@@ -1,0 +1,10 @@
+
+@use 'mlut' with (
+  $jit: (
+    'output': 'src/assets/style/style.css',
+    'content': 'src/**/*.ejs'
+  ),
+);
+
+
+
