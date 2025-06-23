@@ -1,6 +1,6 @@
 @use 'mlut' with (
   $jit: (
-    'output': 'src/assets/style/style.css',
+    'output': 'dist/assets/style/style.css',
     'content': 'src/**/*.ejs',
     'minify': true
   ),
