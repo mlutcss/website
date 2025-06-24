@@ -1,0 +1,7 @@
+@use 'mlut' with (
+  $jit: (
+    'output': 'dist/assets/style/style.min.css',
+    'content': 'src/**/*.ejs',
+    'minify': true
+  ),
+);
