@@ -1,0 +1,57 @@
+<%
+	let cardTitle = typeof title !== 'undefined' ? title : 'Example title'
+	let cardText = typeof text !== 'undefined' ? text : 'Example text'
+	let cardLogo = typeof logo !== 'undefined' ? logo : 'example link'
+	let cardBg = typeof bg !== 'undefined' ? bg : 'Bgc-$featuresBgc'
+	let cardLogoBg = typeof logoBg !== 'undefined' ? logoBg : 'Bgc-$featuresBgc'
+	let cardTitleC = typeof headC !== 'undefined' ? headC : 'Example title'
+	let cardTextC = typeof textC !== 'undefined' ? textC : 'Example text'
+%>
+
+<article class=" <%= cardBg %> P7u Bdrd2u Mxw450 Tsd0.5s
+	md_W40p	 lg_W30p Tf_h -Sx105p_h -Sy105p_h -Ctx-card Zi2_h
+@:pfcs-d_-FastLeftBgc-rgba(30,58,138,0.4) @:pfcs-d_-FastRightBgc-rgba(30,64,175,0.6)
+@:pfcs-d_-FastLeftBgc-rgba(25,60,184,0.5)_h @:pfcs-d_-FastRightBgc-rgba(20,71,230,0.7)_h
+@:pfcs-d_-FastHeadC-rgb(190,219,255) @:pfcs-d_-FastTextC-rgb(142,197,255)
+@:pfcs-l_-FastLeftBgc-rgba(239,246,255,1) @:pfcs-l_-FastRightBgc-rgba(219,234,254,0.5)
+@:pfcs-l_-FastLeftBgc-rgba(219,234,254,1)_h @:pfcs-l_-FastRightBgc-rgba(190,219,255,0.5)_h
+@:pfcs-l_-FastHeadC-rgb(28,57,142) @:pfcs-l_-FastTextC-rgb(20,71,230)
+-FastLeftLogoBgc-rgb(43,127,255) -FastRightLogoBgc-rgb(21,93,252)
+
+
+@:pfcs-d_-ConsLeftBgc-rgba(134,16,67,0.5) @:pfcs-d_-ConsRightBgc-rgba(163,0,76,0.7)
+@:pfcs-d_-ConsLeftBgc-rgba(240,67,140,0.3)_h @:pfcs-d_-ConsRightBgc-rgba(198,0,92)_h
+@:pfcs-d_-ConsHeadC-rgb(244,114,182) @:pfcs-d_-ConsTextC-rgb(249,168,212)
+@:pfcs-l_-ConsLeftBgc-rgba(252,231,243,1) @:pfcs-l_-ConsRightBgc-rgba(252,206,232,0.5)
+@:pfcs-l_-ConsLeftBgc-rgba(252,206,232,1)_h @:pfcs-l_-ConsRightBgc-rgba(253,165,213,0.5)_h
+@:pfcs-l_-ConsHeadC-rgb(185,28,124) @:pfcs-l_-ConsTextC-rgb(194,24,91)
+-ConsLeftLogoBgc-rgb(240,67,140) -ConsRightLogoBgc-rgb(233,30,99)
+
+
+@:pfcs-d_-ModLeftBgc-rgba(89,22,139,0.4) @:pfcs-d_-ModRightBgc-rgba(110,17,176,0.6)
+@:pfcs-d_-ModLeftBgc-rgba(110,17,176,0.4)_h @:pfcs-d_-ModRightBgc-rgba(127,34,254,0.6)_h
+@:pfcs-d_-ModHeadC-rgb(218,178,255) @:pfcs-d_-ModTextC-rgb(233,212,255)
+@:pfcs-l_-ModLeftBgc-rgba(243,232,255,1) @:pfcs-l_-ModRightBgc-rgba(233,212,255,0.5)
+@:pfcs-l_-ModLeftBgc-rgba(233,212,255,1)_h @:pfcs-l_-ModRightBgc-rgba(218,178,255,0.5)_h
+@:pfcs-l_-ModHeadC-rgb(89,22,139) @:pfcs-l_-ModTextC-rgb(130,0,219)
+-ModLeftLogoBgc-rgb(173,70,255) -ModRightLogoBgc-rgb(133,0,226)
+
+">
+
+	<div class="<%=cardLogoBg%> W60 Apcr1 D-f Jc-c Ai-c Bdrd4u
+		^card:h_Tf ^card:h_-Rt30deg Tsd-$longTs">
+		<div class="W50p">
+			<%- include(`../features/${cardLogo}`) %>
+		</div>
+	</div>
+
+	<h3 class="<%=cardTitleC%> Fns1.5e">
+		<%= cardTitle %>
+	</h3>
+	<p class="<%=cardTextC%> Fns1.2e">
+		<%= cardText %>
+	</p>
+
+</article>
+
+<!--  -->

@@ -1,0 +1,40 @@
+<section id="features"
+	class="
+		Bgc-$featuresBgc C-$bodyFontC">
+
+	<div class="W90p D-f M-a Jc-c Ai-c Fld-c P12u;0">
+		<h2 class="M0 Txa-c P5u;0">
+			Why choose mlut?
+		</h2>
+
+		<p class="M0 C-$headerFontC Txa-c P1u;3u">
+			We've build a framework that solves real developer problems
+		</p>
+
+		<div class="D-f Fld-r Flw-w Jc-c Ai-s Gap5u P5u;0 Tsd-$longTs " >
+			<%
+				for (let card of features) {
+			%>
+				<%- include('../components/card.ejs', {
+					title: card.title,
+					text: card.text,
+					logo: card.logo,
+					bg: card.bg,
+					logoBg: card.logoBg,
+					headC: card.headC,
+					textC: card.textC
+				}) %>
+
+			<% } %>
+		</div>
+
+		<div class="P3u;0 Fns1.1e W100p Mxw250">
+			<%- include('../components/link-button.ejs',{
+				url: "https://mlutcss.github.io/mlut/",
+				text: "Learn more",
+				icon: "../hero-section/triangle-icon.ejs"
+			}) %>
+		</div>
+	</div>
+
+</section>

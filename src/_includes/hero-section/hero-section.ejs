@@ -1,0 +1,52 @@
+<section id="hero-page" class="
+  @:pfcs-d_-HeroBgcLeft#121828 @:pfcs-d_-HeroBgcMiddle#251942 @:pfcs-d_-HeroBgcRight#321933
+	@:pfcs-l_-HeroBgcLeft#f8fafc @:pfcs-l_-HeroBgcMiddle#fdfbfc @:pfcs-l_-HeroBgcRight#fbfbfd
+	-Gdl150d,$heroBgcLeft,$heroBgcMiddle,$heroBgcRight
+  H100vh Pt-$headerH
+	D-f Jc-c Ai-c">
+
+	<div id="content-wrapper" style="color:#8349e6"
+		class="	D-f Jc-c Ai-c Fld-c W90p sm_W80p md_W70p">
+		<picture class="W50p Mxw200 P5u;1u xl_Mxw225
+			xxl_Mxw250">
+			<source srcset="/assets/img/logo.png" rel="img/png">
+			<img class="D" alt="mlut logo" src="/assets/img/logo.png">
+		</picture>
+
+		<h1 class="Txa-c C-$bodyFontC Fns2e Lnh1.3e M0 P5u;1u
+			md_Fns2.5e">
+			Next-generation
+			<span class="D Fns1.1e Bgcl-t -Gdl90d,#f0438c,#c433de,#8349e6 C-tp"> Atomic CSS Framework</span>
+		</h1>
+
+		<p class="C-$headerFontC M0 P3u;2u Txa-c Fns1.1
+			md_Fns1.3 lg_W65p">
+			mlut is a modern approach to styling that combines the power of atomic CSS with ease of use and high performance.
+		</p>
+
+		<div id="button-wrapper"
+			class="D-f Fld-r W100p Flw-w Jc-c Gap3u P5u">
+
+			<div class="W70p Mxw200 xl_Mxw300">
+				<%- include('../components/link-button.ejs',{
+						url:"/",
+						text: "Try in playground",
+						icon: "../hero-section/triangle-icon.ejs",
+						variant: "light"
+					})
+				%>
+			</div>
+
+			<div class="W70p H80p Mxw200 xl_Mxw300">
+				<%- include('../components/link-button.ejs',{
+						url:"https://mlutcss.github.io/mlut/",
+						text: "Documentation",
+						icon: "../hero-section/book-icon.ejs",
+						variant: "dark"
+					})
+				%>
+			</div>
+		</div>
+
+	</div>
+</section>

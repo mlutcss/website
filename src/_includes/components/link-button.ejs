@@ -1,0 +1,46 @@
+<%
+	let buttonUrl = typeof url !== 'undefined' ? url : "/"
+	let buttonText = typeof text !== 'undefined' ? text : "link"
+	let buttonIcon = icon
+	let buttonVariant = typeof variant !== 'undefined' ? variant : 'light'
+%>
+
+<% if (buttonVariant === "dark") {%>
+	<a href="<%= buttonUrl %>" role="button"
+		class=" W100p D-f Jc-c Ai-c Txd-n Bgc-n C-$brandC Fns0.8em P2u;3u Bdrd1u
+		xl_P2u;3.5u Bgc-rgba(233,30,99,0.2)_h Bd1;s;$brandC Ts-$shortTs ">
+		<% if (buttonIcon) {%>
+			<div class="D-f Jc-c Ai-c Fld-r Gap3u Fns1.1e ">
+				<div class="D Apcr1 W1e">
+					<%- include( buttonIcon) %>
+				</div>
+				<span class="D">
+					<%= buttonText %>
+				</span>
+			</div>
+		<% } else { %>
+			<span class="D Fns1.1e">
+				<%= buttonText %>
+		</span>
+		<%} %>
+	</a>
+<% } else {%>
+	<a href="<%= buttonUrl %>" role="button"
+		class="W100p D-f Jc-c Ai-c Txd-n Bgc-$brandC Bgc-rgb(233,30,99)_h C#fff Fns0.8em P2u;3u Bdrd1u
+		xl_P2u;3.5u Bd1;s;$brandC Ts-$shortTs ">
+		<% if (buttonIcon) {%>
+			<div class="D-f Jc-c Ai-c Fld-r Gap3u Fns1.1e ">
+				<div class="D Apcr1 W1e">
+					<%- include( buttonIcon) %>
+				</div>
+				<span class="D">
+					<%= buttonText %>
+				</span>
+			</div>
+		<% } else { %>
+			<span class="D Fns1.1e">
+				<%= buttonText %>
+		</span>
+		<%} %>
+	</a>
+<%} %>

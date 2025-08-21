@@ -1,0 +1,29 @@
+[
+	{
+		"title": "Lightning Fast",
+		"text": "Optimized build and minimal bundle size for maximum performance. Your users will love the speed.",
+		"logo": "fast-icon.ejs",
+		"bg": "-Gdl120d,$fastLeftBgc,$fastRightBgc",
+		"logoBg": "-Gdl120d,$fastLeftLogoBgc,$fastRightLogoBgc",
+		"headC":"C-$fastHeadC",
+		"textC":"C-$fastTextC"
+	},
+	{
+		"title": "Consistent Syntax",
+		"text": "Clear and consistent system of rules to get utilities that are delightful to use every day. Code that makes sense.",
+		"logo": "consistent-icon.ejs",
+		"bg": "-Gdl120d,$consLeftBgc,$consRightBgc",
+		"logoBg": "-Gdl120d,$consLeftLogoBgc,$consRightLogoBgc",
+		"headC":"C-$consHeadC",
+		"textC":"C-$consTextC"
+	},
+	{
+		"title": "Modular Architecture",
+		"text": "Use only what you need. Flexible plugin system and configuration options that scale with your project.",
+		"logo": "modular-icon.ejs",
+		"bg": "-Gdl120d,$modLeftBgc,$modRightBgc",
+		"logoBg": "-Gdl120d,$modLeftLogoBgc,$modRightLogoBgc",
+		"headC":"C-$modHeadC",
+		"textC":"C-$modTextC"
+	}
+]
