@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en"
   class="
-		Bxs-cb
-    @:pfcs-d_-HeaderBgc-rgba(17,24,39,0.9) @:pfcs-l_-HeaderBgc-rgba(255,255,255,0.9)
-		@:pfcs-d_-SideBgc-rgb(17,24,39) @:pfcs-l_-SideBgc-rgb(255,255,255)
-    @:pfcs-d_-GhLogoBgc#ffffff @:pfcs-l_-GhLogoBgc#111827
-    @:pfcs-d_-BodyBgc#000 @:pfcs-l_-BodyBgc#fff
-    @:pfcs-d_-HeaderFontC#d1d5db @:pfcs-l_-HeaderFontC#292a33
-		@:pfcs-d_-BodyFontC#fff @:pfcs-l_-BodyFontC-rgb(17,24,39)
-		@:pfcs-d_-FeaturesBgc#1f2937 @:pfcs-l_-FeaturesBgc#f9fafb
-		Fns16 lg_Fns17 xl_Fns19 xxl_Fns21
-    -BrandC#f0438c Ovx-h -HeaderH50 -HeaderFns1e -LongTs0.5s -ShortTs0.2s
-	  md_-HeaderH65 lg_-HeaderH70 xl_-HeaderH75 md_-SideH90vh
+		Fns4u lg_Fns4.25u xl_Fns4.75u xxl_Fns5.25u
+		-HeaderH12.5u -HeaderFns1r -LongTs0.5s -ShortTs0.2s
+	  md_-HeaderH16u lg_-HeaderH14u xl_-HeaderH15u md_-SideH90vh
     Scb-s">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/assets/style/style.min.css">
+	<link rel="stylesheet" href="/assets/style/style-hljs.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+
+	<!-- and it's easy to individually load additional languages -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/go.min.js"></script>
+	<script>hljs.highlightAll();</script>
   <title>MLUT</title>
 </head>
-<body class="D-f Fld-c Jc-sb Fnf-sans-serif Bxs-bb Ovx-h Bgc-$bodyBgc">
+<body class="D-f Fld-c Jc-sb Fnf-sans-serif Bgc-$core950">
 
   <%- include('../_includes/header/header.ejs') %>
   <main >
-    <%- content %>
+    <%- it.content %>
   </main>
 
   <%- include('../_includes/footer.ejs') %>

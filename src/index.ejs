@@ -1,8 +1,284 @@
 ---
 layout: 'base.ejs'
 ---
+<%
+	it.css = {
+		codeWord: "Bgc-$core800 P0.3u;1u"
+	}
+	it.heroCSS = {
+		heroLink: "W70p Mxw50u xl_Mxw55u"
+	}
+%>
+<section id="hero-page" class="
+	-Gdl120d,$core750,$core650,$core600
+  H100vh Pt-$headerH
+	D-f Jc-c Ai-c">
 
-<%- include('_includes/hero-section/hero-section.ejs') %>
-<%- include('_includes/features/features.ejs') %>
+	<div id="content-wrapper" style="color:#8349e6"
+		class="	D-f Jc-c Ai-c Fld-c W90p sm_W80p md_W70p">
+		<picture class="W50p Mxw50u P5u;1u xl_Mxw56u
+			xxl_Mxw63u">
+			<source srcset="/assets/img/logo.png" rel="img/png">
+			<img class="D" alt="mlut logo" src="/assets/img/logo.png">
+		</picture>
+
+		<h1 class="Txa-c C-$accent900 Fns8u Lnh1.3 M0 P5u;1u
+			md_Fns10u">
+			Next-generation
+			<span class="D Fns1.1e Bgcl-t -Gdl90d,#f0438c,#c433de,#8349e6 C-tp"> Atomic CSS Framework</span>
+		</h1>
+
+		<p class="C-$accent850 M0 P3u;2u Txa-c Fns4.4u
+			md_Fns5.2u lg_W65p">
+			mlut is a modern approach to styling that combines the power of atomic CSS with ease of use and high performance.
+		</p>
+
+		<div id="button-wrapper"
+			class="D-f Fld-r W100p Flw-w Jc-c Gap3u P5u">
+
+			<div class="<%= it.heroCSS.heroLink %>">
+				<%- include('./_includes/components/link-button.ejs',{
+						url:"/",
+						text: "Try in playground",
+						icon: "right-triangle",
+						variant: "light"
+					})
+				%>
+			</div>
+
+			<div class="<%= it.heroCSS.heroLink %>">
+				<%- include('./_includes/components/link-button.ejs',{
+						url:"https://mlutcss.github.io/mlut/",
+						text: "Documentation",
+						icon: "book",
+						variant: "dark"
+					})
+				%>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section id="features"
+	class="
+		Bgc-$core550 C-$accent900">
+
+	<div class="W90p D-f M-a Jc-c Ai-c Fld-c P12u;0">
+		<h2 class="M0 Txa-c P5u;0 Fns7u">
+			Why choose mlut?
+		</h2>
+
+		<p class="M0 C-$accent850 Txa-c P1u;3u">
+			We've build a framework that solves real developer problems
+		</p>
+
+		<div class="D-f Fld-r Flw-w Jc-c Ai-s Gap5u P5u;0 Tsd-$longTs " >
+			<%
+				for (let card of it.features) {
+			%>
+				<%- include('./_includes/components/card.ejs', {
+					title: card.title,
+					text: card.text,
+					logo: card.logo,
+					bg: card.bg,
+					bgH: card.bgH,
+					logoBg: card.logoBg,
+					headC: card.headC,
+					textC: card.textC
+				}) %>
+
+			<% } %>
+		</div>
+
+		<div class="P3u;0 Fns3.2u W100p Mxw62u">
+			<%- include('./_includes/components/link-button.ejs',{
+				url: "https://mlutcss.github.io/mlut/",
+				text: "Learn more",
+				icon: "right-triangle"
+			}) %>
+		</div>
+	</div>
+
+</section>
+
+
+<%
+	it.examplesCSS = {
+		h3: "M0;a C-$brand Txa-c W90p Fns6u P16u;0;9u",
+		articleContent:"D-f Fld-r Jc-c Flw-w Ai-s Gap5u W90p M-a",
+		syntCard: "W100p Mxw75u sm_Mxw125u md_W40p lg_W31p P2u Tsd-$longTs Tf_h -Sx105p_h -Sy105p_h Bdrd2u Bd1;s;$accent850 D-g Gtr-a lg_Gtr1.2fr;1fr",
+		wrongSyntCard: "-Gdl120d,$wrong900,$wrong800 -Gdl120d,$wrong850,$wrong750_h",
+		rightSyntCard: "-Gdl120d,$correct900,$correct800 -Gdl120d,$correct850,$correct750_h",
+		syntCardHeader: "M0 C-$accent900 P3u;0",
+		syntCardPoint:"Ps-r P1u;5u Lnh1.5 C-red_b Fns3u_b D-ib_b Ps-a_b T1u_b L0_b",
+		syntCardList:"M0 P1u Fns3.2u Lsst-n Flg0 Grs2 Gre3",
+		syntCardHead:"Flg1 Grs1 Gre2 W100p",
+
+	}
+%>
+
+<section id="examples"
+	class="
+		Bgc-$core700 C-$accent900">
+
+	<div class="W90p D-f M-a Jc-c Ai-c Fld-c P12u;0">
+		<h2 class="M0 Txa-c P5u;0;2u Fns7u">
+			Simplicity in action
+		</h2>
+
+		<p class="M0 C-$accent850 Txa-c P1u;3u md_Mxw60vw lg_Mxw40vw">
+			See how mlut compares to other frameworks with better naming conventions and ergonomics
+		</p>
+
+		<article class="W100p">
+
+			<h3 class="<%= it.examplesCSS.h3%> P12u;0;9u">
+				Strong naming conventions
+			</h3>
+
+			<div class="<%= it.examplesCSS.articleContent%>">
+				<div class="<%= it.examplesCSS.syntCard %> <%= it.examplesCSS.wrongSyntCard %>">
+					<div class="<%=it.examplesCSS.syntCardHead%>">
+						<h4 class="<%= it.examplesCSS.syntCardHeader%>">
+							Tailwind CSS
+						</h4>
+						<%- include('./_includes/components/code-block.ejs', {
+							src: "./code-samples/tw1.ejs",
+							lang: "html",
+						})%>
+					</div>
+
+					<ul class="<%= it.examplesCSS.syntCardList%>">
+						<li class="<%= it.examplesCSS.syntCardPoint%> Ct-'❌'_b ">
+							<span class="<%= it.css.codeWord %>"> flex</span> => <span class="<%= it.css.codeWord %>"> display: flex</span>, but <span class="<%= it.css.codeWord %>"> flex-auto </span> => <span class="<%= it.css.codeWord %>"> flex:1 1 auto</span>
+						</li>
+						<li class="<%= it.examplesCSS.syntCardPoint%> Ct-'❌'_b ">
+							<span class="<%= it.css.codeWord %>"> bg-none</span> => reset all backgrounds? Nope, only <span class="<%= it.css.codeWord %>"> background-image</span>
+						</li>
+					</ul>
+				</div>
+
+				<div class="<%= it.examplesCSS.syntCard %> <%= it.examplesCSS.wrongSyntCard %>">
+					<div class="<%=it.examplesCSS.syntCardHead%>">
+						<h4 class="<%= it.examplesCSS.syntCardHeader%>"> Tachyons</h4>
+						<%- include('./_includes/components/code-block.ejs', {
+							src: "./code-samples/tc1.ejs",
+							lang: "html"
+						})%>
+					</div>
+
+					<ul class="<%= it.examplesCSS.syntCardList%>">
+						<li class="<%= it.examplesCSS.syntCardPoint%> Ct-'❌'_b ">
+							<span class="<%= it.css.codeWord %>"> br-0 </span> => <span class="<%= it.css.codeWord %>"> border-right-width: 0</span>, but <span class="<%= it.css.codeWord %>"> br1 </span> => <span class="<%= it.css.codeWord %>"> border-radius: .125rem</span>
+						</li>
+						<li class="<%= it.examplesCSS.syntCardPoint%> Ct-'❌'_b ">
+							<span class="<%= it.css.codeWord %>"> b</span> => bottom, border, or <span class="<%= it.css.codeWord %>"> display: block</span>? No, it's <span class="<%= it.css.codeWord %>"> font-weight: bold</span>
+						</li>
+					</ul>
+				</div>
+
+				<div class="<%= it.examplesCSS.syntCard %> <%= it.examplesCSS.rightSyntCard %>">
+					<div class="<%=it.examplesCSS.syntCardHead%>">
+						<h4 class="<%= it.examplesCSS.syntCardHeader%>"> mlut CSS</h4>
+						<%- include('./_includes/components/code-block.ejs', {
+							src: "./code-samples/mlut1.ejs",
+							lang: "html"
+						})%>
+					</div>
+
+					<ul class="<%= it.examplesCSS.syntCardList%>">
+						<li class="<%= it.examplesCSS.syntCardPoint%> Ct-'✅'_b">
+							<span class="<%= it.css.codeWord %>"> Jc-c </span> => <span class="<%= it.css.codeWord %>"> justify-content: center</span> and <span class="<%= it.css.codeWord %>"> Js-c </span> => <span class="<%= it.css.codeWord %>"> justify-self: center</span>
+						</li>
+						<li class="<%= it.examplesCSS.syntCardPoint%> Ct-'✅'_b">
+							<span class="<%= it.css.codeWord %>"> Bdr</span> => <span class="<%= it.css.codeWord %>"> border-right: 1px solid</span> and <span class="<%= it.css.codeWord %>"> Bdrd1</span> => <span class="<%= it.css.codeWord %>"> border-radius: 1px</span>
+						</li>
+					<ul>
+				</div>
+
+
+			</div>
+		</article>
+
+		<article class="W100p">
+
+			<h3 class="<%= it.examplesCSS.h3%>">
+				Compactness and elegance in the flesh
+			</h3>
+			<div class="<%= it.examplesCSS.articleContent%>">
+
+				<div class="D-f Fld-c Jc-c Ai-s Gap5u W100p md_W45p Mxw125u H100p">
+					<p class="M0 P0;0;3u C-$accent850 Fns4u md_Fns5u Lnh1.5">
+						See how much more code you need to write in default CSS to reproduce the same styles written in <span class="Fnw-b C-$brand"> mlut </span>
+					</p>
+
+					<div class="W100p P2u Tsd-$longTs Tf_h -Sx105p_h -Sy105p_h Bdrd2u Bd1;s;$accent850 <%= it.examplesCSS.rightSyntCard %> 	">
+						<h4 class="M0 P2u;0"> mlut CSS</h4>
+						<%- include('./_includes/components/code-block',{
+							src: "./code-samples/mlut2.ejs",
+							lang: "html"
+						}) %>
+					</div>
+				</div>
+
+				<div class="D-f Fld-c Jc-c Ai-c W100p md_W45p Mxw125u ">
+					<div class="W100p P2u Tsd-$longTs H100p Tf_h -Sx105p_h -Sy105p_h Bdrd2u Bd1;s;$accent850 <%= it.examplesCSS.wrongSyntCard %> 	">
+							<h4 class="M0 P2u;0"> Regular CSS</h4>
+							<div class="">
+								<%- include('./_includes/components/code-block',{
+									src: "./code-samples/regcss1.ejs",
+									lang: "html",
+								}) %>
+							</div>
+					</div>
+				</div>
+			</div>
+
+		</article>
+
+		<article class="W100p">
+			<h3 class="<%= it.examplesCSS.h3%>">
+				Install and customize
+			</h3>
+			<div class="Gap5u W100p M-a Mxw175u">
+				<ul class="Lsst-n P0 M0">
+					<li class="Ps-r P1u;5u Lnh1.5 C-$accent850">
+						<p>
+							✅ Install via npm
+						</p>
+						<%- include('./_includes/components/code-block',{
+							src: "./code-samples/bash1.ejs",
+							lang: "bash",
+							Fns:"Fns3u"
+						}) %>
+					</li>
+					<li class="Ps-r P1u;5u Lnh1.5 C-$accent850">
+						<p>
+							✅ And configurate by yourself
+						</p>
+						<%- include('./_includes/components/code-block',{
+							src: "./code-samples/scss1.ejs",
+							lang: "scss",
+							Fns:"Fns2.1u"
+						}) %>
+					</li>
+				</ul>
+			</div>
+
+		</article>
+
+
+		<div class="P8u;0 Fns3.2u W100p Mxw62u">
+			<%- include('./_includes/components/link-button.ejs',{
+				url: "https://mlutcss.github.io/mlut/",
+				text: "Try now",
+				icon: "right-triangle"
+			}) %>
+		</div>
+
+	</div>
+</section>
+
+
 
 

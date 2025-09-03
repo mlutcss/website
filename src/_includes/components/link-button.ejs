@@ -1,45 +1,52 @@
 <%
-	let buttonUrl = typeof url !== 'undefined' ? url : "/"
-	let buttonText = typeof text !== 'undefined' ? text : "link"
-	let buttonIcon = icon
-	let buttonVariant = typeof variant !== 'undefined' ? variant : 'light'
+	it.css = {
+		buttonShape:"W100p H100p D-f Jc-c Ai-c Txd-n Fns0.8r P1u;3u Bdrd1u xl_P1.5u;3.5u Ts-$shortTs Bd1;s;$brand",
+		contentContainer: "D-f Jc-c Ai-c Fld-r Gap3u Fns1.1r",
+		iconContainer: "D Apcr1 W0.9r",
+		span:"D Fns0.9r"
+	}
 %>
-
-<% if (buttonVariant === "dark") {%>
-	<a href="<%= buttonUrl %>" role="button"
-		class=" W100p D-f Jc-c Ai-c Txd-n Bgc-n C-$brandC Fns0.8em P2u;3u Bdrd1u
-		xl_P2u;3.5u Bgc-rgba(233,30,99,0.2)_h Bd1;s;$brandC Ts-$shortTs ">
-		<% if (buttonIcon) {%>
-			<div class="D-f Jc-c Ai-c Fld-r Gap3u Fns1.1e ">
-				<div class="D Apcr1 W1e">
-					<%- include( buttonIcon) %>
+<% if (it.variant === "dark") {%>
+	<a href="<%= it.url %>" role="button"
+		class=" <%= it.css.buttonShape %> Bgc-n C-$brand Bgc-$brand200_h">
+		<% if (it.icon) {%>
+			<div class="<%= it.css.contentContainer %>">
+				<div class="<%= it.css.iconContainer%>">
+					<svg xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24"
+						class="D W100p Mxw25u Apcr1 St-$brand Stw2 Fi-n">
+						<use href="/assets/img/icons.svg#<%= it.icon%>"></use>
+					</svg>
 				</div>
-				<span class="D">
-					<%= buttonText %>
+				<span class="<%= it.css.span%>">
+					<%= it.text %>
 				</span>
 			</div>
 		<% } else { %>
-			<span class="D Fns1.1e">
-				<%= buttonText %>
+			<span class="<%= it.css.span%>">
+				<%= it.text %>
 		</span>
 		<%} %>
 	</a>
 <% } else {%>
-	<a href="<%= buttonUrl %>" role="button"
-		class="W100p D-f Jc-c Ai-c Txd-n Bgc-$brandC Bgc-rgb(233,30,99)_h C#fff Fns0.8em P2u;3u Bdrd1u
-		xl_P2u;3.5u Bd1;s;$brandC Ts-$shortTs ">
-		<% if (buttonIcon) {%>
-			<div class="D-f Jc-c Ai-c Fld-r Gap3u Fns1.1e ">
-				<div class="D Apcr1 W1e">
-					<%- include( buttonIcon) %>
+	<a href="<%= it.url %>" role="button"
+		class="<%= it.css.buttonShape %>  Bgc-$brand Bgc-rgb(233,30,99)_h C#fff">
+		<% if (it.icon) {%>
+			<div class="<%= it.css.contentContainer %>">
+				<div class="<%= it.css.iconContainer%>">
+					<svg xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24"
+						class="D W100p Mxw20u Apcr1 St#fff Stw2 Fi-$brand">
+						<use href="/assets/img/icons.svg#<%=it.icon%>">
+					</svg>
 				</div>
-				<span class="D">
-					<%= buttonText %>
+				<span class="<%= it.css.span%>">
+					<%= it.text %>
 				</span>
 			</div>
 		<% } else { %>
-			<span class="D Fns1.1e">
-				<%= buttonText %>
+			<span class="<%= it.css.span%>">
+				<%= it.text %>
 		</span>
 		<%} %>
 	</a>

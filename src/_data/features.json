@@ -2,28 +2,31 @@
 	{
 		"title": "Lightning Fast",
 		"text": "Optimized build and minimal bundle size for maximum performance. Your users will love the speed.",
-		"logo": "fast-icon.ejs",
-		"bg": "-Gdl120d,$fastLeftBgc,$fastRightBgc",
-		"logoBg": "-Gdl120d,$fastLeftLogoBgc,$fastRightLogoBgc",
-		"headC":"C-$fastHeadC",
-		"textC":"C-$fastTextC"
+		"logo": "lightning",
+		"bg": "-Gdl120d,$primary800,$primary750",
+		"bgH":"-Gdl120d,$primary700,$primary650_h",
+		"logoBg": "-Gdl120d,$primaryBright600,$primaryBright650",
+		"headC":"C-$primary300",
+		"textC":"C-$primary400"
 	},
 	{
 		"title": "Consistent Syntax",
 		"text": "Clear and consistent system of rules to get utilities that are delightful to use every day. Code that makes sense.",
-		"logo": "consistent-icon.ejs",
-		"bg": "-Gdl120d,$consLeftBgc,$consRightBgc",
-		"logoBg": "-Gdl120d,$consLeftLogoBgc,$consRightLogoBgc",
-		"headC":"C-$consHeadC",
-		"textC":"C-$consTextC"
+		"logo": "angled-brackets",
+		"bg": "-Gdl120d,$secondary800,$secondary750",
+		"bgH":"-Gdl120d,$secondary700,$secondary650_h",
+		"logoBg": "-Gdl120d,$secondaryBright600,$secondaryBright650",
+		"headC":"C-$secondary300",
+		"textC":"C-$secondary400"
 	},
 	{
 		"title": "Modular Architecture",
 		"text": "Use only what you need. Flexible plugin system and configuration options that scale with your project.",
-		"logo": "modular-icon.ejs",
-		"bg": "-Gdl120d,$modLeftBgc,$modRightBgc",
-		"logoBg": "-Gdl120d,$modLeftLogoBgc,$modRightLogoBgc",
-		"headC":"C-$modHeadC",
-		"textC":"C-$modTextC"
+		"logo": "stack",
+		"bg": "-Gdl120d,$tertiary800,$tertiary750",
+		"bgH":"-Gdl120d,$tertiary700,$tertiary650_h",
+		"logoBg": "-Gdl120d,$tertiaryBright600,$tertiaryBright650",
+		"headC":"C-$tertiary300",
+		"textC":"C-$tertiary400"
 	}
 ]

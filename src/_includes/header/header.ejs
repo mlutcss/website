@@ -1,5 +1,12 @@
+<%
+	it.css = {
+		navLink:"D Txd-n M0;2.5u P1u;3u C-$accent850 C-$brand_h Ts-$shortTs",
+		extLink:"Apcr1 H70p ",
+	}
+%>
+
 <header class="
-  D-f Jc-sb Ai-c P1u;3u Bgc-$headerBgc -Blr4 Bcf-$blr Ps-f H-$headerH
+  D-f Jc-sb Ai-c P1u;3u Bgc-$core800 -Blr4 Bcf-$blr Ps-f H-$headerH
   W100p C-$headerC Zi20">
 	<div class="W40p
 		md_W25p md_Flg0.25">
@@ -12,18 +19,15 @@
 	</div>
 
 	<nav id="desktop-menu"
-		class="Jc-c Ai-c Flg0.5 C-$headerFontC W50p D-n Fns-$headerFns
+		class="Jc-c Ai-c Flg0.5 C-$accent850 W50p D-n Fns-$headerFns
 		md_D-f md_Flg0.5">
-  	<a href="/#features" class="D Txd-n M-0;2.5u P1u;3u C-$headerFontC C-$brandC_h
-			Ts-$shortTs">
+  	<a href="#features" class="<%= it.css.navLink %>">
       Features
     </a>
-    <a href="/#examples" class="D Txd-n M-0;2.5u P1u;3u C-$headerFontC C-$brandC_h
-			Ts-$shortTs">
+    <a href="#examples" class="<%= it.css.navLink %>">
       Examples
     </a>
-    <a href="#arts" class="D Txd-n M-0;2.5u P1u;3u C-$headerFontC C-$brandC_h
-			Ts-$shortTs">
+    <a href="#arts" class="<%= it.css.navLink %>">
       Arts
     </a>
 	</nav>
@@ -37,13 +41,19 @@
 		class="Ai-c Jc-fe P0;2.5u D-n md_D-f H65p
 		md_W25p md_Flg0.25 md_Gap2u
 		lg_Gap3u">
-		<div class="Apcr1 H60p xl_H70p xxl_H80p">
-      <%- include('./xcom-logo.ejs') %>
+		<div class="<%= it.css.extLink %>">
+      <%- include('../components/sm-link.ejs',{
+				icon:"xcom",
+				link:"https://x.com/mlutcss"
+			}) %>
+		</div>
+		<div class="<%= it.css.extLink %>">
+      <%- include('../components/sm-link.ejs',{
+				icon:"github",
+				link:"https://github.com/mlutcss/mlut"
+			}) %>
     </div>
-    <div class="Apcr1 H60p xl_H70p xxl_H80p">
-      <%- include('./github-logo.ejs') %>
-    </div>
-		<div class="H80p xl_H100p">
+		<div class="H80p M0 D-f Ai-c Jc-c">
 			<%- include('../components/link-button.ejs',{
 				url:"/",
 				text: "Get started",

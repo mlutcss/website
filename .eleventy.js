@@ -1,12 +1,11 @@
 import ejsPlugin from '@11ty/eleventy-plugin-ejs'
 
 export default function(config){
-  config.addPlugin(ejsPlugin);
-
-  config.setEjsOptions({
-    _with: false,
+  config.addPlugin(ejsPlugin,{
+		_with: false,
     localsName: 'it'
-  })
+	});
+
 
   config.addPassthroughCopy('src/assets')
 

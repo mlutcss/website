@@ -1,37 +1,50 @@
-<nav class="Bgc-$sideBgc Ps-a R0 T-$headerH Ts-$longTs Tf -Trx100p Bd1;s;$brandC Bdr-n Bdtlr3u Bdblr3u Mxw200
+<%
+	it.css = {
+		smLogo:"W30p Mxw9u",
+		navLi:"Pb2u Bdb1;s;$brand",
+		navLink:"C-$accent850 D Txd-n C-$brand_a W100p"
+	}
+%>
+<nav class="Bgc-$core900 Ps-a R0 T-$headerH Ts-$longTs Tf -Trx101p Bd1;s;$brand Bdr-n Bdtlr3u Bdblr3u Mxw50u
 ^burger:c:~_-Trx0 W50vw P10u;0">
-	<h2 class="P0;5u;7u Txa-r M0 C-$brandC"> Menu</h2>
+	<h2 class="P0;5u;7u Txa-r M0 C-$brand"> Menu</h2>
   <ul id="anchors"
-    class="C-$headerC H40p D-f Jc-c Ai-s Fld-c Gap1.5e P0;5u Txa-l
-    Fns1.2e Lss-n M0">
-    <li class="Pb2u Bdb1;s;$brandC">
+    class="C-$headerC H40p D-f Jc-c Ai-s Fld-c Gap6u P0;5u Txa-l
+    Fns4.8u Lss-n M0">
+    <li class=" <%= it.css.navLi %>">
         <a href="#features"
-            class="C-$headerFontC D Txd-n C-$brandC_a W100p">
+            class="<%= it.css.navLink %>">
             Features
         </a>
     </li>
-    <li class="Pb2u Bdb1;s;$brandC">
+    <li class="<%= it.css.navLi %> ">
         <a href="#examples"
-            class="C-$headerFontC D Txd-n C-$brandC_a W100p">
+            class="<%= it.css.navLink %>">
             Examples
         </a>
     </li>
-    <li class="Pb2u Bdb1;s;$brandC">
+    <li class="<%= it.css.navLi %>">
         <a href="#arts"
-            class="C-$headerFontC D Txd-n C-$brandC_a W100p">
+            class="<%= it.css.navLink %>">
             CSS arts
         </a>
     </li>
 	</ul>
 
-  <h2 class="P10u;5u;3u Txa-r M0 C-$brandC"> Find us</h2>
+  <h2 class="P10u;5u;3u Txa-r M0 C-$brand"> Find us</h2>
   <div id="ex-links"
     class="D-f Fld-r Jc-fe Ai-c Gap3u P0;5u">
-    <div class="W30p Mxw35">
-      <%- include('./github-logo.ejs') %>
+    <div class="<%= it.css.smLogo %>">
+       <%- include('../components/sm-link.ejs',{
+				icon:"github",
+				link:"https://github.com/mlutcss/mlut"
+			}) %>
     </div>
-    <div class="W30p Mxw35">
-      <%- include('./xcom-logo.ejs') %>
+    <div class="<%= it.css.smLogo %>">
+      <%- include('../components/sm-link.ejs',{
+				icon:"xcom",
+				link:"https://x.com/mlutcss"
+			}) %>
     </div>
   </div>
 </nav>
