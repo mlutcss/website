@@ -16,7 +16,7 @@ layout: 'base.ejs'
 
 	<div id="content-wrapper" style="color:#8349e6"
 		class="	D-f Jc-c Ai-c Fld-c W90p sm_W80p md_W70p">
-		<picture class="W50p Mxw50u P5u;1u xl_Mxw56u
+		<picture class="D W50p Mxw50u P5u;1u xl_Mxw56u
 			xxl_Mxw63u">
 			<source srcset="/assets/img/logo.png" rel="img/png">
 			<img class="D" alt="mlut logo" src="/assets/img/logo.png">
@@ -113,7 +113,10 @@ layout: 'base.ejs'
 		syntCardPoint:"Ps-r P1u;5u Lnh1.5 C-red_b Fns3u_b D-ib_b Ps-a_b T1u_b L0_b",
 		syntCardList:"M0 P1u Fns3.2u Lsst-n Flg0 Grs2 Gre3",
 		syntCardHead:"Flg1 Grs1 Gre2 W100p",
-
+		compactCard:"D-f Fld-c Jc-c Ai-s Gap5u W100p md_W45p Mxw125u",
+		compactCode:"W100p P2u Tsd-$longTs Tf_h -Sx105p_h -Sy105p_h Bdrd2u Bd1;s;$accent850",
+		compactH4:"M0 P2u;0",
+		installLi:"Ps-r P1u;5u Lnh1.5 C-$accent850"
 	}
 %>
 
@@ -207,13 +210,13 @@ layout: 'base.ejs'
 			</h3>
 			<div class="<%= it.examplesCSS.articleContent%>">
 
-				<div class="D-f Fld-c Jc-c Ai-s Gap5u W100p md_W45p Mxw125u H100p">
+				<div class="<%= it.examplesCSS.compactCard%> H100p">
 					<p class="M0 P0;0;3u C-$accent850 Fns4u md_Fns5u Lnh1.5">
 						See how much more code you need to write in default CSS to reproduce the same styles written in <span class="Fnw-b C-$brand"> mlut </span>
 					</p>
 
-					<div class="W100p P2u Tsd-$longTs Tf_h -Sx105p_h -Sy105p_h Bdrd2u Bd1;s;$accent850 <%= it.examplesCSS.rightSyntCard %> 	">
-						<h4 class="M0 P2u;0"> mlut CSS</h4>
+					<div class="<%=it.examplesCSS.compactCode%> <%= it.examplesCSS.rightSyntCard %> 	">
+						<h4 class="<%=it.examplesCSS.compactH4%>"> mlut CSS</h4>
 						<%- include('./_includes/components/code-block',{
 							src: "./code-samples/mlut2.ejs",
 							lang: "html",
@@ -221,15 +224,13 @@ layout: 'base.ejs'
 					</div>
 				</div>
 
-				<div class="D-f Fld-c Jc-c Ai-c W100p md_W45p Mxw125u ">
-					<div class="W100p P2u Tsd-$longTs H100p Tf_h -Sx105p_h -Sy105p_h Bdrd2u Bd1;s;$accent850 <%= it.examplesCSS.wrongSyntCard %> 	">
-							<h4 class="M0 P2u;0"> Regular CSS</h4>
-							<div class="">
-								<%- include('./_includes/components/code-block',{
-									src: "./code-samples/regcss1.ejs",
-									lang: "html",
-								}) %>
-							</div>
+				<div class="<%= it.examplesCSS.compactCard%>">
+					<div class="<%=it.examplesCSS.compactCode%> <%= it.examplesCSS.wrongSyntCard %> H100p">
+						<h4 class="<%=it.examplesCSS.compactH4%>"> Regular CSS</h4>
+							<%- include('./_includes/components/code-block',{
+								src: "./code-samples/regcss1.ejs",
+								lang: "html",
+							}) %>
 					</div>
 				</div>
 			</div>
@@ -242,7 +243,7 @@ layout: 'base.ejs'
 			</h3>
 			<div class="Gap5u W100p M-a Mxw175u">
 				<ul class="Lsst-n P0 M0">
-					<li class="Ps-r P1u;5u Lnh1.5 C-$accent850">
+					<li class="<%=it.examplesCSS.installLi%>">
 						<p>
 							✅ Install via npm
 						</p>
@@ -251,7 +252,7 @@ layout: 'base.ejs'
 							lang: "bash",
 						}) %>
 					</li>
-					<li class="Ps-r P1u;5u Lnh1.5 C-$accent850">
+					<li class="<%=it.examplesCSS.installLi%>">
 						<p>
 							✅ And configure by yourself
 						</p>
@@ -277,33 +278,40 @@ layout: 'base.ejs'
 	</div>
 </section>
 
+<%
+	it.arts = {
+		card:"W90p Apcr1  md_W45p lg_W25p -Ctx-art -Sx105p_h -Sy105p_h Tf_h Tsd-$longTs",
+		artWrapper:"W100p Apcr1 Bdrd5u Bd1;s;$accent850 ^art:h_Bdc-$brand Bgc-$blueGray",
+		artCaption:"M0 P3u;0 Txa-c C-$accent850 ^art:h_C-$brand Tsd-$shortTs"
+	}
+%>
 
 
 <section id="arts" class="Bgc-$core550 ">
 	<div class="W90p D-f M-a Jc-c Ai-c Fld-c P12u;0 ">
-		<h2 class="M0 Txa-c P5u;0;2u Fns7u C-$accent900">
+		<h2 class="M0 Txa-c P8u;0;5u Fns7u C-$accent900">
 			CSS Art Gallery
 		</h2>
 
-		<p class="M0 C-$accent850 Txa-c P1u;3u md_Mxw60vw lg_Mxw40vw">
+		<p class="M0 C-$accent850 Txa-c P0;3u;8u md_Mxw60vw lg_Mxw40vw">
 			Discover the artistic possibilities of mlut with these beautiful pure CSS creations
 		</p>
 
 		<div class="W100p P5u;0 Gap5u D-f Jc-c Ai-c Fld-r Flw-w">
-			<article class="W90p Apcr1  md_W45p lg_W25p -Ctx-art -Sx105p_h -Sy105p_h Tf_h Tsd-$longTs">
-				<div class="W100p Apcr1 Bdrd5u Bd1;s;$accent850 ^art:h_Bdc-$brand Bgc-$blueGray">
+			<article class="<%= it.arts.card%>">
+				<div class="<%= it.arts.artWrapper%>">
 					<%- include('./_includes/components/arts/ghost.ejs')%>
 				</div>
-				<h3 class="M0 P3u;0 Txa-c C-$accent850 ^art:h_C-$brand Tsd-$shortTs">
+				<h3 class="<%= it.arts.artCaption%>">
 					Cute ghost
 				</h3>
 			</article>
 
-			<article class="W90p Apcr1 md_W45p lg_W25p -Ctx-art -Sx105p_h -Sy105p_h Tf_h Tsd-$longTs">
-				<div class="W100p Apcr1 Bdrd5u Bd1;s;$accent850 ^art:h_Bdc-$brand Bgc-$blueGray D-f Jc-c Ai-c">
+			<article class="<%= it.arts.card%>">
+				<div class="<%= it.arts.artWrapper%> D-f Jc-c Ai-c">
 					<p class="Fnw-b C-$accent850"> Coming soon...</p>
 				</div>
-				<h3 class="M0 P3u;0 Txa-c C-$accent850 ^art:h_C-$brand Tsd-$shortTs">
+				<h3 class="<%= it.arts.artCaption%>">
 					Penrose triangle
 				</h3>
 			</article>
