@@ -216,7 +216,7 @@ layout: 'base.ejs'
 						<h4 class="M0 P2u;0"> mlut CSS</h4>
 						<%- include('./_includes/components/code-block',{
 							src: "./code-samples/mlut2.ejs",
-							lang: "html"
+							lang: "html",
 						}) %>
 					</div>
 				</div>
@@ -249,17 +249,15 @@ layout: 'base.ejs'
 						<%- include('./_includes/components/code-block',{
 							src: "./code-samples/bash1.ejs",
 							lang: "bash",
-							Fns:"Fns3u"
 						}) %>
 					</li>
 					<li class="Ps-r P1u;5u Lnh1.5 C-$accent850">
 						<p>
-							✅ And configurate by yourself
+							✅ And configure by yourself
 						</p>
 						<%- include('./_includes/components/code-block',{
 							src: "./code-samples/scss1.ejs",
 							lang: "scss",
-							Fns:"Fns2.1u"
 						}) %>
 					</li>
 				</ul>
@@ -281,4 +279,36 @@ layout: 'base.ejs'
 
 
 
+<section id="arts" class="Bgc-$core550 ">
+	<div class="W90p D-f M-a Jc-c Ai-c Fld-c P12u;0 ">
+		<h2 class="M0 Txa-c P5u;0;2u Fns7u C-$accent900">
+			CSS Art Gallery
+		</h2>
+
+		<p class="M0 C-$accent850 Txa-c P1u;3u md_Mxw60vw lg_Mxw40vw">
+			Discover the artistic possibilities of mlut with these beautiful pure CSS creations
+		</p>
+
+		<div class="W100p P5u;0 Gap5u D-f Jc-c Ai-c Fld-r Flw-w">
+			<article class="W90p Apcr1  md_W45p lg_W25p -Ctx-art -Sx105p_h -Sy105p_h Tf_h Tsd-$longTs">
+				<div class="W100p Apcr1 Bdrd5u Bd1;s;$accent850 ^art:h_Bdc-$brand Bgc-$blueGray">
+					<%- include('./_includes/components/arts/ghost.ejs')%>
+				</div>
+				<h3 class="M0 P3u;0 Txa-c C-$accent850 ^art:h_C-$brand Tsd-$shortTs">
+					Cute ghost
+				</h3>
+			</article>
+
+			<article class="W90p Apcr1 md_W45p lg_W25p -Ctx-art -Sx105p_h -Sy105p_h Tf_h Tsd-$longTs">
+				<div class="W100p Apcr1 Bdrd5u Bd1;s;$accent850 ^art:h_Bdc-$brand Bgc-$blueGray D-f Jc-c Ai-c">
+					<p class="Fnw-b C-$accent850"> Coming soon...</p>
+				</div>
+				<h3 class="M0 P3u;0 Txa-c C-$accent850 ^art:h_C-$brand Tsd-$shortTs">
+					Penrose triangle
+				</h3>
+			</article>
+		</div>
+	</div>
+
+</section>
 
