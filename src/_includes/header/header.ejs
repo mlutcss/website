@@ -1,13 +1,14 @@
 <%
-	it.css = {
+	const css = {
 		navLink:"D Txd-n M0;2.5u P1u;3u C-$accent850 C-$brand_h Ts-$shortTs",
-		extLink:"Apcr1 H70p ",
+		extLink:"Apcr1 H70p",
 	}
 %>
 
-<header class="
-  D-f Jc-sb Ai-c P1u;3u Bgc-$core800 -Blr4 Bcf-$blr Ps-f H-$headerH
+<header class=" D-f Jc-sb Ai-c P1u;3u Bgc-$core800 -Blr4 Bcf-$blr Ps-f H-$headerH
   W100p C-$headerC Zi20">
+	<%# Logo %>
+
 	<div class="W40p
 		md_W25p md_Flg0.25">
 		<a href="#hero-page" class="Mxw25u D">
@@ -18,36 +19,40 @@
 		</a>
 	</div>
 
-	<nav id="desktop-menu"
-		class="Jc-c Ai-c Flg0.5 C-$accent850 W50p D-n Fns-$headerFns
+	<%# Desktop menu %>
+
+	<nav class="Jc-c Ai-c Flg0.5 C-$accent850 W50p D-n Fns-$headerFns
 		md_D-f md_Flg0.5">
-  	<a href="#features" class="<%= it.css.navLink %>">
+  	<a href="#features" class="<%= css.navLink %>">
       Features
     </a>
-    <a href="#examples" class="<%= it.css.navLink %>">
+    <a href="#examples" class="<%= css.navLink %>">
       Examples
     </a>
-    <a href="#arts" class="<%= it.css.navLink %>">
+    <a href="#arts" class="<%= css.navLink %>">
       Arts
     </a>
 	</nav>
 
-  <div id="mobile-menu"  class="Bxs-bb md_D-n W50p D-f Fld-r Jc-fe">
+	<%# Mobile menu%>
+
+  <div  class="Bxs-bb md_D-n W50p D-f Fld-r Jc-fe">
     <%- include('./burger.ejs') %>
     <%- include('./side.ejs') %>
   </div>
 
-  <div id="desktop-links"
-		class="Ai-c Jc-fe P0;2.5u D-n md_D-f H65p
+	<%# Desktop links %>
+
+  <div class="Ai-c Jc-fe P0;2.5u D-n md_D-f H65p
 		md_W25p md_Flg0.25 md_Gap2u
 		lg_Gap3u">
-		<div class="<%= it.css.extLink %>">
+		<div class="<%= css.extLink %>">
       <%- include('../components/sm-link.ejs',{
 				icon:"xcom",
 				link:"https://x.com/mlutcss"
 			}) %>
 		</div>
-		<div class="<%= it.css.extLink %>">
+		<div class="<%= css.extLink %>">
       <%- include('../components/sm-link.ejs',{
 				icon:"github",
 				link:"https://github.com/mlutcss/mlut"
