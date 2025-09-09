@@ -1,7 +1,10 @@
 <%
 	const css = {
-		navLink:"D Txd-n M0;2.5u P1u;3u C-$accent850 C-$brand_h Ts-$shortTs",
+		navLinkDesktop:"md_Txd-n md_M0;5.5u md_C-$brand_h Ts-$shortTs",
+		navLinkMobile:"C-$accent850 D Txd-n C-$brand_a W100p md_W30p",
 		extLink:"Apcr1 H70p",
+		smLogo:"W30p Mxw9u",
+		navLi:"Pb2u Bdb1;s;$brand md_Pb0 md_Bd-n",
 	}
 %>
 
@@ -11,34 +14,45 @@
 
 	<div class="W40p
 		md_W25p md_Flg0.25">
-		<a href="#hero-page" class="Mxw25u D">
-			<picture class="D P1u;2u">
-				<source srcset="/assets/img/logo.png" rel="img/png">
-				<img class="D Mxw25u W70p sm_W85p md_W100p" alt="mlut logo" src="/assets/img/logo.png">
-			</picture>
+		<a href="/#hero-page" class="Mxw25u D">
+			<img class="D  P1u;2u Mxw25u W70p sm_W85p md_W100p" alt="mlut logo" src="/assets/img/logo.png">
 		</a>
 	</div>
 
 	<%# Desktop menu %>
 
-	<nav class="Jc-c Ai-c Flg0.5 C-$accent850 W50p D-n Fns-$headerFns
-		md_D-f md_Flg0.5">
-  	<a href="#features" class="<%= css.navLink %>">
-      Features
-    </a>
-    <a href="#examples" class="<%= css.navLink %>">
-      Examples
-    </a>
-    <a href="#arts" class="<%= css.navLink %>">
-      Arts
-    </a>
-	</nav>
-
 	<%# Mobile menu%>
 
-  <div  class="Bxs-bb md_D-n W50p D-f Fld-r Jc-fe">
+  <div  class="W50p D-f Fld-r Jc-fe md_Flg0.5 md_D md_Fns-$headerFns">
     <%- include('./burger.ejs') %>
-    <%- include('./side.ejs') %>
+    <nav class="Bgc-$core900 Ps-a R0 T-$headerH Ts-$longTs Tf -Trx101p Bd1;s;$brand Bdr-n Bdtlr3u Bdblr3u Mxw50u ^burger:c:~_-Trx0 W50vw P10u;0 md_All-ust">
+
+			<h2 class="P0;5u;7u Txa-r M0 C-$brand md_D-n"> Menu</h2>
+
+			<ul class="C-$accent850 H40p D-f Jc-c Fld-c md_Fld-r Gap6u P0;5u Txa-l  Fns4.8u Lsst-n M0 md_P0 md_H100p md_Gap2u md_Txa-c md_Fns4u">
+			<% for (let navLink of it.navLinks) {%>
+				<li class=" <%= css.navLi %>">
+						<a href="<%= navLink.link %>" class="<%= css.navLinkMobile %> <%= css.navLinkDesktop %>">
+								<%= navLink.text %>
+						</a>
+				</li>
+			<% }%>
+		</ul>
+
+		<%# External links %>
+
+			<h2 class="P10u;5u;3u Txa-r M0 C-$brand md_D-n"> Find us</h2>
+			<div class="D-f Fld-r Jc-fe Ai-c Gap3u P0;5u md_D-n">
+				<% for (let extLink of it.extLinks.filter((el) => el.name !== 'Docs')) {%>
+					<div class="<%= css.smLogo %>">
+						<%- include('../components/sm-link.ejs',{
+							icon:`${extLink.icon}`,
+							link:`${extLink.link}`
+						}) %>
+					</div>
+				<% }%>
+			</div>
+		</nav>
   </div>
 
 	<%# Desktop links %>
@@ -46,18 +60,14 @@
   <div class="Ai-c Jc-fe P0;2.5u D-n md_D-f H65p
 		md_W25p md_Flg0.25 md_Gap2u
 		lg_Gap3u">
-		<div class="<%= css.extLink %>">
-      <%- include('../components/sm-link.ejs',{
-				icon:"xcom",
-				link:"https://x.com/mlutcss"
-			}) %>
-		</div>
-		<div class="<%= css.extLink %>">
-      <%- include('../components/sm-link.ejs',{
-				icon:"github",
-				link:"https://github.com/mlutcss/mlut"
-			}) %>
-    </div>
+		<% for (let extLink of it.extLinks.filter((el) => el.name !== 'Docs')) { %>
+			<div class="<%= css.extLink %>">
+				<%- include('../components/sm-link.ejs',{
+					icon:`${extLink.icon}`,
+					link:`${extLink.link}`
+				}) %>
+			</div>
+		<% } %>
 		<div class="H80p M0 D-f Ai-c Jc-c">
 			<%- include('../components/link-button.ejs',{
 				url:"/",

@@ -1,72 +1,59 @@
 <%
-	const styles = {
-		linkSect:"P5u md_P0;3u D-f Fld-r Flw-w Jc-c Ai-fs md_Ai-fs",
+	const css = {
+		linkSect:"P5u W49p md_W31p D-f Fld-r Flw-w Jc-fs md_Jc-c Ai-fs md_Ai-fs md_P0;3u md_W30p",
 		ul:"P0 Lsst-n W70p",
 		li:"P1u;0",
 		link:"Txd-n C#d1d5db C-$brand_h Tsd-$shortTs",
 	}
 %>
-<footer class="P8u;0 W100p Bgc-$core850 C#d1d5db D-g Gtc1fr;1fr Gtr0.2fr;1fr;0.2fr Gap2u  md_Gtc0.5fr;1fr;1fr;1fr;0.5fr md_Gtr1fr;0.2fr md_Gap5u" >
-
-  <section class="W90p M-a Gcs1 Gce3 Grs1 Gre2 md_Gcs2 md_Gce3 ">
-		<picture class="D W40p Mxw30u P2u;1u xl_Mxw56u
-			xxl_Mxw63u">
-			<source srcset="/assets/img/logo.png" rel="img/png">
-			<img class="D" alt="mlut logo" src="/assets/img/logo.png">
-		</picture>
-		<h3 class=" M0 P5u;0 Fns4u md_P5u;5u;5u;0">
-			Atomic CSS framework for modern web development
-		</h3>
-	</section>
-
-	<section class="<%= styles.linkSect %>  Gcs1 Gce2 Grs2 Gre3 md_Grs1 md_Gre2 md_Gcs3 md_Gce4">
-		<div>
-			<h3 class="M0">
-				Product
+<footer class="D-f Jc-c Ai-c" >
+	<div class="P8u;0 W100p sm_W60p md_W100p md_P8u Bgc-$core850 C#d1d5db D-f Fld-r Flw-w Jc-c md_P8u">
+		<section class="W100p md_W26p P0;5u ">
+			<img class="D W50p Mxw30u P2u;1u xl_Mxw56u xxl_Mxw63u" alt="mlut logo" src="/assets/img/logo.png">
+			<h3 class=" M0 P5u;0 Fns4u md_P5;0;5u;0">
+				Atomic CSS framework for modern web development
 			</h3>
-			<ul class="<%= styles.ul %>">
-				<li class="<%= styles.li %>">
-					<a href="#features" class="<%= styles.link %>">
-						Features
-					</a>
-				</li>
-				<li class="<%= styles.li %>">
-					<a href="#examples" class="<%= styles.link %>">
-						Examples
-					</a>
-				</li>
-				<li class="<%= styles.li %>">
-					<a href="https://mlutcss.github.io/mlut/" class="<%= styles.link %>">
-						Docs
-					</a>
-				</li>
-			</ul>
-		</div>
-	</section>
+		</section>
 
-	<section class="<%= styles.linkSect %> Gcs2 Gce3 Grs2 Gre3 md_Grs1 md_Gre2 md_Gcs4 md_Gce5">
-		<div>
-			<h3 class="M0">
-				Find us
-			</h3>
-			<ul class="<%= styles.ul %>">
-				<li class="<%= styles.li %>">
-					<a href="https://github.com/mlutcss/mlut" class="<%= styles.link %>">
-						GitHub
-					</a>
-				</li>
-				<li class="<%= styles.li%>">
-					<a href="https://x.com/mlutcss" class="<%= styles.link %>">
-						Twitter
-					</a>
-				</li>
-			</ul>
-		</div>
-	</section>
+		<section class="<%= css.linkSect %> ">
+			<div>
+				<h3 class="M0">
+					Product
+				</h3>
+				<ul class="<%= css.ul %>">
+					<% for (let navLink of it.navLinks) { %>
+						<li class="<%= css.li %>">
+							<a href="<%= navLink.link %>" class="<%= css.link %>">
+								<%= navLink.text%>
+							</a>
+						</li>
+					<%} %>
+				</ul>
+			</div>
+		</section>
 
-	<section class="W100p Gcs1 Gce3 Grs3 Gre4 md_Gcs1 md_Gce6 md_Grs2 md_Gre3 D-f Jc-c Ai-c">
-		<p class="C#d1d5db*50p Txa-c M0">
-			© 2025 mlut CSS Framework. All rights reserved.
-		</p>
-	</section>
-</footer>
+		<section class="<%= css.linkSect %> ">
+			<div>
+				<h3 class="M0">
+					Learn more
+				</h3>
+
+				<ul class="<%= css.ul %>">
+					<% for (let extLink of it.extLinks) {%>
+						<li class="<%= css.li %>">
+							<a href="<%= extLink.link %>" class="<%= css.link %>">
+								<%= extLink.name %>
+							</a>
+						</li>
+					<% } %>
+				</ul>
+			</div>
+		</section>
+
+		<section class="W100p D-f P3u;5u Ai-c Jc-fs md_Jc-c ">
+			<p class="C#d1d5db*50p Txa-l M0 ">
+				© 2025 mlut CSS Framework. All rights reserved.
+			</p>
+		</section>
+	</footer>
+</div>

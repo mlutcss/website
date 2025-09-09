@@ -2,9 +2,6 @@
 layout: 'base.ejs'
 ---
 <%
-	const css = {
-		codeWord: "Bgc-$core800 P0.3u;1u"
-	}
 	const heroCSS = {
 		heroLink: "W70p Mxw50u xl_Mxw55u"
 	}
@@ -80,10 +77,10 @@ layout: 'base.ejs'
 				<%- include('./_includes/components/card.ejs', {
 					title: card.title,
 					text: card.text,
-					logo: card.logo,
+					img: card.img,
 					bg: card.bg,
 					bgH: card.bgH,
-					logoBg: card.logoBg,
+					imgBg: card.imgBg,
 					headC: card.headC,
 					textC: card.textC
 				}) %>
@@ -109,17 +106,18 @@ layout: 'base.ejs'
 	const examplesCSS = {
 		h3: "M0;a C-$brand Txa-c W90p Fns6u P16u;0;9u",
 		articleContent:"D-f Fld-r Jc-c Flw-w Ai-s Gap5u W90p M-a",
-		syntCard: "W100p Mxw75u sm_Mxw125u md_W40p lg_W31p lg_Mxw110u P2u Tsd-$longTs Tf_h -Sx105p_h -Sy105p_h Bdrd2u Bd1;s;$accent850 D-g Gtr-a lg_Gtr1.2fr;1fr",
+		syntCard: "W100p Mxw35gg md_W40p lg_W31p P2u Tsd-$longTs Tf_h -Sx105p_h -Sy105p_h Bdrd2u Bd1;s;$accent850 D-g Gtr-a lg_Gtr1.2fr;1fr",
 		wrongSyntCard: "-Gdl120d,$wrong900,$wrong800 -Gdl120d,$wrong850,$wrong750_h",
 		rightSyntCard: "-Gdl120d,$correct900,$correct800 -Gdl120d,$correct850,$correct750_h",
 		syntCardHeader: "M0 C-$accent900 P3u;0",
 		syntCardPoint:"Ps-r P1u;5u Lnh1.5 C-red_b Fns3u_b D-ib_b Ps-a_b T1u_b L0_b",
 		syntCardList:"M0 P1u Fns3.2u Lsst-n Flg0 Grs2 Gre3",
 		syntCardHead:"Flg1 Grs1 Gre2 W100p",
-		compactCard:"D-f Fld-c Jc-c Ai-s Gap5u W100p md_W45p Mxw125u",
-		compactCode:"W100p P2u Tsd-$longTs Tf_h -Sx105p_h -Sy105p_h Bdrd2u Bd1;s;$accent850",
+		compactCard:"D-f Mxw35gg Fld-c Jc-c Ai-s Gap5u W100p md_W45p ",
+		compactCode:"W100p P2u Tsd-$longTs Tf_h -S105p_h Bdrd2u Bd1;s;$accent850",
 		compactH4:"M0 P2u;0",
-		installLi:"Ps-r P1u;5u Lnh1.5 C-$accent850"
+		installLi:"Ps-r P1u;5u Lnh1.5 C-$accent850",
+		codeWord: "Bgc-$core800 P0.3u;1u"
 	}
 %>
 
@@ -159,10 +157,10 @@ layout: 'base.ejs'
 
 					<ul class="<%= examplesCSS.syntCardList%>">
 						<li class="<%= examplesCSS.syntCardPoint%> Ct-'❌'_b ">
-							<span class="<%= css.codeWord %>"> flex</span> => <span class="<%= css.codeWord %>"> display: flex</span>, but <span class="<%= css.codeWord %>"> flex-auto </span> => <span class="<%= css.codeWord %>"> flex:1 1 auto</span>
+							<span class="<%= examplesCSS.codeWord %>"> flex</span> => <span class="<%= examplesCSS.codeWord %>"> display: flex</span>, but <span class="<%= examplesCSS.codeWord %>"> flex-auto </span> => <span class="<%= examplesCSS.codeWord %>"> flex:1 1 auto</span>
 						</li>
 						<li class="<%= examplesCSS.syntCardPoint%> Ct-'❌'_b ">
-							<span class="<%= css.codeWord %>"> bg-none</span> => reset all backgrounds? Nope, only <span class="<%= css.codeWord %>"> background-image</span>
+							<span class="<%= examplesCSS.codeWord %>"> bg-none</span> => reset all backgrounds? Nope, only <span class="<%= examplesCSS.codeWord %>"> background-image</span>
 						</li>
 					</ul>
 				</div>
@@ -180,10 +178,10 @@ layout: 'base.ejs'
 
 					<ul class="<%= examplesCSS.syntCardList%>">
 						<li class="<%= examplesCSS.syntCardPoint%> Ct-'❌'_b ">
-							<span class="<%= css.codeWord %>"> br-0 </span> => <span class="<%= css.codeWord %>"> border-right-width: 0</span>, but <span class="<%= css.codeWord %>"> br1 </span> => <span class="<%= css.codeWord %>"> border-radius: .125rem</span>
+							<span class="<%= examplesCSS.codeWord %>"> br-0 </span> => <span class="<%= examplesCSS.codeWord %>"> border-right-width: 0</span>, but <span class="<%= examplesCSS.codeWord %>"> br1 </span> => <span class="<%= examplesCSS.codeWord %>"> border-radius: .125rem</span>
 						</li>
 						<li class="<%= examplesCSS.syntCardPoint%> Ct-'❌'_b ">
-							<span class="<%= css.codeWord %>"> b</span> => bottom, border, or <span class="<%= css.codeWord %>"> display: block</span>? No, it's <span class="<%= css.codeWord %>"> font-weight: bold</span>
+							<span class="<%= examplesCSS.codeWord %>"> b</span> => bottom, border, or <span class="<%= examplesCSS.codeWord %>"> display: block</span>? No, it's <span class="<%= examplesCSS.codeWord %>"> font-weight: bold</span>
 						</li>
 					</ul>
 				</div>
@@ -201,10 +199,10 @@ layout: 'base.ejs'
 
 					<ul class="<%= examplesCSS.syntCardList%>">
 						<li class="<%= examplesCSS.syntCardPoint%> Ct-'✅'_b">
-							<span class="<%= css.codeWord %>"> Jc-c </span> => <span class="<%= css.codeWord %>"> justify-content: center</span> and <span class="<%= css.codeWord %>"> Js-c </span> => <span class="<%= css.codeWord %>"> justify-self: center</span>
+							<span class="<%= examplesCSS.codeWord %>"> Jc-c </span> => <span class="<%= examplesCSS.codeWord %>"> justify-content: center</span> and <span class="<%= examplesCSS.codeWord %>"> Js-c </span> => <span class="<%= examplesCSS.codeWord %>"> justify-self: center</span>
 						</li>
 						<li class="<%= examplesCSS.syntCardPoint%> Ct-'✅'_b">
-							<span class="<%= css.codeWord %>"> Bdr</span> => <span class="<%= css.codeWord %>"> border-right: 1px solid</span> and <span class="<%= css.codeWord %>"> Bdrd1</span> => <span class="<%= css.codeWord %>"> border-radius: 1px</span>
+							<span class="<%= examplesCSS.codeWord %>"> Bdr</span> => <span class="<%= examplesCSS.codeWord %>"> border-right: 1px solid</span> and <span class="<%= examplesCSS.codeWord %>"> Bdrd1</span> => <span class="<%= examplesCSS.codeWord %>"> border-radius: 1px</span>
 						</li>
 					<ul>
 				</div>
@@ -299,7 +297,7 @@ layout: 'base.ejs'
 
 <%
 	const artsCSS = {
-		card:"W90p Apcr1  md_W45p lg_W25p -Ctx-art -Sx105p_h -Sy105p_h Tf_h Tsd-$longTs",
+		card:"W90p Mxw100u Apcr1 md_W45p lg_W25p -Ctx-art -S105p_h Tf_h Tsd-$longTs",
 		artWrapper:"W100p Apcr1 Bdrd5u Bd1;s;$accent850 ^art:h_Bdc-$brand Bgc-$blueGray",
 		artCaption:"M0 P3u;0 Txa-c C-$accent850 ^art:h_C-$brand Tsd-$shortTs"
 	}
@@ -309,7 +307,7 @@ layout: 'base.ejs'
 <section id="arts" class="Bgc-$core550 ">
 	<div class="W90p D-f M-a Jc-c Ai-c Fld-c P12u;0 ">
 		<h2 class="M0 Txa-c P8u;0;5u Fns7u C-$accent900">
-			CSS Art Gallery
+			CSS Arts
 		</h2>
 
 		<p class="M0 C-$accent850 Txa-c P0;3u;8u md_Mxw60vw lg_Mxw40vw">
@@ -340,6 +338,8 @@ layout: 'base.ejs'
 				</h3>
 			</article>
 		</div>
+
+
 	</div>
 
 </section>

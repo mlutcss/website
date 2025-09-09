@@ -1,41 +1,42 @@
 <%
-	const ghostStyles = {
-		eye: "Ps-a W25p H25p Bgc#000 Bdrd50p T45p Ct_b Ps-a_b Bgc#fff_b W40p_b H40p_b Bdrd50p_b L40p_b T10p_b",
-		hand: "Ps-a W20p H20p Bd0.5vmin;s;black Bdblr100 Bdbrr100 Bdt0 T78p",
-		leg: "W25p H100p Bd0.5vmin;s;black Bdblr100 Bdbrr100 Bdt0 Bgc#ffdcdf",
+	const css = {
+		eye: "Ps-a -Sz25p Bgc#000 Bdrd50p T45p Ct_b Ps-a_b Bgc#fff_b -Sz40p_b Bdrd50p_b L40p_b T10p_b",
+		hand: "Ps-a -Sz20p Bd0.5vmin;s;black -Bdbrd100 Bdt0 T78p",
+		leg: "W25p H100p Bd0.5vmin;s;black -Bdbrd100 Bdt0 Bgc-$bodyBgc",
 	}
 %>
-<div class="Apcr1 W100p Ps M-a D-f Ai-c Jc-c Ctnn-canva Ctnt-s ">
+<div class="Apcr1 W100p Ps M-a D-f Ai-c Jc-c Ctnn-canva Ctnt-s
+	-HeartBgc#ff3737 -BodyBgc#ffdcdf ">
 
   <div class="Ps-a Apcr1 @c:canva:apcr>=1/1_H50p @c:canva:apcr<=1/1_W50p">
 
 		<%# body %>
-    <div class="Ps-r Bd0.5vmin;s;black W100p H100p Bdtlr50p Bdtrr50p Bdb0 Bxs-bb Bgc#ffdcdf">
+    <div class="Ps-r Bd0.5vmin;s;black W100p H100p Bdtlr50p Bdtrr50p Bdb0 Bxs-bb Bgc-$bodyBgc">
 
 			<%# heart %>
-      <div class="Ps-r W10p H10p Bgc#ff3737 -Trx700p -Try200p -Rt25d Sx0.8 Sy0.8 Tf
-        Ps-a_b B0_b L-50p_b W100p_b H100p_b Ct_b Bdrd50p_b Bgc#ff3737_b
-        Ps-a_af T-50p_af R0_af W100p_af H100p_af Ct_af Bdrd150p_af Bgc#ff3737_af">
+      <div class="Ps-r W10p H10p Bgc-$heartBgc -Trx700p -Try200p -Rt25d Sx0.8 Sy0.8 Tf
+        Ps-a_b B0_b L-50p_b -Sz100p_b Ct_b Bdrd50p_b Bgc-$heartBgc_b
+        Ps-a_af T-50p_af R0_af -Sz100p_af Ct_af Bdrd150p_af Bgc-$heartBgc_af">
       </div>
 
 			<%# eyes %>
-      <div class=" <%= ghostStyles.eye %> L10p"></div>
-      <div class="<%= ghostStyles.eye %> R10p"></div>
+      <div class=" <%= css.eye %> L10p"></div>
+      <div class="<%= css.eye %> R10p"></div>
 
 			<%# mouse %>
-      <div  class="Ps-a W20p H10p Bd0.7vmin;s;black Bdblr100 Bdbrr100 Bdt0 T60p L40p"></div>
+      <div  class="Ps-a W20p H10p Bd0.7vmin;s;black -Bdbrd100 Bdt0 T60p L40p"></div>
 
 			<%# hands %>
-      <div class=" <%= ghostStyles.hand %> L15p -Rt-45d Tf"></div>
-      <div class="<%= ghostStyles.hand %> R15p -Rt45d Tf"></div>
+      <div class=" <%= css.hand %> L15p -Rt-45d Tf"></div>
+      <div class="<%= css.hand %> R15p -Rt45d Tf"></div>
     </div>
 
 		<%# legs %>
     <div class="D-f W100p H25p -Try-5p Tf">
-      <div class="<%= ghostStyles.leg %>"></div>
-      <div class="<%= ghostStyles.leg %>"></div>
-      <div class="<%= ghostStyles.leg %>"></div>
-      <div class="<%= ghostStyles.leg %>"></div>
+      <div class="<%= css.leg %>"></div>
+      <div class="<%= css.leg %>"></div>
+      <div class="<%= css.leg %>"></div>
+      <div class="<%= css.leg %>"></div>
     </div>
   </div>
 </div>
