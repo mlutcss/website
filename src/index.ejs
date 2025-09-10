@@ -3,34 +3,32 @@ layout: 'base.ejs'
 ---
 <%
 	const heroCSS = {
-		heroLink: "W70p Mxw50u xl_Mxw55u"
+		heroLink: "W70p Mxw50u xl_Mxw55u",
+		universalMargin:"M0;0;5u"
 	}
 %>
 <%# Hero-section %>
 
-<div id="hero-page" class="
-	-Gdl120d,$core750,$core650,$core600
-  H100vh Pt-$headerH
-	D-f Jc-c Ai-c">
+<div id="hero-page" class="-Gdl120d,$core750,$core650,$core600 H100vh Pt-$headerH D-f Jc-c Ai-c">
 
 	<div class="	D-f Jc-c Ai-c Fld-c W90p sm_W80p md_W70p">
 
-		<img class="D W50p Mxw50u P5u;1u xl_Mxw56u
+		<img class="D W50p Mxw50u <%= heroCSS.universalMargin %> P0;1u xl_Mxw56u
 			xxl_Mxw63u" alt="mlut logo" src="/assets/img/logo.png">
 
 
-		<h1 class="Txa-c C-$accent900 Fns8u Lnh1.3 M0 P5u;1u
+		<h1 class="Txa-c C-$accent900 Fns8u Lnh1.1 <%= heroCSS.universalMargin %> P0;1u
 			md_Fns10u">
 			Next-generation
 			<span class="D Fns1.1e Bgcl-t -Gdl90d,$secondaryBright650,$brand,$tertiaryBright650 C-tp"> Atomic CSS Framework</span>
 		</h1>
 
-		<p class="C-$accent850 M0 P3u;2u Txa-c Fns4.4u
+		<p class="C-$accent850 <%= heroCSS.universalMargin %> P0;2u Txa-c Fns4.4u
 			md_Fns5.2u lg_W65p">
 			mlut is a modern approach to styling that combines the power of atomic CSS with ease of use and high performance.
 		</p>
 
-		<div class="D-f Fld-r W100p Flw-w Jc-c Gap3u P5u">
+		<div class="D-f Fld-r W100p Flw-w Jc-c Gap3u <%= heroCSS.universalMargin %> P0;5u">
 
 			<div class="<%= heroCSS.heroLink %>">
 				<%- include('./_includes/components/link-button.ejs',{
@@ -57,20 +55,20 @@ layout: 'base.ejs'
 
 <%# Features section %>
 
-<section id="features" class="Bgc-$core550 C-$accent900">
+<section id="features" class="Bgc-$core550 C-$accent900 P5u;0">
 
 	<div class="W90p D-f M-a Jc-c Ai-c Fld-c P12u;0">
-		<h2 class="M0 Txa-c P5u;0 Fns7u">
+		<h2 class="Txa-c M0;0;5u Fns7u">
 			Why choose mlut?
 		</h2>
 
-		<p class="M0 C-$accent850 Txa-c P1u;3u">
+		<p class="M0 C-$accent850 Txa-c M1u;0 P0;3u">
 			We've build a framework that solves real developer problems
 		</p>
 
 		<%# Feature cards %>
 
-		<div class="D-f Fld-r Flw-w Jc-c Ai-s Gap5u P5u;0 Tsd-$longTs " >
+		<div class="D-f Fld-r Flw-w Jc-c Ai-s Gap5u M5u;0 Tsd-$longTs " >
 			<%
 				for (let card of it.features) {
 			%>
@@ -88,7 +86,7 @@ layout: 'base.ejs'
 			<% } %>
 		</div>
 
-		<div class="P3u;0 Fns3.2u W100p Mxw62u">
+		<div class="M3u;0 Fns3.2u W100p Mxw62u">
 			<%- include('./_includes/components/link-button.ejs',{
 				url: "https://mlutcss.github.io/mlut/",
 				text: "Learn more",
@@ -104,31 +102,32 @@ layout: 'base.ejs'
 
 <%
 	const examplesCSS = {
-		h3: "M0;a C-$brand Txa-c W90p Fns6u P16u;0;9u",
-		articleContent:"D-f Fld-r Jc-c Flw-w Ai-s Gap5u W90p M-a",
+		h3: "C-$brand Txa-c W90p Fns6u M0;a;9u",
+		articleContent:"D-f Fld-r Jc-c Flw-w Ai-s Gap5u W90p M0;a;12u",
 		syntCard: "W100p Mxw35gg md_W40p lg_W31p P2u Tsd-$longTs Tf_h -S105p_h Bdrd2u Bd1;s;$accent850 D-g Gtr-a lg_Gtr1.2fr;1fr",
 		wrongSyntCard: "-Gdl120d,$wrong900,$wrong800 -Gdl120d,$wrong850,$wrong750_h",
 		rightSyntCard: "-Gdl120d,$correct900,$correct800 -Gdl120d,$correct850,$correct750_h",
-		syntCardHeader: "M0 C-$accent900 P3u;0",
-		syntCardPoint:"Ps-r P1u;5u Lnh1.5 C-red_b Fns3u_b D-ib_b Ps-a_b T1u_b L0_b",
-		syntCardList:"M0 P1u Fns3.2u Lsst-n Flg0 Grs2 Gre3",
-		syntCardHead:"Flg1 Grs1 Gre2 W100p",
+		syntCardHeader: "C-$accent900 M3u;0",
+		syntCardPoint:"Ps-r Mb2u P0;5u Lnh1.5 C-red_b Fns3u_b D-ib_b Ps-a_b T1u_b L0_b",
+		syntCardList:"Mb1u P0;1u Fns3.2u Lsst-n Flg0 Grs2 Gre3",
+		syntCardHead:"Flg1 Grs1 Gre2 W100p Mb1u",
 		compactCard:"D-f Mxw35gg Fld-c Jc-c Ai-s Gap5u W100p md_W45p ",
-		compactCode:"W100p P2u Tsd-$longTs Tf_h -S105p_h Bdrd2u Bd1;s;$accent850",
-		compactH4:"M0 P2u;0",
-		installLi:"Ps-r P1u;5u Lnh1.5 C-$accent850",
-		codeWord: "Bgc-$core800 P0.3u;1u"
+		compactCode:"W100p P3u;2u Tsd-$longTs Tf_h -S105p_h Bdrd2u Bd1;s;$accent850",
+		compactH4:"M0;0;3u",
+		installLi:"Ps-r M0;0;5u P0;5u Lnh1.5 C-$accent850",
+		codeWord: "Bgc-$core800 P0.3u;1u",
+		installText:"M0;0;5u"
 	}
 %>
 
-<section id="examples" class="Bgc-$core700 C-$accent900">
+<section id="examples" class="Bgc-$core700 C-$accent900 P15u;0;0">
 
-	<div class="W90p D-f M-a Jc-c Ai-c Fld-c P12u;0">
-		<h2 class="M0 Txa-c P5u;0;2u Fns7u">
+	<div class="W90p D-f M-a Jc-c Ai-c Fld-c P0">
+		<h2 class="Txa-c M0;0;5u Fns7u">
 			Simplicity in action
 		</h2>
 
-		<p class="M0 C-$accent850 Txa-c P1u;3u md_Mxw60vw lg_Mxw40vw">
+		<p class="C-$accent850 Txa-c M0;0;6u P0;3u md_Mxw60vw lg_Mxw40vw">
 			See how mlut compares to other frameworks with better naming conventions and ergonomics
 		</p>
 
@@ -136,7 +135,7 @@ layout: 'base.ejs'
 
 		<article class="W100p">
 
-			<h3 class="<%= examplesCSS.h3%> P12u;0;9u">
+			<h3 class="<%= examplesCSS.h3%>">
 				Strong naming conventions
 			</h3>
 
@@ -212,7 +211,7 @@ layout: 'base.ejs'
 
 		<%# Compactness comparison%>
 
-		<article class="W100p">
+		<article class="<%= examplesCSS.articleContent %>">
 
 			<h3 class="<%= examplesCSS.h3%>">
 				Compactness and elegance in the flesh
@@ -221,7 +220,7 @@ layout: 'base.ejs'
 
 				<%# mlut card %>
 
-				<div class="<%= examplesCSS.compactCard%> H100p">
+				<div class="<%= examplesCSS.compactCard%>">
 					<p class="M0 P0;0;3u C-$accent850 Fns4u md_Fns5u Lnh1.5">
 						See how much more code you need to write in default CSS to reproduce the same styles written in <span class="Fnw-b C-$brand"> mlut </span>
 					</p>
@@ -252,14 +251,14 @@ layout: 'base.ejs'
 
 		<%# Installation part %>
 
-		<article class="W100p">
+		<article class="W100p Mb9u">
 			<h3 class="<%= examplesCSS.h3%>">
 				Install and customize
 			</h3>
 			<div class="Gap5u W100p M-a Mxw175u">
 				<ul class="Lsst-n P0 M0">
 					<li class="<%=examplesCSS.installLi%>">
-						<p>
+						<p class="<%= examplesCSS.installText %>">
 							✅ Install via npm
 						</p>
 						<%- include('./_includes/components/code-block',{
@@ -268,7 +267,7 @@ layout: 'base.ejs'
 						}) %>
 					</li>
 					<li class="<%=examplesCSS.installLi%>">
-						<p>
+						<p class="<%= examplesCSS.installText %>">
 							✅ And configure by yourself
 						</p>
 						<%- include('./_includes/components/code-block',{
@@ -282,7 +281,7 @@ layout: 'base.ejs'
 		</article>
 
 
-		<div class="P8u;0 Fns3.2u W100p Mxw62u">
+		<div class="Mb9u Fns3.2u W100p Mxw62u">
 			<%- include('./_includes/components/link-button.ejs',{
 				url: "https://mlutcss.github.io/mlut/",
 				text: "Try now",
@@ -297,24 +296,24 @@ layout: 'base.ejs'
 
 <%
 	const artsCSS = {
-		card:"W90p Mxw100u Apcr1 md_W45p lg_W25p -Ctx-art -S105p_h Tf_h Tsd-$longTs",
-		artWrapper:"W100p Apcr1 Bdrd5u Bd1;s;$accent850 ^art:h_Bdc-$brand Bgc-$blueGray",
-		artCaption:"M0 P3u;0 Txa-c C-$accent850 ^art:h_C-$brand Tsd-$shortTs"
+		card:"W90p Mxw100u Apcr1 sm_W45p lg_W25p -Ctx-art -S105p_h Tf_h Tsd-$longTs",
+		artWrapper:"W100p Apcr1 Bdrd5u Bd1;s;$accent850 ^art:h_Bdc-$brand Bgc-$blueGray M0;0;3u",
+		artCaption:"M0;0;3u Txa-c C-$accent850 ^art:h_C-$brand Tsd-$shortTs"
 	}
 %>
 
 
 <section id="arts" class="Bgc-$core550 ">
-	<div class="W90p D-f M-a Jc-c Ai-c Fld-c P12u;0 ">
-		<h2 class="M0 Txa-c P8u;0;5u Fns7u C-$accent900">
+	<div class="W90p D-f M-a Jc-c Ai-c Fld-c P12u;0">
+		<h2 class="Txa-c M0;0;5u Fns7u C-$accent900">
 			CSS Arts
 		</h2>
 
-		<p class="M0 C-$accent850 Txa-c P0;3u;8u md_Mxw60vw lg_Mxw40vw">
+		<p class="C-$accent850 Txa-c P0;3u M0;0;9u md_Mxw60vw lg_Mxw40vw">
 			Discover the artistic possibilities of mlut with these beautiful pure CSS creations
 		</p>
 
-		<div class="W100p P5u;0 Gap5u D-f Jc-c Ai-c Fld-r Flw-w">
+		<div class="W100p M0;0;5u Gap5u D-f Jc-c Ai-c Fld-r Flw-w">
 
 			<%# Ghost %>
 
@@ -329,9 +328,9 @@ layout: 'base.ejs'
 
 			<%# Penrose triangle %>
 
-			<article class="<%= artsCSS.card%>">
-				<div class="<%= artsCSS.artWrapper%> D-f Jc-c Ai-c">
-					<p class="C-$accent850">Coming soon...</p>
+			<article class="<%= artsCSS.card%> ">
+				<div class="<%= artsCSS.artWrapper%> Ov-h">
+					<%- include('./_includes/components/arts/penrose-triangle.ejs')%>
 				</div>
 				<h3 class="<%= artsCSS.artCaption%>">
 					Penrose triangle

@@ -1,23 +1,25 @@
 <%
+	const universalMargin = "M0;0;5u"
 	const css = {
-		linkSect:"P5u W49p md_W31p D-f Fld-r Flw-w Jc-fs md_Jc-c Ai-fs md_Ai-fs md_P0;3u md_W30p",
-		ul:"P0 Lsst-n W70p",
-		li:"P1u;0",
+		linkSect:`${universalMargin} P0;5u W49p md_W31p D-f Fld-r Flw-w Jc-fs md_Jc-c Ai-fs md_Ai-fs md_P0;3u md_W30p`,
+		ul:` ${universalMargin} P0 Lsst-n W70p`,
+		li:"M0;0;2u",
 		link:"Txd-n C-$gray200 C-$brand_h Tsd-$shortTs",
+		universalMargin:"M0;0;5u"
 	}
 %>
-<footer class="D-f Jc-c Ai-c" >
-	<div class="P8u;0 W100p sm_W60p md_W100p md_P8u Bgc-$core850 C-$gray200 D-f Fld-r Flw-w Jc-c md_P8u">
+<footer class="D-f Jc-c Ai-c W100p Bgc-$core850 P8u;0" >
+	<div class="W100p sm_W60p md_W100p C-$gray200 D-f Fld-r Flw-w Jc-c md_P0;8u">
 		<section class="W100p md_W26p P0;5u ">
-			<img class="D W50p Mxw30u P2u;1u xl_Mxw56u xxl_Mxw63u" alt="mlut logo" src="/assets/img/logo.png">
-			<h3 class=" M0 P5u;0 Fns4u md_P5;0;5u;0">
+			<img class="D W50p Mxw30u M0;0;5u P0;1u xl_Mxw56u xxl_Mxw63u" alt="mlut logo" src="/assets/img/logo.png">
+			<p class="M0;0;5u Fns4u P0;1u">
 				Atomic CSS framework for modern web development
-			</h3>
+			</p>
 		</section>
 
 		<section class="<%= css.linkSect %> ">
 			<div>
-				<h3 class="M0">
+				<h3 class="<%= universalMargin %>">
 					Product
 				</h3>
 				<ul class="<%= css.ul %>">
@@ -34,7 +36,7 @@
 
 		<section class="<%= css.linkSect %> ">
 			<div>
-				<h3 class="M0">
+				<h3 class="<%= universalMargin %>">
 					Learn more
 				</h3>
 
@@ -50,7 +52,7 @@
 			</div>
 		</section>
 
-		<section class="W100p D-f P3u;5u Ai-c Jc-fs md_Jc-c ">
+		<section class="W100p D-f P0;5u Ai-c Jc-fs md_Jc-c ">
 			<p class="C-$gray100 Txa-l M0 ">
 				© 2025 mlut CSS Framework. All rights reserved.
 			</p>
