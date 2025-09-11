@@ -11,41 +11,29 @@ layout: 'base.ejs'
 
 <div id="hero-page" class="-Gdl120d,$core750,$core650,$core600 H100vh Pt-$headerH D-f Jc-c Ai-c">
 
-	<div class="	D-f Jc-c Ai-c Fld-c W90p sm_W80p md_W70p">
+	<div class="	D-f Jc-c Ai-c Fld-c W90p sm_W80p ">
 
 		<img class="D W50p Mxw50u <%= heroCSS.universalMargin %> P0;1u xl_Mxw56u
 			xxl_Mxw63u" alt="mlut logo" src="/assets/img/logo.png">
 
 
-		<h1 class="Txa-c C-$accent900 Fns8u Lnh1.1 <%= heroCSS.universalMargin %> P0;1u
-			md_Fns10u">
-			Next-generation
-			<span class="D Fns1.1e Bgcl-t -Gdl90d,$secondaryBright650,$brand,$tertiaryBright650 C-tp"> Atomic CSS Framework</span>
+		<h1 class="Txa-c C-$accent900 Fns8u Lnh1.1 <%= heroCSS.universalMargin %> P0;1u md_Fns10u">
+			Make CSS exciting again!
 		</h1>
 
 		<p class="C-$accent850 <%= heroCSS.universalMargin %> P0;2u Txa-c Fns4.4u
-			md_Fns5.2u lg_W65p">
-			mlut is a modern approach to styling that combines the power of atomic CSS with ease of use and high performance.
+			md_Fns5.2u lg_W60p">
+			Atomic CSS toolkit with Sass and ergonomics for creating styles of any complexity
 		</p>
 
 		<div class="D-f Fld-r W100p Flw-w Jc-c Gap3u <%= heroCSS.universalMargin %> P0;5u">
 
 			<div class="<%= heroCSS.heroLink %>">
 				<%- include('./_includes/components/link-button.ejs',{
-						url:"/",
-						text: "Try in playground",
-						icon: "right-triangle",
-						variant: "light"
-					})
-				%>
-			</div>
-
-			<div class="<%= heroCSS.heroLink %>">
-				<%- include('./_includes/components/link-button.ejs',{
 						url:"https://mlutcss.github.io/mlut/",
-						text: "Documentation",
+						text: "Getting started",
 						icon: "book",
-						variant: "dark"
+						variant: "light"
 					})
 				%>
 			</div>
@@ -103,14 +91,14 @@ layout: 'base.ejs'
 <%
 	const examplesCSS = {
 		h3: "C-$brand Txa-c W90p Fns6u M0;a;9u",
-		articleContent:"D-f Fld-r Jc-c Flw-w Ai-s Gap5u W90p M0;a;12u",
-		syntCard: "W100p Mxw35gg md_W40p lg_W31p P2u Tsd-$longTs Tf_h -S105p_h Bdrd2u Bd1;s;$accent850 D-g Gtr-a lg_Gtr1.2fr;1fr",
+		articleContent:"D-f Fld-r Jc-c Flw-w Gap5u W90p M0;a;12u",
+		syntCard: "W100p Mxw35gg md_W40p lg_W31p P2u Tsd-$longTs Tf_h -S105p_h Bdrd2u Bd1;s;$accent850 D-f Fld-c Jc-fs Ai-c",
 		wrongSyntCard: "-Gdl120d,$wrong900,$wrong800 -Gdl120d,$wrong850,$wrong750_h",
 		rightSyntCard: "-Gdl120d,$correct900,$correct800 -Gdl120d,$correct850,$correct750_h",
-		syntCardHeader: "C-$accent900 M3u;0",
-		syntCardPoint:"Ps-r Mb2u P0;5u Lnh1.5 C-red_b Fns3u_b D-ib_b Ps-a_b T1u_b L0_b",
-		syntCardList:"Mb1u P0;1u Fns3.2u Lsst-n Flg0 Grs2 Gre3",
-		syntCardHead:"Flg1 Grs1 Gre2 W100p Mb1u",
+		syntCardHeader: "C-$accent900 M0;0;3u",
+		syntCardPoint:"Ps-r D W100p Mb2u P0;5u Lnh1.5 C-red_b Fns3u_b D-ib_b Ps-a_b T0_b L0_b",
+		syntCardList:"Mb1u P0;1u Fns3.2u Lsst-n Flg1",
+		syntCardHead:"Flg0 Pt3u W100p Mb1u",
 		compactCard:"D-f Mxw35gg Fld-c Jc-c Ai-s Gap5u W100p md_W45p ",
 		compactCode:"W100p P3u;2u Tsd-$longTs Tf_h -S105p_h Bdrd2u Bd1;s;$accent850",
 		compactH4:"M0;0;3u",
@@ -139,7 +127,7 @@ layout: 'base.ejs'
 				Strong naming conventions
 			</h3>
 
-			<div class="<%= examplesCSS.articleContent%>">
+			<div class="<%= examplesCSS.articleContent%> Ai-s">
 
 				<%# Tailwind card %>
 
@@ -156,10 +144,13 @@ layout: 'base.ejs'
 
 					<ul class="<%= examplesCSS.syntCardList%>">
 						<li class="<%= examplesCSS.syntCardPoint%> Ct-'❌'_b ">
-							<span class="<%= examplesCSS.codeWord %>"> flex</span> => <span class="<%= examplesCSS.codeWord %>"> display: flex</span>, but <span class="<%= examplesCSS.codeWord %>"> flex-auto </span> => <span class="<%= examplesCSS.codeWord %>"> flex:1 1 auto</span>
+							<span class="<%= examplesCSS.codeWord %>"> flex</span> => <span class="<%= examplesCSS.codeWord %>"> display: flex</span>, but <span class="<%= examplesCSS.codeWord %>"> flex-auto</span> => <span class="<%= examplesCSS.codeWord %>"> flex:1 1 auto</span>
 						</li>
 						<li class="<%= examplesCSS.syntCardPoint%> Ct-'❌'_b ">
 							<span class="<%= examplesCSS.codeWord %>"> bg-none</span> => reset all backgrounds? Nope, only <span class="<%= examplesCSS.codeWord %>"> background-image</span>
+						</li>
+						<li class="<%= examplesCSS.syntCardPoint%> Ct-'❌'_b ">
+							very long <span class="<%= examplesCSS.codeWord %>"> class</span> attributes for complex styles
 						</li>
 					</ul>
 				</div>
@@ -177,10 +168,13 @@ layout: 'base.ejs'
 
 					<ul class="<%= examplesCSS.syntCardList%>">
 						<li class="<%= examplesCSS.syntCardPoint%> Ct-'❌'_b ">
-							<span class="<%= examplesCSS.codeWord %>"> br-0 </span> => <span class="<%= examplesCSS.codeWord %>"> border-right-width: 0</span>, but <span class="<%= examplesCSS.codeWord %>"> br1 </span> => <span class="<%= examplesCSS.codeWord %>"> border-radius: .125rem</span>
+							<span class="<%= examplesCSS.codeWord %>"> br-0</span> => <span class="<%= examplesCSS.codeWord %>"> border-right-width: 0</span>, but <span class="<%= examplesCSS.codeWord %>"> br1</span> => <span class="<%= examplesCSS.codeWord %>"> border-radius: .125rem</span>
 						</li>
 						<li class="<%= examplesCSS.syntCardPoint%> Ct-'❌'_b ">
 							<span class="<%= examplesCSS.codeWord %>"> b</span> => bottom, border, or <span class="<%= examplesCSS.codeWord %>"> display: block</span>? No, it's <span class="<%= examplesCSS.codeWord %>"> font-weight: bold</span>
+						</li>
+						<li class="<%= examplesCSS.syntCardPoint%> Ct-'❌'_b ">
+							need a custom <span class="<%= examplesCSS.codeWord %>"> bg-none</span> class to have <span class="<%= examplesCSS.codeWord %>"> background-image: none</span> style
 						</li>
 					</ul>
 				</div>
@@ -198,10 +192,13 @@ layout: 'base.ejs'
 
 					<ul class="<%= examplesCSS.syntCardList%>">
 						<li class="<%= examplesCSS.syntCardPoint%> Ct-'✅'_b">
-							<span class="<%= examplesCSS.codeWord %>"> Jc-c </span> => <span class="<%= examplesCSS.codeWord %>"> justify-content: center</span> and <span class="<%= examplesCSS.codeWord %>"> Js-c </span> => <span class="<%= examplesCSS.codeWord %>"> justify-self: center</span>
+							<span class="<%= examplesCSS.codeWord %>"> Jc-c</span> => <span class="<%= examplesCSS.codeWord %>"> justify-content: center</span> and <span class="<%= examplesCSS.codeWord %>"> Js-c</span> => <span class="<%= examplesCSS.codeWord %>"> justify-self: center</span>
 						</li>
 						<li class="<%= examplesCSS.syntCardPoint%> Ct-'✅'_b">
 							<span class="<%= examplesCSS.codeWord %>"> Bdr</span> => <span class="<%= examplesCSS.codeWord %>"> border-right: 1px solid</span> and <span class="<%= examplesCSS.codeWord %>"> Bdrd1</span> => <span class="<%= examplesCSS.codeWord %>"> border-radius: 1px</span>
+						</li>
+						<li class="<%= examplesCSS.syntCardPoint%> Ct-'✅'_b">
+							fits well with the traditional CSS syntax
 						</li>
 					<ul>
 				</div>
@@ -211,20 +208,21 @@ layout: 'base.ejs'
 
 		<%# Compactness comparison%>
 
-		<article class="<%= examplesCSS.articleContent %>">
+		<article class="W100p">
 
 			<h3 class="<%= examplesCSS.h3%>">
 				Compactness and elegance in the flesh
 			</h3>
-			<div class="<%= examplesCSS.articleContent%>">
+			<p class="M0;a;5u P0;5u C-$accent850 Fns4u md_Fns5u Lnh1.5 md_W80p">
+				See how much more code you need to write in default CSS to reproduce the same styles written in <span class="Fnw-b C-$brand"> mlut </span>
+			</p>
+
+			<div class="<%= examplesCSS.articleContent%> Ai-fs">
 
 				<%# mlut card %>
 
-				<div class="<%= examplesCSS.compactCard%>">
-					<p class="M0 P0;0;3u C-$accent850 Fns4u md_Fns5u Lnh1.5">
-						See how much more code you need to write in default CSS to reproduce the same styles written in <span class="Fnw-b C-$brand"> mlut </span>
-					</p>
 
+				<div class="<%= examplesCSS.compactCard%>">
 					<div class="<%=examplesCSS.compactCode%> <%= examplesCSS.rightSyntCard %> 	">
 						<h4 class="<%=examplesCSS.compactH4%>"> mlut CSS</h4>
 						<%- include('./_includes/components/code-block',{
@@ -297,14 +295,14 @@ layout: 'base.ejs'
 <%
 	const artsCSS = {
 		card:"W90p Mxw100u Apcr1 sm_W45p lg_W25p -Ctx-art -S105p_h Tf_h Tsd-$longTs",
-		artWrapper:"W100p Apcr1 Bdrd5u Bd1;s;$accent850 ^art:h_Bdc-$brand Bgc-$blueGray M0;0;3u",
+		artWrapper:"W100p Apcr1 Bdrd5u Bd1;s;$accent850 ^art:h_Bdc-$brand Bgc-$blueGray M0;0;3u Ov-h",
 		artCaption:"M0;0;3u Txa-c C-$accent850 ^art:h_C-$brand Tsd-$shortTs"
 	}
 %>
 
 
 <section id="arts" class="Bgc-$core550 ">
-	<div class="W90p D-f M-a Jc-c Ai-c Fld-c P12u;0">
+	<div class="W90p D-f M-a Jc-c Ai-c Fld-c P16u;0">
 		<h2 class="Txa-c M0;0;5u Fns7u C-$accent900">
 			CSS Arts
 		</h2>
@@ -315,29 +313,18 @@ layout: 'base.ejs'
 
 		<div class="W100p M0;0;5u Gap5u D-f Jc-c Ai-c Fld-r Flw-w">
 
-			<%# Ghost %>
+			<%# arts %>
 
-			<article class="<%= artsCSS.card%>">
-				<div class="<%= artsCSS.artWrapper%>">
-					<%- include('./_includes/components/arts/ghost.ejs')%>
-				</div>
-				<h3 class="<%= artsCSS.artCaption%>">
-					Cute ghost
-				</h3>
-			</article>
-
-			<%# Penrose triangle %>
-
-			<article class="<%= artsCSS.card%> ">
-				<div class="<%= artsCSS.artWrapper%> Ov-h">
-					<%- include('./_includes/components/arts/penrose-triangle.ejs')%>
-				</div>
-				<h3 class="<%= artsCSS.artCaption%>">
-					Penrose triangle
-				</h3>
-			</article>
-		</div>
-
+			<% for (let art of it.arts) {%>
+				<article class="<%= artsCSS.card%>">
+					<div class="<%= artsCSS.artWrapper%>">
+						<%- include(`./_includes/components/arts/${art.filename}.ejs`)%>
+					</div>
+					<h3 class="<%= artsCSS.artCaption%>">
+						<%= art.caption %>
+					</h3>
+				</article>
+			<%}%>
 
 	</div>
 

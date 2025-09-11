@@ -1,10 +1,10 @@
 <%
 	const css = {
 		navLinkDesktop:"md_Txd-n md_C-$brand_h Ts-$shortTs",
-		navLinkMobile:"C-$accent850 D Txd-n C-$brand_a W100p ",
+		navLinkMobile:"C-$accent850 Txd-n C-$brand_a Pb2u Bdb1;s;$brand md_Bdb-n",
 		extLink:"Apcr1 H70p",
 		smLogo:"W20p Mxw9u",
-		navLi:"Pb2u Bdb1;s;$brand md_Pb0 md_Bd-n md_M0;4u ",
+		navLi:" md_Pb0 md_Bd-n md_M0;4u ",
 	}
 %>
 
@@ -26,9 +26,9 @@
     <%- include('./burger.ejs') %>
     <div class="Bgc-$core900 Ps-a R0 T-$headerH Ts-$longTs Tf -Trx101p Bd1;s;$brand Bdr-n Bdtlr3u Bdblr3u Mxw50u ^burger:c:~_-Trx0 W50vw P10u;0 md_All-ust">
 
-			<nav class="M0;0;9u">
+			<nav class="M0;0;9u md_M0">
 				<h2 class="P0;5u M0;0;7u Txa-r C-$brand md_D-n"> Menu</h2>
-				<ul class="C-$accent850 H40p D-f Jc-c Fld-c md_Fld-r Gap6u P0;5u Txa-l  Fns4.8u Lsst-n M0 md_P0 md_H100p md_Gap2u md_Txa-c md_Fns4u">
+				<ul class="C-$accent850 H40p D-f Jc-c Fld-c md_Fld-r Gap6u P0;5u Txa-r  Fns4.8u Lsst-n M0 md_P0 md_H100p md_Gap2u md_Txa-c md_Fns4u">
 					<% for (let navLink of it.navLinks) {%>
 						<li class=" <%= css.navLi %>">
 								<a href="<%= navLink.link %>" class="<%= css.navLinkMobile %> <%= css.navLinkDesktop %>">
@@ -71,7 +71,7 @@
 		<% } %>
 		<div class="H80p M0 D-f Ai-c Jc-c">
 			<%- include('../components/link-button.ejs',{
-				url:"/",
+				url:"https://mlutcss.github.io/mlut/",
 				text: "Get started",
 				icon: "",
 				variant:""
