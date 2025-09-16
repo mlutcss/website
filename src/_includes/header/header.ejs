@@ -13,7 +13,7 @@
 	<%# Logo %>
 
 	<div class="W40p md_W25p md_Flg0.25">
-		<a href="/#hero-page" class="Mxw25u D">
+		<a href="/#hero-page" class="Mxw35u md_Mxw25u D">
 			<img class="D P1u;2u W70p sm_W85p md_W100p" alt="mlut logo" src="/assets/img/logo.png">
 		</a>
 	</div>
@@ -43,7 +43,7 @@
 			<div>
 				<h2 class="P0;5u Txa-r M0;0;3u C-$brand md_D-n"> Find us</h2>
 				<div class="D-f Fld-r Jc-fe Ai-c Gap3u P0;5u md_D-n">
-					<% for (let extLink of it.extLinks.filter((el) => el.name !== 'Docs')) {%>
+					<% for (let extLink of it.extLinks.filter((el) => el.name !== 'Documentation')) {%>
 						<div class="<%= css.smLogo %>">
 							<%- include('../components/sm-link.ejs',{
 								icon:`${extLink.icon}`,
@@ -61,7 +61,7 @@
   <div class="Ai-c Jc-fe P0;2.5u D-n md_D-f H65p
 		md_W25p md_Flg0.25 md_Gap2u
 		lg_Gap3u">
-		<% for (let extLink of it.extLinks.filter((el) => el.name !== 'Docs')) { %>
+		<% for (let extLink of it.extLinks.filter((el) => el.name !== 'Documentation')) { %>
 			<div class="<%= css.extLink %>">
 				<%- include('../components/sm-link.ejs',{
 					icon:`${extLink.icon}`,

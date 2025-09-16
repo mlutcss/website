@@ -104,7 +104,8 @@ layout: 'base.ejs'
 		compactH4:"M0;0;3u",
 		installLi:"Ps-r M0;0;5u P0;5u Lnh1.5 C-$accent850",
 		codeWord: "Bgc-$core800 P0.3u;1u",
-		installText:"M0;0;5u"
+		installText:"M0;0;5u",
+		installStep:"Fnw-b C-$brand M0;0;2u"
 	}
 %>
 
@@ -251,26 +252,64 @@ layout: 'base.ejs'
 
 		<article class="W100p Mb9u">
 			<h3 class="<%= examplesCSS.h3%>">
-				Install and customize
+				Installation
 			</h3>
 			<div class="Gap5u W100p M-a Mxw175u">
 				<ul class="Lsst-n P0 M0">
 					<li class="<%=examplesCSS.installLi%>">
+						<p class="<%= examplesCSS.installStep %>">Step 1</p>
 						<p class="<%= examplesCSS.installText %>">
-							✅ Install via npm
+							✅  Install via npm
 						</p>
 						<%- include('./_includes/components/code-block',{
-							src: "./code-samples/bash1.ejs",
+							src: "./code-samples/install1.ejs",
+							lang: "bash",
+						}) %>
+					</li>
+					<li class="<%=examplesCSS.installLi%>">
+						<p class="<%= examplesCSS.installStep %>">Step 2</p>
+						<p class="<%= examplesCSS.installText %>">
+							✅ And run
+						</p>
+						<%- include('./_includes/components/code-block',{
+							src: "./code-samples/install2.ejs",
+							lang: "bash",
+						}) %>
+					</li>
+					<li class="<%= examplesCSS.installLi %> P5u D-f Fld-c Jc-c Ai-c
+						Ct_af D_af W100p_af H1_af Bgc-$brand_af Ps-a_af L0_af T50p_af Zi0_af">
+							<p class="Bd1;s;$brand D-ib P1u;3u Bdrd5u M0;a Zi1 Bgc-$core700">
+								Or with Sass config and base styles
+							</p>
+					</li>
+					<li class="<%=examplesCSS.installLi%>">
+						<p class="<%= examplesCSS.installText %>">
+							<p class="<%= examplesCSS.installStep %>">Step 2</p>
+							✅ Create input file
+						</p>
+						<%- include('./_includes/components/code-block',{
+							src: "./code-samples/install3.ejs",
 							lang: "bash",
 						}) %>
 					</li>
 					<li class="<%=examplesCSS.installLi%>">
 						<p class="<%= examplesCSS.installText %>">
-							✅ And configure by yourself
+							<p class="<%= examplesCSS.installStep %>">Step 3</p>
+							✅ Add configuration if you need
 						</p>
 						<%- include('./_includes/components/code-block',{
-							src: "./code-samples/scss1.ejs",
+							src: "./code-samples/install4.ejs",
 							lang: "scss",
+						}) %>
+					</li>
+					<li class="<%=examplesCSS.installLi%>">
+						<p class="<%= examplesCSS.installStep %>">Step 4</p>
+						<p class="<%= examplesCSS.installText %>">
+							✅ And run 
+						</p>
+						<%- include('./_includes/components/code-block',{
+							src: "./code-samples/install5.ejs",
+							lang: "bash",
 						}) %>
 					</li>
 				</ul>
@@ -281,7 +320,7 @@ layout: 'base.ejs'
 
 		<div class="Mb9u Fns3.2u W100p Mxw62u">
 			<%- include('./_includes/components/link-button.ejs',{
-				url: "https://mlutcss.github.io/mlut/",
+				url: "https://mlutcss.github.io/mlut/section-start.html#kssref-start-main-usage",
 				text: "Try now",
 				icon: "right-triangle"
 			}) %>
