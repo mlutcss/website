@@ -46,8 +46,10 @@ html{
 		--ml-core900:rgb(17,24,39);
 		--ml-core800:rgba(17,24,39,0.8);
 		--ml-core950:#000;
-		--ml-accent850:#d1d5db;
 		--ml-accent900:#fff;
+		--ml-accent850:rgb(209,213,219,1);
+		--ml-accent750:rgb(209,213,219,0.3);
+		--ml-accent800:#d1d5db;
 		--ml-core550:#1f2937;
 		--ml-core700:#111827;
 		--ml-core750:#121828;
@@ -89,8 +91,10 @@ html{
 		--ml-core900:rgb(255,255,255);
 		--ml-core800:rgba(255,255,255,0.9);
 		--ml-core950:#fff;
-		--ml-accent850:#292a33;
 		--ml-accent900:rgb(17,24,39);
+		--ml-accent850:rgb(41,42,51,1);
+		--ml-accent800:rgba(17,24,39,0.6);
+		--ml-accent750:rgb(41,42,51,0.2);
 		--ml-core550:#f9fafb;
 		--ml-core700:#fff;
 		--ml-core750:#f8fafc;

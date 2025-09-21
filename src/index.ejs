@@ -89,21 +89,25 @@ layout: 'base.ejs'
 <%# Examples Section %>
 
 <%
+	const exampleCard = "W100p Mxw45gg P2u lg_P2u;5u Tsd-$longTs Tf_h -S105p_h Bdrd2u Bd1;s;$accent850"
+
 	const examplesCSS = {
 		h3: "C-$brand Txa-c W90p Fns6u M0;a;9u",
-		articleContent:"D-f Fld-r Jc-c Flw-w Gap5u W90p M0;a;12u",
-		syntCard: "W100p Mxw35gg md_W40p lg_W31p P2u Tsd-$longTs Tf_h -S105p_h Bdrd2u Bd1;s;$accent850 D-f Fld-c Jc-fs Ai-c",
-		wrongSyntCard: "-Gdl120d,$wrong900,$wrong800 -Gdl120d,$wrong850,$wrong750_h",
-		rightSyntCard: "-Gdl120d,$correct900,$correct800 -Gdl120d,$correct850,$correct750_h",
-		syntCardHeader: "C-$accent900 M0;0;3u",
-		syntCardPoint:"Ps-r D W100p Mb2u P0;5u Lnh1.5 C-red_b Fns3u_b D-ib_b Ps-a_b T0_b L0_b",
-		syntCardList:"Mb1u P0;1u Fns3.2u Lsst-n Flg1",
+		article:"W100p M0;0;10u",
+		articleDescription:"M0;a;5u P0;5u C-$accent850 Fns4u md_Fns5u Lnh1.5 md_W80p Txa-c",
+		articleContent:"D-f Fld-r Jc-c Flw-w Gap5u W90p M0;a;9u",
+		wrongCard: "-Gdl120d,$wrong900,$wrong800 -Gdl120d,$wrong850,$wrong750_h",
+		correctCard: "-Gdl120d,$correct900,$correct800 -Gdl120d,$correct850,$correct750_h",
+		cardHeader: "C-$accent900 M0;0;3u",
+		syntCardPoint:"Ps-r D W100p Mb2u P0;5u Lnh1.6 C-red_b Fns3u_b D-ib_b Ps-a_b T0_b L0_b",
+		syntCardList:"M0;0;1u P0;1u Fns3.2u Lsst-n Flg1",
 		syntCardHead:"Flg0 Pt3u W100p Mb1u",
+		ergonomicCard:`${exampleCard} md_W45p lg_W40p`,
 		compactCard:"D-f Mxw35gg Fld-c Jc-c Ai-s Gap5u W100p md_W45p ",
 		compactCode:"W100p P3u;2u Tsd-$longTs Tf_h -S105p_h Bdrd2u Bd1;s;$accent850",
 		compactH4:"M0;0;3u",
 		installLi:"Ps-r M0;0;5u P0;5u Lnh1.5 C-$accent850",
-		codeWord: "Bgc-$core800 P0.3u;1u",
+		codeWord: "C-$accent900 Bgc-$accent750 Bdrd1u Fnf-mUm P0.2u;1u",
 		installText:"M0;0;5u",
 		installStep:"Fnw-b C-$brand M0;0;2u"
 	}
@@ -122,7 +126,7 @@ layout: 'base.ejs'
 
 		<%# Naming conventions part%>
 
-		<article class="W100p">
+		<article class="<%= examplesCSS.article%>">
 
 			<h3 class="<%= examplesCSS.h3%>">
 				Strong naming conventions
@@ -132,74 +136,59 @@ layout: 'base.ejs'
 
 				<%# Tailwind card %>
 
-				<div class="<%= examplesCSS.syntCard %> <%= examplesCSS.wrongSyntCard %>">
+				<div class="<%= exampleCard%> <%= examplesCSS.wrongCard %>">
 					<div class="<%=examplesCSS.syntCardHead%>">
-						<h4 class="<%= examplesCSS.syntCardHeader%>">
+						<h4 class="<%= examplesCSS.cardHeader%>">
 							Tailwind CSS
 						</h4>
-						<%- include('./_includes/components/code-block.ejs', {
-							src: "./code-samples/tw1.ejs",
-							lang: "html",
-						})%>
 					</div>
 
 					<ul class="<%= examplesCSS.syntCardList%>">
 						<li class="<%= examplesCSS.syntCardPoint%> Ct-'❌'_b ">
-							<span class="<%= examplesCSS.codeWord %>"> flex</span> => <span class="<%= examplesCSS.codeWord %>"> display: flex</span>, but <span class="<%= examplesCSS.codeWord %>"> flex-auto</span> => <span class="<%= examplesCSS.codeWord %>"> flex:1 1 auto</span>
+							<span class="<%= examplesCSS.codeWord %>">justify-*</span>: content, items or self?
 						</li>
 						<li class="<%= examplesCSS.syntCardPoint%> Ct-'❌'_b ">
-							<span class="<%= examplesCSS.codeWord %>"> bg-none</span> => reset all backgrounds? Nope, only <span class="<%= examplesCSS.codeWord %>"> background-image</span>
+							<span class="<%= examplesCSS.codeWord %>">flex</span> => <span class="<%= examplesCSS.codeWord %>">display: flex</span>, but <span class="<%= examplesCSS.codeWord %>">flex-auto</span> => <span class="<%= examplesCSS.codeWord %>">flex:1 1 auto</span>
 						</li>
 						<li class="<%= examplesCSS.syntCardPoint%> Ct-'❌'_b ">
-							very long <span class="<%= examplesCSS.codeWord %>"> class</span> attributes for complex styles
+							<span class="<%= examplesCSS.codeWord %>">bg-none</span> => reset all backgrounds? Nope, only <span class="<%= examplesCSS.codeWord %>">background-image</span>
 						</li>
 					</ul>
 				</div>
 
 				<%# Tachyons card%>
 
-				<div class="<%= examplesCSS.syntCard %> <%= examplesCSS.wrongSyntCard %>">
+				<div class="<%= exampleCard%> <%= examplesCSS.wrongCard %>">
 					<div class="<%=examplesCSS.syntCardHead%>">
-						<h4 class="<%= examplesCSS.syntCardHeader%>"> Tachyons</h4>
-						<%- include('./_includes/components/code-block.ejs', {
-							src: "./code-samples/tc1.ejs",
-							lang: "html"
-						})%>
+						<h4 class="<%= examplesCSS.cardHeader%>"> Tachyons</h4>
 					</div>
 
 					<ul class="<%= examplesCSS.syntCardList%>">
 						<li class="<%= examplesCSS.syntCardPoint%> Ct-'❌'_b ">
-							<span class="<%= examplesCSS.codeWord %>"> br-0</span> => <span class="<%= examplesCSS.codeWord %>"> border-right-width: 0</span>, but <span class="<%= examplesCSS.codeWord %>"> br1</span> => <span class="<%= examplesCSS.codeWord %>"> border-radius: .125rem</span>
+							<span class="<%= examplesCSS.codeWord %>">br-0</span> => <span class="<%= examplesCSS.codeWord %>">border-right-width: 0</span>, but <span class="<%= examplesCSS.codeWord %>">br1</span> => <span class="<%= examplesCSS.codeWord %>">border-radius: .125rem</span>
 						</li>
 						<li class="<%= examplesCSS.syntCardPoint%> Ct-'❌'_b ">
-							<span class="<%= examplesCSS.codeWord %>"> b</span> => bottom, border, or <span class="<%= examplesCSS.codeWord %>"> display: block</span>? No, it's <span class="<%= examplesCSS.codeWord %>"> font-weight: bold</span>
+							<span class="<%= examplesCSS.codeWord %>">normal</span>: line-height, font-weight or letter-spacing?
 						</li>
 						<li class="<%= examplesCSS.syntCardPoint%> Ct-'❌'_b ">
-							need a custom <span class="<%= examplesCSS.codeWord %>"> bg-none</span> class to have <span class="<%= examplesCSS.codeWord %>"> background-image: none</span> style
+							<span class="<%= examplesCSS.codeWord %>">b</span> => bottom, border, or <span class="<%= examplesCSS.codeWord %>">display: block</span>? No, it's <span class="<%= examplesCSS.codeWord %>">font-weight: bold</span>
 						</li>
 					</ul>
 				</div>
 
 				<%# mlut card %>
 
-				<div class="<%= examplesCSS.syntCard %> <%= examplesCSS.rightSyntCard %>">
+				<div class="<%= exampleCard%> <%= examplesCSS.correctCard %>">
 					<div class="<%=examplesCSS.syntCardHead%>">
-						<h4 class="<%= examplesCSS.syntCardHeader%>"> mlut CSS</h4>
-						<%- include('./_includes/components/code-block.ejs', {
-							src: "./code-samples/mlut1.ejs",
-							lang: "html"
-						})%>
+						<h4 class="<%= examplesCSS.cardHeader%>"> mlut </h4>
 					</div>
 
 					<ul class="<%= examplesCSS.syntCardList%>">
 						<li class="<%= examplesCSS.syntCardPoint%> Ct-'✅'_b">
-							<span class="<%= examplesCSS.codeWord %>"> Jc-c</span> => <span class="<%= examplesCSS.codeWord %>"> justify-content: center</span> and <span class="<%= examplesCSS.codeWord %>"> Js-c</span> => <span class="<%= examplesCSS.codeWord %>"> justify-self: center</span>
+							<span class="<%= examplesCSS.codeWord %>">Jc-c</span> => <span class="<%= examplesCSS.codeWord %>">justify-content: center</span> and <span class="<%= examplesCSS.codeWord %>">Js-c</span> => <span class="<%= examplesCSS.codeWord %>">justify-self: center</span>
 						</li>
 						<li class="<%= examplesCSS.syntCardPoint%> Ct-'✅'_b">
-							<span class="<%= examplesCSS.codeWord %>"> Bdr</span> => <span class="<%= examplesCSS.codeWord %>"> border-right: 1px solid</span> and <span class="<%= examplesCSS.codeWord %>"> Bdrd1</span> => <span class="<%= examplesCSS.codeWord %>"> border-radius: 1px</span>
-						</li>
-						<li class="<%= examplesCSS.syntCardPoint%> Ct-'✅'_b">
-							fits well with the traditional CSS syntax
+							<span class="<%= examplesCSS.codeWord %>">Bdr</span> => <span class="<%= examplesCSS.codeWord %>">border-right: 1px solid</span> and <span class="<%= examplesCSS.codeWord %>">Bdrd1</span> => <span class="<%= examplesCSS.codeWord %>">border-radius: 1px</span>
 						</li>
 					<ul>
 				</div>
@@ -207,14 +196,106 @@ layout: 'base.ejs'
 			</div>
 		</article>
 
+		<%# Ergonomics comparison %>
+
+		<article class="<%= examplesCSS.article%>">
+
+			<h3 class="<%= examplesCSS.h3%>">
+				Great ergonomics
+			</h3>
+			<p class="<%= examplesCSS.articleDescription %>">
+				Shorter class names
+			</p>
+			<div class="<%= examplesCSS.articleContent%>">
+
+				<%# Tailwind card %>
+
+				<div class="<%= examplesCSS.ergonomicCard %> <%= examplesCSS.wrongCard %> ">
+					<div class="<%=examplesCSS.syntCardHead%>">
+						<h4 class="<%= examplesCSS.cardHeader%>">
+							Tailwind CSS
+						</h4>
+						<%- include('./_includes/components/code-block.ejs',{
+							src: "./code-samples/tw1.ejs",
+							lang: "html",
+						})%>
+					</div>
+				</div>
+
+				<%# mlut card %>
+
+				<div class="<%= examplesCSS.ergonomicCard %> <%= examplesCSS.correctCard %>">
+					<div class="<%=examplesCSS.syntCardHead%>">
+						<h4 class="<%= examplesCSS.cardHeader%>"> mlut </h4>
+						<%- include('./_includes/components/code-block.ejs',{
+							src: "./code-samples/mlut1.ejs",
+							lang: "html",
+						})%>
+					</div>
+				</div>
+
+			</div>
+
+			<p class="<%= examplesCSS.articleDescription %>">
+				Convenient syntax for complex values, states and at-rules.
+			</p>
+
+			<div class="<%= examplesCSS.articleContent%> Ai-s">
+
+				<%# Tailwind card %>
+
+				<div class="<%= examplesCSS.ergonomicCard%> <%= examplesCSS.wrongCard %>">
+					<div class="<%=examplesCSS.syntCardHead%>">
+						<h4 class="<%= examplesCSS.cardHeader%>">
+							Tailwind CSS
+						</h4>
+					</div>
+
+					<ul class="<%= examplesCSS.syntCardList%>">
+						<li class="<%= examplesCSS.syntCardPoint%> Ct-'❌'_b ">
+							<span class="<%= examplesCSS.codeWord %>">[@media(any-hover:hover){&:hover}]:opacity-100</span>
+						</li>
+						<li class="<%= examplesCSS.syntCardPoint%> Ct-'❌'_b ">
+							<span class="<%= examplesCSS.codeWord %>">text-[length:var(--myVar,1.3rem)] </span>
+						</li>
+						<li class="<%= examplesCSS.syntCardPoint%> Ct-'❌'_b ">
+							<span class="<%= examplesCSS.codeWord %>">supports-[margin:1svw]:ml-[1svw] </span>
+						</li>
+					</ul>
+				</div>
+
+				<%# mlut card %>
+
+				<div class="<%= examplesCSS.ergonomicCard%>  <%= examplesCSS.correctCard %>">
+					<div class="<%=examplesCSS.syntCardHead%>">
+						<h4 class="<%= examplesCSS.cardHeader%>"> mlut </h4>
+					</div>
+
+					<ul class="<%= examplesCSS.syntCardList%>">
+						<li class="<%= examplesCSS.syntCardPoint%> Ct-'✅'_b">
+							<span class="<%= examplesCSS.codeWord %>">@:ah_O1_h</span>
+						</li>
+						<li class="<%= examplesCSS.syntCardPoint%> Ct-'✅'_b">
+							<span class="<%= examplesCSS.codeWord %>">Fns-$myVar?1.3</span>
+						</li>
+						<li class="<%= examplesCSS.syntCardPoint%> Ct-'✅'_b">
+							<span class="<%= examplesCSS.codeWord%>">@s_Ml1svw</span>
+						</li>
+					<ul>
+				</div>
+
+			</div>
+		</article>
+
+
 		<%# Compactness comparison%>
 
-		<article class="W100p">
+		<article class="<%= examplesCSS.article%>">
 
 			<h3 class="<%= examplesCSS.h3%>">
 				Compactness and elegance in the flesh
 			</h3>
-			<p class="M0;a;5u P0;5u C-$accent850 Fns4u md_Fns5u Lnh1.5 md_W80p">
+			<p class="<%= examplesCSS.articleDescription %>">
 				See how much more code you need to write in default CSS to reproduce the same styles written in <span class="Fnw-b C-$brand"> mlut </span>
 			</p>
 
@@ -224,7 +305,7 @@ layout: 'base.ejs'
 
 
 				<div class="<%= examplesCSS.compactCard%>">
-					<div class="<%=examplesCSS.compactCode%> <%= examplesCSS.rightSyntCard %> 	">
+					<div class="<%=examplesCSS.compactCode%> <%= examplesCSS.correctCard %> 	">
 						<h4 class="<%=examplesCSS.compactH4%>"> mlut </h4>
 						<%- include('./_includes/components/code-block',{
 							src: "./code-samples/mlut2.ejs",
@@ -236,7 +317,7 @@ layout: 'base.ejs'
 				<%# Traditional CSS card%>
 
 				<div class="<%= examplesCSS.compactCard%>">
-					<div class="<%=examplesCSS.compactCode%> <%= examplesCSS.wrongSyntCard %> H100p">
+					<div class="<%=examplesCSS.compactCode%> <%= examplesCSS.wrongCard %> H100p">
 						<h4 class="<%=examplesCSS.compactH4%>"> Traditional CSS</h4>
 							<%- include('./_includes/components/code-block',{
 								src: "./code-samples/regcss1.ejs",
@@ -247,6 +328,7 @@ layout: 'base.ejs'
 			</div>
 
 		</article>
+
 
 		<%# Installation part %>
 
@@ -278,7 +360,7 @@ layout: 'base.ejs'
 					</li>
 					<li class="<%= examplesCSS.installLi %> P5u D-f Fld-c Jc-c Ai-c
 						Ct_af D_af W100p_af H1_af Bgc-$brand_af Ps-a_af L0_af T50p_af Zi0_af">
-							<p class="Bd1;s;$brand D-ib P1u;3u Bdrd5u M0;a Zi1 Bgc-$core700">
+							<p class="Bd1;s;$brand Txa-c D-ib P1u;3u Bdrd5u M0;a Zi1 Bgc-$core700">
 								Or with Sass config and base styles
 							</p>
 					</li>
@@ -333,7 +415,7 @@ layout: 'base.ejs'
 
 <%
 	const artsCSS = {
-		card:"W90p Mxw100u Apcr1 sm_W45p lg_W25p -Ctx-art -S105p_h Tf_h Tsd-$longTs",
+		card:"W90p Mxw100u Apcr1 sm_W45p lg_W26p -Ctx-art -S105p_h Tf_h Tsd-$longTs",
 		artWrapper:"W100p Apcr1 Bdrd5u Bd1;s;$accent850 ^art:h_Bdc-$brand Bgc-$blueGray M0;0;3u Ov-h",
 		artCaption:"M0;0;3u Txa-c C-$accent850 ^art:h_C-$brand Tsd-$shortTs"
 	}
@@ -368,4 +450,3 @@ layout: 'base.ejs'
 	</div>
 
 </section>
-
