@@ -2,6 +2,7 @@
 layout: 'base.ejs'
 ---
 <%
+	const sectionHeader = "Txa-c M0;0;5u Fns7u"
 	const heroCSS = {
 		heroLink: "W70p Mxw50u xl_Mxw55u",
 		universalMargin:"M0;0;5u"
@@ -11,10 +12,10 @@ layout: 'base.ejs'
 
 <div id="hero-page" class="-Gdl120d,$core750,$core650,$core600 H100vh Pt-$headerH D-f Jc-c Ai-c">
 
-	<div class="	D-f Jc-c Ai-c Fld-c W90p sm_W80p ">
+	<div class="	D-f Jc-c Ai-c Fld-c wrapper">
 
-		<img class="D Mxw65p <%= heroCSS.universalMargin %> P0;1u W70u
-			xxl_W75u" alt="mlut logo" src="/assets/img/logo.png">
+		<img class="D Mxw480 <%= heroCSS.universalMargin %> W80p md_W100p"
+		 alt="mlut logo" src="/assets/img/logo.png">
 
 
 		<h1 class="Txa-c C-$accent900 Fns8u Lnh1.1 <%= heroCSS.universalMargin %> P0;1u md_Fns10u">
@@ -43,10 +44,10 @@ layout: 'base.ejs'
 
 <%# Features section %>
 
-<section id="features" class="Bgc-$core550 C-$accent900 P5u;0">
+<section id="features" class="Bgc-$core550 C-$accent900">
 
-	<div class="W90p D-f M-a Jc-c Ai-c Fld-c P12u;0">
-		<h2 class="Txa-c M0;0;5u Fns7u">
+	<div class="D-f M-a Jc-c Ai-c Fld-c Pt12u Pb12u wrapper">
+		<h2 class="<%= sectionHeader %>">
 			Why choose mlut?
 		</h2>
 
@@ -105,18 +106,17 @@ layout: 'base.ejs'
 		ergonomicCard:`${exampleCard} md_W45p lg_W40p`,
 		compactCard:"D-f Mxw35gg Fld-c Jc-c Ai-s Gap5u W100p md_W45p ",
 		compactCode:"W100p P3u;2u Tsd-$longTs Tf_h -S105p_h Bdrd2u Bd1;s;$accent850",
-		compactH4:"M0;0;3u",
-		installLi:"Ps-r M0;0;5u P0;5u Lnh1.5 C-$accent850",
+		compactH4:"M0;0;3u C-$accent900",
+		installLi:"Ps-r M0;0;8u P0;5u C-$brand_m",
 		codeWord: "C-$accent900 Bgc-$accent750 Bdrd1u Fnf-mUm P0.2u;1u",
-		installText:"M0;0;5u",
-		installStep:"Fnw-b C-$brand M0;0;2u"
+		installStep:"Fnw-b C-$accent850 M0;0;2u D-ib Coi-step Ct-counter(step);'.'_b D-ib_b C-$brand_b"
 	}
 %>
 
-<section id="examples" class="Bgc-$core700 C-$accent900 P15u;0;0">
+<section id="examples" class="Bgc-$core700 C-$accent900 Pt15u">
 
-	<div class="W90p D-f M-a Jc-c Ai-c Fld-c P0">
-		<h2 class="Txa-c M0;0;5u Fns7u">
+	<div class="D-f M-a Jc-c Ai-c Fld-c P0  wrapper">
+		<h2 class="<%= sectionHeader %>">
 			Simplicity in action
 		</h2>
 
@@ -332,27 +332,21 @@ layout: 'base.ejs'
 
 		<%# Installation part %>
 
-		<article class="W100p Mb9u">
+		<article class="W100p Mb9u ">
 			<h3 class="<%= examplesCSS.h3%>">
 				Installation
 			</h3>
 			<div class="Gap5u W100p M-a Mxw175u">
-				<ul class="Lsst-n P0 M0">
+				<ul class="Lsst-n P0 M0 Cor-step">
 					<li class="<%=examplesCSS.installLi%>">
-						<p class="<%= examplesCSS.installStep %>">Step 1</p>
-						<p class="<%= examplesCSS.installText %>">
-							✅  Install via npm
-						</p>
+						<h4 class="<%= examplesCSS.installStep %>"> Install via npm</h4>
 						<%- include('./_includes/components/code-block',{
 							src: "./code-samples/install1.ejs",
 							lang: "bash",
 						}) %>
 					</li>
 					<li class="<%=examplesCSS.installLi%>">
-						<p class="<%= examplesCSS.installStep %>">Step 2</p>
-						<p class="<%= examplesCSS.installText %>">
-							✅ And run
-						</p>
+						<h4 class="<%= examplesCSS.installStep %>"> And run</h4>
 						<%- include('./_includes/components/code-block',{
 							src: "./code-samples/install2.ejs",
 							lang: "bash",
@@ -360,35 +354,26 @@ layout: 'base.ejs'
 					</li>
 					<li class="<%= examplesCSS.installLi %> P5u D-f Fld-c Jc-c Ai-c
 						Ct_af D_af W100p_af H1_af Bgc-$brand_af Ps-a_af L0_af T50p_af Zi0_af">
-							<p class="Bd1;s;$brand Txa-c D-ib P1u;3u Bdrd5u M0;a Zi1 Bgc-$core700">
+							<p class="Bd1;s;$brand Txa-c D-ib P1u;3u Bdrd5u M0;a Zi1 Bgc-$core550 C-$accent850">
 								Or with Sass config and base styles
 							</p>
 					</li>
 					<li class="<%=examplesCSS.installLi%>">
-						<p class="<%= examplesCSS.installText %>">
-							<p class="<%= examplesCSS.installStep %>">Step 2</p>
-							✅ Create input file
-						</p>
+						<h4 class="<%= examplesCSS.installStep %> Cos-step;2"> Create input file</h4>
 						<%- include('./_includes/components/code-block',{
 							src: "./code-samples/install3.ejs",
 							lang: "bash",
 						}) %>
 					</li>
 					<li class="<%=examplesCSS.installLi%>">
-						<p class="<%= examplesCSS.installText %>">
-							<p class="<%= examplesCSS.installStep %>">Step 3</p>
-							✅ Add configuration if you need
-						</p>
+						<h4 class="<%= examplesCSS.installStep %>"> Add configuration if you need</h4>
 						<%- include('./_includes/components/code-block',{
 							src: "./code-samples/install4.ejs",
 							lang: "scss",
 						}) %>
 					</li>
 					<li class="<%=examplesCSS.installLi%>">
-						<p class="<%= examplesCSS.installStep %>">Step 4</p>
-						<p class="<%= examplesCSS.installText %>">
-							✅ And run
-						</p>
+						<h4 class="<%= examplesCSS.installStep %>"> And run</h4>
 						<%- include('./_includes/components/code-block',{
 							src: "./code-samples/install5.ejs",
 							lang: "bash",
@@ -422,9 +407,9 @@ layout: 'base.ejs'
 %>
 
 
-<section id="arts" class="Bgc-$core550 ">
-	<div class="W90p D-f M-a Jc-c Ai-c Fld-c P16u;0">
-		<h2 class="Txa-c M0;0;5u Fns7u C-$accent900">
+<section id="arts" class="Bgc-$core550">
+	<div class="D-f M-a Jc-c Ai-c Fld-c P16u;0  wrapper">
+		<h2 class="<%= sectionHeader %> C-$accent900">
 			CSS Arts
 		</h2>
 

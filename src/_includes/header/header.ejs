@@ -8,7 +8,7 @@
 	}
 %>
 
-<header class=" D-f Jc-sb Ai-c P1u;3u Bgc-$core800 -Blr4 Bcf-$blr Ps-f H-$headerH
+<header class=" D-f Jc-sb Ai-c P2u;2u md_P1u;3u Bgc-$core800 -Blr4 Bcf-$blr Ps-f H-$headerH
   W100p C-$headerC Zi20">
 	<%# Logo %>
 
@@ -59,8 +59,7 @@
 	<%# Desktop links %>
 
   <div class="Ai-c Jc-fe P0;2.5u D-n md_D-f H65p
-		md_W25p md_Flg0.25 md_Gap2u
-		lg_Gap3u">
+		md_W25p md_Flg0.25 md_Gap2u lg_Gap3u">
 		<% for (let extLink of it.extLinks.filter((el) => el.name !== 'Documentation')) { %>
 			<div class="<%= css.extLink %>">
 				<%- include('../components/sm-link.ejs',{
