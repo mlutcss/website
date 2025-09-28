@@ -1,7 +1,7 @@
 [
 	{
-		"title": "Lightning Fast",
-		"text": "Optimized build and minimal bundle size for maximum performance. Your users will love the speed.",
+		"title": "Short and consistent naming ",
+		"text": "The abbreviations are based on the popularity of CSS properties and are compiled according to a single algorithm. If you know CSS, you almost know mlut",
 		"img": "lightning",
 		"bg": "-Gdl120d,$primary800,$primary750",
 		"bgH":"-Gdl120d,$primary700,$primary650_h",
@@ -10,8 +10,8 @@
 		"textC":"C-$primary400"
 	},
 	{
-		"title": "Consistent Syntax",
-		"text": "Clear and consistent system of rules to get utilities that are delightful to use every day. Code that makes sense.",
+		"title": "Rich and native syntax",
+		"text": "It is like Vim for CSS. Conveniently create complex styles with a powerful syntax that is conceptually close to CSS",
 		"img": "angled-brackets",
 		"bg": "-Gdl120d,$secondary800,$secondary750",
 		"bgH":"-Gdl120d,$secondary700,$secondary650_h",
@@ -20,9 +20,9 @@
 		"textC":"C-$secondary400"
 	},
 	{
-		"title": "Modular Architecture",
-		"text": "Use only what you need. Flexible plugin system and configuration options that scale with your project.",
-		"img": "stack",
+		"title": "Written in Sass",
+		"text": "Leverage the full power of the preprocessor in your handwritten CSS and easily link it to utility classes",
+		"img": "sass",
 		"bg": "-Gdl120d,$tertiary800,$tertiary750",
 		"bgH":"-Gdl120d,$tertiary700,$tertiary650_h",
 		"imgBg": "-Gdl120d,$tertiaryBright600,$tertiaryBright650",
