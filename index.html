@@ -1,52 +1,959 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
+  class="
+		Fns4u lg_Fns4.25u xl_Fns4.75u xxl_Fns5.25u
+		-HeaderH15u -HeaderFns1r -LongTs0.5s -ShortTs0.2s
+	  md_-HeaderH16u lg_-HeaderH14u xl_-HeaderH15u md_-SideH90vh
+    Scb-s">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/style/style.min.css">
-    <title>MLUT</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/style/style.min.css">
+	<link rel="stylesheet" href="/assets/style/style-hljs.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css">
+  <title>mlut - make CSS exciting again!</title>
 </head>
-<body class="Mnh100vh D-f Fld-c Jc-sb Bgc#f5f5f5 Fnf-sans-serif">
+<body class="D-f Fld-c Jc-sb Fnf-sans-serif Bgc-$core950">
 
-    <header class="D-f Jc-sb P2u;1u Bgc-white">
-    <div class="Flg0.25  W25p">
-        <picture>
-            <source srcset="/assets/img/logo.png" rel="img/png">
-            <img class="D Mxw25u" src="/assets/img/logo.png">
-        </picture>
-    </div>
+  
 
-    <nav class="D-f Jc-c Ai-c Flg1 C-grey W50p">
-        <a href="/" class="D Txd-n  M-0;2.5u P1u;3u C-grey"> 
-            Main
-        </a>
-        <a href="/arts" class="D Txd-n  M-0;2.5u P1u;3u C-grey"> 
-            Arts
-        </a>
-    </nav>
+<header class=" D-f Jc-sb Ai-c P2u;2u md_P1u;3u Bgc-$core800 -Blr4 Bcf-$blr Ps-f H-$headerH
+  W100p C-$headerC Zi20">
+	
 
-    <div class="Flg0.25 W25p D-f Ai-c P0;2.5u"> 
-        <a class="D W30p Txa-c Txd-n Ml-a P1u;3u C-grey Bgc-white" target="_blank" href="https://github.com/mlutcss/mlut?tab=readme-ov-file"> 
-            GitHub
-        </a>
-    </div>
+	<div class="W40p md_W25p md_Flg0.25">
+		<a href="/#hero-page" class="Mxw35u md_Mxw25u D">
+			<img class="D P1u;2u W70p sm_W85p md_W100p" alt="mlut logo" src="/assets/img/logo.png">
+		</a>
+	</div>
+
+	
+
+	
+
+  <div  class="W50p D-f Fld-r Jc-fe md_Flg0.5 md_D md_Fns-$headerFns">
+    <input type="checkbox" id="menu-toggle" hidden
+  class="-Ctx-burger Zi5 md_D-n">
+<label for="menu-toggle"
+  class="D md_D-n P1.7u Bd-n Bdrd1u H90p Apcr1 Ps-r Bgc-n Zi5 Tsd-$transD
+	D_af,b W6u_af,b H1u_af,b M0;0;1.3u_af,b Bgc-$brand_af,b Zi10_af,b Ct_af,b
+	Bxsd0;2.3u;0;0;$brand_af
+   :c:+_Bgc-$brand :c:+_Bdc-$brand :c:+_Bgc-$core800_af,b :c:+_Bxsd0;2.3u;0;0;$core800_af :c:+_Bdc-n">
+</label>
+
+<label id="overlay" for="menu-toggle"
+  class="Ps-a md_D-n W100vw Tsd-$transD H100vh T0 R0 D-n Bgc-n :c:~_D :c:~_Bgc#000*60p">
+</label>
+
+    <div class="Bgc-$core900 Ps-a R0 T-$headerH Ts-$longTs Tf -Trx101p Bd1;s;$brand Bdr-n Bdtlr3u Bdblr3u Mxw50u ^burger:c:~_-Trx0 W50vw P10u;0 md_All-ust">
+
+			<nav class="M0;0;9u md_M0">
+				<h2 class="P0;5u M0;0;7u Txa-r C-$brand md_D-n"> Menu</h2>
+				<ul class="C-$accent850 H40p D-f Jc-c Fld-c md_Fld-r Gap6u P0;5u Txa-r  Fns4.8u Lsst-n M0 md_P0 md_H100p md_Gap2u md_Txa-c md_Fns4u">
+					
+						<li class="  md_Pb0 md_Bd-n md_M0;4u ">
+								<a href="/#features" class="C-$accent850 Txd-n C-$brand_a Pb2u Bdb1;s;$brand md_Bdb-n md_Txd-n md_C-$brand_h Ts-$shortTs">
+										Features
+								</a>
+						</li>
+					
+						<li class="  md_Pb0 md_Bd-n md_M0;4u ">
+								<a href="/#examples" class="C-$accent850 Txd-n C-$brand_a Pb2u Bdb1;s;$brand md_Bdb-n md_Txd-n md_C-$brand_h Ts-$shortTs">
+										Examples
+								</a>
+						</li>
+					
+						<li class="  md_Pb0 md_Bd-n md_M0;4u ">
+								<a href="/#arts" class="C-$accent850 Txd-n C-$brand_a Pb2u Bdb1;s;$brand md_Bdb-n md_Txd-n md_C-$brand_h Ts-$shortTs">
+										Arts
+								</a>
+						</li>
+					
+				</ul>
+			</nav>
+
+			
+			<div>
+				<h2 class="P0;5u Txa-r M0;0;3u C-$brand md_D-n"> Find us</h2>
+				<div class="D-f Fld-r Jc-fe Ai-c Gap3u P0;5u md_D-n">
+					
+						<div class="W20p Mxw9u">
+							<a href="https://x.com/mlutcss" alt="Link to the project's GitHub" target="_blank"
+  class="-Ctx-logo D Bxs-cb W100p">
+    <svg
+			viewBox="0 0 100 100"
+      class="W100p Mxw25u Apcr1 Fi-$accent850 Fio1 ^logo:h:_Fi-$brand Ts-$shortTs">
+      <use href="/assets/img/icons.svg#xcom"></use>
+    </svg>
+</a>
+						</div>
+					
+						<div class="W20p Mxw9u">
+							<a href="https://github.com/mlutcss/mlut" alt="Link to the project's GitHub" target="_blank"
+  class="-Ctx-logo D Bxs-cb W100p">
+    <svg
+			viewBox="0 0 100 100"
+      class="W100p Mxw25u Apcr1 Fi-$accent850 Fio1 ^logo:h:_Fi-$brand Ts-$shortTs">
+      <use href="/assets/img/icons.svg#github"></use>
+    </svg>
+</a>
+						</div>
+					
+				</div>
+			</div>
+		</div>
+  </div>
+
+	
+
+  <div class="Ai-c Jc-fe P0;2.5u D-n md_D-f H65p
+		md_W25p md_Flg0.25 md_Gap2u lg_Gap3u">
+		
+			<div class="Apcr1 H70p">
+				<a href="https://x.com/mlutcss" alt="Link to the project's GitHub" target="_blank"
+  class="-Ctx-logo D Bxs-cb W100p">
+    <svg
+			viewBox="0 0 100 100"
+      class="W100p Mxw25u Apcr1 Fi-$accent850 Fio1 ^logo:h:_Fi-$brand Ts-$shortTs">
+      <use href="/assets/img/icons.svg#xcom"></use>
+    </svg>
+</a>
+			</div>
+		
+			<div class="Apcr1 H70p">
+				<a href="https://github.com/mlutcss/mlut" alt="Link to the project's GitHub" target="_blank"
+  class="-Ctx-logo D Bxs-cb W100p">
+    <svg
+			viewBox="0 0 100 100"
+      class="W100p Mxw25u Apcr1 Fi-$accent850 Fio1 ^logo:h:_Fi-$brand Ts-$shortTs">
+      <use href="/assets/img/icons.svg#github"></use>
+    </svg>
+</a>
+			</div>
+		
+		<div class="H80p M0 D-f Ai-c Jc-c">
+			
+<a href="https://mlutcss.github.io/mlut/" role="button"
+	class=" -Sz100p D-f Jc-c Ai-c Txd-n Fns0.8r P1u;3u Bdrd1u xl_P1.5u;3.5u Ts-$shortTs Bd1;s;$brand Bgc-$brand Bgc-$brand500_h C#fff">
+	
+		<span class="D Fns0.9r">
+			Docs
+		</span>
+	
+</a>
+
+
+		</div>
+  </div>
 </header>
 
+  <main >
+    
 
-    <main class="">
-        <h1 class="Txa-c"> Homepage </h1>
+
+<div id="hero-page" class="-Gdl120d,$core750,$core650,$core600 H100vh Pt-$headerH D-f Jc-c Ai-c">
+
+	<div class="	D-f Jc-c Ai-c Fld-c wrapper">
+
+		<img class="D Mxw480 M0;0;5u W80p md_W100p"
+		 alt="mlut logo" src="/assets/img/logo.png">
+
+
+		<h1 class="Txa-c C-$accent900 Fns8u Lnh1.1 M0;0;5u P0;1u md_Fns10u">
+			Make CSS exciting again!
+		</h1>
+
+		<p class="C-$accent850 M0;0;5u P0;2u Txa-c Fns4.4u
+			md_Fns5.2u lg_W60p">
+			Atomic CSS toolkit with Sass and ergonomics for creating styles of any complexity
+		</p>
+
+		<div class="D-f Fld-r W100p Flw-w Jc-c Gap3u M0;0;5u P0;5u">
+
+			<div class="W70p Mxw50u xl_Mxw55u">
+				
+<a href="https://mlutcss.github.io/mlut/" role="button"
+	class=" -Sz100p D-f Jc-c Ai-c Txd-n Fns0.8r P1u;3u Bdrd1u xl_P1.5u;3.5u Ts-$shortTs Bd1;s;$brand Bgc-$brand Bgc-$brand500_h C#fff">
+	
+		<div class="D-f Jc-c Ai-c Fld-r Gap3u Fns1.1r">
+			<div class="D Apcr1 W0.9r">
+				<svg xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24"
+					class="D W100p Mxw25u Apcr1 Stw2  Fi-$brand St#fff">
+					<use href="/assets/img/icons.svg#book"></use>
+				</svg>
+			</div>
+			<span class="D Fns0.9r">
+				Getting started
+			</span>
+		</div>
+	
+</a>
+
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<section id="features" class="Bgc-$core550 C-$accent900">
+
+	<div class="D-f M-a Jc-c Ai-c Fld-c Pt12u Pb12u wrapper">
+		<h2 class="Txa-c M0;0;5u Fns7u C-$accent900">
+			Key features
+		</h2>
+
+		<p class="C-$accent850 Txa-c M1u;0 P0;3u">
+			This is a framework for enthusiasts who are as passionate about CSS and front-end development as we are!
+		</p>
+
+		
+
+		<ul class="Lsst-n P0 D-f Fld-r Flw-w Jc-c Ai-s Gap5u M5u;0 Tsd-$longTs " >
+			
+				
+
+<li class="-Gdl120d,$primary800,$primary750 -Gdl120d,$primary700,$primary650_h P7u Bdrd2u Mxw110u md_D-g md_Gtr1fr;1fr Tsd0.5s
+	md_W40p lg_W30p Tf_h -S105p_h -Ctx-card Zi2_h">
+	<div class="md_Grs1 md_Gre2">
+		<div class="-Gdl120d,$primaryBright600,$primaryBright650 W15u M0;a;5u Apcr1 D-f Jc-c Ai-c Bdrd4u
+			^card:h_Tf ^card:h_-Rt30deg Tsd-$longTs">
+			<div class="W70p ">
+				<svg xmlns="http://www.w3.org/2000/svg"
+					class="St#fff Stw2 Fi-n W100p Apcr1 ">
+					<use href="/assets/img/icons.svg#lightning"></use>
+				</svg>
+			</div>
+		</div>
+
+		<h3 class="C-$primary300 Fns5.2u M0;0;5u Txa-c">
+			Short and consistent naming 
+		</h3>
+	</div>
+
+	<div class="md_Grs2 md_Gre3">
+		<p class="C-$primary400 Fns4.3u M0">
+			The abbreviations are based on the popularity of CSS properties and are compiled according to a single algorithm. If you know CSS, you almost know mlut
+		</p>
+	</div>
+
+</li>
+
+<!--  -->
+
+			
+				
+
+<li class="-Gdl120d,$secondary800,$secondary750 -Gdl120d,$secondary700,$secondary650_h P7u Bdrd2u Mxw110u md_D-g md_Gtr1fr;1fr Tsd0.5s
+	md_W40p lg_W30p Tf_h -S105p_h -Ctx-card Zi2_h">
+	<div class="md_Grs1 md_Gre2">
+		<div class="-Gdl120d,$secondaryBright600,$secondaryBright650 W15u M0;a;5u Apcr1 D-f Jc-c Ai-c Bdrd4u
+			^card:h_Tf ^card:h_-Rt30deg Tsd-$longTs">
+			<div class="W50p ">
+				<svg xmlns="http://www.w3.org/2000/svg"
+					class="St#fff Stw2 Fi-n W100p Apcr1 ">
+					<use href="/assets/img/icons.svg#angled-brackets"></use>
+				</svg>
+			</div>
+		</div>
+
+		<h3 class="C-$secondary300 Fns5.2u M0;0;5u Txa-c">
+			Rich and native syntax
+		</h3>
+	</div>
+
+	<div class="md_Grs2 md_Gre3">
+		<p class="C-$secondary400 Fns4.3u M0">
+			It is like Vim for CSS. Conveniently create complex styles with a powerful syntax that is conceptually close to CSS
+		</p>
+	</div>
+
+</li>
+
+<!--  -->
+
+			
+				
+
+<li class="-Gdl120d,$tertiary800,$tertiary750 -Gdl120d,$tertiary700,$tertiary650_h P7u Bdrd2u Mxw110u md_D-g md_Gtr1fr;1fr Tsd0.5s
+	md_W40p lg_W30p Tf_h -S105p_h -Ctx-card Zi2_h">
+	<div class="md_Grs1 md_Gre2">
+		<div class="-Gdl120d,$tertiaryBright600,$tertiaryBright650 W15u M0;a;5u Apcr1 D-f Jc-c Ai-c Bdrd4u
+			^card:h_Tf ^card:h_-Rt30deg Tsd-$longTs">
+			<div class="W70p ">
+				<svg xmlns="http://www.w3.org/2000/svg"
+					class="St#fff Stw2 Fi-n W100p Apcr1 ">
+					<use href="/assets/img/icons.svg#sass"></use>
+				</svg>
+			</div>
+		</div>
+
+		<h3 class="C-$tertiary300 Fns5.2u M0;0;5u Txa-c">
+			Written in Sass
+		</h3>
+	</div>
+
+	<div class="md_Grs2 md_Gre3">
+		<p class="C-$tertiary400 Fns4.3u M0">
+			Leverage the full power of the preprocessor in your handwritten CSS and easily link it to utility classes
+		</p>
+	</div>
+
+</li>
+
+<!--  -->
+
+			
+		</ul>
+
+		<div class="M3u;0 Fns3.2u W100p Mxw62u">
+			
+<a href="https://mlutcss.github.io/mlut/" role="button"
+	class=" -Sz100p D-f Jc-c Ai-c Txd-n Fns0.8r P1u;3u Bdrd1u xl_P1.5u;3.5u Ts-$shortTs Bd1;s;$brand Bgc-$brand Bgc-$brand500_h C#fff">
+	
+		<div class="D-f Jc-c Ai-c Fld-r Gap3u Fns1.1r">
+			<div class="D Apcr1 W0.9r">
+				<svg xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24"
+					class="D W100p Mxw25u Apcr1 Stw2  Fi-$brand St#fff">
+					<use href="/assets/img/icons.svg#right-triangle"></use>
+				</svg>
+			</div>
+			<span class="D Fns0.9r">
+				Learn more
+			</span>
+		</div>
+	
+</a>
+
+
+		</div>
+	</div>
+
+</section>
+
+
+
+
+
+<section id="examples" class="Bgc-$core700 C-$accent900 Pt15u">
+
+	<div class="D-f M-a Jc-c Ai-c Fld-c P0  wrapper">
+		<h2 class="Txa-c M0;0;5u Fns7u C-$accent900">
+			Why choose mlut?
+		</h2>
+
+		<p class="C-$accent850 Txa-c M0;0;6u P0;3u md_Mxw60vw lg_Mxw40vw">
+			Compare it with other solutions
+		</p>
+
+		
+
+		<div class="W100p M0;0;10u">
+
+			<h3 class="C-$brand Txa-c W90p Fns6u M0;a;9u">
+				Strong naming conventions
+			</h3>
+
+			<div class="D-f Fld-r Jc-c Flw-w Gap5u W90p M0;a;9u Ai-s">
+
+				
+
+				<div class="Mxw45gg P2u lg_P2u;5u Tsd-$longTs Tf_h -S105p_h Bdrd2u Bd1;s;$accent850 W100p -Gdl120d,$wrong900,$wrong800 -Gdl120d,$wrong850,$wrong750_h">
+					<div class="Flg0 Pt3u W100p Mb1u">
+						<h4 class="C-$accent900 M0;0;3u">
+							Tailwind CSS
+						</h4>
+					</div>
+
+					<ul class="M0;0;1u P0;1u Fns3.2u Lsst-n Flg1">
+						<li class="Ps-r D W100p Mb2u P0;5u Lnh1.6 C-red_b Fns3u_b D-ib_b Ps-a_b T0_b L0_b Ct-'❌'_b ">
+							<span class="C-$accent900 Bgc-$accent750 Bdrd1u Fnf-mUm P0.2u;1u">justify-*</span>: content, items or self?
+						</li>
+						<li class="Ps-r D W100p Mb2u P0;5u Lnh1.6 C-red_b Fns3u_b D-ib_b Ps-a_b T0_b L0_b Ct-'❌'_b ">
+							<span class="C-$accent900 Bgc-$accent750 Bdrd1u Fnf-mUm P0.2u;1u">flex</span> => <span class="C-$accent900 Bgc-$accent750 Bdrd1u Fnf-mUm P0.2u;1u">display: flex</span>, but <span class="C-$accent900 Bgc-$accent750 Bdrd1u Fnf-mUm P0.2u;1u">flex-auto</span> => <span class="C-$accent900 Bgc-$accent750 Bdrd1u Fnf-mUm P0.2u;1u">flex:1 1 auto</span>
+						</li>
+						<li class="Ps-r D W100p Mb2u P0;5u Lnh1.6 C-red_b Fns3u_b D-ib_b Ps-a_b T0_b L0_b Ct-'❌'_b ">
+							<span class="C-$accent900 Bgc-$accent750 Bdrd1u Fnf-mUm P0.2u;1u">bg-none</span> => reset all backgrounds? Nope, only <span class="C-$accent900 Bgc-$accent750 Bdrd1u Fnf-mUm P0.2u;1u">background-image</span>
+						</li>
+					</ul>
+				</div>
+
+				
+
+				<div class="Mxw45gg P2u lg_P2u;5u Tsd-$longTs Tf_h -S105p_h Bdrd2u Bd1;s;$accent850 W100p -Gdl120d,$wrong900,$wrong800 -Gdl120d,$wrong850,$wrong750_h">
+					<div class="Flg0 Pt3u W100p Mb1u">
+						<h4 class="C-$accent900 M0;0;3u"> Tachyons</h4>
+					</div>
+
+					<ul class="M0;0;1u P0;1u Fns3.2u Lsst-n Flg1">
+						<li class="Ps-r D W100p Mb2u P0;5u Lnh1.6 C-red_b Fns3u_b D-ib_b Ps-a_b T0_b L0_b Ct-'❌'_b ">
+							<span class="C-$accent900 Bgc-$accent750 Bdrd1u Fnf-mUm P0.2u;1u">br-0</span> => <span class="C-$accent900 Bgc-$accent750 Bdrd1u Fnf-mUm P0.2u;1u">border-right-width: 0</span>, but <span class="C-$accent900 Bgc-$accent750 Bdrd1u Fnf-mUm P0.2u;1u">br1</span> => <span class="C-$accent900 Bgc-$accent750 Bdrd1u Fnf-mUm P0.2u;1u">border-radius: .125rem</span>
+						</li>
+						<li class="Ps-r D W100p Mb2u P0;5u Lnh1.6 C-red_b Fns3u_b D-ib_b Ps-a_b T0_b L0_b Ct-'❌'_b ">
+							<span class="C-$accent900 Bgc-$accent750 Bdrd1u Fnf-mUm P0.2u;1u">normal</span>: line-height, font-weight or letter-spacing?
+						</li>
+						<li class="Ps-r D W100p Mb2u P0;5u Lnh1.6 C-red_b Fns3u_b D-ib_b Ps-a_b T0_b L0_b Ct-'❌'_b ">
+							<span class="C-$accent900 Bgc-$accent750 Bdrd1u Fnf-mUm P0.2u;1u">b</span> => bottom, border, or <span class="C-$accent900 Bgc-$accent750 Bdrd1u Fnf-mUm P0.2u;1u">display: block</span>? No, it is <span class="C-$accent900 Bgc-$accent750 Bdrd1u Fnf-mUm P0.2u;1u">font-weight: bold</span>
+						</li>
+					</ul>
+				</div>
+
+				
+
+				<div class="Mxw45gg P2u lg_P2u;5u Tsd-$longTs Tf_h -S105p_h Bdrd2u Bd1;s;$accent850 W100p -Gdl120d,$correct900,$correct800 -Gdl120d,$correct850,$correct750_h">
+					<div class="Flg0 Pt3u W100p Mb1u">
+						<h4 class="C-$accent900 M0;0;3u"> mlut </h4>
+					</div>
+
+					<ul class="M0;0;1u P0;1u Fns3.2u Lsst-n Flg1">
+						<li class="Ps-r D W100p Mb2u P0;5u Lnh1.6 C-red_b Fns3u_b D-ib_b Ps-a_b T0_b L0_b Ct-'✅'_b">
+							<span class="C-$accent900 Bgc-$accent750 Bdrd1u Fnf-mUm P0.2u;1u">Jc-c</span> => <span class="C-$accent900 Bgc-$accent750 Bdrd1u Fnf-mUm P0.2u;1u">justify-content: center</span> and <span class="C-$accent900 Bgc-$accent750 Bdrd1u Fnf-mUm P0.2u;1u">Js-c</span> => <span class="C-$accent900 Bgc-$accent750 Bdrd1u Fnf-mUm P0.2u;1u">justify-self: center</span>
+						</li>
+						<li class="Ps-r D W100p Mb2u P0;5u Lnh1.6 C-red_b Fns3u_b D-ib_b Ps-a_b T0_b L0_b Ct-'✅'_b">
+							<span class="C-$accent900 Bgc-$accent750 Bdrd1u Fnf-mUm P0.2u;1u">Bdr</span> => <span class="C-$accent900 Bgc-$accent750 Bdrd1u Fnf-mUm P0.2u;1u">border-right: 1px solid</span> and <span class="C-$accent900 Bgc-$accent750 Bdrd1u Fnf-mUm P0.2u;1u">Bdrd1</span> => <span class="C-$accent900 Bgc-$accent750 Bdrd1u Fnf-mUm P0.2u;1u">border-radius: 1px</span>
+						</li>
+					<ul>
+				</div>
+
+			</div>
+		</div>
+
+		
+
+		<div class="W100p M0;0;10u">
+
+			<h3 class="C-$brand Txa-c W90p Fns6u M0;a;9u">
+				Great ergonomics
+			</h3>
+			<p class="M0;a;5u P0;5u C-$accent850 Fns4u md_Fns5u Lnh1.5 md_W80p Txa-c">
+				Shorter class names
+			</p>
+			<div class="D-f Fld-c Jc-c Ai-fs Ji-fs Ac-c Flw-w Gap5u W90p M0;a;9u ">
+
+				
+
+				<div class="Mxw45gg P2u lg_P2u;5u Tsd-$longTs Tf_h -S105p_h Bdrd2u Bd1;s;$accent850 W100p md_W-a  -Gdl120d,$wrong900,$wrong800 -Gdl120d,$wrong850,$wrong750_h ">
+					<div class="Flg0 Pt3u W100p Mb1u">
+						<h4 class="C-$accent900 M0;0;3u">
+							Tailwind CSS
+						</h4>
+						
+	<div class="W100p Bdrd2u P0 M0;0;2u">
+		<pre class="D M0 Fns2u xxl_Fns2.2u Lnh1.8 code"><code class="language-html ">&lt;div class="relative -bottom-px col-span-full col-start-1 row-start-2 h-px bg-(--cardBg)"&gt;&lt;/div&gt;</code></pre>
+	</div>
+
+
+					</div>
+				</div>
+
+				
+
+				<div class="Mxw45gg P2u lg_P2u;5u Tsd-$longTs Tf_h -S105p_h Bdrd2u Bd1;s;$accent850 W100p md_W-a  -Gdl120d,$correct900,$correct800 -Gdl120d,$correct850,$correct750_h">
+					<div class="Flg0 Pt3u W100p Mb1u">
+						<h4 class="C-$accent900 M0;0;3u"> mlut </h4>
+						
+	<div class="W100p Bdrd2u P0 M0;0;2u">
+		<pre class="D M0 Fns2u xxl_Fns2.2u Lnh1.8 code"><code class="language-html ">&lt;div class="Ps B-1 Gc1/-1 Gcs1 Grs2 H1 Bgc-$cardBg"&gt;&lt;/div&gt;</code></pre>
+	</div>
+
+
+					</div>
+				</div>
+
+			</div>
+
+			<p class="M0;a;5u P0;5u C-$accent850 Fns4u md_Fns5u Lnh1.5 md_W80p Txa-c">
+				Convenient syntax for complex values, states and at-rules.
+			</p>
+
+			<div class="D-f Fld-r Jc-c Flw-w Gap5u W90p M0;a;9u Ai-s">
+
+				
+
+				<div class="Mxw45gg P2u lg_P2u;5u Tsd-$longTs Tf_h -S105p_h Bdrd2u Bd1;s;$accent850 W100p md_W45p lg_W40p -Gdl120d,$wrong900,$wrong800 -Gdl120d,$wrong850,$wrong750_h">
+					<div class="Flg0 Pt3u W100p Mb1u">
+						<h4 class="C-$accent900 M0;0;3u">
+							Tailwind CSS
+						</h4>
+					</div>
+
+					<ul class="M0;0;1u P0;1u Fns3.2u Lsst-n Flg1">
+						<li class="Ps-r D W100p Mb2u P0;5u Lnh1.6 C-red_b Fns3u_b D-ib_b Ps-a_b T0_b L0_b Ct-'❌'_b ">
+							<span class="C-$accent900 Bgc-$accent750 Bdrd1u Fnf-mUm P0.2u;1u">[@media(any-hover:hover){&:hover}]:opacity-100</span>
+						</li>
+						<li class="Ps-r D W100p Mb2u P0;5u Lnh1.6 C-red_b Fns3u_b D-ib_b Ps-a_b T0_b L0_b Ct-'❌'_b ">
+							<span class="C-$accent900 Bgc-$accent750 Bdrd1u Fnf-mUm P0.2u;1u">text-[length:var(--myVar,1.3rem)] </span>
+						</li>
+						<li class="Ps-r D W100p Mb2u P0;5u Lnh1.6 C-red_b Fns3u_b D-ib_b Ps-a_b T0_b L0_b Ct-'❌'_b ">
+							<span class="C-$accent900 Bgc-$accent750 Bdrd1u Fnf-mUm P0.2u;1u">supports-[margin:1svw]:ml-[1svw] </span>
+						</li>
+					</ul>
+				</div>
+
+				
+
+				<div class="Mxw45gg P2u lg_P2u;5u Tsd-$longTs Tf_h -S105p_h Bdrd2u Bd1;s;$accent850 W100p md_W45p lg_W40p  -Gdl120d,$correct900,$correct800 -Gdl120d,$correct850,$correct750_h">
+					<div class="Flg0 Pt3u W100p Mb1u">
+						<h4 class="C-$accent900 M0;0;3u"> mlut </h4>
+					</div>
+
+					<ul class="M0;0;1u P0;1u Fns3.2u Lsst-n Flg1">
+						<li class="Ps-r D W100p Mb2u P0;5u Lnh1.6 C-red_b Fns3u_b D-ib_b Ps-a_b T0_b L0_b Ct-'✅'_b">
+							<span class="C-$accent900 Bgc-$accent750 Bdrd1u Fnf-mUm P0.2u;1u">@:ah_O1_h</span>
+						</li>
+						<li class="Ps-r D W100p Mb2u P0;5u Lnh1.6 C-red_b Fns3u_b D-ib_b Ps-a_b T0_b L0_b Ct-'✅'_b">
+							<span class="C-$accent900 Bgc-$accent750 Bdrd1u Fnf-mUm P0.2u;1u">Fns-$myVar?1.3</span>
+						</li>
+						<li class="Ps-r D W100p Mb2u P0;5u Lnh1.6 C-red_b Fns3u_b D-ib_b Ps-a_b T0_b L0_b Ct-'✅'_b">
+							<span class="C-$accent900 Bgc-$accent750 Bdrd1u Fnf-mUm P0.2u;1u">@s_Ml1svw</span>
+						</li>
+					<ul>
+				</div>
+
+			</div>
+		</div>
+
+
+		
+
+		<div class="W100p M0;0;10u">
+
+			<h3 class="C-$brand Txa-c W90p Fns6u M0;a;9u">
+				Almost all power of CSS in one utility class
+			</h3>
+			<p class="M0;a;5u P0;5u C-$accent850 Fns4u md_Fns5u Lnh1.5 md_W80p Txa-c">
+				See how much more code you need in handwritten CSS to reproduce the same styles written in mlut
+			</p>
+
+			<div class="D-f Fld-r Jc-c Flw-w Gap5u W90p M0;a;9u Ai-fs">
+
+				
+
+
+				<div class="D-f Mxw35gg Fld-c Jc-c Ai-s Gap5u W100p md_W45p ">
+					<div class="W100p P3u;2u Tsd-$longTs Tf_h -S105p_h Bdrd2u Bd1;s;$accent850 -Gdl120d,$correct900,$correct800 -Gdl120d,$correct850,$correct750_h 	">
+						<h4 class="M0;0;3u C-$accent900"> mlut </h4>
+						
+	<div class="W100p Bdrd2u P0 M0;0;2u">
+		<pre class="D M0 Fns2u xxl_Fns2.2u Lnh1.8 code"><code class="language-html ">&lt;div class="-Ctx Bgc#000 Bgc#000*50p_h D-f Fld-c Jc-c Ai-c"&gt;
+  &lt;div class="P2u;0 Js-fe ^:h_Js-fs"&gt;...&lt;/div&gt;
+  &lt;div class="C-#fff ^:h_C-red"&gt;...&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+	</div>
+
+
+					</div>
+				</div>
+
+				
+
+				<div class="D-f Mxw35gg Fld-c Jc-c Ai-s Gap5u W100p md_W45p ">
+					<div class="W100p P3u;2u Tsd-$longTs Tf_h -S105p_h Bdrd2u Bd1;s;$accent850 -Gdl120d,$wrong900,$wrong800 -Gdl120d,$wrong850,$wrong750_h H100p">
+						<h4 class="M0;0;3u C-$accent900"> Handwritten CSS</h4>
+							
+	<div class="W100p Bdrd2u P0 M0;0;2u">
+		<pre class="D M0 Fns2u xxl_Fns2.2u Lnh1.8 code"><code class="language-html ">&lt;div class="parent"&gt;
+  &lt;div class="child1"&gt;...&lt;/div&gt;
+  &lt;div class="child2"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+  .parent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+  }
+  .child1 {
+    padding: 0.5rem 0;
+    justify-self: flex-end;
+  }
+  .child2 {
+    color:#fff;
+  }
+  .parent:hover {
+    background-color: rgba(0,0,0,0.5);
+  }
+  .parent:hover .child1 {
+    justify-self: flex-start;
+  }
+  .parent:hover .child2 {
+    color: red;
+  }
+&lt;/style&gt;
+</code></pre>
+	</div>
+
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+		
+
+<section class="W100p P15u;0 Bgc-$core550">
+	<h2 class="Txa-c M0;0;5u Fns7u C-$accent900">
+		Installation
+	</h2>
+	<div class="Gap5u W100p M-a Mxw175u wrapper">
+		<ul class="Lsst-n P0 M0 Cor-step">
+			<li class="Ps-r M0;0;8u P0;5u C-$brand_m">
+				<h3 class="Fnw-b C-$accent850 M0;0;2u D-ib Coi-step Ct-counter(step);&#39;.&#39;_b D-ib_b C-$brand_b"> Install via npm</h3>
+				
+	<div class="W100p Bdrd2u P0 M0;0;2u">
+		<pre class="D M0 Fns2u xxl_Fns2.2u Lnh1.8 code"><code class="language-bash ">npm i mlut -D</code></pre>
+	</div>
+
+
+			</li>
+			<li class="Ps-r M0;0;8u P0;5u C-$brand_m">
+				<h3 class="Fnw-b C-$accent850 M0;0;2u D-ib Coi-step Ct-counter(step);&#39;.&#39;_b D-ib_b C-$brand_b"> And run</h3>
+				
+	<div class="W100p Bdrd2u P0 M0;0;2u">
+		<pre class="D M0 Fns2u xxl_Fns2.2u Lnh1.8 code"><code class="language-bash ">npx mlut -o output.css -w --content index.html</code></pre>
+	</div>
+
+
+			</li>
+			<li class="Ps-r M0;0;8u P0;5u C-$brand_m P5u D-f Fld-c Jc-c Ai-c
+				Ct_af D_af W100p_af H1_af Bgc-$brand_af Ps-a_af L0_af T50p_af Zi0_af">
+					<p class="Bd1;s;$brand Txa-c D-ib P1u;3u Bdrd5u M0;a Zi1 Bgc-$core550 C-$accent850">
+						Or with Sass config and base styles
+					</p>
+			</li>
+			<li class="Ps-r M0;0;8u P0;5u C-$brand_m">
+			<h3 class="Fnw-b C-$accent850 M0;0;2u D-ib Coi-step Ct-counter(step);&#39;.&#39;_b D-ib_b C-$brand_b Cos-step;2"> Create input file</h3>
+				
+	<div class="W100p Bdrd2u P0 M0;0;2u">
+		<pre class="D M0 Fns2u xxl_Fns2.2u Lnh1.8 code"><code class="language-bash ">echo "@use 'mlut';" > style.scss</code></pre>
+	</div>
+
+
+			</li>
+			<li class="Ps-r M0;0;8u P0;5u C-$brand_m">
+				<h3 class="Fnw-b C-$accent850 M0;0;2u D-ib Coi-step Ct-counter(step);&#39;.&#39;_b D-ib_b C-$brand_b"> Add configuration if you need</h3>
+				
+	<div class="W100p Bdrd2u P0 M0;0;2u">
+		<pre class="D M0 Fns2u xxl_Fns2.2u Lnh1.8 code"><code class="language-scss ">// style.scss
+@use 'mlut' with (
+  // your config
+);</code></pre>
+	</div>
+
+
+			</li>
+			<li class="Ps-r M0;0;8u P0;5u C-$brand_m">
+				<h3 class="Fnw-b C-$accent850 M0;0;2u D-ib Coi-step Ct-counter(step);&#39;.&#39;_b D-ib_b C-$brand_b"> And run</h3>
+				
+	<div class="W100p Bdrd2u P0 M0;0;2u">
+		<pre class="D M0 Fns2u xxl_Fns2.2u Lnh1.8 code"><code class="language-bash ">npx mlut -i input.scss -o output.css -w --content index.html</code></pre>
+	</div>
+
+
+			</li>
+		</ul>
+	</div>
+	<div class="M0;a;9u Fns3.2u W100p Mxw62u">
+		
+<a href="https://mlutcss.github.io/mlut/section-start.html#kssref-start-main-usage" role="button"
+	class=" -Sz100p D-f Jc-c Ai-c Txd-n Fns0.8r P1u;3u Bdrd1u xl_P1.5u;3.5u Ts-$shortTs Bd1;s;$brand Bgc-$brand Bgc-$brand500_h C#fff">
+	
+		<div class="D-f Jc-c Ai-c Fld-r Gap3u Fns1.1r">
+			<div class="D Apcr1 W0.9r">
+				<svg xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24"
+					class="D W100p Mxw25u Apcr1 Stw2  Fi-$brand St#fff">
+					<use href="/assets/img/icons.svg#right-triangle"></use>
+				</svg>
+			</div>
+			<span class="D Fns0.9r">
+				Try now
+			</span>
+		</div>
+	
+</a>
+
+
+	</div>
+</section>
+
+
+
+
+
+
+
+
+
+<section id="arts" class="Bgc-$core750">
+	<div class="D-f M-a Jc-c Ai-c Fld-c P16u;0  wrapper">
+		<h2 class="Txa-c M0;0;5u Fns7u C-$accent900 C-$accent900">
+			CSS Art
+		</h2>
+
+		<p class="C-$accent850 Txa-c P0;3u M0;0;9u md_Mxw60vw lg_Mxw40vw">
+			Yes, this is pure CSS art using utility classes! With mlut it is possible
+		</p>
+
+		<div class="W100p M0;0;5u Gap5u D-f Jc-c Ai-c Fld-r Flw-w">
+
+			
+
+			
+				<div class="W90p Mxw100u Apcr1 sm_W45p lg_W26p -Ctx-art -S105p_h Tf_h Tsd-$longTs">
+					<div class="W100p Apcr1 Bdrd5u Bd1;s;$accent850 ^art:h_Bdc-$brand Bgc-$blueGray M0;0;3u Ov-h">
+						
+<div class="Apcr1 W100p Plci-c;c Plcc-c Ctnn-canva Ctnt-s
+	-HeartBgc#ff3737 -BodyBgc#ffdcdf Ps-r">
+
+  <div class="Ps-a T15p L20p Apcr1 @c:canva:apcr>=1/1_H60p @c:canva:apcr<=1/1_W60p">
+
+		
+    <div class="Ps-r Bd0.5vmin;s;black -Sz100p -Bdtrd50p Bdb0 Bxs-bb Bgc-$bodyBgc">
+
+			
+      <div class="Ps-r -Sz10p Bgc-$heartBgc -Trx700p -Try200p -Rt25d -S0.8 Tf
+        Ps-a_b B0_b L-50p_b -Sz100p_b Ct_b Bdrd50p_b Bgc-$heartBgc_b
+        Ps-a_af T-50p_af R0_af -Sz100p_af Ct_af Bdrd150p_af Bgc-$heartBgc_af">
+      </div>
+
+			
+      <div class=" Ps-a -Sz25p Bgc#000 Bdrd50p T45p Ct_b Ps-a_b Bgc#fff_b -Sz40p_b Bdrd50p_b L40p_b T10p_b L10p"></div>
+      <div class="Ps-a -Sz25p Bgc#000 Bdrd50p T45p Ct_b Ps-a_b Bgc#fff_b -Sz40p_b Bdrd50p_b L40p_b T10p_b R10p"></div>
+
+			
+      <div  class="Ps-a W20p H10p Bd0.7vmin;s;black -Bdbrd100 Bdt0 T60p L40p"></div>
+
+			
+      <div class=" Ps-a -Sz20p Bd0.5vmin;s;black -Bdbrd100 Bdt0 T78p L15p -Rt-45d Tf"></div>
+      <div class="Ps-a -Sz20p Bd0.5vmin;s;black -Bdbrd100 Bdt0 T78p R15p -Rt45d Tf"></div>
+    </div>
+
+		
+    <div class="D-f W100p H25p -Try-5p Tf">
+      <div class="W25p H100p Bd0.5vmin;s;black -Bdbrd100 Bdt0 Bgc-$bodyBgc"></div>
+      <div class="W25p H100p Bd0.5vmin;s;black -Bdbrd100 Bdt0 Bgc-$bodyBgc"></div>
+      <div class="W25p H100p Bd0.5vmin;s;black -Bdbrd100 Bdt0 Bgc-$bodyBgc"></div>
+      <div class="W25p H100p Bd0.5vmin;s;black -Bdbrd100 Bdt0 Bgc-$bodyBgc"></div>
+    </div>
+  </div>
+</div>
+					</div>
+					<h3 class="M0;0;3u Txa-c C-$accent850 ^art:h_C-$brand Tsd-$shortTs">
+						Cute ghost
+					</h3>
+				</div>
+			
+				<div class="W90p Mxw100u Apcr1 sm_W45p lg_W26p -Ctx-art -S105p_h Tf_h Tsd-$longTs">
+					<div class="W100p Apcr1 Bdrd5u Bd1;s;$accent850 ^art:h_Bdc-$brand Bgc-$blueGray M0;0;3u Ov-h">
+						
+<div class="Ps-r W100p Apcr1 M-a Plci-c;c Plcc-c Ctnn-canva Ctnt-s -Trx-60p -Try-50p Tf">
+
+	
+
+  <div class=" Apcr1 Ps-a T25p L25p @c:canva:apcr&gt;=1_H180p  @c:canva:apcr&lt;=1_W180p  Bgr-nr
+      -Gdl-60deg,tp;14.5p,#fff;14.5p,#fff;40%,tp;40p Bgp61.8p;57p
+      Bgs17p;4p">
+  </div>
+
+	
+
+  <div class=" Apcr1 Ps-a T25p L25p @c:canva:apcr&gt;=1_H180p  @c:canva:apcr&lt;=1_W180p  Bgr-nr
+    -Gdl-60deg,tp;19.5p,#444;19.5p,#444;32p,tp;32p Bgp0p;34.5p
+    Bgs50p;30.4p" >
+  </div>
+
+	
+
+  <div class=" Apcr1 Ps-a T25p L25p @c:canva:apcr&gt;=1_H180p  @c:canva:apcr&lt;=1_W180p  Bgr-nr
+      -Gdl60deg,tp;20p,#aaa;20p,#aaa;26.5p,tp;26.5p Bgp95.6p;40.9p
+      Bgs50p;30.3p">
+  </div>
+
+	
+
+  <div class=" Apcr1 Ps-a T25p L25p @c:canva:apcr&gt;=1_H180p  @c:canva:apcr&lt;=1_W180p  Bgr-nr
+      -Gdl60deg,tp;19p,#fff;19p,#fff;24.9p,tp;24.9p Bgp100p;28p
+      Bgs50p;37.5p">
+  </div>
+
+	
+
+  <div class=" Apcr1 Ps-a T25p L25p @c:canva:apcr&gt;=1_H180p  @c:canva:apcr&lt;=1_W180p  Bgr-nr
+    -Gdl-60deg,tp;18.5p,#fff;18.5p,#fff;25p,tp;25p Bgp0;33p
+    Bgs50p;30.5p" >
+  </div>
+
+	
+
+  <div class=" Apcr1 Ps-a T25p L25p @c:canva:apcr&gt;=1_H180p  @c:canva:apcr&lt;=1_W180p  Bgr-nr
+     -Gdl60deg,#444;0p,#444;37p,tp;37p Bgp107p;52p
+     Bgs70.5p;5p" >
+  </div>
+
+	
+
+  <div class="Apcr1 Ps-a T25p L25p @c:canva:apcr&gt;=1_H180p  @c:canva:apcr&lt;=1_W180p  Bgr-nr
+      -Gdl60deg,tp;6p,#aaa;6p,#aaa;55p,tp;55p Bgp67.2p;56.8p
+      Bgs59.5p;4.55p">
+  </div>
+
+</div>
+					</div>
+					<h3 class="M0;0;3u Txa-c C-$accent850 ^art:h_C-$brand Tsd-$shortTs">
+						Penrose triangle
+					</h3>
+				</div>
+			
+				<div class="W90p Mxw100u Apcr1 sm_W45p lg_W26p -Ctx-art -S105p_h Tf_h Tsd-$longTs">
+					<div class="W100p Apcr1 Bdrd5u Bd1;s;$accent850 ^art:h_Bdc-$brand Bgc-$blueGray M0;0;3u Ov-h">
+						
+
+  <div class="Ctnt-s W100p Apcr1 Ctnn-canva Plci-c;c Plcc-c">
+
+    
+    <div class="Apcr1 Bdrd100p Bd2;s;$orange900 Bgc-$orange800  @c:canva:apcr>=1/1_H70p @c:canva:apcr<=1/1_W70p M-a">
+      <div class="Apcr1 W99.9p Bdrd100p Bd2;s;$orange700 -Gdl0d,$orange700;1p,$orange500;40p,$orange400;70p,$orange100;100p Ps-r Ov-h">
+
         
+        <div class="W25p H5p -Bdbrd1u -Gdl0d,$brown500,$brown700 Ps-a T15p Tf -Bdtrd5u L12p -Rt-10d">
+        </div>
+        <div class="W25p H5p -Bdbrd1u -Gdl0d,$brown500,$brown700 Ps-a T15p Tf -Bdtrd5u R12p -Rt10d ">
+        </div>
 
+        
+        <div class="-Sz35p Bdrd100p Bd1;s;$gray700 Bgc-$gray500 Ps-a T30p Bxsd0;0;30;1;$orange500 Ct_af D_af -Sz100p_af Bdrd100p_af Ps-a_af T0_af L0_af  L10p Bxsd-15;35;6u;1;$orange850_af">
 
-<h2 class="M5u;0 Txa-c"> The value of a is 10 </h2>
+          <div class="-Sz90p Bdrd100p Bgc-$gray400 M-a Ps-r">
+            <div class="-Sz32p Bdrd100p Bgc-$gray900 Ps-a L34p T40p">
+              <div class="-Sz15p Ps-a Bgc-$gray400 T7p R7p">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class=" -Sz35p Bdrd100p Bd1;s;$gray700 Bgc-$gray500 Ps-a T30p Bxsd0;0;30;1;$orange500 Ct_af D_af -Sz100p_af Bdrd100p_af Ps-a_af T0_af L0_af  R10p Bxsd15;35;6u;1;$orange850_af">
+          <div class="-Sz90p Bdrd100p Bgc-$gray400 M-a Ps-r">
+            <div class="-Sz32p Bdrd100p Bgc-$gray900 Ps-a L34p T40p">
+              <div class="-Sz15p Ps-a Bgc-$gray400 T7p R7p">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="W24p H8p -Gdl0d,$brown500,$brown700 Bdrd8u Ps-a
+        B15p L38p">
+        </div>
+      </div>
+    </div>
+  </div>
+					</div>
+					<h3 class="M0;0;3u Txa-c C-$accent850 ^art:h_C-$brand Tsd-$shortTs">
+						Flushed emoji
+					</h3>
+				</div>
+			
+
+	</div>
+
+</section>
+
+  </main>
+
   
-    </main>
+<footer class="D-f Jc-c Ai-c W100p Bgc-$core850 P8u;0" >
+	<div class="W100p sm_W60p md_W100p C-$gray200 D-f Fld-r Flw-w Jc-c md_P0;8u">
+		<div class="W100p md_W26p P0;5u ">
+			<p class="M0;0;5u Fns4u lg_Fns5u xl_Fns6u P0;1u">
+				<span class="Fnw-b C-$brand"> mlut </span> - make CSS exciting again!
+			</p>
+		</div>
 
-    <footer class="H20vh Bgc#f0438c" >
-    <h2 class="Txa-c">
-        This is our footer!
-    </h2>
+		<section class="M0;0;5u P0;5u W49p md_W30p D-f Fld-r Flw-w Jc-fs md_Jc-c Ai-fs md_Ai-fs md_P0;3u  ">
+			<div>
+				<h3 class="M0;0;5u">
+					Product
+				</h3>
+				<ul class=" M0;0;5u P0 Lsst-n W70p">
+					
+						<li class="M0;0;2u">
+							<a href="/#features" class="Txd-n C-$gray200 C-$brand_h Tsd-$shortTs">
+								Features
+							</a>
+						</li>
+					
+						<li class="M0;0;2u">
+							<a href="/#examples" class="Txd-n C-$gray200 C-$brand_h Tsd-$shortTs">
+								Examples
+							</a>
+						</li>
+					
+						<li class="M0;0;2u">
+							<a href="/#arts" class="Txd-n C-$gray200 C-$brand_h Tsd-$shortTs">
+								Arts
+							</a>
+						</li>
+					
+				</ul>
+			</div>
+		</section>
+
+		<section class="M0;0;5u P0;5u W49p md_W30p D-f Fld-r Flw-w Jc-fs md_Jc-c Ai-fs md_Ai-fs md_P0;3u  ">
+			<div>
+				<h3 class="M0;0;5u">
+					Learn more
+				</h3>
+
+				<ul class=" M0;0;5u P0 Lsst-n W70p">
+					
+						<li class="M0;0;2u">
+							<a href="https://x.com/mlutcss" class="Txd-n C-$gray200 C-$brand_h Tsd-$shortTs">
+								Twitter
+							</a>
+						</li>
+					
+						<li class="M0;0;2u">
+							<a href="https://github.com/mlutcss/mlut" class="Txd-n C-$gray200 C-$brand_h Tsd-$shortTs">
+								Github
+							</a>
+						</li>
+					
+						<li class="M0;0;2u">
+							<a href="https://mlutcss.github.io/mlut/" class="Txd-n C-$gray200 C-$brand_h Tsd-$shortTs">
+								Documentation
+							</a>
+						</li>
+					
+				</ul>
+			</div>
+		</section>
+
+		<div class="W100p D-f P0;5u Fld-c Ai-c Jc-fs md_Jc-c ">
+			<p class="C-$gray100 Txa-l M0 ">
+				© 2025 mlut contributors. All rights reserved.
+			</p>
+			<p class="C-$gray100 Txa-l M0 ">
+				Sass logo is used under the
+				<a class="C-$brand Txd-u Tsd-$shortTs"
+				  href="https://sass-lang.com/styleguide/brand/">
+					 Sass Brand Guidelines
+				</a>
+			</p>
+		</div>
+	</div>
 </footer>
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
 </body>
 </html>
