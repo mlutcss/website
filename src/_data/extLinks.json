@@ -1,0 +1,17 @@
+[
+	{
+		"name":"Twitter",
+		"icon":"xcom",
+		"link":"https://x.com/mlutcss"
+	},
+	{
+		"name":"Github",
+		"icon":"github",
+		"link":"https://github.com/mlutcss/mlut"
+	},
+	{
+		"name":"Documentation",
+		"icon":"book",
+		"link":"https://mlutcss.github.io/mlut/"
+	}
+]

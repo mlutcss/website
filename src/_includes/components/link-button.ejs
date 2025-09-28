@@ -1,0 +1,39 @@
+<%
+	 const css = {
+		buttonShape:"-Sz100p D-f Jc-c Ai-c Txd-n Fns0.8r P1u;3u Bdrd1u xl_P1.5u;3.5u Ts-$shortTs Bd1;s;$brand",
+		contentContainer: "D-f Jc-c Ai-c Fld-r Gap3u Fns1.1r",
+		iconContainer: "D Apcr1 W0.9r",
+		icon:"D W100p Mxw25u Apcr1 Stw2",
+		span:"D Fns0.9r"
+	}
+
+	if (it.variant === 'dark'){
+		css.buttonColors = "Bgc-n C-$brand Bgc-$brand200_h";
+		css.svgColors = "Fi-n St-$brand";
+	} else {
+		css.buttonColors = "Bgc-$brand Bgc-$brand500_h C#fff";
+		css.svgColors = " Fi-$brand St#fff";
+	}
+%>
+<a href="<%= it.url %>" role="button"
+	class=" <%= css.buttonShape %> <%= css.buttonColors %>">
+	<% if (it.icon) {%>
+		<div class="<%= css.contentContainer %>">
+			<div class="<%= css.iconContainer %>">
+				<svg xmlns="http://www.w3.org/2000/svg"
+					viewBox="0 0 24 24"
+					class="<%= css.icon %> <%= css.svgColors %>">
+					<use href="/assets/img/icons.svg#<%= it.icon %>"></use>
+				</svg>
+			</div>
+			<span class="<%= css.span %>">
+				<%= it.text %>
+			</span>
+		</div>
+	<% } else { %>
+		<span class="<%= css.span %>">
+			<%= it.text %>
+		</span>
+	<% } %>
+</a>
+

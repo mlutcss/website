@@ -1,0 +1,32 @@
+[
+	{
+		"title": "Short and consistent naming ",
+		"text": "The abbreviations are based on the popularity of CSS properties and are compiled according to a single algorithm. If you know CSS, you almost know mlut",
+		"img": "lightning",
+		"bg": "-Gdl120d,$primary800,$primary750",
+		"bgH":"-Gdl120d,$primary700,$primary650_h",
+		"imgBg": "-Gdl120d,$primaryBright600,$primaryBright650",
+		"headC":"C-$primary300",
+		"textC":"C-$primary400"
+	},
+	{
+		"title": "Rich and native syntax",
+		"text": "It is like Vim for CSS. Conveniently create complex styles with a powerful syntax that is conceptually close to CSS",
+		"img": "angled-brackets",
+		"bg": "-Gdl120d,$secondary800,$secondary750",
+		"bgH":"-Gdl120d,$secondary700,$secondary650_h",
+		"imgBg": "-Gdl120d,$secondaryBright600,$secondaryBright650",
+		"headC":"C-$secondary300",
+		"textC":"C-$secondary400"
+	},
+	{
+		"title": "Written in Sass",
+		"text": "Leverage the full power of the preprocessor in your handwritten CSS and easily link it to utility classes",
+		"img": "sass",
+		"bg": "-Gdl120d,$tertiary800,$tertiary750",
+		"bgH":"-Gdl120d,$tertiary700,$tertiary650_h",
+		"imgBg": "-Gdl120d,$tertiaryBright600,$tertiaryBright650",
+		"headC":"C-$tertiary300",
+		"textC":"C-$tertiary400"
+	}
+]

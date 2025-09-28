@@ -1,0 +1,80 @@
+<%
+	const css = {
+		navLinkDesktop:"md_Txd-n md_C-$brand_h Ts-$shortTs",
+		navLinkMobile:"C-$accent850 Txd-n C-$brand_a Pb2u Bdb1;s;$brand md_Bdb-n",
+		extLink:"Apcr1 H70p",
+		smLogo:"W20p Mxw9u",
+		navLi:" md_Pb0 md_Bd-n md_M0;4u ",
+	}
+%>
+
+<header class=" D-f Jc-sb Ai-c P2u;2u md_P1u;3u Bgc-$core800 -Blr4 Bcf-$blr Ps-f H-$headerH
+  W100p C-$headerC Zi20">
+	<%# Logo %>
+
+	<div class="W40p md_W25p md_Flg0.25">
+		<a href="/#hero-page" class="Mxw35u md_Mxw25u D">
+			<img class="D P1u;2u W70p sm_W85p md_W100p" alt="mlut logo" src="/assets/img/logo.png">
+		</a>
+	</div>
+
+	<%# Desktop menu %>
+
+	<%# Mobile menu%>
+
+  <div  class="W50p D-f Fld-r Jc-fe md_Flg0.5 md_D md_Fns-$headerFns">
+    <%- include('./burger.ejs') %>
+    <div class="Bgc-$core900 Ps-a R0 T-$headerH Ts-$longTs Tf -Trx101p Bd1;s;$brand Bdr-n Bdtlr3u Bdblr3u Mxw50u ^burger:c:~_-Trx0 W50vw P10u;0 md_All-ust">
+
+			<nav class="M0;0;9u md_M0">
+				<h2 class="P0;5u M0;0;7u Txa-r C-$brand md_D-n"> Menu</h2>
+				<ul class="C-$accent850 H40p D-f Jc-c Fld-c md_Fld-r Gap6u P0;5u Txa-r  Fns4.8u Lsst-n M0 md_P0 md_H100p md_Gap2u md_Txa-c md_Fns4u">
+					<% for (let navLink of it.navLinks) {%>
+						<li class=" <%= css.navLi %>">
+								<a href="<%= navLink.link %>" class="<%= css.navLinkMobile %> <%= css.navLinkDesktop %>">
+										<%= navLink.text %>
+								</a>
+						</li>
+					<% }%>
+				</ul>
+			</nav>
+
+			<%# External links %>
+			<div>
+				<h2 class="P0;5u Txa-r M0;0;3u C-$brand md_D-n"> Find us</h2>
+				<div class="D-f Fld-r Jc-fe Ai-c Gap3u P0;5u md_D-n">
+					<% for (let extLink of it.extLinks.filter((el) => el.name !== 'Documentation')) {%>
+						<div class="<%= css.smLogo %>">
+							<%- include('../components/sm-link.ejs',{
+								icon:`${extLink.icon}`,
+								link:`${extLink.link}`
+							}) %>
+						</div>
+					<% }%>
+				</div>
+			</div>
+		</div>
+  </div>
+
+	<%# Desktop links %>
+
+  <div class="Ai-c Jc-fe P0;2.5u D-n md_D-f H65p
+		md_W25p md_Flg0.25 md_Gap2u lg_Gap3u">
+		<% for (let extLink of it.extLinks.filter((el) => el.name !== 'Documentation')) { %>
+			<div class="<%= css.extLink %>">
+				<%- include('../components/sm-link.ejs',{
+					icon:`${extLink.icon}`,
+					link:`${extLink.link}`
+				}) %>
+			</div>
+		<% } %>
+		<div class="H80p M0 D-f Ai-c Jc-c">
+			<%- include('../components/link-button.ejs',{
+				url:"https://mlutcss.github.io/mlut/",
+				text: "Docs",
+				icon: "",
+				variant:""
+			}) %>
+		</div>
+  </div>
+</header>
