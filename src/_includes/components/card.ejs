@@ -1,5 +1,6 @@
 
 <%
+	const optTag = it.optTag || "li"
 	let iconWidth
 	if (it.img === "angled-brackets"){
 		iconWidth = "W50p"
@@ -7,9 +8,9 @@
 		iconWidth = "W70p"
 	}
 %>
-<<%= it.optTag || "li"%> class=" <%= it.bg %> <%= it.bgH %> P7u Bdrd2u Mxw110u D-g Gtr1fr;1fr Tsd0.5s
+<<%= optTag %> class="<%= it.bg %> <%= it.bgH %> P7u Bdrd2u Mxw110u md_D-g md_Gtr1fr;1fr Tsd0.5s
 	md_W40p lg_W30p Tf_h -S105p_h -Ctx-card Zi2_h">
-	<div class="Grs1 Gre2">
+	<div class="md_Grs1 md_Gre2">
 		<div class="<%=it.imgBg %> W15u M0;a;5u Apcr1 D-f Jc-c Ai-c Bdrd4u
 			^card:h_Tf ^card:h_-Rt30deg Tsd-$longTs">
 			<div class="<%= iconWidth %> ">
@@ -25,12 +26,12 @@
 		</h3>
 	</div>
 
-	<div class="Grs2 Gre3">
+	<div class="md_Grs2 md_Gre3">
 		<p class="<%= it.textC %> Fns4.3u M0">
 			<%= it.text %>
 		</p>
 	</div>
 
-</<%= it.optTag || "li"%>>
+</<%= optTag %>>
 
 <!--  -->
