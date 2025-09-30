@@ -2,3 +2,29 @@
 layout: 'base.ejs'
 title: Arts
 ---
+<%
+	const artsPageCSS = {
+		card:"W100p H20gg Tsd-$longTs",
+		artWrapper:"-Sz100p Ov-h Plcc-c Plci-c W100p",
+		artCaption:"M0 P3u;0 Fns3.5u md_Fns5u Txa-c C-$accent850 ^art:h_C-$brand Tsd-$shortTs"
+	}
+%>
+
+<section class="W100p Bgc-$core700 Pt-$headerH ">
+	<div class="">
+		<h2 class="M0 C-$accent900 Txa-c Fns7u P10u;0"> Pure CSS art</h2>
+
+		<div class="M-a W100p D-f Fld-r Flw-w Jc-c Ai-c">
+			<% it.arts.forEach((art, index) => {%>
+
+
+				<div class="<%= artsPageCSS.card%> <%= artsPageCSS.artWidth %>">
+					<div class="<%= artsPageCSS.artWrapper%> <%= art.bgColor %>  ">
+						<%- include(`./_includes/components/arts/${art.filename}.ejs`) %>
+					</div>
+				</div>
+
+			<% }) %>
+		</div>
+	</div>
+</section>

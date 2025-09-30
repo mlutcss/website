@@ -24,11 +24,11 @@
 
   <div  class="W50p D-f Fld-r Jc-fe md_Flg0.5 md_D md_Fns-$headerFns">
     <%- include('./burger.ejs') %>
-    <div class="Bgc-$core900 Ps-a R0 T-$headerH Ts-$longTs Tf -Trx101p Bd1;s;$brand Bdr-n Bdtlr3u Bdblr3u Mxw50u ^burger:c:~_-Trx0 W50vw P10u;0 md_All-ust">
+    <div class="Bgc-$core900 Ps-a R0 T-$headerH Ts-$longTs Tf -Trx101p Bd1;s;$brand Bdr-n Bdtlr3u Bdblr3u Mxw50u ^burger:c:~_-Trx0 W50vw P10u;0 md_All-ust @:h<420_P3u;0">
 
 			<nav class="M0;0;9u md_M0">
-				<h2 class="P0;5u M0;0;7u Txa-r C-$brand md_D-n"> Menu</h2>
-				<ul class="C-$accent850 H40p D-f Jc-c Fld-c md_Fld-r Gap6u P0;5u Txa-r  Fns4.8u Lsst-n M0 md_P0 md_H100p md_Gap2u md_Txa-c md_Fns4u">
+				<h2 class="P0;5u M0;0;7u Txa-r C-$brand md_D-n @:h<420_M0;0;4u"> Menu</h2>
+				<ul class="C-$accent850 H40p D-f Jc-c Fld-c md_Fld-r Gap6u P0;5u Txa-r  Fns4.8u Lsst-n M0 md_P0 md_H100p md_Gap2u md_Txa-c md_Fns4u @:h<420_Fld-r @:h<420_Flw-w @:h<420_Jc-fe">
 					<% for (let navLink of it.navLinks) {%>
 						<li class=" <%= css.navLi %>">
 								<a href="<%= navLink.link %>" class="<%= css.navLinkMobile %> <%= css.navLinkDesktop %>">
@@ -41,7 +41,7 @@
 
 			<%# External links %>
 			<div>
-				<h2 class="P0;5u Txa-r M0;0;3u C-$brand md_D-n"> Find us</h2>
+				<h2 class="P0;5u Txa-r M0;0;3u C-$brand md_D-n @:h<420_M0;0;4u"> Find us</h2>
 				<div class="D-f Fld-r Jc-fe Ai-c Gap3u P0;5u md_D-n">
 					<% for (let extLink of it.extLinks.filter((el) => el.name !== 'Documentation')) {%>
 						<div class="<%= css.smLogo %>">
