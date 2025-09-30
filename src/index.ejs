@@ -44,7 +44,7 @@ layout: 'base.ejs'
 
 <%# Features section %>
 
-<section id="features" class="Bgc-$core550 C-$accent900">
+<section id="comparison" class="Bgc-$core550 C-$accent900">
 
 	<div class="D-f M-a Jc-c Ai-c Fld-c Pt20u Pb12u wrapper">
 		<h2 class="<%= sectionHeader %>">
@@ -399,7 +399,7 @@ layout: 'base.ejs'
 
 <%
 	const artsCSS = {
-		card:"W90p Mxw100u Apcr1 sm_W45p lg_W26p -Ctx-art -S105p_h Tf_h Tsd-$longTs",
+		card:"W90p Mxw100u Apcr1 sm_W45p md_W26p -Ctx-art -S105p_h Tf_h Tsd-$longTs",
 		artWrapper:"W100p Apcr1 Bdrd5u Bd1;s;$accent850 ^art:h_Bdc-$brand Bgc-$blueGray M0;0;3u Ov-h",
 		artCaption:"M0;0;3u Txa-c C-$accent850 ^art:h_C-$brand Tsd-$shortTs"
 	}
@@ -416,7 +416,7 @@ layout: 'base.ejs'
 			Yes, this is pure CSS art using utility classes! With mlut it is possible
 		</p>
 
-		<div class="W100p M0;0;5u Gap5u D-f Jc-c Ai-c Fld-r Flw-w">
+		<div class="W100p M0;0;8u Gap5u D-f Jc-c Ai-c Fld-r Flw-w">
 
 			<%# arts %>
 
@@ -437,7 +437,6 @@ layout: 'base.ejs'
 			<%- include('./_includes/components/link-button.ejs',{
 				url: "/arts",
 				text: "See more arts",
-				icon: "right-triangle"
 			}) %>
 		</div>
 

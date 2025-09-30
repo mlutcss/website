@@ -11,13 +11,11 @@ title: Arts
 %>
 
 <section class="W100p Bgc-$core700 Pt-$headerH ">
-	<div class="">
-		<h2 class="M0 C-$accent900 Txa-c Fns7u P10u;0"> Pure CSS art</h2>
+	<div>
+		<h1 class="M0 C-$accent900 Txa-c Fns7u P10u;0"> Pure CSS art</h1>
 
 		<div class="M-a W100p D-f Fld-r Flw-w Jc-c Ai-c">
 			<% it.arts.forEach((art, index) => {%>
-
-
 				<div class="<%= artsPageCSS.card%> <%= artsPageCSS.artWidth %>">
 					<div class="<%= artsPageCSS.artWrapper%> <%= art.bgColor %>  ">
 						<%- include(`./_includes/components/arts/${art.filename}.ejs`) %>
