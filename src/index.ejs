@@ -10,9 +10,9 @@ layout: 'base.ejs'
 %>
 <%# Hero-section %>
 
-<div id="hero-page" class="-Gdl120d,$core750,$core650,$core600 H100vh Pt-$headerH D-f Jc-c Ai-c">
+<div id="hero-page" class="-Gdl120d,$core750,$core650,$core600 Mnh100vh P-$heroPadding;0;5u D-f Jc-c Ai-c">
 
-	<div class="	D-f Jc-c Ai-c Fld-c wrapper">
+	<div class="D-f Jc-c Ai-c Fld-c  wrapper">
 
 		<img class="D Mxw480 <%= heroCSS.universalMargin %> W80p md_W100p"
 		 alt="mlut logo" src="/assets/img/logo.png">
@@ -22,8 +22,8 @@ layout: 'base.ejs'
 			Make CSS exciting again!
 		</h1>
 
-		<p class="C-$accent850 <%= heroCSS.universalMargin %> P0;2u Txa-c Fns4.4u
-			md_Fns5.2u lg_W60p">
+		<p class="C-$accent850 <%= heroCSS.universalMargin %> P0;2u Mxw750 Txa-c Fns4.4u
+			md_Fns5.2u ">
 			Atomic CSS toolkit with Sass and ergonomics for creating styles of any complexity
 		</p>
 
@@ -46,12 +46,12 @@ layout: 'base.ejs'
 
 <section id="features" class="Bgc-$core550 C-$accent900">
 
-	<div class="D-f M-a Jc-c Ai-c Fld-c Pt12u Pb12u wrapper">
+	<div class="D-f M-a Jc-c Ai-c Fld-c Pt20u Pb12u wrapper">
 		<h2 class="<%= sectionHeader %>">
 			Key features
 		</h2>
 
-		<p class="C-$accent850 Txa-c M1u;0 P0;3u">
+		<p class="C-$accent850 Txa-c M1u;0 P0;3u Mxw750">
 			This is a framework for enthusiasts who are as passionate about CSS and front-end development as we are!
 		</p>
 
@@ -114,7 +114,7 @@ layout: 'base.ejs'
 	}
 %>
 
-<section id="examples" class="Bgc-$core700 C-$accent900 Pt15u">
+<section id="comparison" class="Bgc-$core700 C-$accent900 Pt15u">
 
 	<div class="D-f M-a Jc-c Ai-c Fld-c P0  wrapper">
 		<h2 class="<%= sectionHeader %>">
@@ -399,7 +399,7 @@ layout: 'base.ejs'
 
 <%
 	const artsCSS = {
-		card:"W90p Mxw100u Apcr1 sm_W45p lg_W26p -Ctx-art -S105p_h Tf_h Tsd-$longTs",
+		card:"W90p Mxw100u Apcr1 sm_W45p md_W27p -Ctx-art -S105p_h Tf_h Tsd-$longTs",
 		artWrapper:"W100p Apcr1 Bdrd5u Bd1;s;$accent850 ^art:h_Bdc-$brand Bgc-$blueGray M0;0;3u Ov-h",
 		artCaption:"M0;0;3u Txa-c C-$accent850 ^art:h_C-$brand Tsd-$shortTs"
 	}
@@ -416,7 +416,7 @@ layout: 'base.ejs'
 			Yes, this is pure CSS art using utility classes! With mlut it is possible
 		</p>
 
-		<div class="W100p M0;0;5u Gap5u D-f Jc-c Ai-c Fld-r Flw-w">
+		<div class="W100p M0;0;8u Gap5u D-f Jc-c Ai-c Fld-r Flw-w">
 
 			<%# arts %>
 
@@ -432,5 +432,12 @@ layout: 'base.ejs'
 			<%}%>
 
 	</div>
+
+		<div class="P2u;0 Fns3.2u W100p Mxw62u">
+			<%- include('./_includes/components/link-button.ejs',{
+				url: "/arts",
+				text: "See more arts",
+			}) %>
+		</div>
 
 </section>

@@ -4,11 +4,11 @@
 		"text":"Features"
 	},
 	{
-		"link":"/#examples",
-		"text":"Examples"
+		"link":"/#comparison",
+		"text":"Comparison"
 	},
 	{
-		"link":"/#arts",
-		"text":"Arts"
+		"link":"/arts",
+		"text":"Art"
 	}
 ]
