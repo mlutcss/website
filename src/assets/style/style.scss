@@ -2,7 +2,8 @@
   $jit: (
     'output': 'dist/assets/style/style.min.css',
     'content': ['src/**/*.ejs','src/**/*.json'],
-    'minify': true
+    'minify': true,
+    'no-merge-mq': true
   ),
 );
 
@@ -56,6 +57,7 @@ html{
 		--ml-core750:#121828;
 		--ml-core650:#251942;
 		--ml-core600:#321933;
+		--ml-core500:#2e2e2e;
 		--ml-primary800:rgba(30,58,138,0.4);
 		--ml-primary750:rgba(25,60,184,0.5);
 		--ml-primary700:rgba(30,64,175,0.6);
@@ -101,6 +103,7 @@ html{
 		--ml-accent800:rgba(17,24,39,0.6);
 		--ml-accent750:rgba(41, 42, 51, 0.164);
 		--ml-core550:#ffffff;
+		--ml-core500:#edebeb;
 		--ml-core700:rgba(242, 243, 246, 0.912);
 		--ml-core750:rgba(249,168,212,0.4);
 		--ml-core650:rgba(218,178,255,0.1);
