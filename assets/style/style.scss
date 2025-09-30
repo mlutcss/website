@@ -2,11 +2,13 @@
   $jit: (
     'output': 'dist/assets/style/style.min.css',
     'content': ['src/**/*.ejs','src/**/*.json'],
-    'minify': true
+    'minify': true,
+    'no-merge-mq': true
   ),
 );
 
 html{
+	--ml-heroPadding: calc(var(--ml-headerH) + 10px);
 	--ml-core850:rgba(0,0,0,0.9);
 	--ml-primaryBright600:#2b7fff;
 	--ml-primaryBright650:#155dfc;
@@ -55,6 +57,7 @@ html{
 		--ml-core750:#121828;
 		--ml-core650:#251942;
 		--ml-core600:#321933;
+		--ml-core500:#2e2e2e;
 		--ml-primary800:rgba(30,58,138,0.4);
 		--ml-primary750:rgba(25,60,184,0.5);
 		--ml-primary700:rgba(30,64,175,0.6);
@@ -81,6 +84,10 @@ html{
 		--ml-correct800:rgba(1,102,48,0.6);
 		--ml-correct850:rgba(1,102,48,0.4);
 		--ml-correct750:rgba(0,130,54,0.6);
+		// arts
+		--ml-art900:#450c00;
+		--ml-art850:#420039;
+		--ml-art800:#000942;
 	}
 }
 
@@ -96,6 +103,7 @@ html{
 		--ml-accent800:rgba(17,24,39,0.6);
 		--ml-accent750:rgba(41, 42, 51, 0.164);
 		--ml-core550:#ffffff;
+		--ml-core500:#edebeb;
 		--ml-core700:rgba(242, 243, 246, 0.912);
 		--ml-core750:rgba(249,168,212,0.4);
 		--ml-core650:rgba(218,178,255,0.1);
@@ -126,6 +134,11 @@ html{
 		--ml-correct800:rgba(183, 253, 207, 0.8);
 		--ml-correct850:rgba(183, 250, 207, 0.6);
 		--ml-correct750:rgba(83, 250, 141, 0.6);
+		// arts
+		--ml-art900:#FFBCB0;
+		--ml-art850:#FFA6F2;
+		--ml-art800:#BFC5FF;
 	}
+
 }
 
