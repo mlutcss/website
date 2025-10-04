@@ -13,5 +13,10 @@
 		"caption":"Flushed emoji",
 		"filename":"flushed-emoji",
 		"bgColor":"Bgc-$art800"
+	},
+	{
+		"caption":"Exploding head",
+		"filename":"exploding-head",
+		"bgColor":"Bgc-$art750"
 	}
 ]

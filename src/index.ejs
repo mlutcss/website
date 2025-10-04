@@ -397,14 +397,6 @@ layout: 'base.ejs'
 
 <%# Arts section %>
 
-<%
-	const artsCSS = {
-		card:"W90p Mxw100u Apcr1 sm_W45p md_W27p -Ctx-art -S105p_h Tf_h Tsd-$longTs",
-		artWrapper:"W100p Apcr1 Bdrd5u Bd1;s;$accent850 ^art:h_Bdc-$brand Bgc-$blueGray M0;0;3u Ov-h",
-		artCaption:"M0;0;3u Txa-c C-$accent850 ^art:h_C-$brand Tsd-$shortTs"
-	}
-%>
-
 
 <section id="arts" class="Bgc-$core750">
 	<div class="D-f M-a Jc-c Ai-c Fld-c P16u;0  wrapper">
@@ -412,31 +404,24 @@ layout: 'base.ejs'
 			CSS Art
 		</h2>
 
-		<p class="C-$accent850 Txa-c P0;3u M0;0;9u md_Mxw60vw lg_Mxw40vw">
+		<p class="C-$accent850 Txa-c P0;3u M0;0;7u md_Mxw60vw lg_Mxw40vw">
 			Yes, this is pure CSS art using utility classes! With mlut it is possible
 		</p>
 
-		<div class="W100p M0;0;8u Gap5u D-f Jc-c Ai-c Fld-r Flw-w">
+		<div class="W100p M0;0;2u Gap5u D-f Jc-c Ai-c Fld-r Flw-w ">
 
 			<%# arts %>
 
-			<% for (let art of it.arts) {%>
-				<div class="<%= artsCSS.card%>">
-					<div class="<%= artsCSS.artWrapper%>">
-						<%- include(`./_includes/components/arts/${art.filename}.ejs`)%>
-					</div>
-					<h3 class="<%= artsCSS.artCaption%>">
-						<%= art.caption %>
-					</h3>
-				</div>
-			<%}%>
+			<div class="W90p Mxw100u sm_W55p -Ctx-art -S105p_h Tf_h Tsd-$longTs Ov-h">
+				<%- include(`./_includes/components/arts/exploding-head.ejs`)%>
+			</div>
 
-	</div>
+		</div>
 
 		<div class="P2u;0 Fns3.2u W100p Mxw62u">
 			<%- include('./_includes/components/link-button.ejs',{
 				url: "/arts",
-				text: "See more arts",
+				text: "More arts",
 			}) %>
 		</div>
 
