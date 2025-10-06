@@ -2,8 +2,7 @@
   $jit: (
     'output': 'dist/assets/style/style.min.css',
     'content': ['src/**/*.ejs','src/**/*.json'],
-    'minify': true,
-    'no-merge-mq': true
+    'minify': true
   ),
 );
 
