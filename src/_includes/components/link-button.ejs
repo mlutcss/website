@@ -1,7 +1,7 @@
 <%
 	 const css = {
-		buttonShape:"-Sz100p D-f Jc-c Ai-c Txd-n Fns0.8r P1u;3u Bdrd1u xl_P1.5u;3.5u Ts-$shortTs Bd1;s;$brand",
-		contentContainer: "D-f Jc-c Ai-c Fld-r Gap3u Fns1.1r",
+		buttonShape:"-Sz100p D-f Jc-c Ai-c Txd-n Fns0.8r Bdrd1u  Ts-$shortTs Bd1;s;$brand",
+		contentContainer: "D-f Jc-c Ai-c Fld-r Gap3u Fns1.1r P1u;3u xl_P1.5u;3.5u",
 		iconContainer: "D Apcr1 W0.9r",
 		icon:"D W100p Mxw25u Apcr1 Stw2",
 		span:"D Fns0.9r"
@@ -31,9 +31,11 @@
 			</span>
 		</div>
 	<% } else { %>
-		<span class="<%= css.span %>">
-			<%= it.text %>
-		</span>
+		<div class="<%= css.contentContainer%>">
+			<span class="<%= css.span %>">
+				<%= it.text %>
+			</span>
+		</div>
 	<% } %>
 </a>
 
