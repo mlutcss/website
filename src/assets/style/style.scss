@@ -2,8 +2,7 @@
   $jit: (
     'output': 'dist/assets/style/style.min.css',
     'content': ['src/**/*.ejs','src/**/*.json'],
-    'minify': true,
-    'no-merge-mq': true
+    'minify': true
   ),
 );
 
@@ -21,24 +20,35 @@ html{
 	--ml-brand500:rgb(233,30,99);
 	--ml-darkGray:#1f1f1f;
 	--ml-blueGray:rgb(236, 240, 246,0.5);
-	--ml-orange900:#e66300;
-  --ml-orange850:#f0761c;
-  --ml-orange800:#f17a1b;
-  --ml-orange700:#ee980d;
-  --ml-orange600:#f3ac09;
-  --ml-orange500:#f8c829;
-  --ml-orange400:#f6cc2b;
-  --ml-orange100:#fdfce1;
-  --ml-gray900:#010101;
-  --ml-gray700:#938568;
-  --ml-gray500:#cccccc;
-  --ml-gray400:#ededed;
 	--ml-gray200:#d1d5db;
-	--ml-gray100:rgba(209,213,219,0.5);
-  --ml-brown700:#662800;
-  --ml-brown600:#592e00;
-  --ml-brown500:#934800;
-  --ml-brown400:#864c0a;
+
+	// flushed emoji
+	--ml-flushedOrange900:#e66300;
+  --ml-flushedOrange850:#f0761c;
+  --ml-flushedOrange800:#f17a1b;
+  --ml-flushedOrange700:#ee980d;
+  --ml-flushedOrange500:#f8c829;
+  --ml-flushedOrange400:#f6cc2b;
+  --ml-flushedOrange100:#fdfce1;
+  --ml-flushedGray900:#010101;
+  --ml-flushedGray700:#938568;
+  --ml-flushedGray500:#cccccc;
+  --ml-flushedGray400:#ededed;
+  --ml-flushedBrown700:#662800;
+  --ml-flushedBrown500:#934800;
+
+	// exploding head
+  --ml-explodeOrange700:#ee980d;
+  --ml-explodeOrange500:#f8c829;
+  --ml-explodeBrown700:#662800;
+  --ml-explodeBrown600:#6f2810;
+  --ml-explodeBrown550:#9c2a00;
+  --ml-explodeBrown500:#934800;
+  --ml-explodeBrown450:#9b3c18;
+  --ml-explodeBrown400:#a24b0b;
+  --ml-explodeBrown300:#f7ae48;
+  --ml-explodeBrown200:#d2a55a;
+  --ml-explodeBrown100:#efd3ac;
 }
 
 
@@ -88,6 +98,7 @@ html{
 		--ml-art900:#450c00;
 		--ml-art850:#420039;
 		--ml-art800:#000942;
+		--ml-art750:#003b2a;
 	}
 }
 
@@ -105,7 +116,7 @@ html{
 		--ml-core550:#ffffff;
 		--ml-core500:#edebeb;
 		--ml-core700:rgba(242, 243, 246, 0.912);
-		--ml-core750:rgba(249,168,212,0.4);
+		--ml-core750:var(--ml-blueGray);
 		--ml-core650:rgba(218,178,255,0.1);
 		--ml-core600:rgba(142,197,255,0.4);
 		--ml-primary800:rgba(239,246,255,1);
@@ -135,9 +146,10 @@ html{
 		--ml-correct850:rgba(183, 250, 207, 0.6);
 		--ml-correct750:rgba(83, 250, 141, 0.6);
 		// arts
-		--ml-art900:#FFBCB0;
-		--ml-art850:#FFA6F2;
-		--ml-art800:#BFC5FF;
+		--ml-art900:#ffbcB0;
+		--ml-art850:#ffa6f2;
+		--ml-art800:#bfc5ff;
+		--ml-art750:#9cffe5;
 	}
 
 }
