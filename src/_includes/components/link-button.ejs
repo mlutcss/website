@@ -1,6 +1,6 @@
 <%
 	 const css = {
-		buttonShape:"-Sz100p D-f Jc-c Ai-c Txd-n Fns0.8r Bdrd1u  Ts-$shortTs Bd1;s;$brand",
+		buttonShape:"-Sz100p D Fns0.8r Bdrd1u Ts-$shortTs Bd1;s;$brand",
 		contentContainer: "D-f Jc-c Ai-c Fld-r Gap3u Fns1.1r P1u;3u xl_P1.5u;3.5u",
 		iconContainer: "D Apcr1 W0.9r",
 		icon:"D W100p Mxw25u Apcr1 Stw2",
@@ -16,9 +16,9 @@
 	}
 %>
 <a href="<%= it.url %>" role="button"
-	class=" <%= css.buttonShape %> <%= css.buttonColors %>">
+	class="btn <%= css.buttonShape %> <%= css.buttonColors %>">
 	<% if (it.icon) {%>
-		<div class="<%= css.contentContainer %>">
+		<div class=" <%= css.contentContainer %>">
 			<div class="<%= css.iconContainer %>">
 				<svg xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 24 24"

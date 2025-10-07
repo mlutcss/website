@@ -6,6 +6,18 @@
   ),
 );
 
+.hljs{
+	width:100%;
+	font-size:1.2em;
+	border-radius:8px;
+}
+
+.btn {
+	user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
 html{
 	--ml-heroPadding: calc(var(--ml-headerH) + 10px);
 	--ml-core850:rgba(0,0,0,0.9);
