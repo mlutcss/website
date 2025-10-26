@@ -332,9 +332,41 @@ layout: 'base.ejs'
 	</div>
 </section>
 
+<%# Arts section %>
+
+
+<section id="arts" class="Bgc-$core550 W100p">
+	<div class="D-f M-a Jc-c Ai-c Fld-c P16u;0  wrapper">
+		<h2 class="<%= sectionHeader %> C-$accent900">
+			CSS Art
+		</h2>
+
+		<p class="C-$accent850 Txa-c P0;3u M0;0;7u md_Mxw60vw lg_Mxw40vw">
+			Yes, this is pure CSS art using utility classes! With mlut it is possible
+		</p>
+
+		<div class="W100p M0;0;2u Gap5u D-f Jc-c Ai-c Fld-r Flw-w ">
+
+			<%# arts %>
+
+			<div class="W90p Mxw100u sm_W55p -Ctx-art -S105p_h Tf_h Tsd-$longTs Ov-h">
+				<%- include(`./_includes/components/arts/exploding-head.ejs`)%>
+			</div>
+
+		</div>
+
+		<div class=" Fns3.2u W100p Mxw62u H7u">
+			<%- include('./_includes/components/link-button.ejs',{
+				url: "/arts",
+				text: "More arts",
+			}) %>
+		</div>
+
+</section>
+
 		<%# Installation part %>
 
-<section class="W100p P15u;0 Bgc-$core550">
+<section class="W100p P15u;0 Bgc-$core750">
 	<h2 class="<%= sectionHeader%>">
 		Installation
 	</h2>
@@ -395,34 +427,4 @@ layout: 'base.ejs'
 
 
 
-<%# Arts section %>
 
-
-<section id="arts" class="Bgc-$core750 W100p">
-	<div class="D-f M-a Jc-c Ai-c Fld-c P16u;0  wrapper">
-		<h2 class="<%= sectionHeader %> C-$accent900">
-			CSS Art
-		</h2>
-
-		<p class="C-$accent850 Txa-c P0;3u M0;0;7u md_Mxw60vw lg_Mxw40vw">
-			Yes, this is pure CSS art using utility classes! With mlut it is possible
-		</p>
-
-		<div class="W100p M0;0;2u Gap5u D-f Jc-c Ai-c Fld-r Flw-w ">
-
-			<%# arts %>
-
-			<div class="W90p Mxw100u sm_W55p -Ctx-art -S105p_h Tf_h Tsd-$longTs Ov-h">
-				<%- include(`./_includes/components/arts/exploding-head.ejs`)%>
-			</div>
-
-		</div>
-
-		<div class=" Fns3.2u W100p Mxw62u H7u">
-			<%- include('./_includes/components/link-button.ejs',{
-				url: "/arts",
-				text: "More arts",
-			}) %>
-		</div>
-
-</section>
