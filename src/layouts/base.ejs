@@ -1,7 +1,7 @@
 <%
-let headerVisibility = "O1"
-if (it.title === "main"){
-	headerVisibility = "O0"
+let cssHeaderLogoVisibility = "Vs-v O1"
+if (it.area === "main"){
+	cssHeaderLogoVisibility = "Vs-h O0"
 }
 
 %>
@@ -23,7 +23,7 @@ if (it.title === "main"){
 </head>
 <body class="D-f Fld-c Jc-sb Fnf-sans-serif Bgc-$core950">
   <%- include('../_includes/header/header.ejs',{
-		visibility: headerVisibility
+		cssHeaderLogoVisibility: cssHeaderLogoVisibility
 	}) %>
   <main >
     <%- it.content %>
