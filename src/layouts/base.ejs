@@ -1,3 +1,11 @@
+<%
+let cssHeaderLogoVisibility = "Vs-v O1"
+if (it.area === "main"){
+	cssHeaderLogoVisibility = "Vs-h O0"
+}
+
+%>
+
 <!DOCTYPE html>
 <html lang="en"
   class="
@@ -14,8 +22,9 @@
   <title>mlut - make CSS exciting again!</title>
 </head>
 <body class="D-f Fld-c Jc-sb Fnf-sans-serif Bgc-$core950">
-
-  <%- include('../_includes/header/header.ejs') %>
+  <%- include('../_includes/header/header.ejs',{
+		cssHeaderLogoVisibility: cssHeaderLogoVisibility
+	}) %>
   <main >
     <%- it.content %>
   </main>
@@ -24,5 +33,6 @@
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
 	<script>hljs.highlightAll();</script>
+	<script src="../assets/script/toggleLogo.js" type="module"></script>
 </body>
 </html>
