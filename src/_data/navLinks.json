@@ -10,5 +10,9 @@
 	{
 		"link":"/arts",
 		"text":"Art"
+	},
+	{
+		"link":"https://play.mlut.style/",
+		"text":"Sandbox"
 	}
 ]
