@@ -4,25 +4,34 @@ area: Arts
 ---
 <%
 	const artsPageCSS = {
-		card:"W100p H20gg Tsd-$longTs md_W50p",
-		artWrapper:"-Sz100p Ov-h Plcc-c Plci-c W100p D-f",
-		artCaption:"M0 P3u;0 Fns3.5u md_Fns5u Txa-c C-$accent850 ^art:h_C-$brand Tsd-$shortTs"
+		card:"W100p H20gg Tsd-$shortTs @:hv_Tsd-$longTs",
+		artWrapper:"-Sz100p Ov-h Plcc-c Plci-c D-f",
+	}
+
+	function setCtaLength(){
+		return it.arts.length % 2 != 0 ? 'md_W50p' : ''
 	}
 %>
 
-<section class="W100p Bgc-$core500 Pt-$headerH ">
+<section class="W100p Bgc-$core800 Pt-$headerH">
 	<div>
-		<h1 class="M0 C-$accent900 Txa-c Fns7u P10u;0"> Pure CSS art</h1>
+		<h1 class="M0 Bgc-$core500 C-$accent900 Txa-c Fns7u P10u;0"> Pure CSS art</h1>
 
 		<div class="M-a W100p D-f Fld-r Flw-w Jc-c Ai-c">
 			<% it.arts.forEach((art, index) => {%>
-				<div class="<%= artsPageCSS.card%> <%= artsPageCSS.artWidth %>">
+				<div class="<%= artsPageCSS.card%> md_W50p">
 					<div class="<%= artsPageCSS.artWrapper%> <%= art.bgColor %>  ">
-						<%- include(`./_includes/components/arts/${art.filename}.ejs`) %>
+						<%- include(`./_includes/components/arts/${art.artId}.ejs`) %>
 					</div>
 				</div>
-
 			<% }) %>
+			<div class="<%= artsPageCSS.card %> <%= setCtaLength() %> -Ctx P3u">
+				<a href="https://github.com/mlutcss/website/fork" target="_blank"
+					class="-Sz100p Bd1u;d;$brand200 Bdc-$brand_a @:hv_Bdc-$brand200 @:hv_^:h_Bdc-$brand Bdrd5u Tsd-ih D-f Fld-c Jc-c Ai-c C-$brand Txd-n">
+					<svg class="M0;0;5u @:hv_O0.5 @:hv_^:h_O1 Tsd-ih H40p Stw2">
+						<use href="/assets/img/icons.svg#add-art"></use>
+					</svg>
+					<p class="@:hv_O0.5 @:hv_^:h_O1 M0 Tsd-ih Fns5u md_Fns7u"> Add your own art! </p>
+				</a>
+			</div>
 		</div>
-	</div>
-</section>
