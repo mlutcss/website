@@ -19,14 +19,14 @@ area: 'main'
 		 alt="mlut logo" src="/assets/img/logo.png">
 
 
-		<h1 class="Txa-c C-$accent900 Fns8u Lnh1.1 <%= heroCSS.universalMargin %> P0;1u md_Fns10u">
-			Make CSS exciting again!
+		<h1 class="Txa-c C-$accent900 Fns8u Lnh1.1 <%= heroCSS.universalMargin %> P0;1u Mxw22.5ch md_Fns10u">
+			The best CSS framework for creative coding
 		</h1>
 
-		<p class="C-$accent850 <%= heroCSS.universalMargin %> P0;2u Mxw750 Txa-c Fns4.4u
-			md_Fns5.2u ">
-			Atomic CSS toolkit with Sass and ergonomics for creating styles of any complexity
-		</p>
+		<em class="D C-$accent850 <%= heroCSS.universalMargin %> P0;2u Mxw-gSm Txa-c Fns4.4u
+			md_Fns5.2u">
+			Make CSS exciting again!
+		</em>
 
 		<div class="D-f Fld-r W100p Flw-w Jc-c Gap3u <%= heroCSS.universalMargin %> P0;5u">
 
@@ -43,16 +43,47 @@ area: 'main'
 	</div>
 </div>
 
+<%# Arts section %>
+
+<section id="arts" class="Bgc-$core550 W100p">
+	<div class="D-f M-a Jc-c Ai-c Fld-c P16u;0  wrapper">
+		<h2 class="<%= sectionHeader %> C-$accent900">
+			When creativity meets productivity
+		</h2>
+
+		<p class="C-$accent850 Txa-c P0;3u M0;0;7u Mxw47ch">
+			Yes, you can create pure CSS art using utility classes! With mlut it is possible.
+		</p>
+
+		<div class="W100p M0;0;2u Gap5u D-f Jc-c Ai-c Fld-r Flw-w">
+
+			<%# arts %>
+
+			<div class="W90p Mxw100u sm_W55p -Ctx-art -S105p_h Tf_h Tsd-$longTs Ov-h">
+				<%- include(`./_includes/components/arts/exploding-head.ejs`)%>
+			</div>
+
+		</div>
+
+		<div class=" Fns3.2u W100p Mxw62u H7u">
+			<%- include('./_includes/components/link-button.ejs',{
+				url: "/arts",
+				text: "More arts",
+			}) %>
+		</div>
+
+</section>
+
 <%# Features section %>
 
-<section id="features" class="Bgc-$core550 C-$accent900">
+<section id="features" class="Bgc-$core750 C-$accent900">
 
-	<div class="D-f M-a Jc-c Ai-c Fld-c Pt20u Pb12u wrapper">
+	<div class="D-f M-a Jc-c Ai-c Fld-c Pt16u Pb12u wrapper">
 		<h2 class="<%= sectionHeader %>">
 			Key features
 		</h2>
 
-		<p class="C-$accent850 Txa-c M1u;0 P0;3u Mxw750">
+		<p class="C-$accent850 Txa-c M1u;0 P0;3u Mxw-gMd">
 			This is a framework for enthusiasts who are as passionate about CSS and front-end development as we are!
 		</p>
 
@@ -87,15 +118,13 @@ area: 'main'
 
 </section>
 
-
-
 <%
 	const card = "Mxw45gg P2u lg_P2u;5u Tsd-$longTs Tf_h -S105p_h Bdrd2u Bd1;s;$accent850"
 
 	const examplesCSS = {
-		h3: "C-$brand Txa-c W90p Fns6u M0;a;9u",
+		h3: "C-$brand Txa-c W90p Fns6u M0;a;5u",
 		subsection:"W100p M0;0;10u",
-		subsectionDescription:"M0;a;5u P0;5u C-$accent850 Fns4u md_Fns5u Lnh1.5 md_W80p Txa-c",
+		subsectionDescription:"M0;a;5u P0;5u C-$accent850 Mxw62ch md_W80p Txa-c",
 		subsectionContent:"D-f Fld-r Jc-c Flw-w Gap5u W90p M0;a;9u",
 		wrongCard: "-Gdl120d,$wrong900,$wrong800 -Gdl120d,$wrong850,$wrong750_h",
 		correctCard: "-Gdl120d,$correct900,$correct800 -Gdl120d,$correct850,$correct750_h",
@@ -115,7 +144,7 @@ area: 'main'
 	}
 %>
 
-<section id="comparison" class="Bgc-$core700 C-$accent900 Pt15u">
+<section id="comparison" class="Bgc-$core550 C-$accent900 Pt16u">
 
 	<div class="D-f M-a Jc-c Ai-c Fld-c P0  wrapper">
 		<h2 class="<%= sectionHeader %>">
@@ -238,7 +267,7 @@ area: 'main'
 
 			</div>
 
-			<p class="<%= examplesCSS.subsectionDescription %>">
+			<p class="<%= examplesCSS.subsectionDescription %> Mt12u">
 				Convenient syntax for complex values, states and at-rules.
 			</p>
 
@@ -333,41 +362,9 @@ area: 'main'
 	</div>
 </section>
 
-<%# Arts section %>
-
-
-<section id="arts" class="Bgc-$core550 W100p">
-	<div class="D-f M-a Jc-c Ai-c Fld-c P16u;0  wrapper">
-		<h2 class="<%= sectionHeader %> C-$accent900">
-			CSS Art
-		</h2>
-
-		<p class="C-$accent850 Txa-c P0;3u M0;0;7u md_Mxw60vw lg_Mxw40vw">
-			Yes, this is pure CSS art using utility classes! With mlut it is possible
-		</p>
-
-		<div class="W100p M0;0;2u Gap5u D-f Jc-c Ai-c Fld-r Flw-w ">
-
-			<%# arts %>
-
-			<div class="W90p Mxw100u sm_W55p -Ctx-art -S105p_h Tf_h Tsd-$longTs Ov-h">
-				<%- include(`./_includes/components/arts/exploding-head.ejs`)%>
-			</div>
-
-		</div>
-
-		<div class=" Fns3.2u W100p Mxw62u H7u">
-			<%- include('./_includes/components/link-button.ejs',{
-				url: "/arts",
-				text: "More arts",
-			}) %>
-		</div>
-
-</section>
-
 		<%# Installation part %>
 
-<section class="W100p P15u;0 Bgc-$core750">
+<section class="W100p P16u;0 Bgc-$core750">
 	<h2 class="<%= sectionHeader%>">
 		Installation
 	</h2>
@@ -416,7 +413,7 @@ area: 'main'
 			</li>
 		</ul>
 	</div>
-	<div class="M0;a;9u Fns3.2u W100p Mxw62u H7u">
+	<div class="M0;a;5u Fns3.2u W100p Mxw62u H7u">
 		<%- include('./_includes/components/link-button.ejs',{
 			url: "https://mlutcss.github.io/mlut/section-start.html",
 			text: "Try now",
