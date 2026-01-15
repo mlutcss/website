@@ -12,19 +12,19 @@ area: Arts
 		return it.arts.length % 2 != 0 ? 'md_W50p' : ''
 	}
 %>
-
 <section class="W100p Bgc-$core800 Pt-$headerH">
 	<div>
 		<h1 class="M0 Bgc-$core500 C-$accent900 Txa-c Fns7u P10u;0"> Pure CSS art</h1>
 
 		<div class="M-a W100p D-f Fld-r Flw-w Jc-c Ai-c">
 			<% it.arts.forEach((art, index) => {%>
-				<div class="<%= artsPageCSS.card%> md_W50p">
-					<div class="<%= artsPageCSS.artWrapper%> <%= art.bgColor %>  ">
+				<art-component class="W100p H20gg Tsd-$shortTs @:hv_Tsd-$longTs md_W50p">
+					<div class="-Sz100p Ov-h Plcc-c Plci-c D-f">
 						<%- include(`./_includes/components/arts/${art.artId}.ejs`) %>
 					</div>
-				</div>
+				</art-component>
 			<% }) %>
+
 			<div class="<%= artsPageCSS.card %> <%= setCtaLength() %> -Ctx P3u">
 				<a href="https://github.com/mlutcss/website/fork" target="_blank"
 					class="-Sz100p Bd1u;d;$brand200 Bdc-$brand_a @:hv_Bdc-$brand200 @:hv_^:h_Bdc-$brand Bdrd5u Tsd-ih D-f Fld-c Jc-c Ai-c C-$brand Txd-n">
