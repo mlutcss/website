@@ -1,8 +1,24 @@
+<% if (it.icon != 'github') {%>
 <a href="<%= it.link %>" alt="Link to the project's GitHub" target="_blank"
-  class="-Ctx-logo D Bxs-cb W100p">
+  class="-Ctx-logo D Ps Bxs-cb H100p Apcr1 md_H70p">
     <svg
 			viewBox="0 0 100 100"
       class="W100p Mxw25u Apcr1 Fi-$accent850 Fio1 ^logo:h:_Fi-$brand Ts-$shortTs">
       <use href="/assets/img/icons.svg#<%= it.icon %>"></use>
     </svg>
 </a>
+<% } else { %>
+	<a href="<%= it.link %>" alt="Link to the project's GitHub" target="_blank"
+		class="-Ctx-logo D-f Jc-sb Ai-c Ps Txd-n Ts-$shortTs H100p W50p Mxw15u md_Mxw11u md_H70p Bd1;s;$accent850 Bdc-$brand_h Bdrd10u Bdl-n">
+		<svg
+			viewBox="0 0 100 100"
+			class="H100p Mxw25u Apcr1 Fi-$accent850 Fio1 ^logo:h:_Fi-$brand Ts-$shortTs">
+			<use class="-Sz100p" href="/assets/img/icons.svg#<%= it.icon %>"></use>
+		</svg>
+		<svg
+			viewBox="0 0 100 100"
+			class="W40p Pr10p Mxw25u Apcr1 Fi-$accent850 Fio1 ^logo:h:_Fi#ffd700 Ts-$shortTs">
+			<use href="/assets/img/icons.svg#star"></use>
+		</svg>
+	</a>
+<% } %>

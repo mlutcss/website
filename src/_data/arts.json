@@ -1,22 +1,22 @@
 [
 	{
 		"caption":"Cute ghost",
-		"filename":"ghost",
+		"artId":"ghost",
 		"bgColor":"Bgc-$art900"
 	},
 	{
 		"caption":"Penrose triangle",
-		"filename":"penrose-triangle",
+		"artId":"penrose-triangle",
 		"bgColor":"Bgc-$art850"
 	},
 	{
 		"caption":"Flushed emoji",
-		"filename":"flushed-emoji",
+		"artId":"flushed-emoji",
 		"bgColor":"Bgc-$art800"
 	},
 	{
 		"caption":"Exploding head",
-		"filename":"exploding-head",
+		"artId":"exploding-head",
 		"bgColor":"Bgc-$art750"
 	}
 ]

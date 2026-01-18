@@ -2,10 +2,9 @@
 	const css = {
 		navLinkDesktop:"md_Txd-n md_C-$brand_h Ts-$shortTs",
 		navLinkMobile:"C-$accent850 Txd-n C-$brand_a Pb2u Bdb1;s;$brand md_Bdb-n",
-		extLink:"Apcr1 H70p",
-		smLogo:"W20p Mxw9u",
 		navLi:" md_Pb0 md_Bd-n md_M0;4u ",
 	}
+
 %>
 
 <header class=" D-f Jc-sb Ai-c P2u;2u md_P1u;3u Bgc-$core800 -Blr4 Bcf-$blr Ps-f H-$headerH
@@ -42,14 +41,12 @@
 			<%# External links %>
 			<div>
 				<h2 class="P0;5u Txa-r M0;0;3u C-$brand md_D-n @:h<420_M0;0;4u"> Find us</h2>
-				<div class="D-f Fld-r Jc-fe Ai-c Gap3u P0;5u md_D-n">
+				<div class="D-f Fld-r Jc-fe Ai-c Gap3u P0;5u H8u md_D-n">
 					<% for (let extLink of it.extLinks.filter((el) => el.name !== 'Documentation')) {%>
-						<div class="<%= css.smLogo %>">
-							<%- include('../components/sm-link.ejs',{
-								icon:`${extLink.icon}`,
-								link:`${extLink.link}`
-							}) %>
-						</div>
+						<%- include('../components/sm-link.ejs',{
+							icon:`${extLink.icon}`,
+							link:`${extLink.link}`
+						}) %>
 					<% }%>
 				</div>
 			</div>
@@ -61,12 +58,10 @@
   <div class="Ai-c Jc-fe P0;2.5u D-n md_D-f H65p
 		md_W25p md_Flg0.25 md_Gap2u lg_Gap3u">
 		<% for (let extLink of it.extLinks.filter((el) => el.name !== 'Documentation')) { %>
-			<div class="<%= css.extLink %>">
-				<%- include('../components/sm-link.ejs',{
-					icon:`${extLink.icon}`,
-					link:`${extLink.link}`
-				}) %>
-			</div>
+			<%- include('../components/sm-link.ejs',{
+				icon:`${extLink.icon}`,
+				link:`${extLink.link}`
+			}) %>
 		<% } %>
 		<div class="H80p M0 D-f Ai-c Jc-c">
 			<%- include('../components/link-button.ejs',{
