@@ -6,6 +6,11 @@
   ),
 );
 
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+}
+
 .hljs{
 	width:100%;
 	font-size:1.2em;
@@ -70,6 +75,8 @@ html{
 @media (prefers-color-scheme: dark){
 	html{
 		--ml-core900:rgb(17,24,39);
+		--ml-core400:#121828;
+		--ml-core450:#061230;
 		--ml-core800:rgba(17,24,39,0.8);
 		--ml-core950:#000;
 		--ml-accent900:#fff;
@@ -121,18 +128,20 @@ html{
 @media (prefers-color-scheme: light){
 	html{
 		--ml-core900:rgb(255, 255, 255);
+		--ml-core400:rgba(244, 198, 248, 0.55);
+		--ml-core450:#2762f81f;
 		--ml-core800:rgb(255, 255, 255, 0.9);
 		--ml-core950:#fff;
 		--ml-accent900:rgb(17,24,39);
 		--ml-accent850:rgb(41,42,51,1);
 		--ml-accent800:rgba(17,24,39,0.6);
 		--ml-accent750:rgba(41, 42, 51, 0.164);
-		--ml-core550:#ffffff;
+		--ml-core550:#fff;
 		--ml-core500:#edebeb;
 		--ml-core700:rgba(242, 243, 246, 0.912);
-		--ml-core750:var(--ml-blueGray);
-		--ml-core650:rgba(218,178,255,0.1);
-		--ml-core600:rgba(142,197,255,0.4);
+		--ml-core750:rgb(253, 173, 245, 0.6);
+		--ml-core650:rgba(218,178,255,0.3);
+		--ml-core600:rgba(142,197,255,0.6);
 		--ml-primary800:rgba(239,246,255,1);
 		--ml-primary750:rgba(219,234,254,1);
 		--ml-primary700:rgba(219,234,254,0.5);

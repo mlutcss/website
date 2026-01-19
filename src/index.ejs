@@ -5,7 +5,6 @@ area: 'main'
 <%
 	const sectionHeader = "Txa-c M0;0;5u Fns7u C-$accent900"
 	const heroCSS = {
-		heroLink: "W70p Mxw50u xl_Mxw55u H7u",
 		universalMargin:"M0;0;5u"
 	}
 %>
@@ -19,21 +18,20 @@ area: 'main'
 		 alt="mlut logo" src="/assets/img/logo.png">
 
 
-		<h1 class="Txa-c C-$accent900 Fns8u Lnh1.1 <%= heroCSS.universalMargin %> P0;1u md_Fns10u">
+		<strong class="D Txa-c C-$accent900 Fns8u Lnh1 <%= heroCSS.universalMargin %> P0;1u md_Fns13u">
+			Make CSS exciting again!
+		</strong>
+
+		<h1 class="C-$accent850 Fnw-n <%= heroCSS.universalMargin %> P0;2u Mxw-gMd Txa-c Fns4.4u md_Fns5.2u">
 			The best CSS framework for creative coding
 		</h1>
 
-		<em class="D C-$accent850 <%= heroCSS.universalMargin %> P0;2u Mxw-gSm Txa-c Fns4.4u
-			md_Fns5.2u">
-			Make CSS exciting again!
-		</em>
-
 		<div class="D-f Fld-r W100p Flw-w Jc-c Gap3u <%= heroCSS.universalMargin %> P0;5u">
 
-			<div class="<%= heroCSS.heroLink %>">
+			<div class="W70p Mxw50u xl_Mxw55u H7u">
 				<%- include('./_includes/components/link-button.ejs',{
 						url:"https://docs.mlut.style/",
-						text: "Getting started",
+						text: "Get started",
 						icon: "book",
 						variant: "light"
 					})
@@ -45,7 +43,7 @@ area: 'main'
 
 <%# Arts section %>
 
-<section id="arts" class="Bgc-$core550 W100p">
+<section id="arts" class="Bgc-$core400 W100p">
 	<div class="D-f M-a Jc-c Ai-c Fld-c P16u;0  wrapper">
 		<h2 class="<%= sectionHeader %> C-$accent900">
 			When creativity meets productivity
@@ -59,7 +57,8 @@ area: 'main'
 
 			<%# arts %>
 
-			<div class="W90p Mxw100u sm_W55p -Ctx-art Tf -S105p_h Tsd-$longTs Ov-h">
+			<div class="W90p Apcr1 Mxw100u sm_W55p -Ctx-art Tf -S105p_h Tsd-$longTs Ov-h">
+
 				<%- include(`./_includes/components/arts/exploding-head.ejs`)%>
 			</div>
 
@@ -76,7 +75,7 @@ area: 'main'
 
 <%# Features section %>
 
-<section id="features" class="Bgc-$core750 C-$accent900">
+<section id="features" class="Bgc-$core550 C-$accent900">
 
 	<div class="D-f M-a Jc-c Ai-c Fld-c Pt16u Pb12u wrapper">
 		<h2 class="<%= sectionHeader %>">
@@ -119,6 +118,7 @@ area: 'main'
 </section>
 
 <%
+
 	const card = "Mxw45gg P2u lg_P2u;5u Tsd-$longTs Tf -S105p_h Bdrd2u Bd1;s;$accent850"
 
 	const examplesCSS = {
@@ -137,6 +137,7 @@ area: 'main'
 		complexSyntCard:`${card} W100p md_W45p lg_W40p`,
 		compactCard:"D-f Mxw35gg Fld-c Jc-c Ai-s Gap5u W100p md_W45p ",
 		compactCode:"W100p P3u;2u Tsd-$longTs Tf -S105p_h Bdrd2u Bd1;s;$accent850",
+
 		compactH4:"M0;0;3u C-$accent900",
 		installLi:"Ps-r M0;0;8u P0;5u C-$brand_m",
 		codeWord: "C-$accent900 Bgc-$accent750 Bdrd1u Fnf-mUm P0.2u;1u",
@@ -144,7 +145,7 @@ area: 'main'
 	}
 %>
 
-<section id="comparison" class="Bgc-$core550 C-$accent900 Pt16u">
+<section id="comparison" class="Bgc-$core450 C-$accent900 Pt16u">
 
 	<div class="D-f M-a Jc-c Ai-c Fld-c P0  wrapper">
 		<h2 class="<%= sectionHeader %>">
@@ -364,7 +365,7 @@ area: 'main'
 
 		<%# Installation part %>
 
-<section class="W100p P16u;0 Bgc-$core750">
+<section class="W100p P16u;0 Bgc-$core400">
 	<h2 class="<%= sectionHeader%>">
 		Installation
 	</h2>
