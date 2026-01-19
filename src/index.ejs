@@ -5,7 +5,6 @@ area: 'main'
 <%
 	const sectionHeader = "Txa-c M0;0;5u Fns7u C-$accent900"
 	const heroCSS = {
-		heroLink: "W70p Mxw50u xl_Mxw55u H7u",
 		universalMargin:"M0;0;5u"
 	}
 %>
@@ -19,21 +18,20 @@ area: 'main'
 		 alt="mlut logo" src="/assets/img/logo.png">
 
 
-		<h1 class="Txa-c C-$accent900 Fns10u Lnh1.1 md_Lnh1.5 <%= heroCSS.universalMargin %> P0;1u md_Fns10u">
+		<strong class="D Txa-c C-$accent900 Fns8u Lnh1 <%= heroCSS.universalMargin %> P0;1u md_Fns13u">
+			Make CSS exciting again!
+		</strong>
+
+		<h1 class="C-$accent850 Fnw-n <%= heroCSS.universalMargin %> P0;2u Mxw-gMd Txa-c Fns4.4u md_Fns5.2u">
 			The best CSS framework for creative coding
 		</h1>
 
-		<em class="D C-$accent850 <%= heroCSS.universalMargin %> P0;2u Mxw-gSm Txa-c Fns4.4u
-			md_Fns5.2u">
-			Make CSS exciting again!
-		</em>
-
 		<div class="D-f Fld-r W100p Flw-w Jc-c Gap3u <%= heroCSS.universalMargin %> P0;5u">
 
-			<div class="<%= heroCSS.heroLink %>">
+			<div class="W70p Mxw50u xl_Mxw55u H7u">
 				<%- include('./_includes/components/link-button.ejs',{
 						url:"https://mlutcss.github.io/mlut/",
-						text: "Getting started",
+						text: "Get started",
 						icon: "book",
 						variant: "light"
 					})
