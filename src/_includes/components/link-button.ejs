@@ -7,6 +7,8 @@
 		span:"D Fns0.9r"
 	}
 
+	href=`href=${it.url}`
+
 	if (it.variant === 'dark'){
 		css.buttonColors = "Bgc-n C-$brand Bgc-$brand200_h";
 		css.svgColors = "Fi-n St-$brand";
@@ -14,8 +16,14 @@
 		css.buttonColors = "Bgc-$brand Bgc-$brand500_h C#fff";
 		css.svgColors = " Fi-$brand St#fff";
 	}
+
+	if (!it.tag) {
+		it.tag = 'a'
+	} else {
+		href = ''
+	}
 %>
-<a href="<%= it.url %>" role="button"
+<<%= it.tag %> <%= href %> role="button"
 	class="btn <%= css.buttonShape %> <%= css.buttonColors %>">
 	<% if (it.icon) {%>
 		<div class=" <%= css.contentContainer %>">
@@ -37,5 +45,5 @@
 			</span>
 		</div>
 	<% } %>
-</a>
+</<%= it.tag %>>
 
