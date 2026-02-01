@@ -75,6 +75,7 @@ html{
 @media (prefers-color-scheme: dark){
 	html{
 		--ml-core350: rgba(17,24,39,0.8);
+		--ml-core900:rgb(17,24,39);
 		--ml-core400:#121828;
 		--ml-core450:#061230;
 		--ml-core800:rgba(17,24,39,0.8);
@@ -129,6 +130,7 @@ html{
 @media (prefers-color-scheme: light){
 	html{
 		--ml-core350: #e2e2e2b6;
+		--ml-core900:rgb(255, 255, 255);
 		--ml-core400:rgba(244, 198, 248, 0.55);
 		--ml-core450:#2762f81f;
 		--ml-core800:rgb(255, 255, 255, 0.9);
