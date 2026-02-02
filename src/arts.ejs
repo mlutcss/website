@@ -20,7 +20,7 @@ area: Arts
 
 		<div class="M-a W100p D-f Fld-r Flw-w Jc-c Ai-c">
 			<% it.arts.forEach((art, index) => {%>
-				<art-component class="D Ps -Ctx W100p H20gg Tsd-$shortTs @:hv_Tsd-$longTs md_W50p" id="<%= art.artId %>">
+				<art-panel class="D Ps -Ctx W100p H20gg -Ts @:hv_Tsd-$longTs md_W50p" id="<%= art.artId %>">
 					<div class="-Sz100p Ov-h Plcc-c Plci-c D-f <%= art.bgColor %>">
 						<%- include(`./_includes/components/arts/${art.artId}.ejs`) %>
 					</div>
@@ -40,7 +40,7 @@ area: Arts
 							}) %>
 						</div>
 					</div>
-				</art-component>
+				</art-panel>
 			<% }) %>
 
 			<div class="<%= artsPageCSS.card %> <%= setCtaLength() %> -Ctx P3u">

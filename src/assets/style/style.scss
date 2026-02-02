@@ -1,7 +1,7 @@
 @use 'mlut' with (
   $jit: (
     'output': 'dist/assets/style/style.min.css',
-    'content': ['src/**/*.ejs','src/**/*.json','src/assets/custom-elements/**/*.js'],
+    'content': ['src/**/*.ejs','src/**/*.json','src/assets/script/**/*.js'],
     'minify': true
   ),
 );
@@ -40,40 +40,14 @@ html{
 	--ml-blueGray:rgb(236, 240, 246,0.5);
 	--ml-gray200:#d1d5db;
 	--ml-gray350:#cacacaa0;
-
-	// flushed emoji
-	--ml-flushedOrange900:#e66300;
-  --ml-flushedOrange850:#f0761c;
-  --ml-flushedOrange800:#f17a1b;
-  --ml-flushedOrange700:#ee980d;
-  --ml-flushedOrange500:#f8c829;
-  --ml-flushedOrange400:#f6cc2b;
-  --ml-flushedOrange100:#fdfce1;
-  --ml-flushedGray900:#010101;
-  --ml-flushedGray700:#938568;
-  --ml-flushedGray500:#cccccc;
-  --ml-flushedGray400:#ededed;
-  --ml-flushedBrown700:#662800;
-  --ml-flushedBrown500:#934800;
-
-	// exploding head
-  --ml-explodeOrange700:#ee980d;
-  --ml-explodeOrange500:#f8c829;
-  --ml-explodeBrown700:#662800;
-  --ml-explodeBrown600:#6f2810;
-  --ml-explodeBrown550:#9c2a00;
-  --ml-explodeBrown500:#934800;
-  --ml-explodeBrown450:#9b3c18;
-  --ml-explodeBrown400:#a24b0b;
-  --ml-explodeBrown300:#f7ae48;
-  --ml-explodeBrown200:#d2a55a;
-  --ml-explodeBrown100:#efd3ac;
+	color:#747373
 }
 
 
 
 @media (prefers-color-scheme: dark){
 	html{
+		--ml-core300:rgba(32, 40, 57, 0.8);
 		--ml-core350: rgba(17,24,39,0.8);
 		--ml-core900:rgb(17,24,39);
 		--ml-core400:#121828;
@@ -129,6 +103,7 @@ html{
 
 @media (prefers-color-scheme: light){
 	html{
+		--ml-core300:#a6a6a680;
 		--ml-core350: #e2e2e2b6;
 		--ml-core900:rgb(255, 255, 255);
 		--ml-core400:rgba(244, 198, 248, 0.55);

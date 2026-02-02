@@ -23,7 +23,7 @@
 		href = ''
 	}
 %>
-<<%= it.tag %> <%= href %> role="button"
+<<%= it.tag %> <%= href %>
 	class="btn <%= css.buttonShape %> <%= css.buttonColors %>">
 	<% if (it.icon) {%>
 		<div class=" <%= css.contentContainer %>">
@@ -34,13 +34,13 @@
 					<use href="/assets/img/icons.svg#<%= it.icon %>"></use>
 				</svg>
 			</div>
-			<span class="<%= css.span %>">
+			<span class="<%= css.span %>" data-name="button-text">
 				<%= it.text %>
 			</span>
 		</div>
 	<% } else { %>
 		<div class="<%= css.contentContainer%>">
-			<span class="<%= css.span %>">
+			<span class="<%= css.span %>" data-name="button-text">
 				<%= it.text %>
 			</span>
 		</div>
