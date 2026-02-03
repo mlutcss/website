@@ -1,3 +1,5 @@
+const hightlightCss = "Bd1;s;$brand_t Bxsd1;1;10;2;$brand_t Zi19_t"
+
 export class ArtPanel extends HTMLElement {
 	constructor() {
 		super();
@@ -6,7 +8,7 @@ export class ArtPanel extends HTMLElement {
 
 	connectedCallback() {
 		this.highlightTargetArt();
-		this.button = this.querySelector(`#${this.id}-link-button`);
+		this.button = this.querySelector(`.${this.id}-link-button`);
 		this.button.addEventListener('click', () => this.copyArtLink())
 	}
 
@@ -21,9 +23,9 @@ export class ArtPanel extends HTMLElement {
 	}
 
 	highlightTargetArt() {
-		this.classList.add('Bxsd1;1;10;2;$brand_t', 'Bd1;s;$brand_t', 'Zi19_t')
+		this.classList.add(...hightlightCss.split(' '))
 		setTimeout(() => {
-			this.classList.remove('Bxsd1;1;10;2;$brand_t', 'Bd1;s;$brand_t', 'Zi19_t')
+			this.classList.remove(...hightlightCss.split(' ')	)
 		},5000)
 	}
 }

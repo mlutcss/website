@@ -1,9 +1,9 @@
 import ejsPlugin from '@11ty/eleventy-plugin-ejs';
 
-export default async function(config){
-  config.addPlugin(ejsPlugin,{
+export default function(config){
+  config.addPlugin(ejsPlugin, {
 		_with: false,
-    localsName: 'it'
+		localsName: 'it'
 	});
 
 	config.addCollection('art-api', (collectionApi) => {
