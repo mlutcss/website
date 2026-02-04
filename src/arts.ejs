@@ -6,7 +6,7 @@ area: Arts
 	const artsPageCSS = {
 		card:"W100p H20gg Tsd-$shortTs @:hv_Tsd-$longTs",
 		artWrapper:"-Sz100p Ov-h Plcc-c Plci-c D-f",
-		button: "W12gg lg_W9gg Mxw50u xl_Mxw55u H7u"
+		button: "W12gg lg_W9gg Mxw50u xl_Mxw55u Ai-str"
 	}
 
 	function setCtaLength(){
@@ -20,24 +20,26 @@ area: Arts
 
 		<div class="M-a W100p D-f Fld-r Flw-w Jc-c Ai-c">
 			<% it.arts.forEach((art, index) => {%>
-				<art-panel class="D Ps -Ctx W100p H20gg -Ts @:hv_Tsd-$longTs md_W50p" id="<%= art.artId %>">
+				<art-panel class="D Ps -Ctx W100p H20gg -Ts md_W50p" id="<%= art.artId %>">
 					<div class="-Sz100p Ov-h Plcc-c Plci-c D-f <%= art.bgColor %>">
 						<%- include(`./arts/${art.artId}.ejs`) %>
 					</div>
-					<div class="Ps-a D-f Jc-c Ai-fe P4u Gap3u T0 L0 M0 -Sz100p O0 Vs-h ^:h_Vs-v ^:h_O1 Bd1;s;tp Bgc-$core350 ^:h_Bdc-$brand Tsd500ms">
-						<div class="<%= artsPageCSS.button %>">
-							<%- include(`./_includes/components/link-button.ejs`, {
-								url:`http://play.mlut.style/?art=${art.artId}`,
-								text: "Open in sandbox",
-								variant: "light"
-							}) %>
-						</div>
-						<div class="<%= artsPageCSS.button %> link-button" >
-							<%- include(`./_includes/components/link-button.ejs`, {
-								tag:"button",
-								text: "Share",
-								variant: "light"
-							}) %>
+					<div class="Ps-a P4u T0 L0 M0 D-f Jc-fe Fld-c -Sz100p O0 Vs-h ^:h_Vs-v ^:h_O1 Bd1;s;tp Bgc-$core350 ^:h_Bdc-$brand Tsd500ms">
+						<div class="Mt-a D-f Jc-c Gap3u Mnh7u">
+							<div class="<%= artsPageCSS.button %> ">
+								<%- include(`./_includes/components/link-button.ejs`, {
+									url:`http://play.mlut.style/?art=${art.artId}`,
+									text: "Open in sandbox",
+									variant: "light"
+								}) %>
+							</div>
+							<div class="<%= artsPageCSS.button %> link-button" >
+								<%- include(`./_includes/components/link-button.ejs`, {
+									tag:"button",
+									text: "Share",
+									variant: "light"
+								}) %>
+							</div>
 						</div>
 					</div>
 				</art-panel>

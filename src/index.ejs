@@ -26,9 +26,8 @@ area: 'main'
 			Tailwind CSS alternative for custom websites and creative coding
 		</h1>
 
-		<div class="D-f Fld-r W100p Flw-w Jc-c Gap3u <%= heroCSS.universalMargin %> P0;5u">
-
-			<div class="W70p Mxw50u xl_Mxw55u H7u">
+		<div class="D-f Fld-r W100p Flw-w Jc-c Gap3u <%= heroCSS.universalMargin %> P0;5u Mnh7u">
+			<div class="W70p Mxw50u xl_Mxw55u As-str">
 				<%- include('./_includes/components/link-button.ejs',{
 						url:"https://docs.mlut.style/",
 						text: "Get started",
@@ -49,7 +48,7 @@ area: 'main'
 			When creativity meets productivity
 		</h2>
 
-		<p class="C-$accent850 Txa-c P0;3u M0;0;7u Mxw40ch">
+		<p class="C-$accent850 Txa-c P0;3u M0;0;2u Mxw40ch">
 			Yes, this is pure CSS art using utility classes! With mlut it is possible.
 		</p>
 
@@ -64,11 +63,14 @@ area: 'main'
 
 		</div>
 
-		<div class=" Fns3.2u W100p Mxw62u H7u">
-			<%- include('./_includes/components/link-button.ejs',{
-				url: "/arts",
-				text: "More arts",
-			}) %>
+		<div class="D-f Fld-r W100p Flw-w Jc-c Gap3u <%= heroCSS.universalMargin %> P0;5u Mnh7u">
+			<div class="W70p Mxw50u xl_Mxw55u As-str">
+				<%- include('./_includes/components/link-button.ejs',{
+						url:"/arts",
+						text: "More arts",
+					})
+				%>
+			</div>
 		</div>
 
 </section>
@@ -106,14 +108,16 @@ area: 'main'
 			<% } %>
 		</ul>
 
-		<div class="M3u;0 Fns3.2u W100p Mxw62u H7u">
-			<%- include('./_includes/components/link-button.ejs',{
-				url: "https://docs.mlut.style/",
-				text: "Learn more",
-				icon: "right-triangle"
-			}) %>
+		<div class="D-f Fld-r W100p Flw-w Jc-c Gap3u M3u;0 P0;5u Mnh7u">
+			<div class="W70p Mxw50u xl_Mxw55u As-str">
+				<%- include('./_includes/components/link-button.ejs',{
+						url: "https://docs.mlut.style/",
+						text: "Learn more",
+						icon: "right-triangle"
+					})
+				%>
+			</div>
 		</div>
-	</div>
 
 </section>
 
@@ -414,11 +418,14 @@ area: 'main'
 			</li>
 		</ul>
 	</div>
-	<div class="M0;a;5u Fns3.2u W100p Mxw62u H7u">
-		<%- include('./_includes/components/link-button.ejs',{
-			url: "https://docs.mlut.style/section-start.html",
-			text: "Try now",
-			icon: "right-triangle"
-		}) %>
+	<div class="D-f Fld-r W100p Flw-w Jc-c Gap3u M0;a;5u P0;5u Mnh7u">
+		<div class="W70p Mxw50u xl_Mxw55u As-str">
+			<%- include('./_includes/components/link-button.ejs',{
+					url: "https://docs.mlut.style/section-start.html",
+					text: "Try now",
+					icon: "right-triangle"
+				})
+			%>
+		</div>
 	</div>
 </section>

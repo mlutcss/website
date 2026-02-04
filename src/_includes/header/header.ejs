@@ -54,7 +54,7 @@
 
 	<%# Desktop links %>
 
-  <div class="Ai-c Jc-fe P0;2.5u D-n md_D-f H65p
+  <div class="Ai-c Jc-fe P1u;2.5u D-n md_D-f H65p
 		md_W25p md_Flg0.25 md_Gap2u lg_Gap4u">
 		<% for (let extLink of it.extLinks.filter((el) => el.name !== 'Documentation')) { %>
 			<%- include('../components/sm-link.ejs',{
@@ -62,7 +62,7 @@
 				link:`${extLink.link}`
 			}) %>
 		<% } %>
-		<div class="H80p M0 D-f Ai-c Jc-c">
+		<div class="M0 D-f Ai-c Jc-c As-str">
 			<%- include('../components/link-button.ejs',{
 				url:"https://docs.mlut.style/",
 				text: "Docs",
