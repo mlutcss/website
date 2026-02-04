@@ -1,4 +1,4 @@
-const hightlightCss = "Bd1;s;$brand_t Bxsd1;1;10;2;$brand_t Zi19_t"
+const hightlightCss = ["Bd1;s;$brand", "Bxsd1;1;10;2;$brand", "Zi19"]
 
 export class ArtPanel extends HTMLElement {
 	constructor() {
@@ -7,8 +7,10 @@ export class ArtPanel extends HTMLElement {
 	}
 
 	connectedCallback() {
-		this.highlightTargetArt();
-		this.button = this.querySelector(`.${this.id}-link-button`);
+		if (location.hash.slice(1) === this.id){
+			this.highlightTargetArt();
+		}
+		this.button = this.querySelector(`.link-button`);
 		this.button.addEventListener('click', () => this.copyArtLink())
 	}
 
@@ -23,9 +25,9 @@ export class ArtPanel extends HTMLElement {
 	}
 
 	highlightTargetArt() {
-		this.classList.add(...hightlightCss.split(' '))
+		this.classList.add(...hightlightCss)
 		setTimeout(() => {
-			this.classList.remove(...hightlightCss.split(' ')	)
+			this.classList.remove(...hightlightCss)
 		},5000)
 	}
 }
