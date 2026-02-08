@@ -26,49 +26,47 @@ area: 'main'
 			Tailwind CSS alternative for custom websites and creative coding
 		</h1>
 
-		<div class="D-f Fld-r W100p Flw-w Jc-c Gap3u <%= heroCSS.universalMargin %> P0;5u">
-
-			<div class="W70p Mxw50u xl_Mxw55u H7u">
-				<%- include('./_includes/components/link-button.ejs',{
-						url:"https://docs.mlut.style/",
-						text: "Get started",
-						icon: "book",
-						variant: "light"
-					})
-				%>
-			</div>
+		<div class="W70p Mxw50u xl_Mxw55u M-a">
+			<%- include('./_includes/components/link-button.ejs',{
+					url:"https://docs.mlut.style/",
+					text: "Get started",
+					icon: "book",
+					variant: "light"
+				})
+			%>
 		</div>
 	</div>
 </div>
 
 <%# Arts section %>
 
-<section id="arts" class="Bgc-$core400 W100p">
+<section id="arts" class="Bgc-$core300 W100p">
 	<div class="D-f M-a Jc-c Ai-c Fld-c P16u;0  wrapper">
 		<h2 class="<%= sectionHeader %> C-$accent900">
 			When creativity meets productivity
 		</h2>
 
-		<p class="C-$accent850 Txa-c P0;3u M0;0;7u Mxw40ch">
+		<p class="C-$accent850 Txa-c P0;3u M0 Mxw40ch">
 			Yes, this is pure CSS art using utility classes! With mlut it is possible.
 		</p>
 
-		<div class="W100p M0;0;2u Gap5u D-f Jc-c Ai-c Fld-r Flw-w">
+		<div class="W100p M0;0;9u Gap5u D-f Jc-c Ai-c Fld-r Flw-w">
 
 			<%# arts %>
 
 			<div class="W90p Apcr1 Mxw100u sm_W55p -Ctx-art Tf -S105p_h Tsd-$longTs Ov-h">
 
-				<%- include(`./_includes/components/arts/exploding-head.ejs`)%>
+				<%- include(`./arts/exploding-head.ejs`)%>
 			</div>
 
 		</div>
 
-		<div class=" Fns3.2u W100p Mxw62u H7u">
+		<div class="W80p Mxw50u xl_Mxw55u">
 			<%- include('./_includes/components/link-button.ejs',{
-				url: "/arts",
-				text: "More arts",
-			}) %>
+					url:"/arts",
+					text: "More arts",
+				})
+			%>
 		</div>
 
 </section>
@@ -106,14 +104,14 @@ area: 'main'
 			<% } %>
 		</ul>
 
-		<div class="M3u;0 Fns3.2u W100p Mxw62u H7u">
+		<div class="W70p Mxw50u xl_Mxw55u M0;a;5u">
 			<%- include('./_includes/components/link-button.ejs',{
-				url: "https://docs.mlut.style/",
-				text: "Learn more",
-				icon: "right-triangle"
-			}) %>
+					url: "https://docs.mlut.style/",
+					text: "Learn more",
+					icon: "right-triangle"
+				})
+			%>
 		</div>
-	</div>
 
 </section>
 
@@ -414,11 +412,12 @@ area: 'main'
 			</li>
 		</ul>
 	</div>
-	<div class="M0;a;5u Fns3.2u W100p Mxw62u H7u">
+	<div class="W70p Mxw50u xl_Mxw55u M-a">
 		<%- include('./_includes/components/link-button.ejs',{
-			url: "https://docs.mlut.style/section-start.html",
-			text: "Try now",
-			icon: "right-triangle"
-		}) %>
+				url: "https://docs.mlut.style/section-start.html",
+				text: "Try now",
+				icon: "right-triangle"
+			})
+		%>
 	</div>
 </section>
