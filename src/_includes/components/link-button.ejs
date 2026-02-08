@@ -1,11 +1,13 @@
 <%
 	 const css = {
-		buttonShape:"-Sz100p D-f Jc-c Ai-c P0;3u Fns0.8r Bdrd1u Ts-$shortTs Bd1;s;$brand",
+		buttonShape:"-Sz100p D-f Jc-c Ai-c P1u;3u Fns0.8r Bdrd1u Ts-$shortTs Bd1;s;$brand",
 		contentContainer: "D-f Jc-c Ai-c Fld-r Gap3u Fns1.1r ",
 		iconContainer: "D Apcr1 W0.9r",
 		icon:"D W100p Mxw25u Apcr1 Stw2",
-		span:"D Fns0.9r"
+		span:"D Fns0.9r "
 	}
+
+	href=`href=${it.url}`
 
 	if (it.variant === 'dark'){
 		css.buttonColors = "Bgc-n C-$brand Bgc-$brand200_h";
@@ -14,8 +16,14 @@
 		css.buttonColors = "Bgc-$brand Bgc-$brand500_h C#fff";
 		css.svgColors = " Fi-$brand St#fff";
 	}
+
+	if (!it.tag) {
+		it.tag = 'a'
+	} else {
+		href = ''
+	}
 %>
-<a href="<%= it.url %>" role="button"
+<<%= it.tag %> <%= href %>
 	class="btn <%= css.buttonShape %> <%= css.buttonColors %>">
 	<% if (it.icon) {%>
 		<div class=" <%= css.contentContainer %>">
@@ -26,16 +34,16 @@
 					<use href="/assets/img/icons.svg#<%= it.icon %>"></use>
 				</svg>
 			</div>
-			<span class="<%= css.span %>">
+			<span class="<%= css.span %> button-text">
 				<%= it.text %>
 			</span>
 		</div>
 	<% } else { %>
 		<div class="<%= css.contentContainer%>">
-			<span class="<%= css.span %>">
+			<span class="<%= css.span %> button-text">
 				<%= it.text %>
 			</span>
 		</div>
 	<% } %>
-</a>
+</<%= it.tag %>>
 
