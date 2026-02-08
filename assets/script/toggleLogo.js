@@ -15,6 +15,7 @@ function handleIntersect(entries, observer){
 	});
 };
 
+
 function createObserver(){
 	const options = {
 		root: null,
@@ -26,4 +27,6 @@ function createObserver(){
 	observer.observe(hero);
 };
 
-createObserver();
+if (hero) {
+	createObserver();
+}
