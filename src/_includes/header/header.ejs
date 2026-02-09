@@ -26,7 +26,7 @@
 
 			<nav class="M0;0;9u md_M0">
 				<h2 class="P0;5u M0;0;7u Txa-r C-$brand md_D-n @:h<420_M0;0;4u"> Menu</h2>
-				<ul class="C-$accent850 H40p D-f Jc-c Fld-c md_Fld-r Gap6u P0;5u Txa-r  Fns4.8u Lsst-n M0 md_P0 md_H100p md_Gap2u md_Txa-c md_Fns4u @:h<420:w<gMd_Fld-r @:h<420:w<gMd_Flw-w @:h<420:w<gMd_Jc-fe">
+				<ul id="nav-menu" class="C-$accent850 H40p D-f Jc-c Fld-c md_Fld-r Gap6u P0;5u Txa-r  Fns4.8u Lsst-n M0 md_P0 md_H100p md_Gap2u md_Txa-c md_Fns4u @:h<420:w<gMd_Fld-r @:h<420:w<gMd_Flw-w @:h<420:w<gMd_Jc-fe">
 					<% for (let navLink of it.navLinks) {%>
 						<li class=" <%= css.navLi %>">
 								<a href="<%= navLink.link %>" class="<%= css.navLinkMobile %> <%= css.navLinkDesktop %>">
@@ -35,6 +35,19 @@
 						</li>
 					<% }%>
 				</ul>
+				<script type="module">
+					if(window.location.href.includes('productradar')) {
+						const navMenu = document.getElementById('nav-menu');
+						const newItem = navMenu.lastElementChild.cloneNode(true);
+						const link = newItem.firstElementChild;
+
+						link.textContent = 'Вебинар';
+						link.href = 'https://forms.gle/GjneTZGWHkeCavev5';
+						link.setAttribute('target', 'blank');
+						link.classList.add('Fnw-b');
+						navMenu.appendChild(newItem);
+					}
+				</script>
 			</nav>
 
 			<%# External links %>

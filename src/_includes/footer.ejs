@@ -39,7 +39,7 @@
 					Learn more
 				</h3>
 
-				<ul class="<%= css.ul %>">
+				<ul id="footer-menu" class="<%= css.ul %>">
 					<% for (let extLink of it.extLinks) {%>
 						<li class="<%= css.li %>">
 							<a href="<%= extLink.link %>" class="<%= css.link %>">
@@ -48,6 +48,19 @@
 						</li>
 					<% } %>
 				</ul>
+				<script type="module">
+					if(window.location.href.includes('productradar')) {
+						const navMenu = document.getElementById('footer-menu');
+						const newItem = navMenu.lastElementChild.cloneNode(true);
+						const link = newItem.firstElementChild;
+
+						link.textContent = 'Вебинар';
+						link.href = 'https://forms.gle/GjneTZGWHkeCavev5';
+						link.setAttribute('target', 'blank');
+						link.classList.add('Fnw-b');
+						navMenu.appendChild(newItem);
+					}
+				</script>
 			</div>
 		</section>
 
