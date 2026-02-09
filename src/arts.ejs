@@ -26,21 +26,19 @@ area: Arts
 					</div>
 					<div class="Ps-a P4u T0 L0 M0 D-f Jc-fe Fld-c -Sz100p O0 Vs-h ^:h_Vs-v ^:h_O1 Bd1;s;tp Bgc-$core350 ^:h_Bdc-$brand Tsd500ms">
 						<div class="Mt-a D-f Jc-c Gap3u">
-						<!--
-						<div class="<%= artsPageCSS.button %> ">
-							<%- include(`./_includes/components/link-button.ejs`, {
-								url:`http://play.mlut.style/?art=${art.artId}`,
-								text: "Open in sandbox",
-								variant: "light"
-							}) %>
-						</div>
-						-->
+							<div class="<%= artsPageCSS.button %> ">
+								<%- include(`./_includes/components/link-button.ejs`, {
+										url:`http://play.mlut.style/?art=${art.artId}`,
+										text: "Open in sandbox",
+										variant: "light"
+									}) %>
+							</div>
 							<div class="<%= artsPageCSS.button %> link-button" >
 								<%- include(`./_includes/components/link-button.ejs`, {
-									tag:"button",
-									text: "Share",
-									variant: "light"
-								}) %>
+										tag:"button",
+										text: "Share",
+										variant: "light"
+									}) %>
 							</div>
 						</div>
 					</div>
