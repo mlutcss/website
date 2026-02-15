@@ -1,22 +1,22 @@
 [
 	{
-		"caption":"Cute ghost",
 		"artId":"ghost",
-		"bgColor":"Bgc-$art900"
+		"bgColor":"Bgc-$artGhost"
 	},
 	{
-		"caption":"Penrose triangle",
 		"artId":"penrose-triangle",
-		"bgColor":"Bgc-$art850"
+		"bgColor":"Bgc-$artPenroseTriangle"
 	},
 	{
-		"caption":"Flushed emoji",
 		"artId":"flushed-emoji",
-		"bgColor":"Bgc-$art800"
+		"bgColor":"Bgc-$artFlushedEmoji"
 	},
 	{
-		"caption":"Exploding head",
 		"artId":"exploding-head",
-		"bgColor":"Bgc-$art750"
+		"bgColor":"Bgc-$artExplodingHead"
+	},
+	{
+		"artId":"clown-emoji",
+		"bgColor":"Bgc-$artClownEmoji"
 	}
 ]
