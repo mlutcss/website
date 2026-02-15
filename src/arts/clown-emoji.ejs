@@ -1,0 +1,48 @@
+<%
+  const css = {
+    hairWrapper: '-Sz40p Ps-a T2p',
+    hairBottomPart: '-Sz35p Bdrd100p Ps-a T45p L-15p Bgc-$clownRedA Bd3;s;$clownRedB Ct_b Ps-a_b -Sz100p_b L205p_b T-145p_b Bgc-$clownRedA_b Bd3;s;$clownRedB_b Bdrd100p_b',
+    hairTopPart: '-Sz40p Bdrd100p Ps Bgc-$clownRedA Bd3;s;$clownRedB Ct_af,b Ps-a_af,b -Sz120p_af,b T40p_af L-30p_af L55p_b T-15p_b Bgc-$clownRedA_af,b Bd3;s;$clownRedB_af,b Bdrd100p_af,b',
+    eye: 'Ps-a Bgc-$clownWhiteA Zi10 T20p W23p H38p Bd6;s;$clownBlue Bdrd100p D-f Jc-c Ai-c Ct_af,b Ps-a_af T-40p_af Bdrd100p_af L0_af W100p_af H30p_af -Gdrd-cr;at;50p;100p,tp,tp;50p,$clownGrayB;50p,$clownGrayA;70p,tp;70p_af',
+    pupil: 'W60p H70p Bdrd100p -Gdrd-cr;fts;at;50p;70p,$clownGrayA,$clownGrayA;80p,$clownGrayB;95p',
+    lipsCorner: 'Ps-a Zi7 B28p -Sz19p',
+    shutter: 'W100p H65p Bgc-$clownWhiteA'
+  }
+%>
+<!-- Canvas -->
+<div class="-Sz100p Ctnt-s D-f Jc-c Ai-c -ClownRedA#ff382c -ClownRedB#c50301 -ClownRedC#ff372c40 -ClownWhiteA#fff -ClownWhiteB#ece3b6 -ClownWhiteC#a79b4d -ClownWhiteD#f9f8ef -ClownGrayA#404040 -ClownGrayB#030303 -ClownBlue#0072be Ov-h">
+  <div class="@c:apcr>=1_H70p @c:apcr<=1_W70p Apcr1 Ps-r ">
+    <!-- Left Hair -->
+    <div class="<%= css.hairWrapper%> Tf -Rt-15d L2p">
+      <div class="<%= css.hairBottomPart%>"></div>
+      <div class="<%= css.hairTopPart%>"></div>
+    </div>
+    <!-- Left Hair -->
+    <div class="<%= css.hairWrapper%> Tf -Rt-15d R2p -Sx-100p">
+      <div class="<%= css.hairBottomPart%>"></div>
+      <div class="<%= css.hairTopPart%>"></div>
+    </div>
+    <!-- Head-->
+    <div class="Apcr1 -Sz100p Ps-a Bdrd100p Bd1;s;$clownWhiteC -Gdrd-cr;at;50p;48p,$clownWhiteD,$clownWhiteA;65p,$clownWhiteB;70p,$clownWhiteB;">
+      <!-- Left eye -->
+      <div class="<%= css.eye %> @c:w>=gMd_Bdw13 L20p">
+        <div class="<%= css.pupil %>"></div>
+      </div>
+      <!-- Right eye -->
+      <div class="<%= css.eye %> @c:w>=gMd_Bdw13 R20p">
+        <div class="<%= css.pupil %>"></div>
+      </div>
+      <!-- Nose -->
+      <div class="Ps-a -Sz22p Zi8 T48p L39p -Gdrd-cr;at;50p;90p,$clownRedA;80p,$clownWhiteA;84p Bd4;s;$clownRedB @c:w>=gMd_Bdw6 Bdrd100p Ct_af,b -Sz2p_af,b Bgc-$clownRedA_af,b Bdrd100p_af,b Bxsd0;0;6u;4u;$clownRedA_af,b @c:w>=gSm_Bxsd0;0;7u;5u;$clownRedA_af,b @c:w>=gMd_Bxsd0;0;9u;7u;$clownRedA_af,b Ps-a_af,b T30p_af,b L220p_af R220p_b"></div>
+      <!-- Mouth -->
+      <div class="Ps-a B6p L15p W70p Apcr1 -Bdbrd100p -Bdtrd100p -Gdrd-cr;at;c,$clownWhiteA,$clownWhiteA;58p,$clownRedA;58p,$clownRedA;66p,$clownRedB;66p">
+        <div class="<%= css.shutter %>"></div>
+        <div class="<%= css.lipsCorner%> Tf -Rt-35d L-3p -Gdrd-el;at;57p;100p,$clownRedA,$clownRedA;33p,$clownRedB;33p,$clownRedB;54p,$clownWhiteA;54p"></div>
+        <div class="<%= css.lipsCorner%> Tf -Rt35d R-3p -Gdrd-el;at;41p;100p,$clownRedA,$clownRedA;32p,$clownRedB;32p,$clownRedB;52p,$clownWhiteA;52p"></div>
+      </div>
+      <div class="Ps-a B100p L15p B20p W70p H40p -Bdbrd100p -Bdtrd100p -Gdrd-el;108p;100p,$clownWhiteA,$clownWhiteA;35p,$clownRedB;35p,$clownRedB;40p,$clownRedA;40p">
+        <div class="<%= css.shutter %>"></div>
+      </div>
+    </div>
+  </div>
+</div>

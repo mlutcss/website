@@ -9,6 +9,7 @@
 a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-touch-callout: none;
+
 }
 
 .hljs{
@@ -91,10 +92,11 @@ html{
 		--ml-correct850:rgba(1,102,48,0.4);
 		--ml-correct750:rgba(0,130,54,0.6);
 		// arts
-		--ml-art900:#450c00;
-		--ml-art850:#420039;
-		--ml-art800:#000942;
-		--ml-art750:#003b2a;
+		--ml-artGhost:#450c00;
+		--ml-artPenroseTriangle:#420039;
+		--ml-artFlushedEmoji:#000942;
+		--ml-artExplodingHead:#003b2a;
+		--ml-artClownEmoji: #065054;
 	}
 }
 
@@ -147,10 +149,11 @@ html{
 		--ml-correct850:rgba(183, 250, 207, 0.6);
 		--ml-correct750:rgba(83, 250, 141, 0.6);
 		// arts
-		--ml-art900:#ffbcB0;
-		--ml-art850:#ffa6f2;
-		--ml-art800:#bfc5ff;
-		--ml-art750:#9cffe5;
+		--ml-artGhost:#ffbcB0;
+		--ml-artPenroseTriangle:#ffa6f2;
+		--ml-artFlushedEmoji:#bfc5ff;
+		--ml-artExplodingHead:#9cffe5;
+		--ml-artClownEmoji: #10bac3;
 	}
 
 }
