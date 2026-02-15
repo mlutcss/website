@@ -1,18 +1,17 @@
 <%
-	const css = {
-		eyes: "W11p H13p Ps-a B33p Bdrd100p -Gdl0d,$explodingBrownD;0p,$explodingBrownD;65p,$explodingBrownA;100p",
-		backPart: "Bgc-$explodingBrownC Ps-a Tf",
-		mushroomBackInner: "-Sz80p Bdrd100p Bgc-$explodingBrownG",
-		mushroomBackOuter: "Ps-a D-f Plcc-c Plci-c Bdrd100p Bgc-$explodingBrownF",
-		mushroomBeltInner: "-Sz80p Bdrd100p Bdtlr70p Bgc-$explodingBrownI",
-		mushroomBeltOuter: "D-f Plcc-c Plci-c Ps-a W30p Bdrd100p",
-		artLayer: "W100p Apcr1 Bdrd100p Ps-a"
-	}
+  const css = {
+    eyes: "W11p H13p Ps-a B33p Bdrd100p -Gdl0d,$explodingBrownD;0p,$explodingBrownD;65p,$explodingBrownA;100p",
+    backPart: "Bgc-$explodingBrownC Ps-a Tf",
+    mushroomBackInner: "-Sz80p Bdrd100p Bgc-$explodingBrownG",
+    mushroomBackOuter: "Ps-a D-f Plcc-c Plci-c Bdrd100p Bgc-$explodingBrownF",
+    mushroomBeltInner: "-Sz80p Bdrd100p Bdtlr70p Bgc-$explodingBrownI",
+    mushroomBeltOuter: "D-f Plcc-c Plci-c Ps-a W30p Bdrd100p",
+    artLayer: "W100p Apcr1 Bdrd100p Ps-a"
+  }
 %>
-<div class="Ctnt-s M7u;a;0 H100p Apcr1 Ctnn-canva Plci-c;c Plcc-c D-f -ExplodingOrangeA#ee980d -ExplodingOrangeB#f8c829 -ExplodingBrownA#662800 -ExplodingBrownB#6f2810 -ExplodingBrownC#9c2a00 -ExplodingBrownD#934800 -ExplodingBrownE#9b3c18 -ExplodingBrownF#a24b0b -ExplodingBrownG#f7ae48 -ExplodingBrownH#d2a55a -ExplodingBrownI#efd3ac">
+<div class="Ctnt-s M7u;a;0 H100p Apcr1 Plci-c;c Plcc-c D-f -ExplodingOrangeA#ee980d -ExplodingOrangeB#f8c829 -ExplodingBrownA#662800 -ExplodingBrownB#6f2810 -ExplodingBrownC#9c2a00 -ExplodingBrownD#934800 -ExplodingBrownE#9b3c18 -ExplodingBrownF#a24b0b -ExplodingBrownG#f7ae48 -ExplodingBrownH#d2a55a -ExplodingBrownI#efd3ac">
   <!-- Head  -->
-  <div class="Apcr1 Bdrd100p  @c:canva:apcr>=1/1_H80p @c:canva:apcr<=1/1_W80p M-a Ps-r">
-
+  <div class="Apcr1 Bdrd100p  @c:apcr>=1/1_H80p @c:apcr<=1/1_W80p M-a Ps-r">
     <!-- Back of the head parts -->
     <div class="<%= css.artLayer %>">
       <!-- The first from the left -->
@@ -31,116 +30,134 @@
       <div class="-Sz30p  T46p L63p -Rt-18d <%= css.backPart%> Bdbrr50p">
       </div>
       <!-- The seventh from the left -->
-      <div class="-Sz15p  T49p R2p -Rt10d <%= css.backPart%> Bdbrr50p"></div>
+      <div class="-Sz15p  T49p R2p -Rt10d <%= css.backPart%> Bdbrr50p">
+      </div>
     </div>
-
     <!-- Mushroom -->
     <div class="<%= css.artLayer %>">
       <!-- The mushroom's cap's background -->
       <div class="W80p H35p Ps-a L10p T2p">
         <!-- Background layer -->
         <div class="W30p H35p  Bdtrr70p Bdbrr70 L10p B0p <%= css.mushroomBackOuter%>">
-          <div class="<%= css.mushroomBackInner%>"></div>
+          <div class="<%= css.mushroomBackInner%>">
+          </div>
         </div>
         <div class="W30p H35p  Bdtlr70p Bdblr70 R10p B0p <%= css.mushroomBackOuter%>">
-          <div class="<%= css.mushroomBackInner%>"></div>
+          <div class="<%= css.mushroomBackInner%>">
+          </div>
         </div>
         <div class="W30p H40p R35p B0p <%= css.mushroomBackOuter%>">
-          <div class="<%= css.mushroomBackInner%>"></div>
+          <div class="<%= css.mushroomBackInner%>">
+          </div>
         </div>
       </div>
       <!-- Mushroom stem -->
-      <div class="W28p H40p -Gdl90d,$explodingBrownB;0p,$explodingBrownB;50p,$explodingBrownE;50p,$explodingBrownE;100p Bgs28p Bgr-rx Ps-a T30p L36p"> </div>
+      <div class="W28p H40p -Gdl90d,$explodingBrownB;0p,$explodingBrownB;50p,$explodingBrownE;50p,$explodingBrownE;100p Bgs28p Bgr-rx Ps-a T30p L36p">
+			</div>
       <!-- Mushroom belt -->
       <div class="W34p H9p Ps-a T36p L33p">
         <!-- First left -->
         <div class="H80p Bdtrr70p Bdbrr70p Bgc-$explodingBrownH L0 T10p <%= css.mushroomBeltOuter %> ">
-          <div class="<%= css.mushroomBeltInner %>"></div>
+          <div class="<%= css.mushroomBeltInner %>">
+          </div>
         </div>
         <!-- First right -->
         <div class="H80p Bdtlr70p Bdblr70p Bgc-$explodingBrownH R0 T10p <%= css.mushroomBeltOuter %>">
-          <div class="<%= css.mushroomBeltInner %>"></div>
+          <div class="<%= css.mushroomBeltInner %>">
+          </div>
         </div>
          <!-- Second left -->
         <div class="H90p Bdtrr70p Bdbrr70p -Gdl0d,$explodingBrownH;20p,$explodingBrownI;40p,$explodingBrownI;60p,$explodingBrownH;80p L15p T5p <%= css.mushroomBeltOuter %> ">
-          <div class="<%= css.mushroomBeltInner %>"></div>
+          <div class="<%= css.mushroomBeltInner %>">
+          </div>
         </div>
         <!-- second right -->
         <div class="H90p -Gdl0d,$explodingBrownH;20p,$explodingBrownI;40p,$explodingBrownI;60p,$explodingBrownH;80p R15p T5p <%= css.mushroomBeltOuter %> ">
-          <div class="<%= css.mushroomBeltInner %>"></div>
+          <div class="<%= css.mushroomBeltInner %>">
+          </div>
         </div>
         <!-- middle one -->
         <div class="H100p -Gdl0d,$explodingBrownH;20p,$explodingBrownI;40p,$explodingBrownI;60p,$explodingBrownH;80p  R35p T0 <%= css.mushroomBeltOuter %>">
-          <div class="<%= css.mushroomBeltInner %>"></div>
+          <div class="<%= css.mushroomBeltInner %>">
+          </div>
         </div>
       </div>
-
-		<%
-		css.mushroomFrontOuter = "Bdrd100p Bgc-$explodingBrownH Ps-a"
-		css.mushroomFrontInner = "Bdrd100p Bgc-$explodingBrownI"
-		%>
-
+    <%
+    css.mushroomFrontOuter = "Bdrd100p Bgc-$explodingBrownH Ps-a"
+    css.mushroomFrontInner = "Bdrd100p Bgc-$explodingBrownI"
+    %>
      <!-- The mushroom's cap's foreground -->
       <div class="W100p H35p Ps-a">
         <!-- First bottom-left  -->
         <div class="W30p H60p <%= css.mushroomFrontOuter %> L0 B-5p">
-          <div class="-Sz85p <%= css.mushroomFrontInner %> Ml-a"></div>
+          <div class="-Sz85p <%= css.mushroomFrontInner %> Ml-a">
+          </div>
         </div>
         <!-- First bottom-right  -->
         <div class="W25p H70p <%= css.mushroomFrontOuter %> R0 B0p">
-          <div class="-Sz85p <%= css.mushroomFrontInner %> Mr-a"></div>
+          <div class="-Sz85p <%= css.mushroomFrontInner %> Mr-a">
+          </div>
         </div>
         <!-- Second bottom-right  -->
         <div class="W30p H50p Bdtlr70p <%= css.mushroomFrontOuter %> R20p B0p ">
-          <div class="W100p H85p Bdtlr70p <%= css.mushroomFrontInner %> Mr-a"></div>
+          <div class="W100p H85p Bdtlr70p <%= css.mushroomFrontInner %> Mr-a">
+          </div>
         </div>
         <!-- First top-left  -->
         <div class="W22p H50p  Bdtrr70p <%= css.mushroomFrontOuter %> L10p T10p">
-          <div class="W90p H70p Ps-a T5p L6p <%= css.mushroomFrontInner %> M-a"></div>
+          <div class="W90p H70p Ps-a T5p L6p <%= css.mushroomFrontInner %> M-a">
+          </div>
         </div>
         <!-- First top-right  -->
         <div class="W22p H50p <%= css.mushroomFrontOuter %> R10p T10p">
-          <div class="W90p H80p Ps-a L5p T3p <%= css.mushroomFrontInner %>"></div>
+          <div class="W90p H80p Ps-a L5p T3p <%= css.mushroomFrontInner %>">
+          </div>
         </div>
         <!-- Top-middle one  -->
         <div class="W24p H60p <%= css.mushroomFrontOuter %> R38p T-15p">
-          <div class="W90p H80p <%= css.mushroomFrontInner %> M-a"></div>
+          <div class="W90p H80p <%= css.mushroomFrontInner %> M-a">
+          </div>
         </div>
         <!-- Second top-left -->
         <div class="W28p H55p <%= css.mushroomFrontOuter %> L20p T2p">
-          <div class="W90p H80p Ps-a L5p T3p <%= css.mushroomFrontInner %> M-a"></div>
+          <div class="W90p H80p Ps-a L5p T3p <%= css.mushroomFrontInner %> M-a">
+          </div>
         </div>
         <!-- Second top-right -->
         <div class="W28p H55p <%= css.mushroomFrontOuter %> R23p T1p">
-          <div class="W90p H80p Ps-a L5p T3p <%= css.mushroomFrontInner %> M-a"></div>
+          <div class="W90p H80p Ps-a L5p T3p <%= css.mushroomFrontInner %> M-a">
+          </div>
         </div>
         <!-- Second bottom-left  -->
         <div class="W25p H50p <%= css.mushroomFrontOuter %> L20p B0p">
-          <div class="W90p H80p <%= css.mushroomFrontInner %> Mr-a"></div>
+          <div class="W90p H80p <%= css.mushroomFrontInner %> Mr-a">
+          </div>
         </div>
         <!-- Bottom-middle one  -->
         <div class="W26p H65p <%= css.mushroomFrontOuter %> R37p B0p ">
-          <div class="W90p H85p <%= css.mushroomFrontInner %> Mr-a"></div>
+          <div class="W90p H85p <%= css.mushroomFrontInner %> Mr-a">
+          </div>
         </div>
       </div>
 
     </div>
-
-		<%
-			css.explosionSmoke = "Bgc-$explodingBrownI Ps-a Tf"
-		%>
+    <%
+      css.explosionSmoke = "Bgc-$explodingBrownI Ps-a Tf"
+    %>
     <!-- The smoke of the explosion  -->
     <div class="<%= css.artLayer %>">
 
       <!-- The second from the left -->
       <div class="-Sz30p <%= css.explosionSmoke%> T48p L5p -Rt30d Bdblr50p">
-        <div class="-Sz25p <%= css.explosionSmoke%> T35p L-10p -Rt35d"></div>
+        <div class="-Sz25p <%= css.explosionSmoke%> T35p L-10p -Rt35d">
+        </div>
       </div>
       <!-- The third from the left -->
       <div class="-Sz30p <%= css.explosionSmoke%> T47p L10p -Rt-35d">
       </div>
       <!-- The fourth from the left -->
-      <div class="-Sz20p <%= css.explosionSmoke%> T46p L28p -Rt26d "></div>
+      <div class="-Sz20p <%= css.explosionSmoke%> T46p L28p -Rt26d ">
+      </div>
       <!-- The fifth from the left -->
       <div class="-Sz25p <%= css.explosionSmoke%> T49p L46p -Rt-35d">
       </div>
@@ -148,12 +165,12 @@
       <div class="-Sz30p <%= css.explosionSmoke%> T48p L60p -Rt-20d Bdbrr50p">
       </div>
       <!-- The seventh from the left -->
-      <div class="-Sz15p <%= css.explosionSmoke%> T49p R5p -Rt35d Bdbrr50p"></div>
+      <div class="-Sz15p <%= css.explosionSmoke%> T49p R5p -Rt35d Bdbrr50p">
+      </div>
     </div>
-
-		<%
-			css.foreheadPart = "Bgc-$explodingOrangeB Ps-a Tf"
-		%>
+    <%
+      css.foreheadPart = "Bgc-$explodingOrangeB Ps-a Tf"
+    %>
     <!-- Forehead parts  -->
     <div class="<%= css.artLayer %>">
       <!-- The first from the left -->
@@ -175,38 +192,47 @@
       <div class="-Sz30p <%= css.foreheadPart %> T50p L60p -Rt-15d Bdbrr50p">
       </div>
       <!-- The seventh from the left -->
-      <div class="-Sz15p <%= css.foreheadPart %> T55p R1.6p -Rt10d Bdbrr50p"></div>
-    </div>
-
-
-			<%
-				css.outerPieces = "Ps-a Tf"
-			%>
-      <!-- Outer pieces  -->
-      <div class="<%= css.artLayer %>">
-        <!-- The first from the left -->
-        <div class="-Sz12p -Gdl60d,tp;0,tp;40p,$explodingOrangeB;40p,$explodingOrangeB;80p,tp;80p T8p L-8p Bdrd10p <%= css.outerPieces %> -Rt50d"></div>
-        <!-- The second from the left -->
-        <div class="H10p W15p -Gdl210d,tp;0,tp;40p,$explodingOrangeB;40p,$explodingOrangeB;80p,tp;80p T33p L-5p  <%= css.outerPieces %> -Rt15d "></div>
-        <!-- The third from the left -->
-        <div class="H10p W5p -Gdl60d,tp;0,tp;40p,$explodingOrangeB;40p -Rt-90d  T-10p L20p Bdtrr20p <%= css.outerPieces%>" ></div>
-        <!-- The fifth from the left -->
-        <div class="H8p W16p -Gdl60d,tp;0,tp;40p,$explodingOrangeB;40p T5p R-15p -Rt125d <%= css.outerPieces%>"></div>
-        <div class="W6p H15p Bdbrr100p Bgc-$explodingOrangeB T-10p R6p -Rt-55d <%= css.outerPieces%>"></div>
+      <div class="-Sz15p <%= css.foreheadPart %> T55p R1.6p -Rt10d Bdbrr50p">
       </div>
-      <!-- The bottom part of the head -->
-      <div class="<%= css.artLayer %> Fns10 -Gdl0d,$explodingOrangeA;20p,$explodingOrangeB;40p,tp;40p">
-        <!-- Mouth  -->
-        <div class="W36p H30p Ps-a B8p L32p">
-          <div class="W100p H100p -Gdl0d,tp;60p,$explodingBrownD;60p,$explodingBrownD;65p,$explodingBrownA;100p Bdrd100p Ps-a T36p "></div>
-          <div class="W100p H20p -Bdbrd5u -Bdtrd5u Bgc-$explodingBrownD Ps-a T70p"></div>
-          <div class="W80p H12p Bdrd100p -Gdl0d,tp;0p,tp;50p,$explodingOrangeA;50p Ps-a B1p L10p"></div>
+    </div>
+    <%
+      css.outerPieces = "Ps-a Tf"
+    %>
+    <!-- Outer pieces  -->
+    <div class="<%= css.artLayer %>">
+      <!-- The first from the left -->
+      <div class="-Sz12p -Gdl60d,tp;0,tp;40p,$explodingOrangeB;40p,$explodingOrangeB;80p,tp;80p T8p L-8p Bdrd10p <%= css.outerPieces %> -Rt50d">
+      </div>
+      <!-- The second from the left -->
+      <div class="H10p W15p -Gdl210d,tp;0,tp;40p,$explodingOrangeB;40p,$explodingOrangeB;80p,tp;80p T33p L-5p  <%= css.outerPieces %> -Rt15d ">
+      </div>
+      <!-- The third from the left -->
+      <div class="H10p W5p -Gdl60d,tp;0,tp;40p,$explodingOrangeB;40p -Rt-90d  T-10p L20p Bdtrr20p <%= css.outerPieces%>" >
+      </div>
+      <!-- The fifth from the left -->
+      <div class="H8p W16p -Gdl60d,tp;0,tp;40p,$explodingOrangeB;40p T5p R-15p -Rt125d <%= css.outerPieces%>">
+      </div>
+      <div class="W6p H15p Bdbrr100p Bgc-$explodingOrangeB T-10p R6p -Rt-55d <%= css.outerPieces%>">
+      </div>
+    </div>
+    <!-- The bottom part of the head -->
+    <div class="<%= css.artLayer %> Fns10 -Gdl0d,$explodingOrangeA;20p,$explodingOrangeB;40p,tp;40p">
+      <!-- Mouth  -->
+      <div class="W36p H30p Ps-a B8p L32p">
+        <div class="W100p H100p -Gdl0d,tp;60p,$explodingBrownD;60p,$explodingBrownD;65p,$explodingBrownA;100p Bdrd100p Ps-a T36p ">
         </div>
-        <!-- Eyes  -->
-        <div class="Apcr1 W100p Bdrd100p Ps-a">
-          <div class="<%= css.eyes %> L27p"></div>
-          <div class="<%= css.eyes %> R27p"></div>
+        <div class="W100p H20p -Bdbrd5u -Bdtrd5u Bgc-$explodingBrownD Ps-a T70p">
+        </div>
+        <div class="W80p H12p Bdrd100p -Gdl0d,tp;0p,tp;50p,$explodingOrangeA;50p Ps-a B1p L10p">
+        </div>
+      </div>
+      <!-- Eyes  -->
+      <div class="Apcr1 W100p Bdrd100p Ps-a">
+        <div class="<%= css.eyes %> L27p">
+        </div>
+        <div class="<%= css.eyes %> R27p">
         </div>
       </div>
     </div>
   </div>
+</div>
