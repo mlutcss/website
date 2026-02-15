@@ -1,4 +1,4 @@
-const hightlightCss = ["Bd1;s;$brand", "Bxsd1;1;10;2;$brand", "Zi19"]
+const hightlightCss = ["Bd1;s;$brand", "Bxsd1;1;10;2;$brand", "Zi40"]
 
 export class ArtPanel extends HTMLElement {
 	constructor() {
