@@ -4,12 +4,12 @@
 		"bgColor":"Bgc-$artGhost"
 	},
 	{
-		"artId":"penrose-triangle",
-		"bgColor":"Bgc-$artPenroseTriangle"
-	},
-	{
 		"artId":"flushed-emoji",
 		"bgColor":"Bgc-$artFlushedEmoji"
+	},
+	{
+		"artId":"penrose-triangle",
+		"bgColor":"Bgc-$artPenroseTriangle"
 	},
 	{
 		"artId":"exploding-head",
