@@ -3,7 +3,16 @@
         bead: 'Ps-a Apcr4/3 -Bdy2 -Bdys-s -Bdyc-$cakeBlack Bdrd50p Tf -Tr-50p;-50p Bgc-$cakeWhite Bxsd-i;0;0;2u;2;$cakeRed',
         creamW: 'Ps-a -Sz100p Bdrd50p Bgc-$cakeWhite',
         creamY: 'Ps-a Apcr2/1 Bdrd50p Bgc-$cakeYellow Ov-h'
-    }
+    };
+
+    const leftBeads = [
+        { top: -10, left: 1, width: 6 },
+        { top: 0, left: 3, width: 8 },
+        { top: 16, left: 7, width: 10 },
+        { top: 28, left: 13, width: 12 },
+        { top: 38, left: 22, width: 15 },
+        { top: 45, left: 34, width: 18 }
+    ];
 %>
 
 <div class="-Sz100p Ctnt-s D-f Jc-c Ai-c -CakeGreen#97de9e -CakeWhite#fff -CakeBlack#000 -CakeYellow#ece74f -CakeRed#fc0522">
@@ -31,20 +40,13 @@
         <div class="Ps-a B10p L0 W100p H20p Bdrd50p Bgc-$cakeGreen">
             <!-- Beads -->
             <div class="Ps-a T50p L0 -Sz100p">
-                <div class="<%= css.bead %> T-10p L1p W6p"></div>
-                <div class="<%= css.bead %> T0p L3p W8p"></div>
-                <div class="<%= css.bead %> T16p L7p W10p"></div>
-                <div class="<%= css.bead %> T28p L13p W12p"></div>
-                <div class="<%= css.bead %> T38p L22p W15p"></div>
-                <div class="<%= css.bead %> T45p L34p W18p"></div>
-
-                <div class="<%= css.bead %> T-10p L99p W6p"></div>
-                <div class="<%= css.bead %> T0p L97p W8p"></div>
-                <div class="<%= css.bead %> T16p L93p W10p"></div>
-                <div class="<%= css.bead %> T28p L87p W12p"></div>
-                <div class="<%= css.bead %> T38p L78p W15p"></div>
-                <div class="<%= css.bead %> T45p L66p W18p"></div>
-
+                <% leftBeads.forEach((bead) => { %>
+                    <!-- Left Beads -->
+                    <div class="<%= css.bead %> T<%= bead.top %>p L<%= bead.left %>p W<%= bead.width %>p"></div>
+                    <!-- Right Beads -->
+                     <div class="<%= css.bead %> T<%= bead.top %>p L<%= 100 - bead.left %>p W<%= bead.width %>p"></div>
+                <% }); %>
+                <!-- Center Bead -->
                 <div class="<%= css.bead %> T50p L50p W20p"></div>
                 <!-- Mouth -->
                 <div class="Ps-a T-50p L50p W40p H50p Tf -Trx-60p Bgc-$cakeBlack Bdrd50p">
@@ -56,20 +58,13 @@
         <div class="Ps-a B60p L0 W100p H20p Bd2;s;$cakeBlack Bdrd50p Bgc-$cakeWhite">
             <!-- Beads -->
             <div class="Ps-a T50p L0 -Sz100p">
-                <div class="<%= css.bead %> T-10p L1p W6p"></div>
-                <div class="<%= css.bead %> T0p L3p W8p"></div>
-                <div class="<%= css.bead %> T16p L7p W10p"></div>
-                <div class="<%= css.bead %> T28p L13p W12p"></div>
-                <div class="<%= css.bead %> T38p L22p W15p"></div>
-                <div class="<%= css.bead %> T45p L34p W18p"></div>
-
-                <div class="<%= css.bead %> T-10p L99p W6p"></div>
-                <div class="<%= css.bead %> T0p L97p W8p"></div>
-                <div class="<%= css.bead %> T16p L93p W10p"></div>
-                <div class="<%= css.bead %> T28p L87p W12p"></div>
-                <div class="<%= css.bead %> T38p L78p W15p"></div>
-                <div class="<%= css.bead %> T45p L66p W18p"></div>
-
+                <% leftBeads.forEach((bead) => { %>
+                    <!-- Left Beads -->
+                    <div class="<%= css.bead %> T<%= bead.top %>p L<%= bead.left %>p W<%= bead.width %>p"></div>
+                    <!-- Right Beads -->
+                     <div class="<%= css.bead %> T<%= bead.top %>p L<%= 100 - bead.left %>p W<%= bead.width %>p"></div>
+                <% }); %>
+                <!-- Center Bead -->
                 <div class="<%= css.bead %> T50p L50p W20p"></div>
             </div>
         </div>
