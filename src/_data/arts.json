@@ -20,6 +20,10 @@
 		"bgColor":"Bgc-$artClownEmoji"
 	},
 	{
+		"artId":"mushroom",
+		"bgColor":"Bgc-$artMushroom"
+	},
+	{
 		"artId":"robot-hare",
 		"bgColor":"Bgc-$artRobotHare"
 	}
