@@ -1,11 +1,14 @@
 <%
     const css = {
+        eye: 'Ps-a Apcr1 Bdrd50p',
         bead: 'Ps-a Apcr4/3 -Bdy2 -Bdys-s -Bdyc-$cakeBlack Bdrd50p Tf -Tr-50p;-50p Bgc-$cakeWhite Bxsd-i;0;0;2u;2;$cakeRed',
-        creamW: 'Ps-a -Sz100p Bdrd50p Bgc-$cakeWhite',
-        creamY: 'Ps-a Apcr2/1 Bdrd50p Bgc-$cakeYellow Ov-h'
+        creamWhite: 'Ps-a -Sz100p Bdrd50p Bgc-$cakeWhite',
+        creamYellow: 'Ps-a Apcr2/1 Bdrd50p Bgc-$cakeYellow Ov-h',
+        leftBeads: ['T-10p L1p W6p', 'T0p L3p W8p', 'T16p L7p W10p', 'T28p L13p W12p', 'T38p L22p W15p', 'T45p L34p W18p'],
+        rightBeads: ['T-10p L99p W6p', 'T0p L97p W8p', 'T16p L93p W10p', 'T28p L87p W12p', 'T38p L78p W15p', 'T45p L66p W18p'],
+        sizeCreamWhite: ['B-5p R10p', 'B-5p L10p', 'T-5p L-10p', 'T-10p L-10p', 'T-5p R-10p', 'T-10p R-10p', 'T-10p L0p', 'T-10p L5p', 'T-10p R5p'],
+        sizeCreamYellow: ['T-20p L55p W30p', 'T-20p L15p W30p', 'T15p L72p W30p', 'T35p L60p W30p', 'T15p L-2p W30p', 'T35p L10p W30p', 'T45p L35p W30p', 'T5p L20p W25p', 'T5p L55p W25p']
     };
-    const leftBeads = ['T-10p L1p W6p', 'T0p L3p W8p', 'T16p L7p W10p', 'T28p L13p W12p', 'T38p L22p W15p', 'T45p L34p W18p'];
-    const rightBeads = ['T-10p L99p W6p', 'T0p L97p W8p', 'T16p L93p W10p', 'T28p L87p W12p', 'T38p L78p W15p', 'T45p L66p W18p'];
 %>
 
 <div class="-Sz100p Ctnt-s D-f Jc-c Ai-c -CakeGreen#97de9e -CakeWhite#fff -CakeBlack#000 -CakeYellow#ece74f -CakeRed#fc0522">
@@ -13,18 +16,18 @@
         <!-- Body -->
         <div class="Ps-a B20p L0 W100p H50p Bd1u;s;$cakeBlack Bdb-tp Bgc-$cakeGreen">
             <!-- Left Eye -->
-            <div class="Ps-a T30p L15p W22p Apcr1 Bdl1.5u;s;$cakeBlack Bdb1.5u;s;$cakeBlack Bdrd50p Tf -Rt-25d">
-                <div class="Ps-a B3p R1p W80p Apcr1 Bdr1.5u;s;$cakeBlack Bdt1.5u;s;$cakeBlack Bdrd50p">
-                    <div class="Ps-a T3p L2p W70p Apcr1 Bdl1.5u;s;$cakeBlack Bdb1.5u;s;$cakeBlack Bdrd50p">
-                        <div class="Ps-a B3p R1p W60p Apcr1 Bgc-$cakeBlack Bdrd50p"></div>
+            <div class="<%= css.eye %> T30p L15p W22p Bdl1.5u;s;$cakeBlack Bdb1.5u;s;$cakeBlack Tf -Rt-25d">
+                <div class="<%= css.eye %> B3p R1p W80p Bdr1.5u;s;$cakeBlack Bdt1.5u;s;$cakeBlack">
+                    <div class="<%= css.eye %> T3p L2p W70p Bdl1.5u;s;$cakeBlack Bdb1.5u;s;$cakeBlack">
+                        <div class="<%= css.eye %> B3p R1p W60p Bgc-$cakeBlack"></div>
                     </div>
                 </div>
             </div>
             <!-- Right Eye -->
-            <div class="Ps-a T30p L63p W22p Apcr1 Bdr1.5u;s;$cakeBlack Bdb1.5u;s;$cakeBlack Bdrd50p Tf -Rt25d">
-                <div class="Ps-a B3p L1p W80p Apcr1 Bdl1.5u;s;$cakeBlack Bdt1.5u;s;$cakeBlack Bdrd50p">
-                    <div class="Ps-a T3p R2p W70p Apcr1 Bdr1.5u;s;$cakeBlack Bdb1.5u;s;$cakeBlack Bdrd50p">
-                        <div class="Ps-a B3p L1p W60p Apcr1 Bgc-$cakeBlack Bdrd50p"></div>
+            <div class="<%= css.eye %> T30p L63p W22p Bdr1.5u;s;$cakeBlack Bdb1.5u;s;$cakeBlack Tf -Rt25d">
+                <div class="<%= css.eye %> B3p L1p W80p Bdl1.5u;s;$cakeBlack Bdt1.5u;s;$cakeBlack">
+                    <div class="<%= css.eye %> T3p R2p W70p Bdr1.5u;s;$cakeBlack Bdb1.5u;s;$cakeBlack">
+                        <div class="<%= css.eye %> B3p L1p W60p Bgc-$cakeBlack"></div>
                     </div>
                 </div>
             </div>
@@ -33,11 +36,11 @@
         <div class="Ps-a B10p L0 W100p H20p Bdrd50p Bgc-$cakeGreen">
             <!-- Beads -->
             <div class="Ps-a T50p L0 -Sz100p">
-                <% for (let i = 0; i < leftBeads.length; i++) { %>
+                <% for (let i = 0; i < css.leftBeads.length; i++) { %>
                     <!-- Left Beads -->
-                    <div class="<%= css.bead %> <%= leftBeads[i] %>"></div>
+                    <div class="<%= css.bead %> <%= css.leftBeads[i] %>"></div>
                     <!-- Right Beads -->
-                    <div class="<%= css.bead %> <%= rightBeads[i] %>"></div>
+                    <div class="<%= css.bead %> <%= css.rightBeads[i] %>"></div>
                 <% }; %>
                 <!-- Center Bead -->
                 <div class="<%= css.bead %> T50p L50p W20p"></div>
@@ -51,24 +54,19 @@
         <div class="Ps-a B60p L0 W100p H20p Bd2;s;$cakeBlack Bdrd50p Bgc-$cakeWhite">
             <!-- Beads -->
             <div class="Ps-a T50p L0 -Sz100p">
-                <% for (let i = 0; i < leftBeads.length; i++) { %>
+                <% for (let i = 0; i < css.leftBeads.length; i++) { %>
                     <!-- Left Beads -->
-                    <div class="<%= css.bead %> <%= leftBeads[i] %>"></div>
+                    <div class="<%= css.bead %> <%= css.leftBeads[i] %>"></div>
                     <!-- Right Beads -->
-                    <div class="<%= css.bead %> <%= rightBeads[i] %>"></div>
-                <% }; %>
+                    <div class="<%= css.bead %> <%= css.rightBeads[i] %>"></div>
+                <% } %>
                 <!-- Center Bead -->
                 <div class="<%= css.bead %> T50p L50p W20p"></div>
             </div>
         </div>
         <!-- Cream -->
         <div class="Ps-a T12p L0 W100p H20p">
-            <div class="<%= css.creamY %> T-20p L55p W30p">
-                <div class="<%= css.creamW %> B-5p R10p"></div>
-            </div>
-            <div class="<%= css.creamY %> T-20p L15p W30p">
-                <div class="<%= css.creamW %> B-5p L10p"></div>
-            </div>
+            <!-- Cream with Cherry -->
             <div class="Ps-a T-45p L35p W30p Apcr1 Bdrd50p Bgc-$cakeYellow Ov-h">
                 <div class="Ps-a T5p L-5p W110p Apcr1 Bdrd50p Bgc-$cakeWhite">
                     <!-- Cherry -->
@@ -77,27 +75,11 @@
                     </div>
                 </div>
             </div>
-            <div class="<%= css.creamY %> T15p L72p W30p">
-                <div class="<%= css.creamW %> T-5p L-10p"></div>
-            </div>
-            <div class="<%= css.creamY %> T35p L60p W30p">
-                <div class="<%= css.creamW %> T-10p L-10p"></div>
-            </div>
-            <div class="<%= css.creamY %> T15p L-2p W30p">
-                <div class="<%= css.creamW %> T-5p R-10p"></div>
-            </div>
-            <div class="<%= css.creamY %> T35p L10p W30p">
-                <div class="<%= css.creamW %> T-10p R-10p"></div>
-            </div>
-            <div class="<%= css.creamY %> T45p L35p W30p">
-                <div class="<%= css.creamW %> T-10p L0p"></div>
-            </div>
-            <div class="<%= css.creamY %> T5p L20p W25p">
-                <div class="<%= css.creamW %> T-10p L5p"></div>
-            </div>
-            <div class="<%= css.creamY %> T5p L55p W25p">
-                <div class="<%= css.creamW %> T-10p R5p"></div>
-            </div>
+            <% for (let i = 0; i < css.sizeCreamWhite.length; i++) { %>
+                <div class="<%= css.creamYellow %> <%= css.sizeCreamYellow[i] %>">
+                    <div class="<%= css.creamWhite %> <%= css.sizeCreamWhite[i] %>"></div>
+                </div>
+            <% } %>
         </div>
     </div>
 </div>
