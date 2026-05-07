@@ -26,5 +26,9 @@
 	{
 		"artId":"robot-hare",
 		"bgColor":"Bgc-$artRobotHare"
+	},
+	{
+		"artId":"funny-cake",
+		"bgColor":"Bgc-$artFunnyCake"
 	}
 ]
