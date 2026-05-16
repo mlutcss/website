@@ -3,7 +3,9 @@
         eye: 'Ps-a Apcr1 Bdrd50p',
         bead: 'Ps-a Apcr4/3 -Bdy2 -Bdys-s -Bdyc-$cakeBlack Bdrd50p Tf -Tr-50p;-50p Bgc-$cakeWhite Bxsd-i;0;0;2u;2;$cakeRed',
         creamWhite: 'Ps-a -Sz100p Bdrd50p Bgc-$cakeWhite',
-        creamYellow: 'Ps-a Apcr2/1 Bdrd50p Bgc-$cakeYellow Ov-h',
+        creamYellow: 'Ps-a Apcr2/1 Bdrd50p Bgc-$cakeYellow Ov-h'
+    };
+    const pos = {
         leftBeads: ['T-10p L1p W6p', 'T0p L3p W8p', 'T16p L7p W10p', 'T28p L13p W12p', 'T38p L22p W15p', 'T45p L34p W18p'],
         rightBeads: ['T-10p L99p W6p', 'T0p L97p W8p', 'T16p L93p W10p', 'T28p L87p W12p', 'T38p L78p W15p', 'T45p L66p W18p'],
         sizeCreamWhite: ['B-5p R10p', 'B-5p L10p', 'T-5p L-10p', 'T-10p L-10p', 'T-5p R-10p', 'T-10p R-10p', 'T-10p L0p', 'T-10p L5p', 'T-10p R5p'],
@@ -36,12 +38,10 @@
         <div class="Ps-a B10p L0 W100p H20p Bdrd50p Bgc-$cakeGreen">
             <!-- Beads -->
             <div class="Ps-a T50p L0 -Sz100p">
-                <% for (let i = 0; i < css.leftBeads.length; i++) { %>
-                    <!-- Left Beads -->
-                    <div class="<%= css.bead %> <%= css.leftBeads[i] %>"></div>
-                    <!-- Right Beads -->
-                    <div class="<%= css.bead %> <%= css.rightBeads[i] %>"></div>
-                <% }; %>
+                <% for (let i = 0; i < pos.leftBeads.length; i++) { %>
+                    <div class="<%= css.bead %> <%= pos.leftBeads[i] %>"></div>
+                    <div class="<%= css.bead %> <%= pos.rightBeads[i] %>"></div>
+                <% } %>
                 <!-- Center Bead -->
                 <div class="<%= css.bead %> T50p L50p W20p"></div>
                 <!-- Mouth -->
@@ -54,11 +54,9 @@
         <div class="Ps-a B60p L0 W100p H20p Bd2;s;$cakeBlack Bdrd50p Bgc-$cakeWhite">
             <!-- Beads -->
             <div class="Ps-a T50p L0 -Sz100p">
-                <% for (let i = 0; i < css.leftBeads.length; i++) { %>
-                    <!-- Left Beads -->
-                    <div class="<%= css.bead %> <%= css.leftBeads[i] %>"></div>
-                    <!-- Right Beads -->
-                    <div class="<%= css.bead %> <%= css.rightBeads[i] %>"></div>
+                <% for (let i = 0; i < pos.leftBeads.length; i++) { %>
+                    <div class="<%= css.bead %> <%= pos.leftBeads[i] %>"></div>
+                    <div class="<%= css.bead %> <%= pos.rightBeads[i] %>"></div>
                 <% } %>
                 <!-- Center Bead -->
                 <div class="<%= css.bead %> T50p L50p W20p"></div>
@@ -75,9 +73,9 @@
                     </div>
                 </div>
             </div>
-            <% for (let i = 0; i < css.sizeCreamWhite.length; i++) { %>
-                <div class="<%= css.creamYellow %> <%= css.sizeCreamYellow[i] %>">
-                    <div class="<%= css.creamWhite %> <%= css.sizeCreamWhite[i] %>"></div>
+            <% for (let i = 0; i < pos.sizeCreamWhite.length; i++) { %>
+                <div class="<%= css.creamYellow %> <%= pos.sizeCreamYellow[i] %>">
+                    <div class="<%= css.creamWhite %> <%= pos.sizeCreamWhite[i] %>"></div>
                 </div>
             <% } %>
         </div>
