@@ -1,0 +1,22 @@
+[
+	{
+		"link":"#0",
+		"text":"Features"
+	},
+	{
+		"link":"/arts",
+		"text":"Art"
+	},
+	{
+		"link":"#0",
+		"text":"Showcase"
+	},
+	{
+		"link":"https://docs.mlut.style/",
+		"text":"Docs"
+	},
+	{
+		"link":"https://play.mlut.style/",
+		"text":"Sandbox"
+	}
+]

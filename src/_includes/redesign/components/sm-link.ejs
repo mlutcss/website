@@ -1,0 +1,24 @@
+<%
+	if(it.name === "X") {
+		css.width = "24",
+		css.height = "24"
+	} else {
+		css.width = "26",
+		css.height = "26"
+	}
+%>
+
+<a
+	href="<%= it.link %>"
+	alt="Link to <%= it.name %>"
+	target="_blank"
+	class="-Ctx-logo Ps -Sz32 D-f Jc-c Ai-c"
+>
+	<svg
+		class="Fi-$reAccent900 Fio1 ^logo:h:_Fi-$brand Ts-$shortTs"
+		width="<%= css.width %>"
+		height="<%= css.height %>"
+	>
+		<use href="/assets/img/icons.svg#<%= it.icon %>"></use>
+	</svg>
+</a>

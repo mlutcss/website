@@ -1,38 +1,47 @@
 [
 	{
 		"artId":"ghost",
-		"bgColor":"Bgc-$artGhost"
+		"bgColor":"Bgc-$artGhost",
+		"showSlider": true
 	},
 	{
 		"artId":"flushed-emoji",
-		"bgColor":"Bgc-$artFlushedEmoji"
+		"bgColor":"Bgc-$artFlushedEmoji",
+		"showSlider": true
 	},
 	{
 		"artId":"penrose-triangle",
-		"bgColor":"Bgc-$artPenroseTriangle"
+		"bgColor":"Bgc-$artPenroseTriangle",
+		"showSlider": true
 	},
 	{
 		"artId":"exploding-head",
-		"bgColor":"Bgc-$artExplodingHead"
+		"bgColor":"Bgc-$artExplodingHead",
+		"showSlider": true
 	},
 	{
 		"artId":"clown-emoji",
-		"bgColor":"Bgc-$artClownEmoji"
+		"bgColor":"Bgc-$artClownEmoji",
+		"showSlider": true
 	},
 	{
 		"artId":"mushroom",
-		"bgColor":"Bgc-$artMushroom"
+		"bgColor":"Bgc-$artMushroom",
+		"showSlider": true
 	},
 	{
 		"artId":"robot-hare",
-		"bgColor":"Bgc-$artRobotHare"
+		"bgColor":"Bgc-$artRobotHare",
+		"showSlider": true
 	},
 	{
 		"artId":"funny-cake",
-		"bgColor":"Bgc-$artFunnyCake"
+		"bgColor":"Bgc-$artFunnyCake",
+		"showSlider": false
 	},
 	{
 		"artId":"cat",
-		"bgColor":"Bgc-$artCat"
+		"bgColor":"Bgc-$artCat",
+		"showSlider": false
 	}
 ]
