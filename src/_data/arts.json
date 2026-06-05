@@ -2,46 +2,46 @@
 	{
 		"artId":"ghost",
 		"bgColor":"Bgc-$artGhost",
-		"showSlider": true
+		"showInMain": true
 	},
 	{
 		"artId":"flushed-emoji",
 		"bgColor":"Bgc-$artFlushedEmoji",
-		"showSlider": true
+		"showInMain": true
 	},
 	{
 		"artId":"penrose-triangle",
 		"bgColor":"Bgc-$artPenroseTriangle",
-		"showSlider": true
+		"showInMain": true
 	},
 	{
 		"artId":"exploding-head",
 		"bgColor":"Bgc-$artExplodingHead",
-		"showSlider": true
+		"showInMain": true
 	},
 	{
 		"artId":"clown-emoji",
 		"bgColor":"Bgc-$artClownEmoji",
-		"showSlider": true
+		"showInMain": false
 	},
 	{
 		"artId":"mushroom",
 		"bgColor":"Bgc-$artMushroom",
-		"showSlider": true
+		"showInMain": true
 	},
 	{
 		"artId":"robot-hare",
 		"bgColor":"Bgc-$artRobotHare",
-		"showSlider": true
+		"showInMain": true
 	},
 	{
 		"artId":"funny-cake",
 		"bgColor":"Bgc-$artFunnyCake",
-		"showSlider": false
+		"showInMain": false
 	},
 	{
 		"artId":"cat",
 		"bgColor":"Bgc-$artCat",
-		"showSlider": false
+		"showInMain": false
 	}
 ]

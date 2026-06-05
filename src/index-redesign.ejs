@@ -4,57 +4,74 @@ permalink: /redesign-preview/
 ---
 
 <%
+    const filteredArts = it.arts.filter(art => art.showInMain === true);
+
     const heroCSS = {
-        gradient: "Ps-a W70p Apcr1 T10p L50p Tf -Tr-50p;0 Bdrd100p -Gdl180d,$reCore700;0,$reCore600;100p,$reCore700;100p Ft -Blr100",
-        vertical: "Ps-a_af Ct_af T0_af L50p_af W85p_af Apcr2/3_af Bgc-tp_af Tf_af -Tr-50p;0_af -Gdrl90d,$reCore800;0;1,tp;1;86,$reCore800;86;87,tp;87;107_af",
-        horizontal: "Ps-a_b Ct_b T-8_b L50p_b W85p_b Apcr2/3_b Bgc-tp_b Tf_b -Tr-50p;0_b -Gdrl180d,$reCore800;0;1,tp;1;86,$reCore800;86;87,tp;87;107_b Zi1_b",
-        dradientDescTop: "Ps-a_af Ct_af W40p_af Apcr1_af T5p_af R0_af Bdrd100p_af -Gdl180d,$reCore700;0,$reCore600;100p,$reCore700;100p_af Ft_af -Blr100_af",
-        dradientDescBot: "Ps-a_b Ct_b W30p_b Apcr1_b B5p_b L5p_b Bdrd100p_b -Gdl180d,$reCore700;0,$reCore600;100p,$reCore700;100p_b Ft_b -Blr80_b"
+        gradient: "Ps-a W80p md_W45p Apcr1 T14p L50p Tf -Tr-50p;0 Bdrd100p -Gdl180d,$core700;0,$core600;100p,$core700;100p Ft -Blr50",
+        vertical: "Ps-a_af Ct_af T0_af L50p_af W85p_af Apcr2/3_af Bgc-tp_af Tf_af -Tr-50p;0_af -Gdrl90d,$core800;0;1,tp;1;86,$core800;86;87,tp;87;107_af",
+        horizontal: "Ps-a_b Ct_b T-8_b L50p_b W85p_b Apcr2/3_b Bgc-tp_b Tf_b -Tr-50p;0_b -Gdrl180d,$core800;0;1,tp;1;86,$core800;86;87,tp;87;107_b Zi1_b",
+        dradientDescTop: "Ps-a_af Ct_af W40p_af Apcr1_af T5p_af R0_af Bdrd100p_af -Gdl180d,$core700;0,$core600;100p,$core700;100p_af Ft_af -Blr50_af",
+        dradientDescBot: "Ps-a_b Ct_b W30p_b Apcr1_b B-5p_b L0_b Bdrd100p_b -Gdl180d,$core700;0,$core600;100p,$core700;100p_b Ft_b -Blr40_b"
     }
-
-    const filteredArts = it.arts.filter(art => art.showSlider === true);
-
-    const decorCSS = {
-        twoSquares: "Ps-a W14 Apcr1 T-42 lg_T-92 L70 Bdrd0.5u Bgc-$decorSquare Ps-a_af Ct_af W9_af Apcr1_af T240p_af R-200p_af Bgc-$decorTwoSquare_af Bdrd0.5u_af",
-        squareDot: "Ps-a W28 Apcr1 L292 T-47 lg_T-97 Bgc-$decorSquareDark -Gdrl90d,tp;0;2,$reCore800;2;8 Ps-a_af Ct_af -Sz100p_af T0_af L0_af -Gdrl0d,tp;0;2,$reCore800;2;8_af",
-        twoArt: "Ps-a W22 Apcr1 L240 T-73 lg_T-133 Bd1u;s;tp Bdrd100p Bdtc-$decorTwoArt Bdrc-$decorTwoArt Tf -Rt-34d Ps-a_af Ct_af W22_af Apcr1_af T45p_af L75p_af Bd1u;s;tp_af Bdrd100p_af Bdbc-$decorTwoArt_af Bdlc-$decorTwoArt_af",
-        rectangle: "Ps-a W100 H7 L37p T67 Bgc-$decorRectangle Bdrd8;100p;100p;8 Tf -Rt-4d Zi-1",
-        squareDotFigure: "Ps-a W30 Apcr1 R24p B-35 Bgc-$decorSquareDark -Gdrl90d,tp;0;4,$reCore800;4;12 Ps-a_af Ct_af -Sz100p_af T0_af L0_af -Gdrl0d,tp;0;4,$reCore800;4;12_af Ps-a_b Ct_b W32_b H16_b T45p_b L55p_b Zi1_b Bdrd50p;8;8;100p_b -Gdrd-cr;at;40p;-42p,tp;0;45p,$decorTwoArt;40p;100p_b Tf_b -Rt14d_b"
-    }
-
     const decorCSSArts = {
-        squareFrame: "Ps-a W16 Apcr1 T-64 L87 Bdrd1u Bgc-$decorSquare Ps-a_af Ct_af W21_af Apcr1_af T50p_af L-70p_af Bd1u;s;$decorFrame_af Bdrd1u_af",
-        triangle: "Ps-a T-39 L8 W57 Apcr1 Bdrd2u Bgc-$decorTriangle Tf -Rt45d Zi-1 Ps-a_af Ct_af W20p_af Apcr1_af T45p_af L-16p_af Tf_af -Rt-45d_af Bdrd0.5u_af Bgc-$decorTriangleSquare_af",
-        squareDotArc: "Ps-a W35 Apcr1 T34p L-24p Bgc-$decorSquareDot -Gdrl90d,tp;0;2,$reCore800;2;8 Ps-a_af Ct_af -Sz100p_af T0_af L0_af -Gdrl0d,tp;0;2,$reCore800;2;8_af Ps-a_b Ct_b -Sz130p_b L-34p_b T-140p_b Bd1u;s;tp_b Bdrd100p_b Bdtc-$decorSquareDot_b Tf_b -Rt40d_b",
-        rectangleArc: "Ps-a W84 H20 B-6p L-29p Bgc-$decorRectangle Tf -Rt-30d Bdrd0.5u Zi-1 Ps-a_af Ct_af W50p_af Apcr1_af T85p_af L15p_af Bd1u;s;tp_af Bdrd100p_af Bdtc-$decorArcPink_af Tf_af -Rt20d_af",
-        circle: "Ps-a W100 Apcr1 T73p R-22p Bgc-tp Bd0.75u;s;$decorCircle Bdrd100p Zi-1",
-        square: "Ps-a W48 Apcr1 T67p R-26p Bgc-$decorSquare Tf -Rt17d Zi-2 Ps-a_af,b Ct_af,b -Sz104p_af,b T50p_af,b L50p_af,b Tf_af,b -Tr-50p;-50p_af,b -Gdrl90d,tp;0;6,$reCore800;6;21_b -Gdrl0d,tp;0;6,$reCore800;6;21_af",
-        arc: "Ps-a W60 H79 T0 R-25p Bgc-tp Bdrd50p Bdl2u;s;$decorArcBig Bdt2u;s;tp Tf -Rt-30d Zi-1"
+        squareFrame: "Ps-a W16 Apcr1 T-68 L212 Bdrd1u Bgc-$brand Ps-a_af Ct_af W21_af Apcr1_af T50p_af L-70p_af Bd1u;s;$primary650_af Bdrd1u_af",
+        triangle: "Ps-a T-39 L137 W57 Apcr1 Bdrd2u Bgc-$yellow500 Tf -Rt45d Zi-1 Ps-a_af Ct_af W20p_af Apcr1_af T45p_af L-16p_af Tf_af -Rt-45d_af Bdrd0.5u_af Bgc-$accent800_af",
+        squareDotArc: "Ps-a W35 Apcr1 md_T26p lg_T33p L13p Bgc-$accent800 -Gdrl90d,tp;0;2,$core800;2;8 Ps-a_af Ct_af -Sz100p_af T0_af L0_af -Gdrl0d,tp;0;2,$core800;2;8_af Ps-a_b Ct_b -Sz130p_b L-34p_b T-140p_b Bd1u;s;tp_b Bdrd100p_b Bdtc-$accent800_b Tf_b -Rt40d_b",
+        rectangleArc: "Ps-a W84 H20 md_B10p lg_B-4p L11p Bgc-$yellow500 Tf -Rt-30d Bdrd0.5u Zi-1 Ps-a_af Ct_af W50p_af Apcr1_af T85p_af L15p_af Bd1u;s;tp_af Bdrd100p_af Bdtc-$brand_af Tf_af -Rt20d_af",
+        circle: "Ps-a W100 Apcr1 md_T60p lg_T72p R15p Bgc-tp Bd0.75u;s;$accent800 Bdrd100p Zi-1",
+        square: "Ps-a W48 Apcr1 md_T54p lg_T66p R14p Bgc-$brand Tf -Rt17d Zi-2 Ps-a_af,b Ct_af,b -Sz104p_af,b T50p_af,b L50p_af,b Tf_af,b -Tr-50p;-50p_af,b -Gdrl90d,tp;0;6,$core800;6;21_b -Gdrl0d,tp;0;6,$core800;6;21_af",
+        arc: "Ps-a W60 H79 T0 R14p Bgc-tp Bdrd50p Bdl2u;s;$brand Bdt2u;s;tp Tf -Rt-39d Zi-1"
+    }
+    const decorCSS = {
+        twoSquares: "Ps-a W14 Apcr1 lg_T10p xl_T13p L10p Bdrd0.5u Bgc-$brand Ps-a_af Ct_af W9_af Apcr1_af T240p_af R-200p_af Bgc-$yellow500_af Bdrd0.5u_af",
+        squareDot: "Ps-a W28 Apcr1 L25.5p T12p Bgc-$accent750 -Gdrl90d,tp;0;2,$core800;2;8 Ps-a_af Ct_af -Sz100p_af T0_af L0_af -Gdrl0d,tp;0;2,$core800;2;8_af",
+        twoArt: "Ps-a W22 Apcr1 L22p T5p Bd1u;s;tp Bdrd100p Bdtc-$yellow500 Bdrc-$yellow500 Tf -Rt-34d Ps-a_af Ct_af W22_af Apcr1_af T45p_af L75p_af Bd1u;s;tp_af Bdrd100p_af Bdbc-$yellow500_af Bdlc-$yellow500_af",
+        rectangle: "Ps-a W100 H7 L25p T43p Bgc-$yellow500 Bdrd8;100p;100p;8 Tf -Rt-4d Zi-1",
+        squareDotFigure: "Ps-a W30 Apcr1 L44p lg_B4p xl_B12p Bgc-$accent750 -Gdrl90d,tp;0;4,$core800;4;12 Ps-a_af Ct_af -Sz100p_af T0_af L0_af -Gdrl0d,tp;0;4,$core800;4;12_af"
     }
 %>
 
 <%# Hero-section %>
 
-<div class="Ps D-f Fld-c Ai-c Mt-$headerH W100p P6u;4u;10u Bgc-$reCore800 Ov-h <%= heroCSS.vertical %> <%= heroCSS.horizontal %> md_Fld-rr md_Jc-sb md_P11p;5.5p;7p">
-    <div class="D-n Ps-a W80p H150p T-195 L50p Tf -Tr-50p;0 <%= heroCSS.dradientDescTop %> <%= heroCSS.dradientDescBot %> md_D-f">
-        <div class="Ps-a W80p Apcr1 T0 L10p Bdrd100p -Gdl180d,$reCore400;0,$reCore450;100p Ft -Blr100"></div>
+<div id="hero-section" class="Ps D-f Fld-c Ai-c Mt-$headerH W100p P6u;4u;10u Bgc-$core800 lg_D-g lg_Gtc1fr;504 lg_P80;40;50 xl_P160;80;100 Ov-h <%= heroCSS.vertical %> <%= heroCSS.horizontal %>">
+    <!-- Decor  -->
+    <div class="D-n Ps-a W80p H150p T-195 L50p Tf -Tr-50p;0 <%= heroCSS.dradientDescTop %> <%= heroCSS.dradientDescBot %> lg_D-f">
+        <div class="Ps-a W80p Apcr1 T0 L10p Bdrd100p -Gdl180d,$core550;0,$core650;100p Ft -Blr100"></div>
     </div>
-    <div class="D-f Fld-c Ai-c Gap4u W100p md_W80p md_Mxw350 lg_Mxw504">
-        <div class="<%= heroCSS.gradient %> md_D-n"></div>
-        
-        <h1 class="D Fnf-SNPro Fns6u Fnw-b Lnh100p Lts0 M3.5u;0 Txt C-$brand Ps Zi2 md_D-n">Make CSS exciting again!</h1>
-        <div class="D-f Fld-c Ai-c Gap2u Bgc-tp W100p Ps Zi2">
-            <arts-slider class="D-f Ai-fs Fl1 W100p">
-                <button class="prev W48 Apcr1 Mr40 As-c Bgc-tp Bd-n P0 Cs lg_Mr80">
-                    <svg class="Tf -Rt180d C-$brand C-$reBrand500_h C-$reBrand600_a Ts-$shortTs" width="17" height="29">
+    <div class="<%= heroCSS.gradient %> lg_D-n"></div>
+    <% for (let decor of Object.values(decorCSS)) { %>
+        <div class="D-n lg_D <%= decor %> Zi2"></div>
+    <% } %>
+    <svg class="D-n lg_D Ps-a L22p lg_T15p xl_T19p C-$accent750 Zi2" width="40" height="40">
+		<use href="/assets/img/decor.svg#twoTriangle"></use>
+	</svg>
+    <svg class="D-n lg_D Ps-a L45.5p lg_B4p xl_B12p Zi2" width="31" height="21">
+		<use href="/assets/img/decor.svg#figure"></use>
+	</svg>
+
+
+    <div class="P3.25u;0 M0;0;4u Txa-c lg_Txa-s lg_Gc1 lg_M0 lg_As-st Zi2">
+        <strong class="Fnf-SN;Pro Fns6u Lnh100p Lts0 Txt C-$brand md_Fns9u lg_Fns48">
+            Make CSS exciting again!
+        </strong>
+    </div>
+
+    <!-- Slider -->
+    <div class="Ps D-f Fld-c Ai-c Gap2u Bgc-tp W100p md_W504 md_Gap4u md_M14u;0;10u lg_M0 lg_Gc2 lg_Grs1 lg_Gre5 Zi2">
+        <% for (let decor of Object.values(decorCSSArts)) { %>
+            <div class="D-n md_D <%= decor %>"></div>
+        <% } %>
+        <svg class="D-n md_D Ps-a L55p T-20p C-$core800" width="37" height="37">
+		    <use href="/assets/img/decor.svg#squareDot"></use>
+	    </svg>
+        <arts-slider class="D-f Ai-fs Fl1 W100p Gap26 md_Gap80">
+                <button class="prev W48 Apcr1 As-c Bgc-tp Bd-n P0 Cs">
+                    <svg class="Tf -Rt180d C-$brand C-$brand500_h C-$brand200_a Ts-$shortTs md_W24 md_H36" width="17" height="29">
 		                <use href="/assets/img/icons.svg#arrow-slider"></use>
 	                </svg>
                 </button>
-                <div class="Ps Fl1 P0 Mnw0 md_P44 md_Bdrd1u md_Bgc-$artFrameColor md_Bxsd0;0;0;2u;$artFrameBorder">
-                    <% for (let decor of Object.values(decorCSSArts)) { %>
-                        <div class="D-n md_D <%= decor %>"></div>
-                    <% } %>
-                    <div class="W100p P0 Bxz-bb md_P16 md_Bdrd1u md_Bgc-$artFrameColorSmall md_Bxsd0;0;0;0.5u;$artFrameBorderSmall">
+                <div class="Ps Fl1 P0 Mnw0 md_P20 md_Bdrd1u md_Bgc-$core300 md_Bxsd0;0;0;2u;$core350 lg_P32">
+                    <div class="W100p P0 lg_P2u lg_Bgc-$core400 lg_Bxsd0;0;0;0.5u;$core900">
                         <div class="swiper W100p Bgc-tp Apcr1">
                             <div class="swiper-wrapper">
                                 <% if (filteredArts.length) { %>
@@ -68,48 +85,38 @@ permalink: /redesign-preview/
                         </div>
                     </div>
                 </div>
-                <button class="next W48 Apcr1 Ml40 As-c Bgc-tp Bd-n P0 Cs lg_Ml80">
-                    <svg class="C-$brand C-$reBrand500_h C-$reBrand600_a Ts-$shortTs" width="17" height="29">
+                <button class="next W48 Apcr1 As-c Bgc-tp Bd-n P0 Cs">
+                    <svg class="C-$brand C-$brand500_h C-$brand200_a Ts-$shortTs md_W24 md_H36" width="17" height="29">
 		                <use href="/assets/img/icons.svg#arrow-slider"></use>
 	                </svg>
                 </button>
-            </arts-slider>
-            <span class="Fns16 Fnw-l Lnh150p Lts0 C-$reAccent850 md_Ps-a md_L50p md_B-43 md_Tf md_-Tr-50p;0">Yes, this is  CSS</span>
-            <div class="W100p P2.5u;3.5u Txa-c md_D-n">
-                <span class="D Fns4u Fnw-l Lnh150p Lts0 C-$reAccent900 ">Tailwind CSS alternative for custom websites and creative coding</span>
-            </div>
-        </div>
+        </arts-slider>
+        <span class="Fns16 Fnw600 Lnh150p Lts0 C-$accent850 lg_Ps-a lg_B-16p lg_L50p lg_Tf lg_-Tr-50p;0">Yes, this is pure CSS</span>
     </div>
-    <div class="W100p Ps Zi2 md_D-f md_Fld-c md_Gap64">
-        <% for (let decor of Object.values(decorCSS)) { %>
-            <div class="D-n md_D <%= decor %>"></div>
-        <% } %>
-        <svg class="D-n md_D Ps-a L244 T-20 lg_T-60 C-$decorTwoTriangle" width="40" height="40">
-		    <use href="/assets/img/icons.svg#twoTriangle"></use>
-	    </svg>
-        <div class="D-n md_D-f md_Fld-c Gap8">
-            <h1 class="Fnf-SNPro Fns48 M17;0 Fnw-b Lnh100p Lts0 Txt C-$brand">Make CSS exciting again!</h1>
-            <span class="M10;0 Mxw60p Fns4u Fnw-l Lnh115p Lts0 C-$reAccent900">Tailwind CSS alternative for custom websites and creative coding</span>
-        </div>
-        <div class="D-f Fld-c Ai-c Gap4u M6u;0;0 W100p md_Fld-r md_Jc-st md_Gap48 md_M0">
-            <div class="W100p Mxw100u M-a md_Mxw240 md_M0">
+
+    <div class="P2.5u Mt2u md_Gc1 Txa-c lg_Txa-s lg_P1.5u;0 lg_Mxw60p Zi2">
+        <h1 class="Fns4u Fnst-n Fnw300 Lnh120p Lts0 C-$accent900 M0">Tailwind CSS alternative for custom websites and creative coding</h1>
+    </div>
+
+    <div class="D-f Fld-c Ai-c Gap4u Mt6u W100p md_Fld-r md_Jc-c md_Gap48 md_M0 md_Gc1 md_Mt64 lg_Jc-st Zi2">
+        <div class="W100p Mxw100u Mnh39 md_Mxw240 md_M0">
 			    <%- include('./_includes/redesign/components/link-button.ejs',{
 					url:"https://docs.mlut.style/",
 					text: "Get started",
 					variant: "brand"
 				    })
 			    %>
-		    </div>
-            <div class="W100p Mxw100u M-a md_Mxw240 md_M0">
+		</div>
+        <div class="W100p Mxw100u Mnh39 md_Mxw240 md_M0">
 			    <%- include('./_includes/redesign/components/link-button.ejs',{
 					url:"#0",
 					text: "View the gallery",
 					variant: "white"
 				    })
 			    %>
-		    </div>
-        </div>
+		</div>
     </div>
 </div>
+
 
 <script src="/assets/script/art-slider.js" type="module"></script>

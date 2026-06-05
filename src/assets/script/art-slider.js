@@ -8,7 +8,7 @@ if (!document.querySelector(`link[href*="swiper-bundle.min.css"]`)) {
   document.head.appendChild(link);
 }
 
-class ArtsSliderComponent extends HTMLElement {
+class ArtsSlider extends HTMLElement {
   constructor() {
     super();
   }
@@ -34,4 +34,4 @@ class ArtsSliderComponent extends HTMLElement {
   }
 }
 
-customElements.define('arts-slider', ArtsSliderComponent);
+customElements.define('arts-slider', ArtsSlider);

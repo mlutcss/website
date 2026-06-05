@@ -1,17 +1,14 @@
 <%
 	 const css = {
-		buttonShape:"-Sz100p D-f Jc-c Ai-c P10 Fns16 Bdrd8 Ts-$shortTs Bd1;s;$brand",
-		contentContainer: "D-f Jc-c Ai-c"
+		buttonShape:"-Sz100p D-f Jc-c Ai-c P10 Fns4u Lnh100p Lts0 Fnst-n Fnw400 Bdrd8 Ts-$shortTs Bd1;s;$brand",
 	}
 
-	href=`href=${it.url}`
-
 	if (it.variant === 'brand') {
-        css.buttonColors = "Bgc-$brand Bgc-$reBrand500_h Bgc-$reBrand600_a";
-        css.span = "Lnh100p Lts0 C#fff";
+        css.buttonColors = "Bgc-$brand Bgc-$brand500_h Bgc-$brand200_a";
+        css.textColor = "C#fff";
 	} else {
-		css.buttonColors = "Bgc-$btnBg100 Bgc-$btnBg200_h Bgc-$btnBg300_a";
-        css.span = "Lnh100p Lts0 C#22141A";
+		css.buttonColors = "Bgc-$white100 Bgc-$white200_h Bgc-$white300_a";
+        css.textColor = "C#22141A";
 	}
 
 	if (!it.tag) {
@@ -20,9 +17,6 @@
 		href = ''
 	}
 %>
-<<%= it.tag %> <%= href %>
-	class="btn <%= css.buttonShape %> <%= css.buttonColors %>">
-		<span class="<%= css.span %>">
-			<%= it.text %>
-		</span>
+<<%= it.tag %> class="btn <%= css.buttonShape %> <%= css.buttonColors %> <%= css.textColor %>" href="<%= it.url %>">
+	<%= it.text %>
 </<%= it.tag %>>
