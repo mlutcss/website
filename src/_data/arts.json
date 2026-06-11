@@ -34,5 +34,10 @@
 	{
 		"artId":"cat",
 		"bgColor":"Bgc-$artCat"
+	},
+	{
+		"artId":"corgi",
+		"bgColor":"Bgc-$artCorgi"
 	}
+
 ]
