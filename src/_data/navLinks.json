@@ -1,15 +1,23 @@
 [
 	{
-		"link":"/#features",
+		"link":"/redesign-preview/#key-features",
 		"text":"Features"
 	},
 	{
-		"link":"/#comparison",
+		"link":"/redesign-preview/#comparison",
 		"text":"Comparison"
 	},
 	{
-		"link":"/arts",
+		"link":"#0",
 		"text":"Art"
+	},
+	{
+		"link":"#0",
+		"text":"Showcase"
+	},
+	{
+		"link":"https://docs.mlut.style/",
+		"text":"Docs"
 	},
 	{
 		"link":"https://play.mlut.style/",

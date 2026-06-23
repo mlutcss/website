@@ -16,6 +16,7 @@ a {
 	width:100%;
 	font-size:1.2em;
 	border-radius:8px;
+	height: 100%;
 }
 
 
@@ -25,144 +26,200 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
-html{
-	--ml-heroPadding: calc(var(--ml-headerH) + 10px);
-	--ml-core850:rgba(0,0,0,0.9);
-	--ml-primaryBright600:#2b7fff;
-	--ml-primary650:#16348C;
-	--ml-secondaryBright600:#f0438c;
-	--ml-secondaryBright650:#e91e63;
-	--ml-tertiaryBright600:#ad46ff;
-	--ml-tertiaryBright650:#8500e2;
-	--ml-brand:#f0438c;
-	--ml-brand200:rgba(201, 35, 105);
-	--ml-brand500:rgb(230, 38, 119);
-	--ml-darkGray:#1f1f1f;
-	--ml-blueGray:rgb(236, 240, 246,0.5);
-	--ml-gray200:#d1d5db;
-	--ml-gray350:#cacacaa0;
-	--ml-white100: #fff;
-	--ml-white200: #F7F2FF;
-	--ml-white300: #E4D6F0;
-	--ml-yellow500: #F9CF67;
+// Светлая тема
+@mixin light-theme {
+  --ml-core200: #E4D6F0;
+  --ml-core201: #000;
+  --ml-core202: #000;
+  --ml-core205: #fff;
+  --ml-core210: #394EB6;
+  --ml-core215: #0B0A22;
+  --ml-core220: #16348C;
+  --ml-core221: #fff;
+  --ml-core225: #16348C;
+  --ml-core230: #fff;
+  --ml-core231: #000;
+  --ml-core300: #fff;
+  --ml-core350: #16348C;
+  --ml-core900: #D9D1CA;
+  --ml-core400: #FDF6EF;
+  --ml-core450: #2762f81f;
+  --ml-core800: #F7F2FF;
+  --ml-core810: #e4d6f0;
+  --ml-core820: #e4d6f0;
+  --ml-core830: #F7F2FF;
+  --ml-core950: #fff;
+  --ml-accent900: #22141A;
+  --ml-accent850: #394EB6;
+  --ml-accent800: #394EB6;
+  --ml-accent750: #16348C;
+  --ml-accent950: #D2B5D0;
+  --ml-core550: #fff;
+  --ml-core500: #edebeb;
+  --ml-core700: rgba(240, 67, 140, 0.3);
+  --ml-core750: rgb(253, 173, 245, 0.6);
+  --ml-core650: rgba(240, 67, 140, 0);
+  --ml-core600: rgba(249, 207, 103, 0);
+  --ml-primary800: rgba(239,246,255,1);
+  --ml-primary750: rgba(219,234,254,1);
+  --ml-primary700: rgba(219,234,254,0.5);
+  --ml-primary300: rgb(28,57,142);
+  --ml-primary400: rgb(20,71,230);
+  --ml-secondary800: rgba(252,231,243,1);
+  --ml-secondary750: rgba(252,206,232,1);
+  --ml-secondary700: rgba(252,206,232,0.5);
+  --ml-secondary650: rgba(253, 165, 213, 0.793);
+  --ml-secondary300: rgb(185,28,124);
+  --ml-secondary400: rgb(194,24,91);
+  --ml-tertiary800: #a3a0b9;
+  --ml-tertiary750: #574b4b;
+  --ml-tertiary760: #574b4b;
+  --ml-tertiary770: #000;
+  --ml-tertiary700: #fafaa2;
+  --ml-tertiary650: rgba(218,178,255,0.5);
+  --ml-tertiary300: rgb(89,22,139);
+  --ml-tertiary400: rgb(130,0,219);
+  --ml-wrong900: rgba(254,242,242,0.6);
+  --ml-wrong800: rgba(255,226,226,0.8);
+  --ml-wrong850: rgba(255,226,226,0.6);
+  --ml-wrong750: rgba(255,201,201,0.8);
+  --ml-correct900: rgba(224, 255, 233, 0.8);
+  --ml-correct800: rgba(183, 253, 207, 0.8);
+  --ml-correct850: rgba(183, 250, 207, 0.6);
+  --ml-correct750: rgba(83, 250, 141, 0.6);
+
+  // arts
+  --ml-artGhost: #ffbcB0;
+  --ml-artPenroseTriangle: #77de64;
+  --ml-artFlushedEmoji: #bfc5ff;
+  --ml-artExplodingHead: #9cffe5;
+  --ml-artClownEmoji: #10bac3;
+  --ml-artMushroom: #ad8bc7;
+  --ml-artRobotHare: #947e4f;
+  --ml-artFunnyCake: #6295e3;
+  --ml-artCat: #dea3e3;
+}
+
+// Тёмная тема
+@mixin dark-theme {
+  --ml-core200: #151833;
+  --ml-core201: #16348C;
+  --ml-core202: #16348C;
+  --ml-core205: #16348C;
+  --ml-core210: #16348C;
+  --ml-core215: #D2B5D0;
+  --ml-core220: #81C8F1;
+  --ml-core221: #81C8F1;
+  --ml-core225: #16348C;
+  --ml-core230: #f0438c;
+  --ml-core231: #f0438c;
+  --ml-core300: #0B0A22;
+  --ml-core350: #151833;
+  --ml-core900: #000;
+  --ml-core400: #151833;
+  --ml-core450: #061230;
+  --ml-core800: #1B173C;
+  --ml-core810: #251F53;
+  --ml-core820: #0e0d2e;
+  --ml-core830: #0e0d2e;
+  --ml-core950: #000;
+  --ml-accent900: #fff;
+  --ml-accent850: #A3A0B9;
+  --ml-accent750: #394EB6;
+  --ml-accent800: #62B7EA;
+  --ml-accent950: #394EB6;
+  --ml-core550: rgba(57, 78, 182, 0.1);
+  --ml-core700: rgba(57, 78, 182, 0.24);
+  --ml-core750: #121828;
+  --ml-core650: rgba(57, 78, 182, 0);
+  --ml-core600: rgba(129, 200, 241, 0);
+  --ml-core500: #2e2e2e;
+  --ml-primary800: rgba(30,58,138,0.4);
+  --ml-primary750: rgba(25,60,184,0.5);
+  --ml-primary700: rgba(30,64,175,0.6);
+  --ml-primary300: rgb(190,219,255);
+  --ml-primary400: rgb(142,197,255);
+  --ml-secondary800: rgba(134,16,67,0.5);
+  --ml-secondary750: rgba(240,67,140,0.3);
+  --ml-secondary700: rgba(163,0,76,0.7);
+  --ml-secondary650: rgba(198,0,92);
+  --ml-secondary300: rgb(244,114,182);
+  --ml-secondary400: rgb(249,168,212);
+  --ml-tertiary800: #5865A2;
+  --ml-tertiary750: #fff;
+  --ml-tertiary760: #9EA2B9;
+  --ml-tertiary770: #fff;
+  --ml-tertiary700: rgba(119, 214, 255, 0.22);
+  --ml-tertiary650: rgba(127,34,254,0.6);
+  --ml-tertiary300: rgb(218,178,255);
+  --ml-tertiary400: rgb(233,212,255);
+  --ml-wrong900: rgba(130,24,26,0.4);
+  --ml-wrong800: rgba(159,7,18,0.6);
+  --ml-wrong850: rgba(159,7,18,0.5);
+  --ml-wrong750: rgba(193,0,7,0.7);
+  --ml-correct900: rgba(13,84,43,0.4);
+  --ml-correct800: rgba(1,102,48,0.6);
+  --ml-correct850: rgba(1,102,48,0.4);
+  --ml-correct750: rgba(0,130,54,0.6);
+
+  // arts
+  --ml-artGhost: #450c00;
+  --ml-artPenroseTriangle: #726603;
+  --ml-artFlushedEmoji: #000942;
+  --ml-artExplodingHead: #003b2a;
+  --ml-artClownEmoji: #065054;
+  --ml-artMushroom: #3b244d;
+  --ml-artRobotHare: #6f592b;
+  --ml-artFunnyCake: #1f3e6e;
+  --ml-artCat: #a479a8;
+}
+
+
+html {
+  --ml-heroPadding: calc(var(--ml-headerH) + 10px);
+  --ml-core850: rgba(0,0,0,0.9);
+  --ml-primaryBright600: #2b7fff;
+  --ml-primary650: #16348C;
+  --ml-secondaryBright600: #f0438c;
+  --ml-secondaryBright650: #e91e63;
+  --ml-tertiaryBright600: #ad46ff;
+  --ml-tertiaryBright650: #8500e2;
+  --ml-brand: #f0438c;
+  --ml-brand50: rgba(240, 67, 140, 0.00);
+  --ml-brand100: rgba(240, 67, 140, 0.13);
+  --ml-brand200: rgba(201, 35, 105);
+  --ml-brand500: rgb(230, 38, 119);
+  --ml-darkGray: #1f1f1f;
+  --ml-blueGray: rgb(236, 240, 246, 0.5);
+  --ml-gray200: #d1d5db;
+  --ml-gray350: #D2B5D0;
+  --ml-white100: #fff;
+  --ml-white200: #F7F2FF;
+  --ml-white300: #E4D6F0;
+  --ml-yellow500: #F9CF67;
+  --ml-yellow510: rgb(249, 207, 103, 0.00);
 }
 
 
 
-@media (prefers-color-scheme: dark){
-	html{
-		--ml-core300:#0B0A22;
-		--ml-core350: #151833;
-		--ml-core900:#000;
-		--ml-core400:#151833;
-		--ml-core450:#061230;
-		--ml-core800:#1B173C;
-		--ml-core950:#000;
-		--ml-accent900:#fff;
-		--ml-accent850:#A3A0B9;
-		--ml-accent750:#394EB6;
-		--ml-accent800:#62B7EA;
-		--ml-core550:rgba(57, 78, 182, 0.1);
-		--ml-core700:rgba(57, 78, 182, 0.24);
-		--ml-core750:#121828;
-		--ml-core650:rgba(57, 78, 182, 0);
-		--ml-core600:rgba(129, 200, 241, 0);
-		--ml-core500:#2e2e2e;
-		--ml-primary800:rgba(30,58,138,0.4);
-		--ml-primary750:rgba(25,60,184,0.5);
-		--ml-primary700:rgba(30,64,175,0.6);
-		--ml-primary300:rgb(190,219,255);
-		--ml-primary400:rgb(142,197,255);
-		--ml-secondary800:rgba(134,16,67,0.5);
-		--ml-secondary750:rgba(240,67,140,0.3);
-		--ml-secondary700:rgba(163,0,76,0.7);
-		--ml-secondary650:rgba(198,0,92);
-		--ml-secondary300:rgb(244,114,182);
-		--ml-secondary400:rgb(249,168,212);
-		--ml-tertiary800:rgba(89,22,139,0.4);
-		--ml-tertiary750:rgba(110,17,176,0.4);
-		--ml-tertiary700:rgba(110,17,176,0.6);
-		--ml-tertiary650:rgba(127,34,254,0.6);
-		--ml-tertiary300:rgb(218,178,255);
-		--ml-tertiary400:rgb(233,212,255);
-		--ml-wrong900:rgba(130,24,26,0.4);
-		--ml-wrong800:rgba(159,7,18,0.6);
-		--ml-wrong850:rgba(159,7,18,0.5);
-		--ml-wrong750:rgba(193,0,7,0.7);
-		--ml-correct900:rgba(13,84,43,0.4);
-		--ml-correct800:rgba(1,102,48,0.6);
-		--ml-correct850:rgba(1,102,48,0.4);
-		--ml-correct750:rgba(0,130,54,0.6);
-		// arts
-		--ml-artGhost:#450c00;
-		--ml-artPenroseTriangle:#726603;
-		--ml-artFlushedEmoji:#000942;
-		--ml-artExplodingHead:#003b2a;
-		--ml-artClownEmoji: #065054;
-		--ml-artMushroom: #3b244d;
-		--ml-artRobotHare: #6f592b;
-		--ml-artFunnyCake: #1f3e6e;
-		--ml-artCat: #a479a8;
-	}
+// Базовая светлая тема
+html {
+  @include light-theme;
 }
 
-
-
-@media (prefers-color-scheme: light){
-	html{
-		--ml-core300:#fff;
-		--ml-core350: #16348C;
-		--ml-core900:#D9D1CA;
-		--ml-core400:#FDF6EF;
-		--ml-core450:#2762f81f;
-		--ml-core800:#F7F2FF;
-		--ml-core950:#fff;
-		--ml-accent900:#22141A;
-		--ml-accent850:#394EB6;
-		--ml-accent800:#394EB6;
-		--ml-accent750:#16348C;
-		--ml-core550:#fff;
-		--ml-core500:#edebeb;
-		--ml-core700:rgba(240, 67, 140, 0.3);
-		--ml-core750:rgb(253, 173, 245, 0.6);
-		--ml-core650:rgba(240, 67, 140, 0);
-		--ml-core600:rgba(249, 207, 103, 0);
-		--ml-primary800:rgba(239,246,255,1);
-		--ml-primary750:rgba(219,234,254,1);
-		--ml-primary700:rgba(219,234,254,0.5);
-		--ml-primary300:rgb(28,57,142);
-		--ml-primary400:rgb(20,71,230);
-		--ml-secondary800:rgba(252,231,243,1);
-		--ml-secondary750:rgba(252,206,232,1);
-		--ml-secondary700:rgba(252,206,232,0.5);
-		--ml-secondary650:rgba(253, 165, 213, 0.793);
-		--ml-secondary300:rgb(185,28,124);
-		--ml-secondary400:rgb(194,24,91);
-		--ml-tertiary800:rgba(243,232,255,1);
-		--ml-tertiary750:rgba(233,212,255,1);
-		--ml-tertiary700:rgba(233,212,255,0.5);
-		--ml-tertiary650:rgba(218,178,255,0.5);
-		--ml-tertiary300:rgb(89,22,139);
-		--ml-tertiary400:rgb(130,0,219);
-		--ml-wrong900:rgba(254,242,242,0.6);
-		--ml-wrong800:rgba(255,226,226,0.8);
-		--ml-wrong850:rgba(255,226,226,0.6);
-		--ml-wrong750:rgba(255,201,201,0.8);
-		--ml-correct900:rgba(224, 255, 233, 0.8);
-		--ml-correct800:rgba(183, 253, 207, 0.8);
-		--ml-correct850:rgba(183, 250, 207, 0.6);
-		--ml-correct750:rgba(83, 250, 141, 0.6);
-		// arts
-		--ml-artGhost:#ffbcB0;
-		--ml-artPenroseTriangle:#77de64;
-		--ml-artFlushedEmoji:#bfc5ff;
-		--ml-artExplodingHead:#9cffe5;
-		--ml-artClownEmoji: #10bac3;
-		--ml-artMushroom: #ad8bc7;
-		--ml-artRobotHare: #947e4f;
-		--ml-artFunnyCake: #6295e3;
-		--ml-artCat: #dea3e3;
-	}
-
+// Явная светлая тема
+html.theme-light {
+  @include light-theme;
 }
 
+// Явная тёмная тема
+html.theme-dark {
+  @include dark-theme;
+}
+
+// Системная тёмная тема
+@media (prefers-color-scheme: dark) {
+  html:not(.theme-light):not(.theme-dark) {
+    @include dark-theme;
+  }
+}

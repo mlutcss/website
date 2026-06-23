@@ -1,80 +1,84 @@
 <%
-	const universalMargin = "M0;0;5u"
-	const css = {
-		linkSect:`${universalMargin} P0;5u W49p md_W30p D-f Fld-r Flw-w Jc-fs md_Jc-c Ai-fs md_Ai-fs md_P0;3u `,
-		ul:` ${universalMargin} P0 Lsst-n W70p`,
-		li:"M0;0;2u",
-		link:"Txd-n C-$gray200 C-$brand_h Tsd-$shortTs",
-		universalMargin:"M0;0;5u"
-	}
+    const css = {
+        buttons: "btn D-f Ai-c Gap12 Mnh32 C-$accent900",
+        square: "Ps-a_af Ct_af W40p_af Apcr1_af T115p_af L50_af Bgc-$yellow500_af Bdrd0.5u_af",
+        twoArc: "Ps-a_af Ct_af W100p_af Apcr1_af T15p_af L1p_af Bdrd100p_af Bd1u;s;tp_af Bdtc-$brand_af Tf_af -Rt-20d_af  Ps-a_b Ct_b W100p_b Apcr1_b T-30p_b L-74p_b Bdrd100p_b Bd1u;s;tp_b Bdbc-$brand_b Tf_b -Rt-15d_b"
+    }
 %>
-<footer class="D-f Jc-c Ai-c W100p Bgc-$core850 P8u;0" >
-	<div class="W100p sm_W60p md_W100p C-$gray200 D-f Fld-r Flw-w Jc-c md_P0;8u">
-		<div class="W100p md_W25p P0;5u ">
-			<p class="M0;0;5u Fns4u lg_Fns5u xl_Fns6u P0;1u md_Mxw16ch">
-				<span class="Fnw-b C-$brand"> mlut </span> - make CSS exciting again!
-			</p>
-		</div>
 
-		<section class="<%= css.linkSect %> ">
-			<div>
-				<h3 class="<%= universalMargin %>">
-					Product
-				</h3>
-				<ul class="<%= css.ul %>">
-					<% for (let navLink of it.navLinks) { %>
-						<li class="<%= css.li %>">
-							<a href="<%= navLink.link %>" class="<%= css.link %>">
-								<%= navLink.text%>
-							</a>
-						</li>
-					<%} %>
-				</ul>
-			</div>
-		</section>
 
-		<section class="<%= css.linkSect %> ">
-			<div>
-				<h3 class="<%= universalMargin %>">
-					Learn more
-				</h3>
+<footer class="Ps D-f Jc-sb Ai-st Gap12u W100p P6u;4u Bgc-$core950 Fns4u Fnw400 Fnst-n Lnh100p Lts0 C-$accent900 xl_P40;80">
+  <div class="Ps-a W35 Apcr1 T-6p L74p Bdrd100p Bd6;s;#16348C Zi1 <%= css.square %> md_D-n"></div>
+  <div class="D-n md_D Ps-a T-7p L17p Tf -Rt-25d <%= css.twoArc %> Zi1">
+    <svg class="C#3943B6" width="31" height="31">
+        <use href="/assets/img/decor.svg#squareDot"></use>
+    </svg>
+  </div>
 
-				<ul id="footer-menu" class="<%= css.ul %>">
-					<% for (let extLink of it.extLinks) {%>
-						<li class="<%= css.li %>">
-							<a href="<%= extLink.link %>" class="<%= css.link %>">
-								<%= extLink.name %>
-							</a>
-						</li>
-					<% } %>
-				</ul>
-				<script type="module">
-					if(window.location.href.includes('productradar')) {
-						const navMenu = document.getElementById('footer-menu');
-						const newItem = navMenu.lastElementChild.cloneNode(true);
-						const link = newItem.firstElementChild;
+  <a href="/redesign-preview/#hero-section" class="D-n md_D-f Jc-c Ai-c <%= it.cssHeaderLogoVisibility %> Ts-O;$shortTs">
+  	<img src="/assets/img/logo.svg" alt="mlut logo" class="W64 md_W116 H-a">
+  </a>
 
-						link.textContent = 'Вебинар';
-						link.href = 'https://forms.gle/GjneTZGWHkeCavev5';
-						link.setAttribute('target', 'blank');
-						link.classList.add('Fnw-b');
-						navMenu.appendChild(newItem);
-					}
-				</script>
-			</div>
-		</section>
-
-		<div class="W100p D-f P0;5u Fld-c Ai-fs Jc-fs md_Jc-c md_Ai-c Fns0.9e">
-			<p class="C-$gray350 Txa-l M0 ">
-				© 2025 mlut contributors. All rights reserved.
-			</p>
-			<p class="C-$gray350 Txa-l M0 ">
-				Sass logo is used under the
-				<a class="C-$brand Txd-u Tsd-$shortTs"
-				  href="https://sass-lang.com/styleguide/brand/">
-					 Sass Brand Guidelines
+  <div class="D-f Fld-c Jc-st Gap2u">
+    <div class="D-f Ai-c Gap2u Flw md_Od2 md_Gap20">
+        <div class="P10;12 xl_P10;20">
+            <span>Community:</span>
+        </div>
+        <div class="D-f Ai-c Gap32">
+            <% for (let extLink of it.extLinks) {%>
+				<%- include('./components/sm-link.ejs',{
+					icon: `${extLink.icon}`,
+					link: `${extLink.link}`,
+				    name: `${extLink.name}`
+				}) %>
+			<% }%>
+        </div>
+    </div>
+    <ul class="D-f Flw Lsst-n P0 M0 md_Od1">
+        <% for (let navLink of it.navLinks) {%>
+			<li class="P10;12 xl_P10;20">
+				<a href="<%= navLink.link %>" class="Txd-n C-$accent900 C-$brand_h -Ts">
+					<%= navLink.text %>
 				</a>
-			</p>
-		</div>
-	</div>
+			</li>
+		<% }%>
+    </ul>
+    <theme-switcher class="md_Od3">
+        <div class="P5;12 D-f Ai-c Gap8u xl_P10;20" role="group" aria-label="Select theme">
+            <button class="<%= css.buttons %>" data-theme="auto">
+                <svg class="C-$accent900" width="21" height="20">
+                    <use href="/assets/img/icons.svg#icon-system"></use>
+                </svg>
+                <span class="D-n md_D">System</span>
+            </button>
+            <button class="<%= css.buttons %>" data-theme="light">
+                <svg class="C-$accent900" width="26" height="26">
+                    <use href="/assets/img/icons.svg#icon-light"></use>
+                </svg>
+                <span class="D-n md_D">Light</span>
+            </button>
+            <button class="<%= css.buttons %>" data-theme="dark">
+                <svg class="C-$accent900" width="19" height="19">
+                    <use href="/assets/img/icons.svg#icon-dark"></use>
+                </svg>
+                <span class="D-n md_D">Dark</span>
+            </button>
+        </div>
+    </theme-switcher>
+  </div>
+
+  <div class="D-n md_D P10">
+    <p class="M0 Fnw300 Fnst-n Lnh150p Lts0">
+        © <%= new Date().getFullYear() %> mlut contributors. All rights reserved.<br>
+        Sass logo is used under the
+        <a href="https://sass-lang.com/styleguide/brand" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="C-$accent900 C-$brand_h Txd-n">
+            Sass Brand Guidelines
+        </a>
+    </p>
+  </div>
 </footer>
+
+<script src="/assets/script/theme-switcher.js" type="module"></script>

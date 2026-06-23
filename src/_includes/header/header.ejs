@@ -1,87 +1,59 @@
 <%
-	const css = {
-		navLinkDesktop:"md_Txd-n md_C-$brand_h Ts-$shortTs",
-		navLinkMobile:"C-$accent850 Txd-n C-$brand_a Pb2u Bdb1;s;$brand md_Bdb-n",
-		navLi:" md_Pb0 md_Bd-n md_M0;4u ",
+	const decorCss = {
+		squareFrame: "Ps-a W15 Apcr1 T-7p L35p Bdrd2 Bgc-$brand Ps-a_af Ct_af W18_af Apcr1_af T50p_af L-70p_af Bd1u;s;#FAC447_af Bdrd1u_af",
+		square: "Ps-a_af Ct_af W5p_af Apcr1_af T-15p_af L9_af Bgc#394EB6_af Bdrd2_af",
+		arc: "Ps-a_b Ct_b W20p_b Apcr1_b T10p_b L15p_b Bdrd100p_b Bd1.5u;s;tp_b Bdlc#D2B5D0_b Tf_b -Rt-60d_b"
 	}
-
 %>
 
-<header class=" D-f Jc-sb Ai-c P2u;2u md_P1u;3u Bgc-$core800  Bcf -Blr0.4 Ps-f H-$headerH W100p C-$headerC Zi20">
-	<%# Logo %>
+<header class=" D-f Jc-sb Ai-c Gap2u P15u;4u;2u md_P0;5.5p Bgc-$core950 Bcf -Blr0.4 Ps-f H-$headerH W100p C-$accent900 Zi20">
+    <%# Logo %>
+	<a href="/redesign-preview/#hero-section" class="D-f Jc-c Ai-c <%= it.cssHeaderLogoVisibility %> Ts-O;$shortTs">
+  		<img src="/assets/img/logo.svg" alt="mlut logo" class="W64 md_W116 H-a">
+	</a>
 
-	<div class="W40p md_W25p md_Flg0.25">
-		<a href="/#hero-page" id="header-logo" class="Mxw35u md_Mxw25u D <%= it.cssHeaderLogoVisibility %> Ts-O;$shortTs">
-			<img class="D P1u;2u W70p sm_W85p md_W100p" alt="mlut logo" src="/assets/img/logo.png">
-		</a>
-	</div>
-
-	<%# Desktop menu %>
-
-	<%# Mobile menu%>
-
-  <div  class="W50p D-f Fld-r Jc-fe md_Flg0.5 md_D md_Fns-$headerFns">
-    <%- include('./burger.ejs') %>
-    <div class="Bgc-$core900 Ps-a R0 T-$headerH Ts-$longTs Tf -Trx101p Bd1;s;$brand Bdr-n Bdtlr3u Bdblr3u Mxw50u ^burger:c:~_-Trx0 W50vw P10u;0 md_All-ust @:h<420_P3u;0">
-
-			<nav class="M0;0;9u md_M0">
-				<h2 class="P0;5u M0;0;7u Txa-r C-$brand md_D-n @:h<420_M0;0;4u"> Menu</h2>
-				<ul id="nav-menu" class="C-$accent850 H40p D-f Jc-c Fld-c md_Fld-r Gap6u P0;5u Txa-r  Fns4.8u Lsst-n M0 md_P0 md_H100p md_Gap2u md_Txa-c md_Fns4u @:h<420:w<gMd_Fld-r @:h<420:w<gMd_Flw-w @:h<420:w<gMd_Jc-fe">
-					<% for (let navLink of it.navLinks) {%>
-						<li class=" <%= css.navLi %>">
-								<a href="<%= navLink.link %>" class="<%= css.navLinkMobile %> <%= css.navLinkDesktop %>">
+    <%# Menu %>
+    <div class="D-f Fld-r Jc-fe Ai-c md_D-f md_Jc-e md_Gap8u md_Fns-$headerFns">
+        <%- include('./burger.ejs') %>
+        <div class="Ps-a R0 T-$headerH W100p H91vh Ov-h P6u;4u Bgc-$core820 Ts-$longTs Tf -Trx101p Mxw420 ^burger:c:~_-Trx0 md_All-ust">
+			<div class="D-f Fld-c Gap2u md_Fld-r md_Ai-c md_Gap8u">
+				<a href="/redesign-preview/" class="P2.5u Txd-n C-$accent900 C-$brand_a md_D-n">
+					Home
+				</a>
+				<div class="Mxh300 Ovy-a">
+					<nav>
+						<ul id="nav-menu" class="C-$accent900 D-f Fld-c Gap2u Fns4u Lsst-n P0 M0 md_Fld-r md_Jc-sb md_H100p lg_Gap8u">
+							<% for (let navLink of it.navLinks) {%>
+								<li class="P2.5u">
+									<a href="<%= navLink.link %>" class="C-$accent900 C-$brand_a md_C-$brand_h Ts-$shortTs Txd-n">
 										<%= navLink.text %>
-								</a>
-						</li>
-					<% }%>
-				</ul>
-				<script type="module">
-					if(window.location.href.includes('productradar')) {
-						const navMenu = document.getElementById('nav-menu');
-						const newItem = navMenu.lastElementChild.cloneNode(true);
-						const link = newItem.firstElementChild;
-
-						link.textContent = 'Вебинар';
-						link.href = 'https://forms.gle/GjneTZGWHkeCavev5';
-						link.setAttribute('target', 'blank');
-						link.classList.add('Fnw-b');
-						navMenu.appendChild(newItem);
-					}
-				</script>
-			</nav>
-
-			<%# External links %>
-			<div>
-				<h2 class="P0;5u Txa-r M0;0;3u C-$brand md_D-n @:h<420_M0;0;4u"> Find us</h2>
-				<div class="D-f Fld-r Jc-fe Ai-c Gap3u P0;5u H8u md_D-n">
-					<% for (let extLink of it.extLinks.filter((el) => el.name !== 'Documentation')) {%>
-						<%- include('../components/sm-link.ejs',{
-							icon:`${extLink.icon}`,
-							link:`${extLink.link}`
-						}) %>
-					<% }%>
+									</a>
+								</li>
+							<% }%>
+						</ul>
+					</nav>
+				</div>
+				
+				<%# External links %>
+				<div class="D-f Fld-c Gap2u Pt2u Bdt1;s;$core760 md_P0 md_Bd-n">
+					<div class="P2u md_D-n">
+						<span>Community:</span>
+					</div>
+					<div class="D-f Ai-c Gap6u P1u;2u md_Gap8u md_P0">
+						<% for (let extLink of it.extLinks) { %>
+							<%- include('../components/sm-link.ejs',{
+								icon: `${extLink.icon}`,
+								link: `${extLink.link}`,
+								name: `${extLink.name}`
+							}) %>
+		    			<% } %>
+					</div>
 				</div>
 			</div>
-		</div>
-  </div>
 
-	<%# Desktop links %>
-
-  <div class="Ai-c Jc-fe P1u;2.5u D-n md_D-f H65p
-		md_W25p md_Flg0.25 md_Gap2u lg_Gap4u">
-		<% for (let extLink of it.extLinks.filter((el) => el.name !== 'Documentation')) { %>
-			<%- include('../components/sm-link.ejs',{
-				icon:`${extLink.icon}`,
-				link:`${extLink.link}`
-			}) %>
-		<% } %>
-		<div class="M0 D-f Ai-c Jc-c">
-			<%- include('../components/link-button.ejs',{
-				url:"https://docs.mlut.style/",
-				text: "Docs",
-				icon: "",
-				variant:""
-			}) %>
+			<div class="Ps-a W58p Apcr1 T85p R-20p Bd1u;s;#5865A2 Bdrd100p <%= decorCss.square %> <%= decorCss.arc %> md_D-n">
+				<div class="<%= decorCss.squareFrame %>"></div>
+			</div>
 		</div>
-  </div>
+    </div>
 </header>
