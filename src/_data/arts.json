@@ -43,5 +43,11 @@
 		"artId":"cat",
 		"bgColor":"Bgc-$artCat",
 		"showInMain": false
+	},
+	{
+		"artId":"corgi",
+		"bgColor":"Bgc-$artCorgi",
+		"showInMain": true
 	}
+
 ]
