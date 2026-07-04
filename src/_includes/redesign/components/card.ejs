@@ -1,36 +1,14 @@
 
 <%
     const card = it.item;
-    let styles;
-    if (card.title === "Rich syntax") {
-        styles = {
-            sizeSVG: "W34 H27 lg_W37 lg_H30",
-            padding: "P4u lg_P36;40",
-            gridPosition: "lg_Gc1 lg_Grs1 lg_Gre3 lg_As-st"
-        }
-    };
-    if (card.title === "Easy naming") {
-        styles = {
-            sizeSVG: "W30 H30 lg_W32 lg_H32",
-            padding: "P4u lg_P16;20",
-            gridPosition: "lg_Gc2"
-        }
-    };
-    if (card.title === "Sass availability") {
-        styles = {
-            sizeSVG: "W36 H27 lg_W40 lg_H30",
-            padding: "P4u lg_P16;20",
-            gridPosition: "lg_Gc2"
-        }
-    };
 %>
 
 
-<li class="D-f Fld-c Ai-st Jc-sb Gap20 <%= styles.padding %> <%= styles.gridPosition %> W100p Bdrd8 Bgc-$core800 lg_Mnh100p">
+<li class="D-f Fld-c Ai-st Jc-sb Gap20 <%= card.padding %> <%= card.gridPosition %> W100p Bdrd8 Bgc-$core800 lg_Mnh100p">
     <div class="D-f Fld-c Ai-st Gap2u">
         <div class="D-f Ai-c Gap2.5u P0.5u;0 lg_P0;2.5u">
             <div class="W36 Apcr1 D-f Jc-c Ai-c lg_W40">
-                <svg class="<%= styles.sizeSVG %> C-$tertiary800">
+                <svg class="<%= card.sizeSVG %> C-$tertiary800">
                     <use href="/assets/img/icons.svg#<%= card.img %>"></use>
                 </svg>
             </div>
@@ -38,29 +16,7 @@
         </div>
         <p class="M0 Fns4u Fnst-n Fnw300 Lnh150p Lts0 C-$accent900 lg_P0;2.5u"><%= card.text %></p>
     </div>
-    <% if (card.title === "Rich syntax") { %>
-    <div class="D-n md_D-g Gtc-mc;17u;mc">
-        <div class="P2.5u Gc1">
-            <span class="Fns4u Fnst-n Fnw600 Lnh140p Lts0 C-$brand">mlut syntax</span>
-        </div>
-        <div class="P2.5u Gc3">
-            <span class="Fns4u Fnst-n Fnw600 Lnh140p Lts0 C-$tertiary800">Standard CSS </span>
-        </div>
-        <code class="P0;2.5u Fnf-Fira;Code Fns3u Fnst-n Fnw400 Lnh150p Lts0 C-$tertiary750 Gc1">
-            <span class=""><span class="C#00ac4d">@:ah</span>_<span class="C#f04">0</span>1_<span class="P0;0.5u Bgc-$tertiary700 Bdrd0.75u C#9e54ff">h</span></span>
-        </code>
-        <div class="W20 D-f Ai-c Jc-c Apcr1 Gc2 Js-c">
-            <svg class="C-$brand" width="16" height="12">
-                <use href="/assets/img/icons.svg#arrow-code"></use>
-            </svg>
-        </div>
-        <code class="P0;2.5u D-f Fld-c Fnf-Fira;Code Fns3u Fnst-n Fnw400 Lnh150p Lts0 C-$tertiary750 Gc3">
-            <span><span class="C#00ac4d">@media (any-hover)</span> {</span>
-            <span class="Ml3u">.\@\:ah_01_h<span class="P0;0.5u Bgc-$tertiary700 Bdrd0.75u C#9e54ff">:hover</span> {</span>
-            <span class="Ml6u"><span class="C#f04">opacity</span>: 1</span>
-            <span class="Ml3u">}</span>
-            <span>}</span>
-        </code>
-    </div>
+    <% if (card.extraContent) { %>
+        <%- include(`../../components/pattern/${card.extraContent}.ejs`) %>
     <% } %>
 </li>

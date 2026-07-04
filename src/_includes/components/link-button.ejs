@@ -11,12 +11,15 @@
         css.textColor = "C#22141A";
 	}
 
-	if (!it.tag) {
-		it.tag = 'a'
-	} else {
-		href = ''
-	}
+  const isLink = it.url && it.url !== '#0' && it.url !== '';
+  const tag = isLink ? 'a' : 'button';
+  const className = it.className || '';
 %>
-<<%= it.tag %> class="btn <%= css.buttonShape %> <%= css.buttonColors %> <%= css.textColor %>" href="<%= it.url %>">
-	<%= it.text %>
-</<%= it.tag %>>
+
+<<%= tag %>
+  class="btn <%= css.buttonShape %> <%= css.buttonColors %> <%= css.textColor %> <%= className %>"
+  <%= isLink ? `href="${it.url}"` : '' %>
+  <%= tag === 'button' ? 'type="button"' : '' %>
+>
+  <%= it.text %>
+</<%= tag %>>

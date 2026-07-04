@@ -1,26 +1,23 @@
 class ThemeSwitcher extends HTMLElement {
+
   constructor() {
     super();
-
-    const theme = localStorage.getItem('theme');
-    if (theme) {
-      this.applyTheme(theme);
-    }
+    this._theme = localStorage.getItem('mlut-theme') || 'auto';
+    this.applyTheme(this._theme);
   }
 
   connectedCallback() {
-    const buttons = this.querySelectorAll('[data-theme]');
-    if (buttons.length === 0) return;
+    this._activeClass = this.getAttribute("active-button") || '';
+    this._buttons = [...this.querySelectorAll('[data-theme]')];
+    if (this._buttons.length === 0) return;
 
-    const currentTheme = this.getCurrentTheme();
-    this.setActiveButton(buttons, currentTheme);
+    this._updateActiveButton(this._theme);
 
-    buttons.forEach(button => {
+    this._buttons.forEach(button => {
       button.addEventListener('click', () => {
         const chosenTheme = button.dataset.theme;
         if (chosenTheme) {
           this.setTheme(chosenTheme);
-          this.setActiveButton(buttons, chosenTheme);
         }
       });
     });
@@ -35,34 +32,19 @@ class ThemeSwitcher extends HTMLElement {
   }
 
   setTheme(theme) {
+    if (theme === this._theme) return;
+    this._theme = theme;
+    localStorage.setItem('mlut-theme', theme);
     this.applyTheme(theme);
-    localStorage.setItem('theme', theme);
+    this._updateActiveButton(theme);
   }
 
-  getCurrentTheme() {
-    const html = document.documentElement;
-    if (html.classList.contains('theme-dark')) return 'dark';
-    if (html.classList.contains('theme-light')) return 'light';
-    return 'auto';
-  }
-
-  setActiveButton(buttons, theme) {
-    buttons.forEach(button => {
-    const svg = button.querySelector('svg');
-      if (svg) {
-        svg.classList.remove('C-$brand');
-      }
-      button.removeAttribute('disabled');
+  _updateActiveButton(theme) {
+    this._buttons.forEach(btn => {
+      const isActive = btn.dataset.theme === theme;
+      btn.classList.toggle(this._activeClass, isActive);
+      btn.disabled = isActive;
     });
-
-    const activeBtn = Array.from(buttons).find(btn => btn.dataset.theme === theme);
-      if (activeBtn) {
-        const activeSvg = activeBtn.querySelector('svg');
-        if (activeSvg) {
-          activeSvg.classList.add('C-$brand');
-        }
-        activeBtn.setAttribute('disabled', 'true');
-      }
   }
 }
 

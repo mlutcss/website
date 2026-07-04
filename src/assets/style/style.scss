@@ -45,6 +45,7 @@ a {
   --ml-core400: #FDF6EF;
   --ml-core450: #2762f81f;
   --ml-core800: #F7F2FF;
+  --ml-core805: #F7F2FF;
   --ml-core810: #e4d6f0;
   --ml-core820: #e4d6f0;
   --ml-core830: #F7F2FF;
@@ -57,6 +58,8 @@ a {
   --ml-core550: #fff;
   --ml-core500: #edebeb;
   --ml-core700: rgba(240, 67, 140, 0.3);
+  --ml-core720: rgba(255, 123, 202, 0.36);////
+  --ml-core730: rgba(255, 197, 111, 0.16);////
   --ml-core750: rgb(253, 173, 245, 0.6);
   --ml-core650: rgba(240, 67, 140, 0);
   --ml-core600: rgba(249, 207, 103, 0);
@@ -120,6 +123,7 @@ a {
   --ml-core400: #151833;
   --ml-core450: #061230;
   --ml-core800: #1B173C;
+  --ml-core805: #0d1117;
   --ml-core810: #251F53;
   --ml-core820: #0e0d2e;
   --ml-core830: #0e0d2e;
@@ -131,6 +135,8 @@ a {
   --ml-accent950: #394EB6;
   --ml-core550: rgba(57, 78, 182, 0.1);
   --ml-core700: rgba(57, 78, 182, 0.24);
+  --ml-core720: rgba(255, 123, 202, 0.15);////
+  --ml-core730: rgba(255, 197, 111, 0.1);////
   --ml-core750: #121828;
   --ml-core650: rgba(57, 78, 182, 0);
   --ml-core600: rgba(129, 200, 241, 0);
@@ -200,27 +206,23 @@ html {
   --ml-white300: #E4D6F0;
   --ml-yellow500: #F9CF67;
   --ml-yellow510: rgb(249, 207, 103, 0.00);
+  --ml-activeTab: #394EB6;
 }
 
 
-// Базовая светлая тема
-html {
-  @include light-theme;
-}
-
-// Явная светлая тема
-html.theme-light {
-  @include light-theme;
-}
-
-// Явная тёмная тема
-html.theme-dark {
+// Базовая тёмная тема + явная тёмная
+html, .theme-dark {
   @include dark-theme;
 }
 
-// Системная тёмная тема
-@media (prefers-color-scheme: dark) {
-  html:not(.theme-light):not(.theme-dark) {
-    @include dark-theme;
+// Явная светлая тема
+.theme-light {
+  @include light-theme;
+}
+
+// Системная светлая тема
+@media (prefers-color-scheme: light) {
+  html:not(.theme-dark):not(.theme-light) {
+    @include light-theme;
   }
 }
