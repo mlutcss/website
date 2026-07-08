@@ -27,7 +27,7 @@
 	{
 		"artId":"mushroom",
 		"bgColor":"Bgc-$artMushroom",
-		"showInMain": true
+		"showInMain": false
 	},
 	{
 		"artId":"robot-hare",

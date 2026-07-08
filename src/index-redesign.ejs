@@ -18,7 +18,7 @@ permalink: /redesign-preview/
         triangle: "Ps-a T-39 L137 W57 Apcr1 Bdrd2u Bgc-$yellow500 Tf -Rt45d Zi-1 Ps-a_af Ct_af W20p_af Apcr1_af T45p_af L-16p_af Tf_af -Rt-45d_af Bdrd0.5u_af Bgc-$accent800_af",
         squareDotArc: "Ps-a W35 Apcr1 md_T26p lg_T33p L13p Bgc-$accent800 -Gdrl90d,tp;0;2,$core800;2;8 Ps-a_af Ct_af -Sz100p_af T0_af L0_af -Gdrl0d,tp;0;2,$core800;2;8_af Ps-a_b Ct_b -Sz130p_b L-34p_b T-140p_b Bd1u;s;tp_b Bdrd100p_b Bdtc-$accent800_b Tf_b -Rt40d_b",
         rectangleArc: "Ps-a W84 H20 md_B10p lg_B-4p L11p Bgc-$yellow500 Tf -Rt-30d Bdrd0.5u Zi-1 Ps-a_af Ct_af W50p_af Apcr1_af T85p_af L15p_af Bd1u;s;tp_af Bdrd100p_af Bdtc-$brand_af Tf_af -Rt20d_af",
-        circle: "Ps-a W100 Apcr1 md_T60p lg_T72p R15p Bgc-tp Bd0.75u;s;$accent800 Bdrd100p Zi-1",
+        circle: "Ps-a W100 Apcr1 md_T62p lg_T72p R15p Bgc-tp Bd0.75u;s;$accent800 Bdrd100p Zi-1",
         square: "Ps-a W48 Apcr1 md_T54p lg_T66p R14p Bgc-$brand Tf -Rt17d Zi-2 Ps-a_af,b Ct_af,b -Sz104p_af,b T50p_af,b L50p_af,b Tf_af,b -Tr-50p;-50p_af,b -Gdrl90d,tp;0;6,$core800;6;21_b -Gdrl0d,tp;0;6,$core800;6;21_af",
         arc: "Ps-a W60 H79 T0 R14p Bgc-tp Bdrd50p Bdl2u;s;$brand Bdt2u;s;tp Tf -Rt-39d Zi-1"
     }
@@ -33,7 +33,7 @@ permalink: /redesign-preview/
 
 <%# Hero-section %>
 
-<div id="hero-section" class="Ps D-f Fld-c Ai-c Mt-$headerH W100p P6u;4u;10u Bgc-$core800 lg_D-g lg_Gtc1fr;504 lg_P80;40;50 xl_P160;6p;100 Ov-h <%= heroCSS.vertical %> <%= heroCSS.horizontal %>">
+<div id="hero-section" class="Ps D-f Fld-c Ai-c Mt-$headerH W100p P6u;4u;10u Bgc-$core800 lg_D-g lg_Gtc1fr;504 lg_P80;5p xl_P160;6p;100 Ov-h <%= heroCSS.vertical %> <%= heroCSS.horizontal %>">
 
     <div class="D-n Ps-a W80p H150p T-195 L50p Tf -Tr-50p;0 <%= heroCSS.dradientDescTop %> <%= heroCSS.dradientDescBot %> lg_D-f">
         <div class="Ps-a W80p Apcr1 T0 L10p Bdrd100p -Gdl180d,$core550;0,$core650;100p Ft -Blr100"></div>
@@ -57,7 +57,7 @@ permalink: /redesign-preview/
     </div>
 
 
-    <div class="Ps D-f Fld-c Ai-c Gap2u Bgc-tp W100p md_W504 md_Gap4u md_M14u;0;10u lg_M0 lg_Gc2 lg_Grs1 lg_Gre5 Zi2">
+    <div class="Ps D-f Fld-c Ai-c Gap2u Bgc-tp W100p md_W504 md_Gap4u md_M14u;0;6u lg_M0 lg_Gc2 lg_Grs1 lg_Gre5 Zi2">
         <% for (let decor of Object.values(decorCSSArts)) { %>
             <div class="D-n md_D <%= decor %>"></div>
         <% } %>
@@ -66,7 +66,7 @@ permalink: /redesign-preview/
 	    </svg>
         <arts-slider class="D-f Ai-fs Fl1 W100p Gap26 md_Gap80">
                 <button class="prev W48 Apcr1 As-c Bgc-tp Bd-n P0 Cs">
-                    <svg class="Tf -Rt180d C-$brand C-$brand500_h C-$brand200_a Ts-$shortTs md_W24 md_H36" width="17" height="29">
+                    <svg class="Tf -Rt180d C-$brand C-$brand500_h C-$brand200_a Ts-$shortTs md_W34 md_H46" width="17" height="29">
 		                <use href="/assets/img/icons.svg#arrow-slider"></use>
 	                </svg>
                 </button>
@@ -86,7 +86,7 @@ permalink: /redesign-preview/
                     </div>
                 </div>
                 <button class="next W48 Apcr1 As-c Bgc-tp Bd-n P0 Cs">
-                    <svg class="C-$brand C-$brand500_h C-$brand200_a Ts-$shortTs md_W24 md_H36" width="17" height="29">
+                    <svg class="C-$brand C-$brand500_h C-$brand200_a Ts-$shortTs md_W34 md_H46" width="17" height="29">
 		                <use href="/assets/img/icons.svg#arrow-slider"></use>
 	                </svg>
                 </button>
@@ -94,11 +94,11 @@ permalink: /redesign-preview/
         <span class="Fns16 Fnw600 Lnh150p Lts0 C-$accent850 lg_Ps-a lg_B-16p lg_L50p lg_Tf lg_-Tr-50p;0">Yes, this is pure CSS</span>
     </div>
 
-    <div class="P2.5u Mt2u md_Gc1 Txa-c lg_Txa-s lg_P1.5u;0 lg_Mxw60p Zi2">
+    <div class="P2.5u Mt2u md_Gc1 md_Mt0 Txa-c lg_Txa-s lg_P1.5u;0 lg_Mxw60p Zi2">
         <h1 class="Fns4u Fnst-n Fnw300 Lnh120p Lts0 C-$accent900 M0">Tailwind CSS alternative for custom websites and creative coding</h1>
     </div>
 
-    <div class="D-f Fld-c Ai-c Gap4u Mt6u W100p md_Fld-r md_Jc-c md_Gap48 md_M0 md_Gc1 md_Mt64 lg_Jc-st Zi2">
+    <div class="D-f Fld-c Ai-c Gap4u Mt6u W100p md_Fld-r md_Jc-c md_Gap48 md_Gc1 lg_Mt64 lg_Jc-st Zi2">
         <div class="W100p Mxw100u Mnh39 md_Mxw240 md_M0">
 			    <%- include('./_includes/components/link-button.ejs',{
 					url:"https://docs.mlut.style/",
@@ -175,8 +175,7 @@ permalink: /redesign-preview/
 
 <%
     const comparisonCss = {
-        marker: "Ps-a_b Ct_b L0_b T0.25u_b -Sz16_b Msi-url('/assets/img/marker.svg')_b Mss8_b Msr-nr_b Msp-c_b",
-        markerS: "Ps-a_b Ct_b L4_b T6_b -Sz8_b Bdrd100p_b",
+        marker: "Ps-a_b Ct_b L4_b T6_b -Sz8_b Bdrd100p_b",
         gradientEclipse: "Ps-a_af Ct_af W100p_af Apcr3/4_af T0_af L0_af Bdrd100p_af -Gdl180d,$yellow510;0,$brand100;100p_af Ft_af -Blr100_af",
         gradientRectangle: "Ps-a_b Ct_b W50p_b Apcr1/2_b B0_b L50p_b Tf_b -Tr-50p;0_b -Gdl180d,$core550;0,$brand100;100p_b Ft_b -Blr100_b"
     }
@@ -186,9 +185,9 @@ permalink: /redesign-preview/
         triangle: "Ps-a Zi-1 B-6p xl_B58p L10p xl_L93p W88 H74 Bdl88;s;$yellow500 Bdt37;s;tp Bdb37;s;tp Tf -Rt-10d Ps-a_af Ct_af W44_af H36_af T-16_af L-74_af Bdl50;s;$core800_af Bdt18;s;tp_af Bdb18;s;tp_af",
         twoArc: "Ps-a_af Ct_af W100p_af Apcr1_af T15p_af L71p_af Bdrd100p_af Bd1u;s;tp_af Bdtc-$brand_af Tf_af -Rt-20d_af  Ps-a_b Ct_b W100p_b Apcr1_b T-32p_b L-7p_b Bdrd100p_b Bd1u;s;tp_b Bdbc-$brand_b Tf_b -Rt-15d_b",
         frameSquare: "Ps-a Apcr1 Bdrd1u Ps-a_af Ct_af W110p_af Apcr1_af T50p_af L-70p_af Bdrd1u_af",
-        twoCircle: "Ps-a T56p L74p W20p Apcr1 Bdrd100p Bgc-$core210 Ps-a_af Ct_af T39p_af L-84p_af W125p_af Apcr1_af Bdrd100p_af Bgc-$yellow500_af",
-        arrows: "Ps-a T73p L-2p W102p H10 Bgc-$core215 Bdrd100p;8;8;100p Tf -Rt24d Ps-a_af Ct_af T-600p_af L22p_af W100p_af H5_af Bgc-$brand_af Tf_af -Rt-90d_af Ps-a_b Ct_b W7p_b Apcr1_b T700p_b L50p_b Bdrd2_b Bgc-$core220_b",
-        circleSquare: "Ps-a_af Ct_af T16p_af L24p_af W20p_af Apcr1_af Bdrd100p_af Bd8;s;#394EB6_af Ps-a_b Ct_b T-10p_b L70p_b W12p_b Apcr1_b Bdrd4_b Bgc-$brand_b Tf_b -Rt-30d_b",
+        twoCircle: "Ps-a B20p L74p W20p Apcr1 Bdrd100p Bgc-$core210 Ps-a_af Ct_af T39p_af L-84p_af W125p_af Apcr1_af Bdrd100p_af Bgc-$yellow500_af",
+        arrows: "Ps-a B15p L-2p W102p H1u lg_H2u Bgc-$core215 Bdrd100p;8;8;100p Tf -Rt24d Ps-a_af Ct_af B12u_af lg_B16u_af L22p_af W100p_af H0.5u_af lg_H0.75u_af Bgc-$brand_af Tf_af -Rt-90d_af Ps-a_b Ct_b W7p_b Apcr1_b B-8u_b L50p_b Bdrd2_b Bgc-$core220_b",
+        circleSquare: "Ps-a_af Ct_af T-20p_af L40p_af W20p_af Apcr1_af Bdrd100p_af Bd2u;s;#394EB6_af Ps-a_b Ct_b T-20p_b L100p_b W12p_b Apcr1_b Bdrd4_b Bgc-$brand_b Tf_b -Rt-30d_b",
         twoCircleTop: "Ps-a_af Ct_af T10p_af L45p_af W42_af Apcr1_af Bdrd100p_af Bgc#394EB6_af Ps-a_b Ct_b T50p_b R-10p_b W34_b Apcr1_b Bdrd100p_b Bgc#16348C_b",
         circle: "Ps-a_af Ct_af W36_af Apcr1_af Bdrd100p_af",
         twoSquare: "Ps-a T68p xxl_T75p L86p W24 Apcr1 Bdrd6 Bgc-$core225 Ps-a_af Ct_af T125p_af L-70p_af W18_af Apcr1_af Bdrd4_af Bgc-$core230_af Zi2_af"
@@ -210,13 +209,13 @@ permalink: /redesign-preview/
         <li class="P4u;3u W100p Bdrd8 Bgc-$core830 xl_P3u">
             <h4 class="M0 Txa-c Fns4u Fnw600 Fnst-n Lnh100p Lts0 C-$tertiary800">Tailwind CSS</h4>
             <ul class="M3u;0;0 D-f Fld-c Gap12 Lsst-n P0 Fnf-Fira;Code Fns3u Fnst-n Fnw400 Lnh150p Lts0 C-$tertiary760">
-                <li class="D Ps Pl20 <%= comparisonCss.markerS %> Bgc-$tertiary800_b">
+                <li class="D Ps Pl20 <%= comparisonCss.marker %> Bgc-$tertiary800_b">
                     <span class="C#FF1010">justify-*</span>: content, items or self?
                 </li>
-                <li class="D Ps Pl20 <%= comparisonCss.markerS %> Bgc-$tertiary800_b">
+                <li class="D Ps Pl20 <%= comparisonCss.marker %> Bgc-$tertiary800_b">
                     <span class="C#FF1010">flex</span> => <span class="C#FF1010">display: flex</span>, <span class="C#FF1010">but flex-auto</span> => <span class="C#FF1010">flex:1 1 auto</span>
                 </li>
-                <li class="D Ps Pl20 <%= comparisonCss.markerS %> Bgc-$tertiary800_b">
+                <li class="D Ps Pl20 <%= comparisonCss.marker %> Bgc-$tertiary800_b">
                     <span class="C#FF1010">bg-none</span> => reset all backgrounds? Nope, only <span class="C#FF1010">background-image</span>
                 </li>
             </ul>
@@ -226,13 +225,13 @@ permalink: /redesign-preview/
         <li class="P4u;3u W100p Bdrd8 Bgc-$core830 xl_P3u">
             <h4 class="M0 Txa-c Fns4u Fnw600 Fnst-n Lnh100p Lts0 C-$tertiary800">Tachyons</h4>
             <ul class="M3u;0;0 D-f Fld-c Gap12 Lsst-n P0 Fnf-Fira;Code Fns3u Fnst-n Fnw400 Lnh150p Lts0 C-$tertiary760">
-                <li class="D Ps Pl20 <%= comparisonCss.markerS %> Bgc-$tertiary800_b">
+                <li class="D Ps Pl20 <%= comparisonCss.marker %> Bgc-$tertiary800_b">
                     <span class="C#FF1010">br-0</span> => <span class="C#FF1010">border-right-width: 0</span>,but <span class="C#FF1010">br1</span> => <span class="C#FF1010">border-radius: .125rem</span>
                 </li>
-                <li class="D Ps Pl20 <%= comparisonCss.markerS %> Bgc-$tertiary800_b">
+                <li class="D Ps Pl20 <%= comparisonCss.marker %> Bgc-$tertiary800_b">
                     <span class="C#FF1010">normal</span>: line-height, font-weight or letter-spacing?
                 </li>
-                <li class="D Ps Pl20 <%= comparisonCss.markerS %> Bgc-$tertiary800_b">
+                <li class="D Ps Pl20 <%= comparisonCss.marker %> Bgc-$tertiary800_b">
                     <span class="C#FF1010">b</span> => bottom, border, or <span class="C#FF1010">display: block</span>? No, it is <span class="C#FF1010">font-weight: bold</span>
                 </li>
             </ul>
@@ -242,10 +241,10 @@ permalink: /redesign-preview/
         <li class="P4u;3u W100p Bd1;s;$brand Bdrd8 Bgc-$core830 xl_P3u">
             <h4 class="M0 Txa-c Fns4u Fnw600 Fnst-n Lnh100p Lts0 C-$brand">mlut</h4>
             <ul class="M3u;0;0 D-f Fld-c Gap12 Lsst-n P0 Fnf-Fira;Code Fns3u Fnst-n Fnw400 Lnh150p Lts0 C-$tertiary770">
-                <li class="D Ps Pl20 <%= comparisonCss.markerS %> Bgc-$brand_b">
+                <li class="D Ps Pl20 <%= comparisonCss.marker %> Bgc-$brand_b">
                     <span class="C#68AD00">Jc-c</span> => <span class="C#68AD00">justify-content: center</span> and <span class="C#68AD00">Js-c</span> => <span class="C#68AD00">justify-self: center</span>
                 </li>
-                <li class="D Ps Pl20 <%= comparisonCss.markerS %> Bgc-$brand_b">
+                <li class="D Ps Pl20 <%= comparisonCss.marker %> Bgc-$brand_b">
                     <span class="C#68AD00">Bdr</span> => <span class="C#68AD00">border-right: 1px solid</span> and <span class="C#68AD00">Bdrd1</span> => <span class="C#68AD00">border-radius: 1px</span>
                 </li>
             </ul>
@@ -299,13 +298,13 @@ permalink: /redesign-preview/
                 <div class="P4u;3u W100p Bdrd8 Bgc-$core830 xl_P16">
                     <h4 class="M0 Txa-c Fns4u Fnw600 Fnst-n Lnh100p Lts0 C-$tertiary800">Tailwind</h4>
                     <ul class="M3u;0;0 D-f Fld-c Gap12 Lsst-n P0 Fnf-Fira;Code Fns3u Fnst-n Fnw400 Lnh150p Lts0 C-$tertiary760">
-                        <li class="D Ps Pl20 <%= comparisonCss.markerS %> Bgc-$tertiary800_b">
+                        <li class="D Ps Pl20 <%= comparisonCss.marker %> Bgc-$tertiary800_b">
                             <code>[@media(any-hover:hover){&:hover}]:opacity-100</code>>
                         </li>
-                        <li class="D Ps Pl20 <%= comparisonCss.markerS %> Bgc-$tertiary800_b">
+                        <li class="D Ps Pl20 <%= comparisonCss.marker %> Bgc-$tertiary800_b">
                             <code>text-[length:var(--myVar,1.3rem)]</code>>
                         </li>
-                        <li class="D Ps Pl20 <%= comparisonCss.markerS %> Bgc-$tertiary800_b">
+                        <li class="D Ps Pl20 <%= comparisonCss.marker %> Bgc-$tertiary800_b">
                             <code>supports-[margin:1svw]:ml-[1svw]</code>
                         </li>
                     </ul>
@@ -318,10 +317,10 @@ permalink: /redesign-preview/
                         <li class="D Ps Pl20 <%= comparisonCss.marker %> Bgc-$brand_b">
                             <code>@:ah_O1_h</code>
                         </li>
-                        <li class="D Ps Pl20 <%= comparisonCss.markerS %> Bgc-$brand_b">
+                        <li class="D Ps Pl20 <%= comparisonCss.marker %> Bgc-$brand_b">
                             <code>Fns-$myVar?1.3</code>>
                         </li>
-                        <li class="D Ps Pl20 <%= comparisonCss.markerS %> Bgc-$brand_b">
+                        <li class="D Ps Pl20 <%= comparisonCss.marker %> Bgc-$brand_b">
                             <code>@s_Ml1svw</code>>
                         </li>
                     </ul>
@@ -388,14 +387,13 @@ permalink: /redesign-preview/
         </div>
 
     </div>
-    <div class="D-n xl_D Ps-a B7p R10p W18p H15p">
-        <div class="Ps-a T21p L-9p W98p Apcr3/2 Tf -Rt-22d -Gdl150d,tp;0;53p,$accent950;53p;100p"></div>
-        <div class="<%= decorCss.frameSquare %> W16p T40p L59p Bgc-$core200 Bd10;s;$yellow500_af Tf -Rt57d"></div>
+    <div class="D-n md_D Ps-a B20u xl_B34u R10p W18p H15p">
+        <div class="Ps-a B11u L-9p W98p Apcr3/2 Tf -Rt-22d -Gdl150d,tp;0;53p,$accent950;53p;100p <%= decorCss.circleSquare %>"></div>
+        <div class="<%= decorCss.frameSquare %> W16p B36p lg_B42p xxl_B46p L59p Bgc-$core200 Bd1.5u;s;$yellow500_af lg_Bd2u;s;$yellow500_af xxl_Bd2.5u;s;$yellow500_af Tf -Rt57d"></div>
         <div class="<%= decorCss.twoCircle %>"></div>
         <div class="<%= decorCss.arrows %>"></div>
-        <div class=" <%= decorCss.circleSquare %>"></div>
-        <div class="Ps-a T35p L-15p">
-            <svg class="C#394EB6" width="36" height="36">
+        <div class="Ps-a B40p L-20p xxl_L-15p">
+            <svg class="C#394EB6 md_-Sz24 lg_-Sz30 xxl_-Sz36">
                 <use href="/assets/img/decor.svg#squareDotTwo"></use>
             </svg>
         </div>
@@ -405,7 +403,7 @@ permalink: /redesign-preview/
 
 <%
     const installationCSS = {
-        button: "btn Ps W100p Fnw600 Fnst-n Lnh100p Lts0 C-$accent900 P2.5u Txa-s Ps-a_af Ct_af W100p_af H1_af L0_af B-2_af Bgc-$gray350_af Tf_af -Sy300p_h:af Ts-tf;0.2s_af",
+        button: "btn Ps W100p Fnw600 Fnst-n Lnh100p Lts0 C-$accent900 C-$brand_a md_C-$brand_h md_Lts2p_h md_Ts-lts;0.5s,c;0.5s P2.5u Txa-s Ps-a_af Ct_af W100p_af H1_af L0_af B-2_af Bgc-$gray350_af Tf_af -Sy300p_h:af -Ts_af",
         installStep:"Fns4u Fnst-n Fnw300 Lnh150p Lts0 C-$accent900 D-ib Coi-step Ct-counter(step);'.'_b D-ib_b C-$accent900_b Mr6_b",
         vertical: "Ps-a_af Ct_af T0_af L50p_af W85p_af H100p_af Bgc-tp_af Tf_af -Tr-50p;0_af -Gdrl90d,$core820;0;1,tp;1;86,$core820;86;87,tp;87;107_af",
         horizontal: "Ps-a_b Ct_b T-8_b L50p_b W85p_b H100p_b Bgc-tp_b Tf_b -Tr-50p;0_b -Gdrl180d,$core820;0;1,tp;1;86,$core820;86;87,tp;87;107_b Zi1_b",
@@ -414,7 +412,6 @@ permalink: /redesign-preview/
         twoSquares: "Ps-a W14 Apcr1 T26 xl_T66 L10p Bdrd0.5u Bgc-$brand Ps-a_af Ct_af W9_af Apcr1_af T240p_af R-200p_af Bgc-$yellow500_af Bdrd0.5u_af"
     }
 %>
-
 
 <%# Installation %>
 
@@ -425,7 +422,7 @@ permalink: /redesign-preview/
 
   <toggle-tab
     class="W100p M5.5u;0;0 Zi1 xl_M50;0;0"
-    active-tab="Bgc-$activeTab_af"
+    active-tab-css="Bgc-$activeTab_af"
     >
     <div class="W100p D-f Ai-e Jc-sb Gap4u Fns4u md_Gap6u xl_Gap16u">
         <h3 class="-D-vh">Installation type</h3>
