@@ -41,6 +41,7 @@ a {
   --ml-core231: #000;
   --ml-core300: #fff;
   --ml-core350: #16348C;
+  --ml-core355: #e2e2e2b6;
   --ml-core900: #D9D1CA;
   --ml-core400: #FDF6EF;
   --ml-core450: #2762f81f;
@@ -55,6 +56,7 @@ a {
   --ml-accent800: #394EB6;
   --ml-accent750: #16348C;
   --ml-accent950: #D2B5D0;
+  --ml-accent955: #D2B5D0;
   --ml-core550: #fff;
   --ml-core500: #edebeb;
   --ml-core700: rgba(240, 67, 140, 0.3);
@@ -119,6 +121,7 @@ a {
   --ml-core231: #f0438c;
   --ml-core300: #0B0A22;
   --ml-core350: #151833;
+  --ml-core355: rgba(17, 24, 39, 0.8);
   --ml-core900: #000;
   --ml-core400: #151833;
   --ml-core450: #061230;
@@ -133,6 +136,7 @@ a {
   --ml-accent750: #394EB6;
   --ml-accent800: #62B7EA;
   --ml-accent950: #394EB6;
+  --ml-accent955: #1B173C;
   --ml-core550: rgba(57, 78, 182, 0.1);
   --ml-core700: rgba(57, 78, 182, 0.24);
   --ml-core720: rgba(255, 123, 202, 0.15);////
@@ -184,7 +188,7 @@ a {
 
 
 html {
-  --ml-heroPadding: calc(var(--ml-headerH) + 10px);
+  //--ml-heroPadding: calc(var(--ml-headerH) + 10px);
   --ml-core850: rgba(0,0,0,0.9);
   --ml-primaryBright600: #2b7fff;
   --ml-primary650: #16348C;
@@ -196,6 +200,7 @@ html {
   --ml-brand50: rgba(240, 67, 140, 0.00);
   --ml-brand100: rgba(240, 67, 140, 0.13);
   --ml-brand200: rgba(201, 35, 105);
+  --ml-brand205: rgba(233,30,99,0.2);
   --ml-brand500: rgb(230, 38, 119);
   --ml-darkGray: #1f1f1f;
   --ml-blueGray: rgb(236, 240, 246, 0.5);
@@ -207,6 +212,8 @@ html {
   --ml-yellow500: #F9CF67;
   --ml-yellow510: rgb(249, 207, 103, 0.00);
   --ml-activeTab: #394EB6;
+  //
+  scroll-padding-top: var(--ml-headerH);
 }
 
 

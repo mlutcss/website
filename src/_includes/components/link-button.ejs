@@ -1,25 +1,25 @@
 <%
-	 const css = {
+	const css = {
 		buttonShape:"-Sz100p D-f Jc-c Ai-c P10 Fns4u Lnh100p Lts0 Fnst-n Fnw400 Bdrd8 Ts-$shortTs Bd1;s;$brand",
 	}
 
 	if (it.variant === 'brand') {
-        css.buttonColors = "Bgc-$brand Bgc-$brand500_h Bgc-$brand200_a";
-        css.textColor = "C#fff";
+				css.buttonColors = "Bgc-$brand Bgc-$brand500_h Bgc-$brand200_a";
+				css.textColor = "C#fff";
 	} else {
 		css.buttonColors = "Bgc-$white100 Bgc-$white200_h Bgc-$white300_a";
-        css.textColor = "C#22141A";
+				css.textColor = "C#22141A";
 	}
 
-  const isLink = it.url && it.url !== '#0';
-  const tag = isLink ? 'a' : 'button';
-  const className = it.className || '';
+	const isLink = it.url && it.url !== '#0';
+	const tag = isLink ? 'a' : 'button';
+	const className = it.className || '';
 %>
 
 <<%= tag %>
-  class="btn <%= css.buttonShape %> <%= css.buttonColors %> <%= css.textColor %> <%= className %>"
-  <%= isLink ? `href="${it.url}"` : '' %>
-  <%= tag === 'button' ? 'type="button"' : '' %>
+	class="btn <%= css.buttonShape %> <%= css.buttonColors %> <%= css.textColor %> <%= className %>"
+	<%= isLink ? `href="${it.url}"` : '' %>
+	<%= tag === 'button' ? 'type="button"' : '' %>
 >
-  <%= it.text %>
+	<%= it.text %>
 </<%= tag %>>

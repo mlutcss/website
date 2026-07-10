@@ -6,27 +6,27 @@
 	}
 %>
 
-<header class=" D-f Jc-sb Ai-e md_Ai-c Gap3u P0;4u;2u md_P0;5.5p Bgc-$core950 Bcf -Blr0.4 Ps-f H-$headerH W100p C-$accent900 Zi20">
+<header class=" D-f Jc-sb Ai-e md_Ai-c Gap3u P2u;4u md_P0;5.5p Bgc-$core950 Bcf -Blr0.4 Ps-f H-$headerH W100p C-$accent900 Zi20">
     <%# Logo %>
 	<a href="/redesign-preview/#hero-section" id="header-logo" class="D-f Jc-c Ai-c <%= it.cssHeaderLogoVisibility %> -Ts">
   		<img src="/assets/img/logo.svg" alt="mlut logo" class="W64 md_W116 H-a">
 	</a>
 
 	<%# Menu %>
-	<div class="D-f Fld-r Jc-fe Ai-c md_D-f md_Jc-e md_Gap8u">
+	<nav-links class="D-f Fld-r Jc-fe Ai-c md_D-f md_Jc-e md_Gap8u">
 		<%- include('./burger.ejs') %>
 
 		<div class="Ps-a R0 T-$headerH W100p H91vh Ov-h P6u;4u Bgc-$core820 -Ts Tf -Trx101p Mxw420 ^burger:c:~_-Trx0 md_All-ust">
-			<div class="D-f Fld-c Gap2u md_Fld-r md_Ai-c lg_Gap8u">
-				<a href="/redesign-preview/" class="P2.5u Txd-n C-$accent900 C-$brand_a md_D-n">
+			<div class="D-f Fld-c Gap2u md_Fld-r md_Ai-c md_Gap4u lg_Gap8u">
+				<a href="/" class="P2.5u Txd-n C-$accent900 Bgc-$accent955_a -Ts md_D-n">
 					Home
 				</a>
-				<div class="Mxh300 Ovy-a">
+				<div class="">
 					<nav>
-						<ul id="nav-menu" class="C-$accent900 D-f Fld-c Gap2.5u Fns3.75u Lsst-n P0 M0 md_Fld-r md_Jc-sb md_H100p lg_Gap8u xl_Fns4u">
+						<ul class="C-$accent900 D-f Fld-c Gap2.5u Fns3.75u Lsst-n P0 M0 md_Fld-r md_Jc-sb md_H100p lg_Gap8u xl_Fns4u">
 							<% for (let navLink of it.navLinks) {%>
-								<li class="P2.5u">
-									<a href="<%= navLink.link %>" class="C-$accent900 C-$brand_a md_C-$brand_h Ts-$shortTs Txd-n">
+								<li>
+									<a href="<%= navLink.link %>" class="P2.5u D-b W100p Bgc-$accent955_a C-$accent900 md_Bgc-tp md_D-i md_C-$brand_h -Ts Txd-n">
 										<%= navLink.text %>
 									</a>
 								</li>
@@ -58,5 +58,7 @@
 				<div class="<%= decorCss.squareFrame %>"></div>
 			</div>
 		</div>
-    </div>
+	</nav-links>
 </header>
+
+<script src="/assets/script/nav-links.js" type="module"></script>

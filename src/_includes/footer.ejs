@@ -1,109 +1,109 @@
 <%
-    const css = {
-        buttons: "btn D-f Ai-c P2.5u;3u xl_P2.5u;5u Gap12 C-$accent900 C-$brand_h -Ts",
-        square: "Ps-a_af Ct_af W40p_af Apcr1_af T115p_af L50_af Bgc-$yellow500_af Bdrd0.5u_af",
-        twoArc: "Ps-a_af Ct_af W100p_af Apcr1_af T15p_af L1p_af Bdrd100p_af Bd1u;s;tp_af Bdtc-$brand_af Tf_af -Rt-20d_af  Ps-a_b Ct_b W100p_b Apcr1_b T-32p_b L-70p_b Bdrd100p_b Bd1u;s;tp_b Bdbc-$brand_b Tf_b -Rt-15d_b",
-        badge: "Tf -S102p_h -Ts"
-    }
+	const css = {
+		buttons: "btn D-f Ai-c P2.5u;3u xl_P2.5u;5u Gap12 C-$accent900 C-$brand_h -Ts",
+		square: "Ps-a_af Ct_af W40p_af Apcr1_af T115p_af L50_af Bgc-$yellow500_af Bdrd0.5u_af",
+		twoArc: "Ps-a_af Ct_af W100p_af Apcr1_af T15p_af L1p_af Bdrd100p_af Bd1u;s;tp_af Bdtc-$brand_af Tf_af -Rt-20d_af  Ps-a_b Ct_b W100p_b Apcr1_b T-32p_b L-70p_b Bdrd100p_b Bd1u;s;tp_b Bdbc-$brand_b Tf_b -Rt-15d_b",
+		badge: "Tf -S102p_h -Ts"
+	}
 %>
 
 <footer id="footer" class="Ps D-f Fld-c Gap5u W100p P6u;4u Bgc-$core950 Fns4u Fnw400 Fnst-n Lnh100p Lts0 C-$accent900 md_D-g md_Gtc-a;1fr;a md_Clmg8u md_Rwg0 md_P8u xxl_P40;80">
-    <div class="Ps-a W35 Apcr1 T-3p L74p Bdrd100p Bd6;s;#16348C Zi1 <%= css.square %> md_D-n"></div>
-    <div class="D-n md_D Ps-a T-7p L17p Tf -Rt-25d <%= css.twoArc %> Zi1">
-        <svg class="C#3943B6" width="31" height="31">
-            <use href="/assets/img/decor.svg#squareDot"></use>
-        </svg>
-    </div>
+	<div class="Ps-a W35 Apcr1 T-2p L74p Bdrd100p Bd6;s;#16348C Zi1 <%= css.square %> md_D-n"></div>
+	<div class="D-n md_D Ps-a T-2p L17p Tf -Rt-25d <%= css.twoArc %> Zi1">
+		<svg class="C#3943B6" width="31" height="31">
+			<use href="/assets/img/decor.svg#squareDot"></use>
+		</svg>
+	</div>
 
-    <a href="/redesign-preview/#hero-section" class="D-n md_D-f Jc-c Ai-c md_Gc1 md_Gr1/3 md_As-st">
-        <img src="/assets/img/logo.svg" alt="mlut logo" class="W64 md_W116 H-a">
-    </a>
+	<a href="/#hero-section" class="D-n md_D-f Jc-c Ai-c md_Gc1 md_Gr1/3 md_As-st">
+		<img src="/assets/img/logo.svg" alt="mlut logo" class="W64 md_W116 H-a">
+	</a>
 
-    <div class="D-f Fld-c Jc-sb Gap2u md_Gc2 md_Gr1/3 xl_Gap4u">
-        <div class="D-f Ai-c Gap2u Flw md_Od2">
-            <div class="P2.5u;2.5u;2.5u;3u xl_P2.5u;2.5u;2.5u;5u">
-                <span>Community:</span>
-            </div>
-            <ul class="D-f Ai-c Gap32 M0 P0 Lsst-n">
-                <% for (let extLink of it.extLinks) { %>
-				    <li>
-                        <%- include('./components/sm-link.ejs',{
-					    icon: `${extLink.icon}`,
-					    link: `${extLink.link}`,
-				        name: `${extLink.name}`
-				        }) %>
-                    </li>
-			    <% } %>
-            </ul>
-        </div>
-        <ul class="D-f Flw Lsst-n P0 M0 md_Od1">
-            <% for (let navLink of it.navLinks) {%>
-			    <li class="P2.5u;3u xl_P2.5u;5u">
-				    <a href="<%= navLink.link %>" class="Txd-n C-$accent900 C-$brand_h -Ts">
-					    <%= navLink.text %>
-				    </a>
-			    </li>
-		    <% }%>
-        </ul>
-        <theme-switcher
-            class="md_Od3"
-            active-btn-css="C#f0438c"
-            >
-            <h2 class="-D-vh">Select theme</h2>
-            <ul class="P0 M0 D-f Ai-c Lsst-n">
-                <li>
-                    <button class="<%= css.buttons %>" data-theme="auto">
-                        <svg width="21" height="20">
-                            <use href="/assets/img/icons.svg#icon-system"></use>
-                        </svg>
-                        <span>System</span>
-                    </button>
-                </li>
-                <li>
-                    <button class="<%= css.buttons %>" data-theme="light">
-                        <svg width="26" height="26">
-                            <use href="/assets/img/icons.svg#icon-light"></use>
-                        </svg>
-                        <span>Light</span>
-                    </button>
-                </li>
-                <li>
-                    <button class="<%= css.buttons %>" data-theme="dark">
-                        <svg width="19" height="19">
-                            <use href="/assets/img/icons.svg#icon-dark"></use>
-                        </svg>
-                        <span>Dark</span>
-                    </button>
-                </li>
-            </ul>
-        </theme-switcher>
-    </div>
+	<div class="D-f Fld-c Jc-sb Gap2u md_Gc2 md_Gr1/3 xl_Gap4u">
+		<div class="D-f Ai-c Gap2u Flw md_Od2">
+			<div class="P2.5u;2.5u;2.5u;3u xl_P2.5u;2.5u;2.5u;5u">
+				<span>Community:</span>
+			</div>
+			<ul class="D-f Ai-c Gap32 M0 P0 Lsst-n">
+				<% for (let extLink of it.extLinks) { %>
+					<li>
+						<%- include('./components/sm-link.ejs',{
+						icon: `${extLink.icon}`,
+						link: `${extLink.link}`,
+						name: `${extLink.name}`
+						}) %>
+					</li>
+				<% } %>
+			</ul>
+		</div>
+		<ul class="D-f Flw Lsst-n P0 M0 md_Od1">
+			<% for (let navLink of it.navLinks) {%>
+				<li class="P2.5u;3u xl_P2.5u;5u">
+					<a href="<%= navLink.link %>" class="Txd-n C-$accent900 C-$brand_h -Ts">
+						<%= navLink.text %>
+					</a>
+				</li>
+			<% }%>
+		</ul>
+		<theme-switcher
+			class="md_Od3"
+			active-btn-css="C#f0438c"
+			>
+			<h2 class="-D-vh">Select theme</h2>
+			<ul class="P0 M0 D-f Ai-c Lsst-n">
+				<li>
+					<button class="<%= css.buttons %>" data-theme="auto">
+						<svg width="21" height="20">
+							<use href="/assets/img/icons.svg#icon-system"></use>
+						</svg>
+						<span>System</span>
+					</button>
+				</li>
+				<li>
+					<button class="<%= css.buttons %>" data-theme="light">
+						<svg width="26" height="26">
+							<use href="/assets/img/icons.svg#icon-light"></use>
+						</svg>
+						<span>Light</span>
+					</button>
+				</li>
+				<li>
+					<button class="<%= css.buttons %>" data-theme="dark">
+						<svg width="19" height="19">
+							<use href="/assets/img/icons.svg#icon-dark"></use>
+						</svg>
+						<span>Dark</span>
+					</button>
+				</li>
+			</ul>
+		</theme-switcher>
+	</div>
 
-    <ul class="D-f Fld-c Gap2u P0;12 M0 Lss-n md_P0 md_Gc3 md_Gr1/2 md_As-st lg_D-g lg_Gtc-mc;mc lg_Clmg8u">
-        <li>
-            <a class="Va" href="https://microlaunch.net/p/mlut" target="_blank" rel="noopener">
-                <img class="Tf -S102p_h Tsd0.1s md_W184 md_H61" src="/assets/img/badge/Microlaunch.svg"/>
-            </a>
-        </li>
-        <li>
-            <a class="Va" href="https://productradar.ru/product/mlut?utm_source=badge" target="_blank" rel="noopener">
-                <img class="Tf -S102p_h Tsd0.1s md_W184 md_H49" src="/assets/img/badge/Radar.svg"/>
-            </a>
-        </li>
-    </ul>
+	<ul class="D-f Fld-c Gap2u P0;12 M0 Lss-n md_P0 md_Gc3 md_Gr1/2 md_As-st lg_D-g lg_Gtc-mc;mc lg_Clmg8u">
+		<li>
+			<a class="Va" href="https://microlaunch.net/p/mlut" target="_blank" rel="noopener">
+				<img class="Tf -S102p_h -Ts md_W184 md_H61 xl_W224 xl_H74 xxl_W264 xxl_H87" src="/assets/img/badge/Microlaunch.svg"/>
+			</a>
+		</li>
+		<li>
+			<a class="Va" href="https://productradar.ru/product/mlut?utm_source=badge" target="_blank" rel="noopener">
+				<img class="Tf -S102p_h -Ts md_W184 md_H49 xl_W224 xl_H60 xxl_W264 xxl_H71" src="/assets/img/badge/Radar.svg"/>
+			</a>
+		</li>
+	</ul>
 
-    <div class=" P2.5u;3u md_Gc2/4 md_Gr3 lg_Gr2/3 lg_Gc3 lg_P2.5u;0 lg_As-e xxl_Mxw100u">
-        <p class="M0 Fnw300 Fnst-n Lnh150p Lts0">
-            © <%= new Date().getFullYear() %> mlut contributors. All rights reserved.<br/>
-            Sass logo is used under the
-            <a href="https://sass-lang.com/styleguide/brand" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                class="C-$accent900 C-$brand_h -Ts Txd-n">
-                Sass Brand Guidelines
-            </a>
-        </p>
-    </div>
+	<div class=" P2.5u;3u md_Gc2/4 md_Gr3 lg_Gr2/3 lg_Gc3 lg_P2.5u;0 lg_As-e xxl_Mxw100u">
+		<p class="M0 Fnw300 Fnst-n Lnh150p Lts0">
+			© <%= new Date().getFullYear() %> mlut contributors. All rights reserved.<br/>
+			Sass logo is used under the
+			<a href="https://sass-lang.com/styleguide/brand" 
+				target="_blank" 
+				rel="noopener noreferrer" 
+				class="C-$accent900 C-$brand_h -Ts Txd-n">
+				Sass Brand Guidelines
+			</a>
+		</p>
+	</div>
 </footer>
 
 <script src="/assets/script/theme-switcher.js" type="module"></script>
