@@ -48,6 +48,7 @@ a {
   --ml-core800: #F7F2FF;
   --ml-core805: #F7F2FF;
   --ml-core810: #e4d6f0;
+  --ml-core815: #fff;
   --ml-core820: #e4d6f0;
   --ml-core830: #F7F2FF;
   --ml-core950: #fff;
@@ -62,6 +63,7 @@ a {
   --ml-core700: rgba(240, 67, 140, 0.3);
   --ml-core720: rgba(255, 123, 202, 0.36);////
   --ml-core730: rgba(255, 197, 111, 0.16);////
+  --ml-core735: rgba(255, 197, 111, 0.4);
   --ml-core750: rgb(253, 173, 245, 0.6);
   --ml-core650: rgba(240, 67, 140, 0);
   --ml-core600: rgba(249, 207, 103, 0);
@@ -92,6 +94,7 @@ a {
   --ml-correct800: rgba(183, 253, 207, 0.8);
   --ml-correct850: rgba(183, 250, 207, 0.6);
   --ml-correct750: rgba(83, 250, 141, 0.6);
+  --ml-overlay: rgba(255, 255, 255, 0.7);
 
   // arts
   --ml-artGhost: #ffbcB0;
@@ -128,6 +131,7 @@ a {
   --ml-core800: #1B173C;
   --ml-core805: #0d1117;
   --ml-core810: #251F53;
+  --ml-core815: #1B173C;
   --ml-core820: #0e0d2e;
   --ml-core830: #0e0d2e;
   --ml-core950: #000;
@@ -140,7 +144,9 @@ a {
   --ml-core550: rgba(57, 78, 182, 0.1);
   --ml-core700: rgba(57, 78, 182, 0.24);
   --ml-core720: rgba(255, 123, 202, 0.15);////
+  --ml-core725: rgba(255, 123, 202, 0.3);
   --ml-core730: rgba(255, 197, 111, 0.1);////
+  --ml-core735: rgba(255, 197, 111, 0.2);
   --ml-core750: #121828;
   --ml-core650: rgba(57, 78, 182, 0);
   --ml-core600: rgba(129, 200, 241, 0);
@@ -172,6 +178,7 @@ a {
   --ml-correct800: rgba(1,102,48,0.6);
   --ml-correct850: rgba(1,102,48,0.4);
   --ml-correct750: rgba(0,130,54,0.6);
+  --ml-overlay: rgba(0, 0, 0, 0.7);
 
   // arts
   --ml-artGhost: #450c00;
@@ -188,7 +195,6 @@ a {
 
 
 html {
-  //--ml-heroPadding: calc(var(--ml-headerH) + 10px);
   --ml-core850: rgba(0,0,0,0.9);
   --ml-primaryBright600: #2b7fff;
   --ml-primary650: #16348C;
@@ -207,6 +213,7 @@ html {
   --ml-gray200: #d1d5db;
   --ml-gray350: #D2B5D0;
   --ml-white100: #fff;
+  --ml-white150: rgba(255, 255, 255, 0.7);
   --ml-white200: #F7F2FF;
   --ml-white300: #E4D6F0;
   --ml-yellow500: #F9CF67;

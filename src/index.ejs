@@ -16,8 +16,8 @@ area: 'main'
 	const decorCSSArts = {
 		squareFrame: "Ps-a W16 Apcr1 T-70 L100 Bdrd1u Bgc-$brand Ps-a_af Ct_af W21_af Apcr1_af T50p_af L-70p_af Bd1u;s;$primary650_af Bdrd1u_af",
 		triangle: "Ps-a T-39 L8 W57 Apcr1 Bdrd2u Bgc-$yellow500 Tf -Rt45d Zi-1 Ps-a_af Ct_af W20p_af Apcr1_af T45p_af L-16p_af Tf_af -Rt-45d_af Bdrd0.5u_af Bgc-$accent800_af",
-		squareDotArc: "Ps-a W35 Apcr1 T33p L-22p Bgc-$accent800 -Gdrl90d,tp;0;2,$core800;2;8 Ps-a_af Ct_af -Sz100p_af T0_af L0_af -Gdrl0d,tp;0;2,$core800;2;8_af Ps-a_b Ct_b -Sz130p_b L-34p_b T-140p_b Bd1u;s;tp_b Bdrd100p_b Bdtc-$accent800_b Tf_b -Rt40d_b",
-		rectangleArc: "Ps-a W84 H20 B-4p L-30p Bgc-$yellow500 Tf -Rt-30d Bdrd0.5u Zi-1 Ps-a_af Ct_af W50p_af Apcr1_af T85p_af L15p_af Bd1u;s;tp_af Bdrd100p_af Bdtc-$brand_af Tf_af -Rt20d_af",
+		squareDotArc: "Ps-a W35 Apcr1 T33p L-20p Bgc-$accent800 -Gdrl90d,tp;0;2,$core800;2;8 Ps-a_af Ct_af -Sz100p_af T0_af L0_af -Gdrl0d,tp;0;2,$core800;2;8_af Ps-a_b Ct_b -Sz130p_b L-34p_b T-140p_b Bd1u;s;tp_b Bdrd100p_b Bdtc-$accent800_b Tf_b -Rt40d_b",
+		rectangleArc: "Ps-a W84 H20 B-4p L-26p Bgc-$yellow500 Tf -Rt-30d Bdrd0.5u Zi-1 Ps-a_af Ct_af W50p_af Apcr1_af T85p_af L15p_af Bd1u;s;tp_af Bdrd100p_af Bdtc-$brand_af Tf_af -Rt20d_af",
 		circle: "Ps-a W100 Apcr1 T72p R-27p Bgc-tp Bd0.75u;s;$accent800 Bdrd100p Zi-1",
 		square: "Ps-a W48 Apcr1 T66p R-27p Bgc-$brand Tf -Rt17d Zi-2 Ps-a_af,b Ct_af,b -Sz104p_af,b T50p_af,b L50p_af,b Tf_af,b -Tr-50p;-50p_af,b -Gdrl90d,tp;0;6,$core800;6;21_b -Gdrl0d,tp;0;6,$core800;6;21_af",
 		arc: "Ps-a W60 H79 T0 R-27p Bgc-tp Bdrd50p Bdl2u;s;$brand Bdt2u;s;tp Tf -Rt-39d Zi-1"
@@ -51,27 +51,27 @@ area: 'main'
 
 
 	<div class="P3.25u;0 M0;0;4u Txa-c lg_Txa-s lg_Gc1 lg_M0 lg_As-st Zi2">
-		<strong class="Fnf-SN;Pro Fns6u Lnh100p Lts0 Txt C-$brand sm_Fns7u xxl_Fns48">
+		<strong class="Fnf-SN;Pro Fns6u Lnh100p Lts0 Txt C-$brand sm_Fns8u xxl_Fns48">
 			Make CSS exciting again!
 		</strong>
 	</div>
 
 
 	<div class="Ps D-f Fld-c Ai-c Jc-c Gap2u Bgc-tp W100p md_W604 md_Gap4u md_M14u;0;6u lg_W100p lg_M0 lg_Gc2 lg_Gr1/4 Zi2">
-		<arts-slider class="D-f Ai-fs Jc-c Fl1 W100p Gap6.5u md_Gap30u lg_Gap20u xxl_Gap25u">
+		<arts-slider class="D-f Ai-fs Jc-c Fl1 W100p Gap6.5u md_Gap30u lg_Gap15u xl_Gap20u xxl_Gap25u">
 				<button class="prev W48 Apcr1 As-c Bgc-tp Bd-n P0 Cs">
 					<svg class="Tf -Rt180d C-$brand C-$brand500_h C-$brand200_a Ts-$shortTs sm_W5.5u sm_H9u" width="17" height="29">
 						<use href="/assets/img/icons.svg#arrow-slider"></use>
 					</svg>
 				</button>
-				<div class="Ps Fl1 P0 Mnw0 Mxw350 md_P20 md_Bdrd1u md_Bgc-$core300 md_Bxsd0;0;0;2u;$core350 lg_P32 lg_W248">
+				<div class="Ps Fl1 P0 Mnw0 Mxw350 md_P16 md_Bdrd1u md_Bgc-$core300 md_Bxsd0;0;0;2u;$core350 lg_P32 lg_W280">
 					<% for (let decor of Object.values(decorCSSArts)) { %>
 						<div class="D-n md_D <%= decor %>"></div>
 					<% } %>
 					<svg class="D-n md_D Ps-a L70p T-20p C-$core800" width="37" height="37">
 						<use href="/assets/img/decor.svg#squareDot"></use>
 					</svg>
-					<div class="W100p P0 lg_P2u lg_Bgc-$core400 lg_Bxsd0;0;0;0.5u;$core900">
+					<div class="W100p P0 md_P2u md_Bgc-$core400 md_Bxsd0;0;0;0.5u;$core900">
 						<div class="swiper W100p Bgc-tp Apcr1">
 							<div class="swiper-wrapper">
 								<% if (filteredArts.length) { %>
@@ -167,7 +167,7 @@ area: 'main'
 
 	<ul class="Ps M6u;0;0 D-f Fld-c Ai-c Jc-c Gap16 P0 Lsst-n lg_D-g lg_Gtc57p;1fr lg_Rwg20 lg_Clmg32 lg_M40;0;0">
 		<% for (let card of it.features) { %>
-				<%- include('./_includes/redesign/components/card.ejs', {item: card}) %>
+				<%- include('./_includes/components/card.ejs', {item: card}) %>
 		<% } %>
 	</ul>
 </section>
@@ -208,7 +208,7 @@ area: 'main'
 		<%# Tailwind card %>
 		<li class="P4u;3u W100p Bdrd8 Bgc-$core830 xl_P3u">
 			<h4 class="M0 Txa-c Fns4u Fnw600 Fnst-n Lnh100p Lts0 C-$tertiary800">Tailwind CSS</h4>
-			<ul class="M3u;0;0 D-f Fld-c Gap12 Lsst-n P0 Fnf-Fira;Code Fns3u Fnst-n Fnw400 Lnh150p Lts0 C-$tertiary760">
+			<ul class="M3u;0;0 D-f Fld-c Gap12 Lsst-n P0 Fnf-mUm Fns3u Fnst-n Fnw400 Lnh150p Lts0 C-$tertiary760">
 				<li class="D Ps Pl20 <%= comparisonCss.marker %> Bgc-$tertiary800_b">
 					<span class="C#FF1010">justify-*</span>: content, items or self?
 				</li>
@@ -224,7 +224,7 @@ area: 'main'
 		<%# Tachyons card %>
 		<li class="P4u;3u W100p Bdrd8 Bgc-$core830 xl_P3u">
 			<h4 class="M0 Txa-c Fns4u Fnw600 Fnst-n Lnh100p Lts0 C-$tertiary800">Tachyons</h4>
-			<ul class="M3u;0;0 D-f Fld-c Gap12 Lsst-n P0 Fnf-Fira;Code Fns3u Fnst-n Fnw400 Lnh150p Lts0 C-$tertiary760">
+			<ul class="M3u;0;0 D-f Fld-c Gap12 Lsst-n P0 Fnf-mUm Fns3u Fnst-n Fnw400 Lnh150p Lts0 C-$tertiary760">
 				<li class="D Ps Pl20 <%= comparisonCss.marker %> Bgc-$tertiary800_b">
 					<span class="C#FF1010">br-0</span> => <span class="C#FF1010">border-right-width: 0</span>,but <span class="C#FF1010">br1</span> => <span class="C#FF1010">border-radius: .125rem</span>
 				</li>
@@ -240,7 +240,7 @@ area: 'main'
 		<%# mlut card %>
 		<li class="P4u;3u W100p Bd1;s;$brand Bdrd8 Bgc-$core830 xl_P3u">
 			<h4 class="M0 Txa-c Fns4u Fnw600 Fnst-n Lnh100p Lts0 C-$brand">mlut</h4>
-			<ul class="M3u;0;0 D-f Fld-c Gap12 Lsst-n P0 Fnf-Fira;Code Fns3u Fnst-n Fnw400 Lnh150p Lts0 C-$tertiary770">
+			<ul class="M3u;0;0 D-f Fld-c Gap12 Lsst-n P0 Fnf-mUm Fns3u Fnst-n Fnw400 Lnh150p Lts0 C-$tertiary770">
 				<li class="D Ps Pl20 <%= comparisonCss.marker %> Bgc-$brand_b">
 					<span class="C#68AD00">Jc-c</span> => <span class="C#68AD00">justify-content: center</span> and <span class="C#68AD00">Js-c</span> => <span class="C#68AD00">justify-self: center</span>
 				</li>
@@ -297,7 +297,7 @@ area: 'main'
 				<%# Tailwind card %>
 				<div class="P4u;3u W100p Bdrd8 Bgc-$core830 xl_P16">
 					<h4 class="M0 Txa-c Fns4u Fnw600 Fnst-n Lnh100p Lts0 C-$tertiary800">Tailwind</h4>
-					<ul class="M3u;0;0 D-f Fld-c Gap12 Lsst-n P0 Fnf-Fira;Code Fns3u Fnst-n Fnw400 Lnh150p Lts0 C-$tertiary760">
+					<ul class="M3u;0;0 D-f Fld-c Gap12 Lsst-n P0 Fnf-mUm Fns3u Fnst-n Fnw400 Lnh150p Lts0 C-$tertiary760">
 						<li class="D Ps Pl20 <%= comparisonCss.marker %> Bgc-$tertiary800_b">
 							<code>[@media(any-hover:hover){&:hover}]:opacity-100</code>>
 						</li>
@@ -313,7 +313,7 @@ area: 'main'
 				<%# mlut card %>
 				<div class="P4u;3u W100p Bd1;s;$brand Bdrd8 Bgc-$core830 xl_P16">
 					<h4 class="M0 Txa-c Fns4u Fnw600 Fnst-n Lnh100p Lts0 C-$brand">mlut</h4>
-					<ul class="M3u;0;0 D-f Fld-c Gap12 Lsst-n P0 Fnf-Fira;Code Fns3u Fnst-n Fnw400 Lnh150p Lts0 C-$tertiary770">
+					<ul class="M3u;0;0 D-f Fld-c Gap12 Lsst-n P0 Fnf-mUm Fns3u Fnst-n Fnw400 Lnh150p Lts0 C-$tertiary770">
 						<li class="D Ps Pl20 <%= comparisonCss.marker %> Bgc-$brand_b">
 							<code>@:ah_O1_h</code>
 						</li>
@@ -403,7 +403,7 @@ area: 'main'
 
 <%
 	const installationCSS = {
-		button: "btn Ps W100p Fnw600 Fnst-n Lnh100p Lts0 C-$accent900 C-$brand_a md_C-$brand_h md_Lts2p_h md_Ts-lts;0.5s,c;0.5s P2.5u Txa-s Ps-a_af Ct_af W100p_af H1_af L0_af B-2_af Bgc-$gray350_af Tf_af -Sy300p_h:af -Ts_af",
+		button: "btn Ps W100p Fnw600 Fnst-n Lnh100p Lts0 C-$accent900 C-$brand_a md_C-$brand_h md_Lts2p_h md_Ts-lts;0.5s,c;0.5s P2.5u Txa-s Ps-a_af Ct_af W100p_af H1_af L0_af B-2_af Bgc-$gray350_af md_Tf_af md_-Sy300p_h:af -Ts_af",
 		installStep:"Fns4u Fnst-n Fnw300 Lnh150p Lts0 C-$accent900 D-ib Coi-step Ct-counter(step);'.'_b D-ib_b C-$accent900_b Mr6_b",
 		vertical: "Ps-a_af Ct_af T0_af L50p_af W85p_af H100p_af Bgc-tp_af Tf_af -Tr-50p;0_af -Gdrl90d,$core820;0;1,tp;1;86,$core820;86;87,tp;87;107_af",
 		horizontal: "Ps-a_b Ct_b T-8_b L50p_b W85p_b H100p_b Bgc-tp_b Tf_b -Tr-50p;0_b -Gdrl180d,$core820;0;1,tp;1;86,$core820;86;87,tp;87;107_b Zi1_b",

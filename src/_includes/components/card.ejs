@@ -1,37 +1,21 @@
-
 <%
-	const optTag = it.optTag || "li"
-	let iconWidth
-	if (it.img === "angled-brackets"){
-		iconWidth = "W50p"
-	} else {
-		iconWidth = "W70p"
-	}
+    const card = it.item;
 %>
-<<%= optTag %> class="<%= it.bg %> <%= it.bgH %> P28 Bdrd2u W90p Mxw70u md_D-g md_Gtr1fr;1fr Tsd0.5s md_W35p lg_W28p Tf -S105p_h -Ctx-card Zi2_h">
 
-	<div class="md_Grs1 md_Gre2">
-		<div class="<%=it.imgBg %> W15u M0;a;5u Apcr1 D-f Jc-c Ai-c Bdrd4u
-			^card:h_Tf ^card:h_-Rt30deg Tsd-$longTs">
-			<div class="<%= iconWidth %> ">
-				<svg xmlns="http://www.w3.org/2000/svg"
-					class="St#fff Stw2 Fi-n W100p Apcr1 ">
-					<use href="/assets/img/icons.svg#<%= it.img %>"></use>
-				</svg>
-			</div>
-		</div>
 
-		<h3 class="<%= it.headC %> Fns5.2u M0;0;4u Txa-c">
-			<%= it.title %>
-		</h3>
-	</div>
-
-	<div class="md_Grs2 md_Gre3">
-		<p class="<%= it.textC %> Fns4.3u M0">
-			<%= it.text %>
-		</p>
-	</div>
-
-</<%= optTag %>>
-
-<!--  -->
+<li class="D-f Fld-c Ai-st Jc-sb Gap20 <%= card.padding %> <%= card.gridPosition %> W100p Bdrd8 Bgc-$core800 lg_Mnh100p">
+    <div class="D-f Fld-c Ai-st Gap2u">
+        <div class="D-f Ai-c Gap2.5u P0.5u;0 lg_P0;2.5u">
+            <div class="W36 Apcr1 D-f Jc-c Ai-c lg_W40">
+                <svg class="<%= card.sizeSVG %> C-$tertiary800">
+                    <use href="/assets/img/icons.svg#<%= card.img %>"></use>
+                </svg>
+            </div>
+            <h3 class="M0 Fns4u Fnst-n Fnw600 Lnh100p Lts0 C-$accent900 md_Fns5u"><%= card.title %></h3>
+        </div>
+        <p class="M0 Fns4u Fnst-n Fnw300 Lnh150p Lts0 C-$accent900 lg_P0;2.5u"><%= card.text %></p>
+    </div>
+    <% if (card.extraContent) { %>
+        <%- include(`./embedded/${card.extraContent}.ejs`) %>
+    <% } %>
+</li>

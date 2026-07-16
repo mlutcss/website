@@ -1,6 +1,6 @@
 <%
 	const css = {
-		buttonShape:"-Sz100p D-f Jc-c Ai-c P10 Fns4u Lnh100p Lts0 Fnst-n Fnw400 Bdrd8 Ts-$shortTs Bd1;s;$brand",
+		buttonShape:"-Sz100p D-f Jc-c Ai-c Gap2.5u P10 Fns4u Lnh100p Lts0 Fnst-n Fnw400 Bdrd8 Ts-$shortTs Bd1;s;$brand",
 	}
 
 	if (it.variant === 'brand') {
@@ -14,12 +14,18 @@
 	const isLink = it.url && it.url !== '#0';
 	const tag = isLink ? 'a' : 'button';
 	const className = it.className || '';
+	const iconClass = it.iconClass || 'W24 H24';
 %>
 
 <<%= tag %>
 	class="btn <%= css.buttonShape %> <%= css.buttonColors %> <%= css.textColor %> <%= className %>"
-	<%= isLink ? `href="${it.url}"` : '' %>
+	<%= isLink ? `href=${it.url}` : '' %>
 	<%= tag === 'button' ? 'type="button"' : '' %>
 >
-	<%= it.text %>
+	<span class="button-text"><%= it.text %></span>
+	<% if (it.icon) { %>
+		<svg class="<%= iconClass %>" width="24" height="24">
+			<use href="/assets/img/icons.svg#<%= it.icon %>"></use>
+		</svg>
+	<% } %>
 </<%= tag %>>
