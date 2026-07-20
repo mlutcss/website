@@ -8,10 +8,5 @@
 		"name":"Github",
 		"icon":"github",
 		"link":"https://github.com/mlutcss/mlut"
-	},
-	{
-		"name":"Documentation",
-		"icon":"book",
-		"link":"https://docs.mlut.style/"
 	}
 ]

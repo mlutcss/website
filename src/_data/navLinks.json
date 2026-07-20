@@ -1,6 +1,6 @@
 [
 	{
-		"link":"/#features",
+		"link":"/#key-features",
 		"text":"Features"
 	},
 	{
@@ -10,6 +10,10 @@
 	{
 		"link":"/arts",
 		"text":"Art"
+	},
+	{
+		"link":"https://docs.mlut.style/",
+		"text":"Docs"
 	},
 	{
 		"link":"https://play.mlut.style/",

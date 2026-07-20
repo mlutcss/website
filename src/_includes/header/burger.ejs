@@ -1,12 +1,19 @@
-<input type="checkbox" id="menu-toggle" hidden
-  class="-Ctx-burger Zi5 md_D-n">
-<label for="menu-toggle"
-  class="D md_D-n P1.7u Bd-n Bdrd1u H90p Apcr1 Ps-r Bgc-n Zi5 Tsd-$transD
-	D_af,b W6u_af,b H1u_af,b M0;0;1.3u_af,b Bgc-$brand_af,b Zi10_af,b Ct_af,b
-	Bxsd0;2.3u;0;0;$brand_af
-   :c:+_Bgc-$brand :c:+_Bdc-$brand :c:+_Bgc-$core800_af,b :c:+_Bxsd0;2.3u;0;0;$core800_af :c:+_Bdc-n">
+<input type="checkbox" id="menu-toggle"
+  class="-Ctx-burger Zi5 -D-vh md_D-n">
+
+ <%# Burger-menu %>
+<label for="menu-toggle" class="D md_D-n Bd-n Bdrd1u H90p Apcr1 Ps-r Bgc-n Zi5 Tsd-$transD Cs ^burger:c:~_D-n">
+  <svg class="W24 H24 C-$accent900 C-$brand_a">
+    <use href="/assets/img/icons.svg#burger-menu"></use>
+  </svg>
 </label>
 
-<label id="overlay" for="menu-toggle"
-  class="Ps-a W100vw Tsd-$transD H100vh T0 R0 D-n Bgc-n :c:~_D :c:~_Bgc#000*60p md_D-n">
+ <%# Close-menu %>
+<label for="menu-toggle" class="D-n md_D-n P1u Bd-n Bdrd1u H90p Apcr1 Ps-r Bgc-n Zi5 Tsd-$transD Cs ^burger:c:~_D-f Jc-c Ai-c">
+  <svg class="W16 H16 C-$accent900 C-$brand_a">
+    <use href="/assets/img/icons.svg#close-menu"></use>
+  </svg>
 </label>
+
+<%# Overlay %>
+<label for="menu-toggle" class="Ps-a W100vw H100vh T-$headerH L0 Bgc-tp D-n -Ts ^burger:c:~_D ^burger:c:~_Bgc#000*60p md_D-n"></label>
