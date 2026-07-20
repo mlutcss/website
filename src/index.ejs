@@ -64,7 +64,7 @@ area: 'main'
 						<use href="/assets/img/icons.svg#arrow-slider"></use>
 					</svg>
 				</button>
-				<div class="Ps Fl1 P0 Mnw0 Mxw350 md_P16 md_Bdrd1u md_Bgc-$core300 md_Bxsd0;0;0;2u;$core350 lg_P32 lg_W280">
+				<div class="Ps Fl1 P0 Mnw0 Mxw350 md_P32 md_Bdrd1u md_Bgc-$core300 md_Bxsd0;0;0;2u;$core350 lg_W280">
 					<% for (let decor of Object.values(decorCSSArts)) { %>
 						<div class="D-n md_D <%= decor %>"></div>
 					<% } %>
@@ -109,7 +109,7 @@ area: 'main'
 		</div>
 		<div class="W100p Mxw100u Mnh39 md_Mxw240 md_M0">
 				<%- include('./_includes/components/link-button.ejs',{
-					url:"arts",
+					url:"/arts-redesign",
 					text: "View the gallery",
 					variant: "white"
 					})
