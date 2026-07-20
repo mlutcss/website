@@ -1,4 +1,4 @@
-const hero = document.querySelector('#hero-page');
+const footer = document.querySelector('#footer');
 const logo = document.querySelector('#header-logo');
 
 function handleIntersect(entries, observer){
@@ -24,9 +24,9 @@ function createObserver(){
 	};
 
 	const observer = new IntersectionObserver(handleIntersect, options);
-	observer.observe(hero);
+	observer.observe(footer);
 };
 
-if (hero) {
+if (footer) {
 	createObserver();
 }
