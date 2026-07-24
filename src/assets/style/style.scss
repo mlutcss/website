@@ -26,6 +26,16 @@ a {
 	-webkit-tap-highlight-color: transparent;
 }
 
+@media (min-width: 1401px) {
+  .masonry {
+    column-count: 3;
+  }
+  .breakIns {
+    break-inside: avoid;
+	margin-bottom: 1.5rem;
+  }
+}
+
 // Светлая тема
 @mixin light-theme {
 	--ml-core200: #E4D6F0;

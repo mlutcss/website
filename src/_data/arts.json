@@ -2,61 +2,61 @@
 	{
 		"artId":"ghost",
 		"bgColor":"Bgc-$artGhost",
-		"gridSpan": "xxl_Gc-s4 xxl_Gr-s3",
+		"height": "xxl_H45u",
 		"showInMain": true
 	},
 	{
 		"artId":"flushed-emoji",
 		"bgColor":"Bgc-$artFlushedEmoji",
-		"gridSpan": "xxl_Gc-s3 xxl_Gr-s4",
+		"height": "xxl_H45u",
 		"showInMain": true
 	},
 	{
 		"artId":"corgi",
 		"bgColor":"Bgc-$artCorgi",
-		"gridSpan": "xxl_Gc-s5 xxl_Gr-s4",
+		"height": "xxl_H75u",
 		"showInMain": true
 	},
 	{
 		"artId":"penrose-triangle",
 		"bgColor":"Bgc-$artPenroseTriangle",
-		"gridSpan": "xxl_Gc-s4 xxl_Gr-s2",
+		"height": "xxl_H35u",
 		"showInMain": true
 	},
 	{
 		"artId":"exploding-head",
 		"bgColor":"Bgc-$artExplodingHead",
-		"gridSpan": "xxl_Gc-s5 xxl_Gr-s5",
+		"height": "xxl_H75u",
 		"showInMain": true
 	},
 	{
 		"artId":"robot-hare",
 		"bgColor":"Bgc-$artRobotHare",
-		"gridSpan": "xxl_Gc-s3 xxl_Gr-s5",
+		"height": "xxl_H55u",
 		"showInMain": true
 	},
 	{
 		"artId":"clown-emoji",
 		"bgColor":"Bgc-$artClownEmoji",
-		"gridSpan": "xxl_Gc-s4 xxl_Gr-s4",
+		"height": "xxl_H70u",
 		"showInMain": false
 	},
 	{
 		"artId":"cat",
 		"bgColor":"Bgc-$artCat",
-		"gridSpan": "xxl_Gc-s6 xxl_Gr-s4",
+		"height": "xxl_H60u",
 		"showInMain": false
 	},
 	{
 		"artId":"mushroom",
 		"bgColor":"Bgc-$artMushroom",
-		"gridSpan": "xxl_Gc-s7 xxl_Gr-s4",
+		"height": "xxl_H75u",
 		"showInMain": false
 	},
 	{
 		"artId":"funny-cake",
 		"bgColor":"Bgc-$artFunnyCake",
-		"gridSpan": "xxl_Gc-s6 xxl_Gr-s4",
+		"height": "xxl_H70u",
 		"showInMain": false
 	}
 ]

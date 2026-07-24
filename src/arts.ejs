@@ -5,7 +5,7 @@ area: Arts
 
 <%
 	const artsPageCSS = {
-		card:"W100p H46u Ov-h Bdrd3u Bgc-$core815 Bd3;s;$brand Tf -S104p_h O50p O1_h sm_H50u md_H60u xxl_H-a -Ts",
+		card:"W100p H46u Ov-h Bdrd3u Bgc-$core815 Bd3;s;$brand Tf -S104p_h O50p O1_h sm_H50u md_H60u -Ts",
 		color: "C-$white100 C-$brand500_h C-$brand200_a -Ts"
 	}
 
@@ -23,9 +23,9 @@ area: Arts
 	<h1 class="M0 P2.5u Fnf-SN;Pro Fns6u sm_Fns7u Fnw700 Fnst-n Lnh150p Lts0 Txt C-$brand Txa-c">Pure css art</h1>
 	<p class="M0 Fns4u Fnst-n Fnw300 Lnh150p Lts0 C-$accent900 Txa-c">Created entirely with mlut utility classes</p>
 
-	<div class="Mt8.5u D-g Gtc-t1 Gap4u md_Gap6u md_Gtc-t2 xxl_Gtc-t12 xxl_Gatr13.5u xxl_Gap8u xxl_Gatf-d">
+	<div class="Mt8.5u D-g Gtc-t1 Gap4u md_Gap6u md_Gtc-t2 xxl_Gtc-t3 xxl_D masonry">
 		<% it.arts.forEach((art, index) => {%>
-			<art-panel class="D Ps Bdrd2u Ov-h -Ctx W100p H46u sm_H50u md_H60u xxl_H-a -Ts <%= art.gridSpan %> md_Tf md_-S104p_h Bd0.25u;s;tp Bdc-$brand_h" id="<%= art.artId %>">
+			<art-panel class="breakIns D Ps Bdrd2u Ov-h -Ctx W100p H46u sm_H50u md_H60u xxl_H-a -Ts <%= art.height %> md_Tf md_-S104p_h" id="<%= art.artId %>">
 				<div class="art -Sz100p Ov-h Plcc-c Plci-c <%= art.bgColor %>">
 					<%- include(`./arts/${art.artId}.ejs`) %>
 				</div>
@@ -47,8 +47,10 @@ area: Arts
 				</div>
 			</art-panel>
 		<% }) %>
+	</div>
 
-		<div class="<%= artsPageCSS.card %> <%= position %> xxl_Gc-s5 xxl_Gr-s4">
+	
+		<div class="<%= artsPageCSS.card %> <%= position %> Mt4u md_Mt6u">
 			<a
 				href="https://github.com/mlutcss/website/fork" target="_blank"
 				class="-Sz100p D-f Fld-c Jc-c Ai-c Gap5u C-$brand Txd-n -Ts"
@@ -62,7 +64,6 @@ area: Arts
 				</p>
 			</a>
 		</div>
-	</div>
 
 </section>
 
