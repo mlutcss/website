@@ -2,61 +2,61 @@
 	{
 		"artId":"ghost",
 		"bgColor":"Bgc-$artGhost",
-		"gridPosition": "xxl_Gc1/4 xxl_Gr3/5",
+		"gridSpan": "xxl_Gc-s4 xxl_Gr-s3",
 		"showInMain": true
 	},
 	{
 		"artId":"flushed-emoji",
 		"bgColor":"Bgc-$artFlushedEmoji",
-		"gridPosition": "xxl_Gc10/13 xxl_Gr4/7",
+		"gridSpan": "xxl_Gc-s3 xxl_Gr-s4",
+		"showInMain": true
+	},
+	{
+		"artId":"corgi",
+		"bgColor":"Bgc-$artCorgi",
+		"gridSpan": "xxl_Gc-s5 xxl_Gr-s4",
 		"showInMain": true
 	},
 	{
 		"artId":"penrose-triangle",
 		"bgColor":"Bgc-$artPenroseTriangle",
-		"gridPosition": "xxl_Gc10/13 xxl_Gr7/9",
+		"gridSpan": "xxl_Gc-s4 xxl_Gr-s2",
 		"showInMain": true
 	},
 	{
 		"artId":"exploding-head",
 		"bgColor":"Bgc-$artExplodingHead",
-		"gridPosition": "xxl_Gc1/4 xxl_Gr1/3",
+		"gridSpan": "xxl_Gc-s5 xxl_Gr-s5",
+		"showInMain": true
+	},
+	{
+		"artId":"robot-hare",
+		"bgColor":"Bgc-$artRobotHare",
+		"gridSpan": "xxl_Gc-s3 xxl_Gr-s5",
 		"showInMain": true
 	},
 	{
 		"artId":"clown-emoji",
 		"bgColor":"Bgc-$artClownEmoji",
-		"gridPosition": "xxl_Gc10/13 xxl_Gr1/4",
-		"showInMain": false
-	},
-	{
-		"artId":"mushroom",
-		"bgColor":"Bgc-$artMushroom",
-		"gridPosition": "xxl_Gc1/7 xxl_Gr5/9",
-		"showInMain": false
-	},
-	{
-		"artId":"robot-hare",
-		"bgColor":"Bgc-$artRobotHare",
-		"gridPosition": "xxl_Gc7/10 xxl_Gr5/9",
-		"showInMain": true
-	},
-	{
-		"artId":"funny-cake",
-		"bgColor":"Bgc-$artFunnyCake",
-		"gridPosition": "xxl_Gc1/9 xxl_Gr9/13",
+		"gridSpan": "xxl_Gc-s4 xxl_Gr-s4",
 		"showInMain": false
 	},
 	{
 		"artId":"cat",
 		"bgColor":"Bgc-$artCat",
-		"gridPosition": "xxl_Gc4/10 xxl_Gr1/5",
+		"gridSpan": "xxl_Gc-s6 xxl_Gr-s4",
 		"showInMain": false
 	},
 	{
-		"artId":"corgi",
-		"bgColor":"Bgc-$artCorgi",
-		"gridPosition": "xxl_Gc9/13 xxl_Gr9/13",
-		"showInMain": true
+		"artId":"mushroom",
+		"bgColor":"Bgc-$artMushroom",
+		"gridSpan": "xxl_Gc-s7 xxl_Gr-s4",
+		"showInMain": false
+	},
+	{
+		"artId":"funny-cake",
+		"bgColor":"Bgc-$artFunnyCake",
+		"gridSpan": "xxl_Gc-s6 xxl_Gr-s4",
+		"showInMain": false
 	}
 ]
