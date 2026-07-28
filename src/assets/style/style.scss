@@ -26,13 +26,23 @@ a {
 	-webkit-tap-highlight-color: transparent;
 }
 
-@media (min-width: 1401px) {
-  .masonry {
-    column-count: 3;
+.masonry-sizer,
+.masonry-item {
+  width: calc(33.333% - 1rem);
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 1400px) {
+  .masonry-sizer,
+  .masonry-item {
+    width: calc(50% - 1rem);
   }
-  .breakIns {
-    break-inside: avoid;
-	margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .masonry-sizer,
+  .masonry-item {
+    width: 100%;
   }
 }
 
