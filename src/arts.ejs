@@ -30,26 +30,41 @@ area: Arts
 		(_, index) => `${row + Math.floor(index / width)}:${column + (index % width)}`
 	);
 
+	function getTileDimensions(size, columns) {
+		const [preferredWidth, height] = tileSizes[size] || tileSizes.standard;
+		const wideTileOnMdScreen = size === 'wide' && columns === colsOnScreen.md;
+		const width = wideTileOnMdScreen ? 1 : Math.min(preferredWidth, columns);
+
+		return { width, height };
+	}
+
+	function findFirstAvailableArea(occupied, columns, width, height) {
+		// Preserve the row-first, then column-first placement order.
+		for (let row = 1; ; row += 1) {
+			for (let column = 1; column <= columns - width + 1; column += 1) {
+				const cells = getCells(row, column, width, height);
+				const isAvailable = cells.every((cell) => !occupied.has(cell));
+
+				if (isAvailable) return { column, row, cells };
+			}
+		}
+	}
+
 	function packMasonry(columns) {
 		const occupied = new Set();
-		const isMdScreen = columns === colsOnScreen.md;
 
-		// Scan rows left-to-right and place each tile in the first free fitting area.
 		return masonryItems.reduce((layout, item) => {
-			const [itemWidth, height] = tileSizes[item.size] || tileSizes.standard;
-			const width = isMdScreen && item.size === 'wide' ?
-				1 : Math.min(itemWidth, columns);
+			const { width, height } = getTileDimensions(item.size, columns);
+			const { column, row, cells } = findFirstAvailableArea(
+				occupied,
+				columns,
+				width,
+				height
+			);
 
-			for (let row = 1; ; row += 1) {
-				for (let column = 1; column <= columns - width + 1; column += 1) {
-					const cells = getCells(row, column, width, height);
-					if (cells.some((cell) => occupied.has(cell))) continue;
-
-					cells.forEach((cell) => occupied.add(cell));
-					layout[item.artId] = { column, row, width, height };
-					return layout;
-				}
-			}
+			cells.forEach((cell) => occupied.add(cell));
+			layout[item.artId] = { column, row, width, height };
+			return layout;
 		}, {});
 	}
 
