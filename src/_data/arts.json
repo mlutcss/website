@@ -27,13 +27,13 @@
 		"artId":"clown-emoji",
 		"bgColor":"Bgc-$artClownEmoji",
 		"showInMain": false,
-		"size":"standard"
+		"size":"tall"
 	},
 	{
 		"artId":"mushroom",
 		"bgColor":"Bgc-$artMushroom",
 		"showInMain": false,
-		"size":"tall"
+		"size":"wide"
 	},
 	{
 		"artId":"robot-hare",
