@@ -33,23 +33,22 @@ export class ArtModal extends HTMLElement {
 		});
 	}
 
-	open(artHTML, artId, bgClass, onShare) {
+	open(artHTML, artId, bgValue, onShare) {
 		if (!this._contentContainer) return;
 
-		if (this._container && this._currentBgClass) {
-			this._container.classList.remove(this._currentBgClass);
+		if (this._container) {
+			this._container.style.backgroundColor = '';
 		}
 
 		this._currentArtId = artId;
 		this._onShare = onShare;
-		this._currentBgClass = bgClass;
 
 		if (this._sandboxLink) {
 			this._sandboxLink.href = `http://play.mlut.style/?art=${artId}`;
 		}
 
-		if (this._container && bgClass) {
-			this._container.classList.add(bgClass);
+		if (this._container && bgValue) {
+			this._container.style.backgroundColor = bgValue;
 		}
 
 		this._contentContainer.innerHTML = artHTML;
@@ -64,10 +63,8 @@ export class ArtModal extends HTMLElement {
 		document.removeEventListener("keydown", this._handleKeydown);
 		this._overlay.classList.remove("O1", "Pne-a");
 		this._overlay.classList.add("O0", "Pne");
-		if (this._container && this._currentBgClass) {
-			this._container.classList.remove(this._currentBgClass);
-		}
-		if (this._contentContainer) this._contentContainer.innerHTML = "";
+		this._container.style.backgroundColor = '';
+		this._contentContainer.innerHTML = "";
 	}
 }
 

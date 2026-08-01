@@ -66,12 +66,6 @@ export class ArtPanel extends HTMLElement {
 					btnText.textContent = originalText;
 				}, 2000)
 			}
-			// if (svg) svg.classList.add('D-n');
-			// if (span) span.textContent = 'Copied!';
-			// setTimeout(() => {
-			// 	if (svg) svg.classList.remove('D-n');
-			// 	if (span) span.textContent = 'Share';
-			// }, 2000);
 		})
 		.catch(err => console.error('Copy failed', err));
 	}

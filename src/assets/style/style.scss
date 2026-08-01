@@ -26,25 +26,6 @@ a {
 	-webkit-tap-highlight-color: transparent;
 }
 
-.masonry-sizer,
-.masonry-item {
-  width: calc(33.333% - 1rem);
-  margin-bottom: 1.5rem;
-}
-
-@media (max-width: 1400px) {
-  .masonry-sizer,
-  .masonry-item {
-    width: calc(50% - 1rem);
-  }
-}
-
-@media (max-width: 768px) {
-  .masonry-sizer,
-  .masonry-item {
-    width: 100%;
-  }
-}
 
 // Светлая тема
 @mixin light-theme {
@@ -129,7 +110,7 @@ a {
 	--ml-artMushroom: #ad8bc7;
 	--ml-artRobotHare: #947e4f;
 	--ml-artFunnyCake: #6295e3;
-	--ml-artCat: #dea3e3;
+	--ml-artCat: #4ecfcf;
 	--ml-artCorgi: #92959c;
 }
 
@@ -216,7 +197,7 @@ a {
 	--ml-artMushroom: #3b244d;
 	--ml-artRobotHare: #6f592b;
 	--ml-artFunnyCake: #1f3e6e;
-	--ml-artCat: #a479a8;
+	--ml-artCat: #4ecfcf;
 	--ml-artCorgi: #77797f;
 }
 

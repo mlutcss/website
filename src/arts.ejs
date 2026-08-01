@@ -5,24 +5,36 @@ area: Arts
 
 <%
 	const artsPageCSS = {
-		card:"D H20gg Bgc-$core800 Tsd-$shortTs @:hv_Tsd-$longTs",
-		button: "W12gg lg_W9gg Mxw50u xl_Mxw55u Ai-str"
-	};
+		card:"-Sz100p Ov-h Bdrd3u Bgc-$core815 Bd3;s;$brand md_Tf md_-S102p_h md_O50p md_O1_h -Ts",
+		color: "C-$white100 C-$brand500_h C-$brand200_a -Ts"
+	}
+
+	const decorCss = {
+		gradientEclipse: "Ps-a_af Ct_af W90p_af Apcr1_af B-4p_af L50p_af Tf_af -Tr-50p;0_af Bdrd100p_af -Gdl180d,$core725;0,$core735;100p_af Ft_af -Blr100_af",
+		gradientPlanet: "Ps-a_b Ct_b W70p_b Apcr1_b T1p_b L50p_b Tf_b -Tr-50p;0_b Bdrd100p_b -Gdl180d,$core725;0,$core740;100p,$core745;100p_b Ft_b -Blr50_b"
+	}
+
+	function toPascalCase(str) {
+		const camel = str.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase());
+		return camel[0].toUpperCase() + camel.slice(1);
+	}
 
 	// Grid spans are expressed as [columns, rows].
 	const tileSizes = {
 		standard: [1, 2],
 		wide: [2, 2],
-		tall: [1, 4]
+		tall: [1, 4],
+		large: [2, 3],
+		addArt: [2, 2]
 	};
 	const colsOnScreen = {
-		md: 2,
+		md: 3,
 		xl: 4,
 	};
 
 	const masonryItems = [
 			...it.arts,
-			{ artId: 'add-art', size: 'wide' }
+			{ artId: 'add-art', size: 'addArt' }
 	];
 
 	// Represent every occupied grid cell with a stable row:column key.
@@ -31,9 +43,9 @@ area: Arts
 		(_, index) => `${row + Math.floor(index / width)}:${column + (index % width)}`
 	);
 
-	function getTileDimensions(size, columns, id) {
+	function getTileDimensions(size, columns) {
 		const [preferredWidth, height] = tileSizes[size] || tileSizes.standard;
-		const wideTileOnMdScreen = size === 'wide' && columns === colsOnScreen.md && id !== 'add-art';
+		const wideTileOnMdScreen = size === 'wide' && columns === colsOnScreen.md;
 		const width = wideTileOnMdScreen ? 1 : Math.min(preferredWidth, columns);
 
 		return { width, height };
@@ -55,7 +67,7 @@ area: Arts
 		const occupied = new Set();
 
 		return masonryItems.reduce((layout, item) => {
-			const { width, height } = getTileDimensions(item.size, columns, item.artId);
+			const { width, height } = getTileDimensions(item.size, columns);
 			const { column, row, cells } = findFirstAvailableArea(
 				occupied,
 				columns,
@@ -84,10 +96,19 @@ area: Arts
 	}
 %>
 
-		<div class="M-a W100p D-g Gtc-t1 md_Gtc-t2 xl_Gtc-t4 Gatr10gg Gatf-r;d Gap3u">
-			<% it.arts.forEach((art) => { %>
-				<art-panel class="D Ps -Ctx Gr-s2" id="<%= art.artId %>" size="<%= art.size %>" style="<%= getMasonryStyle(art.artId) %>">
-					<div class="-Sz100p Ov-h Plcc-c Plci-c D-f <%= art.bgColor %>">
+<section class="D-f Fld-c W100p Bgc-$core830 Mt-$headerH P5u;4u;10u md_P8u;8u;10u">
+	<div class="Ps-a W58p Apcr1 T-$headerH L50p Tf -Tr-50p;0 <%= decorCss.gradientEclipse %> <%= decorCss.gradientPlanet %>"></div>
+
+	<h1 class="M0 P2.5u Fnf-SN;Pro Fns6u sm_Fns7u Fnw700 Fnst-n Lnh150p Lts0 Txt C-$brand Txa-c">Pure css art</h1>
+	<p class="M0 Fns4u Fnst-n Fnw300 Lnh150p Lts0 C-$accent900 Txa-c">Created entirely with mlut utility classes</p>
+
+		<div class="Mt8.5u W100p D-g Gtc-t1 md_Gtc-t3 xl_Gtc-t4 Gatr9gg md_Gatr8gg xl_Gatr7gg Gatf-r;d Gap4u">
+			<% it.arts.forEach((art, index) => {%>
+				<art-panel
+					class="D Ps Bdrd2u Ov-h -Ctx Gr-s2 -Ts md_Tf md_-S102p_h" id="<%= art.artId %>" size="<%= art.size %>" style="<%= getMasonryStyle(art.artId) %> background-color: var(--ml-art<%= toPascalCase(art.artId) %>)"
+					bgc-art-css="var(--ml-art<%= toPascalCase(art.artId) %>)"
+					>
+					<div class="art -Sz100p Ov-h Plcc-c Plci-c">
 						<%- include(`./arts/${art.artId}.ejs`) %>
 					</div>
 					<div class="Ps-a B0 L0 W100p H15u Zi15 P4u M0 D-f Fld-c Jc-fe O0 Pne md_^:h_Pne-a md_^:h_O1 Bgc-$gray250 Bcf -Blr15 -Ts">
@@ -109,17 +130,56 @@ area: Arts
 						</div>
 					</div>
 				</art-panel>
-			<% }); %>
-
-			<div class="<%= artsPageCSS.card %> Gr-s2 arts-masonry-cta -Ctx P3u" style="<%= getMasonryStyle('add-art') %>">
-				<a href="https://github.com/mlutcss/website/fork" target="_blank"
-					class="-Sz100p Bd1u;d;$brand205 Bdc-$brand_a @:hv_Bdc-$brand205 @:hv_^:h_Bdc-$brand Bdrd5u Tsd-ih D-f Fld-c Jc-c Ai-c C-$brand Txd-n">
-					<svg class="M0;0;5u @:hv_O0.5 @:hv_^:h_O1 Tsd-ih H40p Stw2">
+			<% }) %>
+			<div class="<%= artsPageCSS.card %> Gr-s2 arts-masonry-cta" style="<%= getMasonryStyle('add-art') %>">
+				<a
+					href="https://github.com/mlutcss/website/fork" target="_blank"
+					class="-Sz100p D-f Fld-c Jc-c Ai-c Gap5u C-$brand Txd-n -Ts"
+				>
+					<svg class="md_-Sz25u" width="57" height="57">
 						<use href="/assets/img/icons.svg#add-art"></use>
 					</svg>
-					<p class="@:hv_O0.5 @:hv_^:h_O1 M0 Tsd-ih Fns5u md_Fns7u"> Add your own art! </p>
+					<p class="M0 Tsd-ih Fns4u Fnst-n Fnw300 Lnh150p Lts0 Txa-c C-$accent900">
+						Want to see your work here? <br/>
+						Submit your CSS art
+					</p>
 				</a>
 			</div>
 		</div>
-	</div>
 </section>
+
+
+
+<art-modal>
+	<div class="art-modal-overlay Ps-f T0 L0 W100vw H100vh Bgc-$overlay Zi20 O0 Pne -Ts">
+		<div class="modal-container Ps-a T15p L50p Tf -Tr-50p;0 W85p md_W60p xl_W50p Apcr3/2 Bdrd2u Ov-h Bd0.375u;s;$brand D-f Fld-c @:o-l:w<768_H80vh">
+			<button class="art-modal-close btn Ps-a Zi20 T4u R4u C-$white100 md_C-$brand_h C-$brand_a -Ts">
+				<svg class="xxl_-Sz24" width="16" height="16">
+					<use href="/assets/img/icons.svg#close-menu"></use>
+				</svg>
+			</button>
+			<div class="art-modal-content Fl1 Mnw0 Ov-h"></div>
+			<div class="D-f Ai-c Jc-c Gap8u W100p H11u sm_H8u P0;3u Mb3u xxl_Mb5u">
+				<div class="W100p Mxw240 H100p">
+					<%- include('_includes/components/link-button.ejs',{
+						url: "http://",
+						text: "Open in sandbox",
+						variant: "brand",
+						className: "art-modal-sandbox"
+						})
+					%>
+				</div>
+				<div class="W100p Mxw240 H100p">
+					<%- include('_includes/components/link-button.ejs',{
+						text: "Share",
+						variant: "white",
+						icon: "share",
+						iconClass: "C-$brand W20 H20",
+						className: "art-modal-share"
+						})
+					%>
+				</div>
+			</div>
+		</div>
+	</div>
+</art-modal>
