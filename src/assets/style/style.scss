@@ -268,3 +268,24 @@ html, .theme-dark {
 		@include light-theme;
 	}
 }
+
+art-panel[size],
+.arts-masonry-cta {
+  min-width: 0;
+}
+
+@media (min-width: 768px) {
+  art-panel[size],
+  .arts-masonry-cta {
+    grid-column: var(--masonry-column-md);
+    grid-row: var(--masonry-row-md);
+  }
+}
+
+@media (min-width: 1200px) {
+  art-panel[size],
+  .arts-masonry-cta {
+    grid-column: var(--masonry-column-xl);
+    grid-row: var(--masonry-row-xl);
+  }
+}

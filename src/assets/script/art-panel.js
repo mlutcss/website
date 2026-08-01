@@ -10,9 +10,6 @@ export class ArtPanel extends HTMLElement {
 	}
 
 	connectedCallback() {
-		if (!modal) {
-		this.modal = document.querySelector('art-modal');
-		}
 		this.modal = modal;
 
 		if (location.hash.slice(1) === this.id) {
@@ -35,9 +32,9 @@ export class ArtPanel extends HTMLElement {
 
 		const artDiv = this.querySelector('.art');
 		if (!artDiv) return;
-		const artHTML = artDiv.outerHTML;
-		const bgClass = this.getAttribute('data-bg-class');
-		this.modal.open(artHTML, this.id, bgClass, (artId) => this.copyArtLink(artId, this.modal.shareBtn));
+		const artHtml = artDiv.outerHTML;
+		const bgClass = this.getAttribute('bgc-art-css');
+		this.modal.open(artHtml, this.id, bgClass, (artId) => this.copyArtLink(artId, this.modal.shareBtn));
 	}
 
 	copyArtLink(artId, button) {
@@ -46,26 +43,35 @@ export class ArtPanel extends HTMLElement {
 		navigator.clipboard.writeText(link)
 		.then(() => {
 			const icon = button.querySelector('.copy-icon');
-			const copyText = button.querySelector('.copy-text');
+			const tickIcon = button.querySelector('.tick-icon');
 
-			if (icon && copyText) {
+			if (icon && tickIcon) {
 				icon.classList.add('D-n');
-				copyText.classList.remove('D-n');
+				tickIcon.classList.remove('D-n');
 				setTimeout(() => {
 					icon.classList.remove('D-n');
-					copyText.classList.add('D-n');
+					tickIcon.classList.add('D-n');
 				}, 2000);
 				return;
 			}
 
-			const svg = button.querySelector('svg');
-			const span = button.querySelector('.button-text');
-			if (svg) svg.classList.add('D-n');
-			if (span) span.textContent = 'Copied!';
-			setTimeout(() => {
-				if (svg) svg.classList.remove('D-n');
-				if (span) span.textContent = 'Share';
-			}, 2000);
+			const btnIcon = button.querySelector('.button-icon');
+			const btnText = button.querySelector('.button-text');
+			if (btnIcon && btnText) {
+				const originalText = btnText.textContent;
+				btnIcon.classList.add('D-n');
+				btnText.textContent = 'Copied!';
+				setTimeout(() => {
+					btnIcon.classList.remove('D-n');
+					btnText.textContent = originalText;
+				}, 2000)
+			}
+			// if (svg) svg.classList.add('D-n');
+			// if (span) span.textContent = 'Copied!';
+			// setTimeout(() => {
+			// 	if (svg) svg.classList.remove('D-n');
+			// 	if (span) span.textContent = 'Share';
+			// }, 2000);
 		})
 		.catch(err => console.error('Copy failed', err));
 	}
