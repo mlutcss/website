@@ -59,7 +59,7 @@ area: 'main'
 
 	<div class="Ps D-f Fld-c Ai-c Jc-c Gap2u Bgc-tp W100p md_W604 md_Gap4u md_M14u;0;6u lg_W100p lg_M0 lg_Gc2 lg_Gr1/4 Zi2">
 		<arts-slider class="D-f Ai-fs Jc-c Fl1 W100p Gap6.5u md_Gap30u lg_Gap15u xl_Gap20u xxl_Gap25u">
-				<button class="prev W48 Apcr1 As-c Bgc-tp Bd-n P0 Cs">
+				<button class="prev W48 Apcr1 As-c Bgc-tp Bd-n P0 Cs O0 Vs-h">
 					<svg class="Tf -Rt180d C-$brand C-$brand500_h C-$brand200_a Ts-$shortTs sm_W5.5u sm_H9u" width="17" height="29">
 						<use href="/assets/img/icons.svg#arrow-slider"></use>
 					</svg>
@@ -72,20 +72,20 @@ area: 'main'
 						<use href="/assets/img/decor.svg#squareDot"></use>
 					</svg>
 					<div class="W100p P0 md_P2u md_Bgc-$core400 md_Bxsd0;0;0;0.5u;$core900">
-						<div class="swiper W100p Bgc-tp Apcr1">
-							<div class="swiper-wrapper">
+						<div class="swiper W100p Bgc-tp Apcr1 Ov-h">
+							<div class="swiper-wrapper carousel-track">
 								<% if (filteredArts.length) { %>
 									<% for (let art of filteredArts) { %>
-										<div class="swiper-slide"><%- include(`./arts/${art.artId}.ejs`) %></div>
+										<div class="swiper-slide carousel-slide"><%- include(`./arts/${art.artId}.ejs`) %></div>
 									<% } %>
 									<% } else { %>
-										<div class="swiper-slide">there are no arts</div>
+										<div class="swiper-slide carousel-slide">there are no arts</div>
 								<% } %>
 							</div>
 						</div>
 					</div>
 				</div>
-				<button class="next W48 Apcr1 As-c Bgc-tp Bd-n P0 Cs">
+				<button class="next W48 Apcr1 As-c Bgc-tp Bd-n P0 Cs O0 Vs-h">
 					<svg class="C-$brand C-$brand500_h C-$brand200_a Ts-$shortTs sm_W5.5u sm_H9u" width="17" height="29">
 						<use href="/assets/img/icons.svg#arrow-slider"></use>
 					</svg>
