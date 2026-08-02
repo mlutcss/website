@@ -19,12 +19,12 @@ class ArtsSlider extends HTMLElement {
 
 		this.swiper = new Swiper(swiperContainer, {
 			navigation: {
-				nextEl: ".next",
-				prevEl: ".prev",
+				nextEl: '.next',
+				prevEl: '.prev',
 			},
 			loop: true,
 			speed: 300,
-			effect: "fade",
+			effect: 'fade',
 			fadeEffect: { crossFade: true },
 			simulateTouch: false,
 			allowTouchMove: true,
@@ -42,4 +42,4 @@ class ArtsSlider extends HTMLElement {
 	}
 }
 
-customElements.define("arts-slider", ArtsSlider);
+customElements.define('arts-slider', ArtsSlider);
