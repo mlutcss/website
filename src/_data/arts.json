@@ -7,12 +7,12 @@
 	{
 		"artId":"flushed-emoji",
 		"showInMain": true,
-		"size":"standard"
+		"size":"wide"
 	},
 	{
 		"artId":"penrose-triangle",
 		"showInMain": true,
-		"size":"wide"
+		"size":"standard"
 	},
 	{
 		"artId":"cat",
@@ -22,32 +22,31 @@
 	{
 		"artId":"exploding-head",
 		"showInMain": true,
-		"size":"wide"
+		"size":"large"
 	},
 	{
 		"artId":"clown-emoji",
 		"showInMain": false,
-		"size":"tall"
+		"size":"standard"
 	},
 	{
 		"artId":"mushroom",
 		"showInMain": false,
 		"size":"wide"
 	},
-	
+	{
+		"artId":"robot-hare",
+		"showInMain": true,
+		"size":"tall"
+	},
 	{
 		"artId":"funny-cake",
 		"showInMain": false,
-		"size":"wide"
+		"size":"tall"
 	},
 	{
 		"artId":"corgi",
 		"showInMain": true,
 		"size":"large"
-	},
-	{
-		"artId":"robot-hare",
-		"showInMain": true,
-		"size":"tall"
 	}
 ]

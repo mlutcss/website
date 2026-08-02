@@ -29,28 +29,19 @@ export class ArtModal extends HTMLElement {
 		});
 		this._closeBtn.addEventListener("click", () => this.close());
 		this.shareBtn.addEventListener("click", () => {
-			if (this._onShare) this._onShare(this._currentArtId);
+			this._onShare(this._currentArtId);
 		});
 	}
 
-	open(artHTML, artId, bgValue, onShare) {
+	open(artHTML, artId, bgValue, sandboxUrl, onShare) {
 		if (!this._contentContainer) return;
 
-		if (this._container) {
-			this._container.style.backgroundColor = '';
-		}
-
+		this._container.style.backgroundColor = '';
 		this._currentArtId = artId;
 		this._onShare = onShare;
+		this._sandboxLink.href = sandboxUrl;
 
-		if (this._sandboxLink) {
-			this._sandboxLink.href = `http://play.mlut.style/?art=${artId}`;
-		}
-
-		if (this._container && bgValue) {
-			this._container.style.backgroundColor = bgValue;
-		}
-
+		this._container.style.backgroundColor = bgValue;
 		this._contentContainer.innerHTML = artHTML;
 		this._overlay.classList.remove("O0", "Pne");
 		this._overlay.classList.add("O1", "Pne-a");

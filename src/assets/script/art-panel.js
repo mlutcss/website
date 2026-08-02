@@ -17,9 +17,7 @@ export class ArtPanel extends HTMLElement {
 		}
 
 		this.button = this.querySelector('.link-button');
-		if (this.button) {
-			this.button.addEventListener('click', () => this.copyArtLink(this.id, this.button));
-		}
+		this.button.addEventListener('click', () => this.copyArtLink(this.id, this.button));
 
 		this.addEventListener('click', (e) => {
 			if (e.target.closest('.link-button, .sandbox-button')) return;
@@ -33,8 +31,9 @@ export class ArtPanel extends HTMLElement {
 		const artDiv = this.querySelector('.art');
 		if (!artDiv) return;
 		const artHtml = artDiv.outerHTML;
-		const bgClass = this.getAttribute('bgc-art-css');
-		this.modal.open(artHtml, this.id, bgClass, (artId) => this.copyArtLink(artId, this.modal.shareBtn));
+		const bgValue = this.style.backgroundColor;
+		const sandboxUrl = this.querySelector('.sandbox-button')?.href;
+		this.modal.open(artHtml, this.id, bgValue, sandboxUrl, (artId) => this.copyArtLink(artId, this.modal.shareBtn));
 	}
 
 	copyArtLink(artId, button) {

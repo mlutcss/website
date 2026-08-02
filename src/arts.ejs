@@ -24,8 +24,7 @@ area: Arts
 		standard: [1, 2],
 		wide: [2, 2],
 		tall: [1, 4],
-		large: [2, 3],
-		addArt: [2, 2]
+		large: [2, 3]
 	};
 	const colsOnScreen = {
 		md: 3,
@@ -34,7 +33,7 @@ area: Arts
 
 	const masonryItems = [
 			...it.arts,
-			{ artId: 'add-art', size: 'addArt' }
+			{ artId: 'add-art', size: 'standard' }
 	];
 
 	// Represent every occupied grid cell with a stable row:column key.
@@ -104,10 +103,7 @@ area: Arts
 
 		<div class="Mt8.5u W100p D-g Gtc-t1 md_Gtc-t3 xl_Gtc-t4 Gatr9gg md_Gatr8gg xl_Gatr7gg Gatf-r;d Gap4u">
 			<% it.arts.forEach((art, index) => {%>
-				<art-panel
-					class="D Ps Bdrd2u Ov-h -Ctx Gr-s2 -Ts md_Tf md_-S102p_h" id="<%= art.artId %>" size="<%= art.size %>" style="<%= getMasonryStyle(art.artId) %> background-color: var(--ml-art<%= toPascalCase(art.artId) %>)"
-					bgc-art-css="var(--ml-art<%= toPascalCase(art.artId) %>)"
-					>
+				<art-panel class="D Ps Bdrd2u Ov-h -Ctx Gr-s2 -Ts md_Tf md_-S102p_h" id="<%= art.artId %>" size="<%= art.size %>" style="<%= getMasonryStyle(art.artId) %> background-color: var(--ml-art<%= toPascalCase(art.artId) %>)">
 					<div class="art -Sz100p Ov-h Plcc-c Plci-c">
 						<%- include(`./arts/${art.artId}.ejs`) %>
 					</div>
@@ -148,11 +144,9 @@ area: Arts
 		</div>
 </section>
 
-
-
 <art-modal>
 	<div class="art-modal-overlay Ps-f T0 L0 W100vw H100vh Bgc-$overlay Zi20 O0 Pne -Ts">
-		<div class="modal-container Ps-a T15p L50p Tf -Tr-50p;0 W85p md_W60p xl_W50p Apcr3/2 Bdrd2u Ov-h Bd0.375u;s;$brand D-f Fld-c @:o-l:w<768_H80vh">
+		<div class="modal-container Ps-a T15p L50p Tf -Tr-50p;0 W85p md_W60p xl_W50p Apcr3/2 Bdrd2u Ov-h Bd0.25u;s;$brand D-f Fld-c @:o-l:w<gMd_H80vh">
 			<button class="art-modal-close btn Ps-a Zi20 T4u R4u C-$white100 md_C-$brand_h C-$brand_a -Ts">
 				<svg class="xxl_-Sz24" width="16" height="16">
 					<use href="/assets/img/icons.svg#close-menu"></use>
