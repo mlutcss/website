@@ -17,11 +17,6 @@ class ArtsSlider extends HTMLElement {
 		const swiperContainer = this.querySelector('.swiper');
 		if (!swiperContainer) return;
 
-		const wrapper = swiperContainer.querySelector('.swiper-wrapper');
-		wrapper?.classList.remove("carousel-track");
-		const slides = swiperContainer.querySelectorAll('.swiper-slide');
-		slides.forEach((slide) => slide.classList.remove("carousel-slide"));
-
 		this.swiper = new Swiper(swiperContainer, {
 			navigation: {
 				nextEl: '.next',
@@ -29,17 +24,19 @@ class ArtsSlider extends HTMLElement {
 			},
 			loop: true,
 			speed: 300,
-			effect: 'fade',
-			fadeEffect: { crossFade: true },
+			effect: 'slide',
 			simulateTouch: false,
 			allowTouchMove: true,
 			autoplay: true,
-			grabCursor: false,
+			grabCursor: false
 		});
 
+		this.querySelector('.swiper-wrapper').classList.remove('carousel-track');
+		this.querySelectorAll('.swiper-slide').forEach(s => s.classList.remove('carousel-slide'));
 		this.querySelector('.prev')?.classList.remove('O0', 'Vs-h');
 		this.querySelector('.next')?.classList.remove('O0', 'Vs-h');
 	}
+
 }
 
 customElements.define('arts-slider', ArtsSlider);

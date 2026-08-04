@@ -11,8 +11,9 @@ class ThemeSwitcher extends HTMLElement {
 		if (this._buttons.length === 0) return;
 
 		this._updateActiveButton(this._theme);
+		this._updateHighlightTheme(this._theme);
 
-		this.addEventListener('click', (e) => {
+		this.addEventListener("click", (e) => {
 			const button = e.target.closest('[data-theme]');
 			if (!button || !button.dataset.theme) return;
 			this.setTheme(button.dataset.theme);
@@ -33,6 +34,7 @@ class ThemeSwitcher extends HTMLElement {
 		localStorage.setItem('mlut-theme', theme);
 		this.applyTheme(theme);
 		this._updateActiveButton(theme);
+		this._updateHighlightTheme(theme);
 	}
 
 	_updateActiveButton(theme) {
@@ -41,6 +43,24 @@ class ThemeSwitcher extends HTMLElement {
 			btn.classList.toggle(this._activeClass, isActive);
 			btn.disabled = isActive;
 		});
+	}
+
+	_updateHighlightTheme(theme) {
+		const effectiveTheme = (theme === 'auto')
+			? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+			: theme;
+
+		const lightLink = document.getElementById('hljs-light');
+		const darkLink = document.getElementById('hljs-dark');
+		if (!lightLink || !darkLink) return;
+
+		if (effectiveTheme === 'dark') {
+			lightLink.setAttribute('media', 'not all');
+			darkLink.setAttribute('media', 'all');
+		} else {
+			lightLink.setAttribute('media', 'all');
+			darkLink.setAttribute('media', 'not all');
+		}
 	}
 }
 

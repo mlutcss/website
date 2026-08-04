@@ -100,7 +100,6 @@ a {
 	--ml-correct850: rgba(183, 250, 207, 0.6);
 	--ml-correct750: rgba(83, 250, 141, 0.6);
 	--ml-overlay: rgba(255, 255, 255, 0.7);
-	--ml-codeBgc: #4f3863;
 
 	// arts
 	--ml-artGhost: #ffbcB0;
@@ -188,7 +187,6 @@ a {
 	--ml-correct850: rgba(1,102,48,0.4);
 	--ml-correct750: rgba(0,130,54,0.6);
 	--ml-overlay: rgba(0, 0, 0, 0.7);
-	--ml-codeBgc: #0d1117;
 
 	// arts
 	--ml-artGhost: #450c00;
@@ -254,59 +252,74 @@ html, .theme-dark {
 
 art-panel[size],
 .arts-masonry-cta {
-  min-width: 0;
+	min-width: 0;
 }
 
 @media (min-width: 768px) {
-  art-panel[size],
-  .arts-masonry-cta {
-    grid-column: var(--masonry-column-md);
-    grid-row: var(--masonry-row-md);
-  }
+	art-panel[size],
+	.arts-masonry-cta {
+		grid-column: var(--masonry-column-md);
+		grid-row: var(--masonry-row-md);
+	}
 }
 
 @media (min-width: 1200px) {
-  art-panel[size],
-  .arts-masonry-cta {
-    grid-column: var(--masonry-column-xl);
-    grid-row: var(--masonry-row-xl);
-  }
+	art-panel[size],
+	.arts-masonry-cta {
+		grid-column: var(--masonry-column-xl);
+		grid-row: var(--masonry-row-xl);
+	}
 }
 
 art-panel[size],
 .arts-masonry-cta {
-  min-width: 0;
+	min-width: 0;
 }
 
 @media (min-width: 768px) {
-  art-panel[size],
-  .arts-masonry-cta {
-    grid-column: var(--masonry-column-md);
-    grid-row: var(--masonry-row-md);
-  }
+	art-panel[size],
+	.arts-masonry-cta {
+		grid-column: var(--masonry-column-md);
+		grid-row: var(--masonry-row-md);
+	}
 }
 
 @media (min-width: 1200px) {
-  art-panel[size],
-  .arts-masonry-cta {
-    grid-column: var(--masonry-column-xl);
-    grid-row: var(--masonry-row-xl);
-  }
+	art-panel[size],
+	.arts-masonry-cta {
+		grid-column: var(--masonry-column-xl);
+		grid-row: var(--masonry-row-xl);
+	}
 }
 
 .carousel-track {
-  display: flex;
-  gap: 0;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
+	display: flex;
+	gap: 20px;
+	overflow-x: auto;
+	overflow-y: hidden;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
+	padding-left: 16px;
+	scrollbar-width: thin;
+	scrollbar-color: var(--ml-brand) transparent;
 }
-.carousel-track::-webkit-scrollbar {
-  display: none;
-}
+
 .carousel-slide {
-  flex: 0 0 100%;
-  scroll-snap-align: start;
+	flex: 0 0 100%;
+	scroll-snap-align: center;
+}
+
+/* Chrome/Safari/Edge */
+.carousel-track::-webkit-scrollbar {
+	height: 4px;
+}
+
+.carousel-track::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+.carousel-track::-webkit-scrollbar-thumb {
+	background: var(--ml-brand);
+	border-radius: 4px;
 }
