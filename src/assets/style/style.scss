@@ -1,10 +1,19 @@
 @use 'mlut' with (
+	$utils-config: (
+		'states': (
+			'custom': (
+				'nojs': '.no-js',
+			),
+		),
+	),
 	$jit: (
 		'output': 'dist/assets/style/style.min.css',
 		'content': ['src/**/*.ejs','src/**/*.json','src/assets/script/**/*.js'],
 		'minify': true
 	),
 );
+
+@include mlut.apply(('-nojs _O0', '-nojs _Vs-h'), (), true);
 
 a {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);

@@ -28,15 +28,16 @@ class ArtsSlider extends HTMLElement {
 			simulateTouch: false,
 			allowTouchMove: true,
 			autoplay: true,
-			grabCursor: false
+			grabCursor: false,
+			on: {
+				init: () => {
+					this.querySelector('.swiper-wrapper')?.classList.remove('carousel-track');
+					this.querySelectorAll('.swiper-slide').forEach((s) => s.classList.remove('carousel-slide'));
+					this.classList.remove('no-js');
+				},
+			},
 		});
-
-		this.querySelector('.swiper-wrapper').classList.remove('carousel-track');
-		this.querySelectorAll('.swiper-slide').forEach(s => s.classList.remove('carousel-slide'));
-		this.querySelector('.prev')?.classList.remove('O0', 'Vs-h');
-		this.querySelector('.next')?.classList.remove('O0', 'Vs-h');
 	}
-
 }
 
 customElements.define('arts-slider', ArtsSlider);
