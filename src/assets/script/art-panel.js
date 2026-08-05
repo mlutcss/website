@@ -21,6 +21,7 @@ export class ArtPanel extends HTMLElement {
 
 		this.addEventListener('click', (e) => {
 			if (e.target.closest('.link-button, .sandbox-button')) return;
+			if (window.innerWidth < 768) return;
 			this.openModal();
 		});
 	}
