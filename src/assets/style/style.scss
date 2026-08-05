@@ -1,19 +1,10 @@
 @use 'mlut' with (
-	$utils-config: (
-		'states': (
-			'custom': (
-				'nojs': '.no-js',
-			),
-		),
-	),
 	$jit: (
 		'output': 'dist/assets/style/style.min.css',
 		'content': ['src/**/*.ejs','src/**/*.json','src/assets/script/**/*.js'],
 		'minify': true
 	),
 );
-
-@include mlut.apply(('-nojs _O0', '-nojs _Vs-h'), (), true);
 
 a {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -309,26 +300,10 @@ art-panel[size],
 	scroll-snap-type: x mandatory;
 	scroll-behavior: smooth;
 	-webkit-overflow-scrolling: touch;
-	padding-left: 16px;
-	scrollbar-width: thin;
-	scrollbar-color: var(--ml-brand) transparent;
+	height: 100%;;
 }
 
 .carousel-slide {
 	flex: 0 0 100%;
 	scroll-snap-align: center;
-}
-
-/* Chrome/Safari/Edge */
-.carousel-track::-webkit-scrollbar {
-	height: 4px;
-}
-
-.carousel-track::-webkit-scrollbar-track {
-	background: transparent;
-}
-
-.carousel-track::-webkit-scrollbar-thumb {
-	background: var(--ml-brand);
-	border-radius: 4px;
 }
