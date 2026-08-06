@@ -13,7 +13,8 @@
 	<meta name="color-scheme" content="dark light">
 	<link rel="stylesheet" href="/assets/style/style.min.css">
 	<link rel="icon" href="/assets/img/favicon.png" type="image/x-icon">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css">
+	<link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github.min.css">
+	<link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github-dark.min.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
@@ -52,7 +53,7 @@
 <label for="menu-toggle" class="Ps-a W100vw H100vh T-$headerH L0 Bgc-tp D-n -Ts ^burger:c:~_D ^burger:c:~_Bgc#000*60p md_D-n"></label>
 
 
-		<div class="Ps-a R0 T-$headerH W100p H100vh Ovy-a Ovx-h P6u;4u Bgc-$core820 -Ts Tf -Trx101p Mxw420 ^burger:c:~_-Trx0 md_All-ust">
+		<div class="Ps-a R0 T-$headerH W100p H100vh Ov-h P6u;4u Bgc-$core820 -Ts Tf -Trx101p Mxw420 ^burger:c:~_-Trx0 md_All-ust @:o-l:w<gMd_Ovy-a">
 			<div class="D-f Fld-c Gap2u md_Fld-r md_Ai-c md_Gap4u lg_Gap8u">
 				<a href="/#hero-section" class="P2.5u Txd-n C-$accent900 Bgc-$accent955_a -Ts md_D-n">
 					Home
@@ -187,8 +188,8 @@
 
 
 	<div class="Ps D-f Fld-c Ai-c Jc-c Gap2u Bgc-tp W100p md_W604 md_Gap4u md_M14u;0;6u lg_W100p lg_M0 lg_Gc2 lg_Gr1/4 Zi2">
-		<arts-slider class="D-f Ai-fs Jc-c Fl1 W100p Gap6.5u md_Gap30u lg_Gap15u xl_Gap20u xxl_Gap25u">
-				<button class="prev W48 Apcr1 As-c Bgc-tp Bd-n P0 Cs">
+		<arts-slider class="D-f Ai-fs Jc-c Fl1 W100p Gap6.5u md_Gap30u lg_Gap15u xl_Gap20u xxl_Gap25u no-js">
+				<button class="prev W48 Apcr1 As-c Bgc-tp Bd-n P0 Cs :-nojs_O0 :-nojs_Vs-h">
 					<svg class="Tf -Rt180d C-$brand C-$brand500_h C-$brand200_a Ts-$shortTs sm_W5.5u sm_H9u" width="17" height="29">
 						<use href="/assets/img/icons.svg#arrow-slider"></use>
 					</svg>
@@ -212,12 +213,12 @@
 					<svg class="D-n md_D Ps-a L70p T-20p C-$core800" width="37" height="37">
 						<use href="/assets/img/decor.svg#squareDot"></use>
 					</svg>
-					<div class="W100p P0 md_P2u md_Bgc-$core400 md_Bxsd0;0;0;0.5u;$core900">
-						<div class="swiper W100p Bgc-tp Apcr1">
-							<div class="swiper-wrapper">
+					<div class="W100p P0 md_P1u md_Bgc-$core400 md_Bxsd0;0;0;0.5u;$core900">
+						<div class="swiper W100p Bgc-tp Apcr1 Ov-h">
+							<div class="swiper-wrapper carousel-track">
 								
 									
-										<div class="swiper-slide">
+										<div class="swiper-slide carousel-slide">
 <div class="-Sz100p D-f Jc-c Ai-c">
   <div class="Apcr1 H100p Ctnt-s -HeartBgc#ff3737 -BodyBgc#ffdcdf Ps-r">
     <div class="Apcr1 Ps-a L20p T15p @c:apcr>=1/1_H60p @c:apcr<=1/1_W60p">
@@ -245,7 +246,7 @@
   </div>
 </div></div>
 									
-										<div class="swiper-slide">
+										<div class="swiper-slide carousel-slide">
 <div class="Ctnt-s -Sz100p Apcr1 D-f Plci-c;c Plcc-c -FlushedOrangeA#e66300 -FlushedOrangeB#f0761c -FlushedOrangeC#f17a1b -FlushedOrangeD#ee980d -FlushedOrangeE#f8c829 -FlushedOrangeF#f6cc2b -FlushedOrangeG#fdfce1 -FlushedGrayA#010101 -FlushedGrayB#938568 -FlushedGrayC#ccc -FlushedGrayD#ededed -FlushedBrownA#662800 -FlushedBrownB#934800">
   <!-- Head -->
   <div class="Apcr1 Bdrd100p Bd2;s;$flushedOrangeA Bgc-$flushedOrangeC  @c:apcr>=1/1_H70p @c:apcr<=1/1_W70p">
@@ -275,7 +276,7 @@
   </div>
 </div></div>
 									
-										<div class="swiper-slide">
+										<div class="swiper-slide carousel-slide">
 <div class="Ps-r -Sz100p Apcr1 D-f Jc-c Ai-c Ctnt-s -ColorA#009dcf -ColorB#3e55ba -ColorC#b1cbfa Ov-h">
 	<!-- right-colorC2 -->
   <div class="Apcr1 T-25p M-a Ps-a Bgr-nr @c:apcr>=1_H180p @c:apcr<=1_W180p -Gdl-60deg,tp;14.5p,$colorC;14.5p,$colorC;40%,tp;40p Bgp61.8p;57p Bgs17p;4p"></div>
@@ -295,7 +296,7 @@
 </div>
 </div>
 									
-										<div class="swiper-slide">
+										<div class="swiper-slide carousel-slide">
 
 <div class="Ctnt-s H100p Apcr1 M1u;a;0 Plci-c;c Plcc-c D-f -ExplodingOrangeA#ee980d -ExplodingOrangeB#f8c829 -ExplodingBrownA#662800 -ExplodingBrownB#6f2810 -ExplodingBrownC#9c2a00 -ExplodingBrownD#934800 -ExplodingBrownE#9b3c18 -ExplodingBrownF#a24b0b -ExplodingBrownG#f7ae48 -ExplodingBrownH#d2a55a -ExplodingBrownI#efd3ac">
   <!-- Head  -->
@@ -468,7 +469,7 @@
   </div>
 </div></div>
 									
-										<div class="swiper-slide">
+										<div class="swiper-slide carousel-slide">
 <div class="-Sz100p Ctnn-canva Ctnt-s D-f Jc-c Ai-c -RobotHareWhiteA#e1d7cb -RobotHareGrayA#9499b9 -RobotHareGrayB#8590a4 -RobotHareGrayC#2a282d -RobotHareGreenA#b3a624 -RobotHareGreenB#121f15 -RobotHareYellowA#d0a614 -RobotHareRedA#b61c04 -RobotHareBlackA#030102">
   <div class="@c:canva:apcr>=1_H100p @c:canva:apcr<=1_W100p Apcr1 Ps-r ">
     <!-- Hare -->
@@ -555,7 +556,7 @@
 </div>
 </div>
 									
-										<div class="swiper-slide">
+										<div class="swiper-slide carousel-slide">
 
 
 <div class="-Sz100p Ctnt-s D-f Jc-c Ai-c Ov-h -CorgiBody#bd610b -CorgiShadow#57483b -CorgiWhite#fff -CorgiBlack#000">
@@ -604,7 +605,7 @@
 						</div>
 					</div>
 				</div>
-				<button class="next W48 Apcr1 As-c Bgc-tp Bd-n P0 Cs">
+				<button class="next W48 Apcr1 As-c Bgc-tp Bd-n P0 Cs :-nojs_O0 :-nojs_Vs-h">
 					<svg class="C-$brand C-$brand500_h C-$brand200_a Ts-$shortTs sm_W5.5u sm_H9u" width="17" height="29">
 						<use href="/assets/img/icons.svg#arrow-slider"></use>
 					</svg>
@@ -915,7 +916,7 @@
 	
 
 	<h3 class="D-n xl_D M11u;0;0 Fns4u Fnw600 Fnst-n Lnh100p Lts0 C-$accent900 Txa-c Ps Zi1">See how much more code you need in handwritten CSS to reproduce the same styles written in mlut</h3>
-	<h3 class="D xl_D-n M8u;0;0 Fns4u Fnw600 Fnst-n Lnh100p Lts0 C-$accent900 Txa-c">Almost all power of CSS in one utility class</h3>
+	<h3 class="D xl_D-n M8u;0;0 Fns4u Fnw600 Fnst-n Lnh100p Lts0 C-$accent900 Txa-c Ps Zi1">Almost all power of CSS in one utility class</h3>
 	<div class="D-f Fld-c Ai-c Gap16 M4.5u;0;0 P4u;3u W100p Bdrd8 Bgc-$core810 -Gdl90d,$brand50;0p,$brand100;100p md_Fld-r md_Ai-st md_Jc-c md_Gap20 md_P4u;0 md_Bgc-tp md_Bgi-n xl_M26;0;0 xl_Gap32 xl_P0 Ps Zi1">
 
 		
@@ -989,7 +990,7 @@
 			<use href="/assets/img/decor.svg#squareDot"></use>
 		</svg>
 	</div>
-	<div class="D-n md_D Ps-a W66p Apcr2/3 B0 L50p Tf -Tr-50p;0 Ps-a_af Ct_af W100p_af Apcr3/4_af T0_af L0_af Bdrd100p_af -Gdl180d,$yellow510;0,$brand100;100p_af Ft_af -Blr100_af Ps-a_b Ct_b W50p_b Apcr1/2_b B0_b L50p_b Tf_b -Tr-50p;0_b -Gdl180d,$core550;0,$brand100;100p_b Ft_b -Blr100_b"></div>
+	<div class="D-n md_D Ps-a W98p Apcr2/3 B0 L50p Tf -Tr-50p;0 Ps-a_af Ct_af W100p_af Apcr3/4_af T0_af L0_af Bdrd100p_af -Gdl180d,$yellow510;0,$brand100;100p_af Ft_af -Blr100_af Ps-a_b Ct_b W50p_b Apcr1/2_b B0_b L50p_b Tf_b -Tr-50p;0_b -Gdl180d,$core550;0,$brand100;100p_b Ft_b -Blr100_b"></div>
 	<div class="D-n xl_D Ps-a T-4p R9p W384 Apcr1">
 		<div class="Ps-a T50p L50p Tf -Tr-50p;-70p W52p Apcr1 Bd4;s;#16348C Bdrd100p Ps-a_af Ct_af T10p_af L45p_af W42_af Apcr1_af Bdrd100p_af Bgc#394EB6_af Ps-a_b Ct_b T50p_b R-10p_b W34_b Apcr1_b Bdrd100p_b Bgc#16348C_b"></div>
 		<div class="Ps-a T55p L50p W69 Apcr1 Bdrd100p Bd8;s;#394EB6 Ps-a_af Ct_af W36_af Apcr1_af Bdrd100p_af T15p_af L-47p_af Bgc-$brand_af"></div>
