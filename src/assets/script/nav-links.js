@@ -13,10 +13,6 @@ class NavLinks extends HTMLElement {
 				burger.checked = false;
 			}
 		});
-
-		burger.addEventListener('change', () => {
-			document.body.classList.toggle('Ov-h', burger.checked);
-		});
 	}
 }
 
