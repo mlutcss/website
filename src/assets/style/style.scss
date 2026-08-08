@@ -307,3 +307,82 @@ art-panel[size],
 	flex: 0 0 100%;
 	scroll-snap-align: center;
 }
+
+/*Анимация декор-элементов*/
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+@keyframes revers {
+	0% { transform: rotate(-19deg); }
+	100% { transform: rotate(-200deg); }
+}
+
+@keyframes trans {
+	0% { transform: translate(0px); }
+	100% { transform: translate(-270px); }
+}
+
+@keyframes reverans {
+	20% { transform: translate(0px); }
+	100% { transform: translate(350px); }
+}
+
+#circle,
+#square {
+	animation-timeline: view();
+	animation-range: contain 30% contain 125%;
+}
+
+#sticks::before {
+	animation-timeline: view();
+	animation-range: contain 30% contain 125%;
+}
+
+#square_yel {
+	animation-timeline: view();
+	animation-range: contain 25% contain 125%;
+}
+
+
+#frame_square {
+	animation-timeline: view();
+	animation-range: contain 0% contain 125%;
+}
+
+#two_circle {
+	animation-timeline: view();
+	animation-range: contain 10% contain 125%;
+}
+
+@supports not (animation-timeline: view()) {
+	#circle,
+	#square,
+	#two_circle {
+		animation: spin 12s linear infinite;
+	}
+
+	#sticks::before {
+		animation: revers 12s linear infinite;
+	}
+
+	#square_yel {
+		animation: trans 12s linear infinite;
+	}
+
+	#frame_square {
+		animation: reverans 12s linear infinite;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	#circle,
+	#square,
+	#sticks::before,
+	#square_yel,
+	#frame_square,
+	#two_circle {
+		animation: none;
+	}
+}
