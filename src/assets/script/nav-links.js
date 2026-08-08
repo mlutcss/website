@@ -11,7 +11,12 @@ class NavLinks extends HTMLElement {
 			const link = e.target.closest('a');
 			if (link) {
 				burger.checked = false;
+				document.body.classList.remove('Ov-h');
 			}
+		});
+
+		burger.addEventListener('change', () => {
+			document.body.classList.toggle('Ov-h', burger.checked);
 		});
 	}
 }
