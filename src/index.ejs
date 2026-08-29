@@ -131,7 +131,7 @@ area: 'main'
  }
  const groupDecor = {
 	twoCircle: "Ps-a_af Ct_af T49p_af L67p_af -Sz51_af Bdrd100p_af Bgc#394EB6_af Ps-a_b Ct_b T60p_b R10p_b -Sz82_b Bdrd100p_b Bgc#16348C_b",
-	twoSticks: "Ps-a_af Ct_af T81p_af L-17p_af W162_af H6_af Bdrd4_af Bgc-$core202_af Ps-a_b Ct_b T49p_b L-86p_b W280_b H3_b Bdrd50p_b Bgc-$core231_b Tf_b -Rt-19d_b",
+	twoSticks: "Ps-a_af Ct_af T81p_af L-17p_af W162_af H6_af Bdrd4_af Bgc-$core202_af Ps-a_b Ct_b T49p_b L-86p_b W280_b H3_b Bdrd50p_b Bgc-$core231_b Tf_b -Rt-19d_b Ann-revers_b Antf-l_b Anfm-f_b",
 	circle: "Ps-a_af Ct_af T-124p_af L-44p_af -Sz40_af Bdrd100p_af Bgc-$core221_af"
  }
 %>
@@ -143,14 +143,14 @@ area: 'main'
 	<%# decor %>
 	<div class="D-n md_D Ps-a L50p T33p W57p Apcr1 Tf -Tr-50p;0 Bdrd100p -Gdl180d,$core720;0,$core730;100p Ft -Blr100 Ps-a_af Ct_af L40p_af T-7p_af W73p_af Apcr1_af Bdrd100p_af -Gdl180d,$core720;0,$yellow510;100p,#394EB6;100p_af Ft_af -Blr50_af"></div>
 	<div class="D-n xl_D Ps-a T6p L10p W250 H290">
-		<div class="Ps-a T10p L0 -Sz138 Bdrd100p Bd4;s;$core201 <%= groupDecor.twoCircle %>"></div>
+		<div id="circle" class="Ann-spin Antf-l Anfm-f Ps-a T10p L0 -Sz138 Bdrd100p Bd4;s;$core201 <%= groupDecor.twoCircle %>"></div>
 		<div class="Ps-a T25p L19p W100 H80 Bdrd100p Bdl20;s;$brand Bdt5;s;tp Bdb5;s;tp Tf -Rt-120d <%= groupDecor.circle %>"></div>
 		<div class="Ps-a T23p L56p Tf -Rt13d Ps-a_af Ct_af T-30p_af L58p_af -Sz18_af Bdrd4_af Bgc#16348C_af Tf_af -Rt-24d_af">
-			<svg class="C#394EB6" width="65" height="65">
+			<svg id="square" class="Ann-spin Antf-l Anfm-f Ps C#394EB6" width="65" height="65">
 				<use href="/assets/img/decor.svg#squareDotTwo"></use>
 			</svg>
 		</div>
-		<div class="Ps-a T8p L29p W100 H280 Bdrd100p Bdr30;s;$yellow500 Bdt5;s;tp Bdb5;s;tp Tf -Rt-39d <%= groupDecor.twoSticks %>"></div>
+		<div id="sticks" class="Ps-a T8p L29p W100 H280 Bdrd100p Bdr30;s;$yellow500 Bdt5;s;tp Bdb5;s;tp Tf -Rt-39d <%= groupDecor.twoSticks %>"></div>
 		<div class="Ps-a T6p L19p -Sz20 Bdrd100p Bgc-$brand Ps-a_af Ct_af T-75p_af L900p_af -Sz18_af Bdrd100p_af Bd3;s;#16348C_af"></div>
 	</div>
 	<div class="D lg_D-n <%= decorFeatures.twoSquares %>"></div>
@@ -372,15 +372,15 @@ area: 'main'
 	<div class="D-n md_D Ps-a W98p Apcr2/3 B0 L50p Tf -Tr-50p;0 <%= comparisonCss.gradientEclipse %> <%= comparisonCss.gradientRectangle %>"></div>
 	<div class="D-n xl_D Ps-a T-4p R9p W384 Apcr1">
 		<div class="Ps-a T50p L50p Tf -Tr-50p;-70p W52p Apcr1 Bd4;s;#16348C Bdrd100p <%= decorCss.twoCircleTop %>"></div>
-		<div class="Ps-a T55p L50p W69 Apcr1 Bdrd100p Bd8;s;#394EB6 <%= decorCss.circle %> T15p_af L-47p_af Bgc-$brand_af"></div>
-		<div class="<%= decorCss.frameSquare %> W10p T26p L2p Bgc-$core220 Bd10;s;$brand_af Tf -Rt180d"></div>
+		<div id="two_circle" class="Ann-spin Antf-l Anfm-f Ps-a T55p L50p W69 Apcr1 Bdrd100p Bd8;s;#394EB6 <%= decorCss.circle %> T15p_af L-47p_af Bgc-$brand_af"></div>
+		<div id="frame_square" class="Ann-reverans Antf-l Anfm-f <%= decorCss.frameSquare %> W10p T26p L2p Bgc-$core220 Bd10;s;$brand_af Tf -Rt180d"></div>
 		<div class="<%= decorCss.twoSquare %>"></div>
 		<div class="Ps-a T56p L20p <%= decorCss.circle %> T40p_af L10p_af Bgc-$yellow500_af">
-			<svg class="C#D9D1CA" width="84" height="84">
+			<svg id="square" class="Ann-spin Antf-l Anfm-f Ps C#D9D1CA" width="84" height="84">
 				<use href="/assets/img/decor.svg#squareDot"></use>
 			</svg>
 		</div>
-		<div class="Ps-a T14p L67p">
+		<div id="square_yel" class="Ann-trans Antf-l Anfm-f Ps-a T14p L67p">
 			<svg class="C-$yellow500" width="82" height="82">
 				<use href="/assets/img/decor.svg#squareDotTwo"></use>
 			</svg>
