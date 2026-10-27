@@ -208,12 +208,12 @@ area: 'main'
 		<%# Tailwind card %>
 		<li class="P4u;3u W100p Bdrd8 Bgc-$core830 xl_P3u">
 			<h4 class="M0 Txa-c Fns4u Fnw600 Fnst-n Lnh100p Lts0 C-$tertiary800">Tailwind CSS</h4>
-			<ul class="M3u;0;0 D-f Fld-c Gap12 Lsst-n P0 Fnf-mUm Fns3u Fnst-n Fnw400 Lnh150p Lts0 C-$tertiary760">
+			<ul class="M3u;0;0 D-f Fld-c Gap12 Lsst-n P0 Fnf-mUm Fns3u Fnst-n Fnw400 Lnh150p Lts0 C-$tertiary770">
 				<li class="D Ps Pl20 <%= comparisonCss.marker %> Bgc-$tertiary800_b">
 					<span><span class="C-$code100">justify-*</span>: <span class="C-$code110">content</span>, <span class="C-$code110">items</span> or <span class="C-$code110">self</span>?</span>
 				</li>
 				<li class="D Ps Pl20 <%= comparisonCss.marker %> Bgc-$tertiary800_b">
-					<span><span class="C-$code100">flex</span> => <span class="C-$code100">display</span>: <span class="C-$code110">flex</span>, but <span class="C-$code110">flex-auto</span> => <span class="C-$code100">flex</span>: <span class="C-$code110"><span class="C-$code120">1 1</span> auto</span></span>
+					<span><span class="C-$code100">flex</span> => <span class="C-$code100">display: flex</span>, but <span class="C-$code100">flex-auto</span> => <span class="C-$code100">flex: 1 1 auto</span>
 				</li>
 				<li class="D Ps Pl20 <%= comparisonCss.marker %> Bgc-$tertiary800_b">
 					<span class="C-$code100">bg-none</span> => reset all backgrounds? Nope, only <span class="C-$code100">background-image</span>
@@ -224,15 +224,15 @@ area: 'main'
 		<%# Tachyons card %>
 		<li class="P4u;3u W100p Bdrd8 Bgc-$core830 xl_P3u">
 			<h4 class="M0 Txa-c Fns4u Fnw600 Fnst-n Lnh100p Lts0 C-$tertiary800">Tachyons</h4>
-			<ul class="M3u;0;0 D-f Fld-c Gap12 Lsst-n P0 Fnf-mUm Fns3u Fnst-n Fnw400 Lnh150p Lts0 C-$tertiary760">
+			<ul class="M3u;0;0 D-f Fld-c Gap12 Lsst-n P0 Fnf-mUm Fns3u Fnst-n Fnw400 Lnh150p Lts0 C-$tertiary770">
 				<li class="D Ps Pl20 <%= comparisonCss.marker %> Bgc-$tertiary800_b">
-					<span class="C-$code100">br-0</span> => <span class="C-$code100">border-right-width</span>: <span class="C-$code120">0</span>, but <span class="C-$code100">br1</span> => <span class="C-$code100">border-radius</span>: <span class="C-$code120">.125rem</span>
+					<span class="C-$code100">br-0</span> => <span class="C-$code100">border-right-width: 0</span>, but <span class="C-$code100">br1</span> => <span class="C-$code100">border-radius: .125rem</span>
 				</li>
 				<li class="D Ps Pl20 <%= comparisonCss.marker %> Bgc-$tertiary800_b">
 					<span class="C-$code100">normal</span>: <span class="C-$code110">line-height</span>, <span class="C-$code110">font-weight</span> or <span class="C-$code110">letter-spacing</span>?
 				</li>
 				<li class="D Ps Pl20 <%= comparisonCss.marker %> Bgc-$tertiary800_b">
-					<span class="C-$code100">b</span> => <span class="C-$code110">bottom</span>, <span class="C-$code110">border</span>, or <span class="C-$code100">display</span>: <span class="C-$code110">block</span>? No, it is <span class="C-$code100">font-weight</span>: <span class="C-$code110">bold</span>
+					<span class="C-$code100">b</span> => <span class="C-$code110">bottom</span>, <span class="C-$code110">border</span>, or <span class="C-$code100">display: block</span>? No, it is <span class="C-$code100">font-weight: bold</span>
 				</li>
 			</ul>
 		</li>
@@ -242,10 +242,10 @@ area: 'main'
 			<h4 class="M0 Txa-c Fns4u Fnw600 Fnst-n Lnh100p Lts0 C-$brand">mlut</h4>
 			<ul class="M3u;0;0 D-f Fld-c Gap12 Lsst-n P0 Fnf-mUm Fns3u Fnst-n Fnw400 Lnh150p Lts0 C-$tertiary770">
 				<li class="D Ps Pl20 <%= comparisonCss.marker %> Bgc-$brand_b">
-					<span class="C-$code100">Jc-c</span> => <span class="C-$code100">justify-content: <span class="C-$code110">center</span></span> and <span class="C-$code100">Js-c</span> => <span class="C-$code100">justify-self: <span class="C-$code110">center</span></span>
+					<span class="C-$code120">Jc-c</span> => <span class="C-$code120">justify-content: center</span> and <span class="C-$code120">Js-c</span> => <span class="C-$code120">justify-self: center</span>
 				</li>
 				<li class="D Ps Pl20 <%= comparisonCss.marker %> Bgc-$brand_b">
-					<span class="C-$code100">Bdr</span> => <span class="C-$code100">border-right: <span class="C-$code120">1px</span> <span class="C-$code110">solid</span></span> and <span class="C-$code100">Bdrd1</span> => <span class="C-$code100">border-radius: <span class="C-$code120">1px</span></span>
+					<span class="C-$code120">Bdr</span> => <span class="C-$code120">border-right: 1px solid</span> and <span class="C-$code120">Bdrd1</span> => <span class="C-$code120">border-radius: 1px</span>
 				</li>
 			</ul>
 		</li>
@@ -313,7 +313,7 @@ area: 'main'
 				<%# mlut card %>
 				<div class="P4u;3u W100p Bd1;s;$brand Bdrd8 Bgc-$core830 xl_P16">
 					<h4 class="M0 Txa-c Fns4u Fnw600 Fnst-n Lnh100p Lts0 C-$brand">mlut</h4>
-					<ul class="M3u;0;0 D-f Fld-c Gap12 Lsst-n P0 Fnf-mUm Fns3u Fnst-n Fnw400 Lnh150p Lts0 C-$code100">
+					<ul class="M3u;0;0 D-f Fld-c Gap12 Lsst-n P0 Fnf-mUm Fns3u Fnst-n Fnw400 Lnh150p Lts0 C-$tertiary770">
 						<li class="D Ps Pl20 <%= comparisonCss.marker %> Bgc-$brand_b">
 							<code>@:ah_O1_h</code>
 						</li>
