@@ -101,6 +101,7 @@ a {
 	--ml-correct850: rgba(183, 250, 207, 0.6);
 	--ml-correct750: rgba(83, 250, 141, 0.6);
 	--ml-overlay: rgba(255, 255, 255, 0.7);
+	--ml-code110: #574b4b;
 
 	// arts
 	--ml-artGhost: #ffbcB0;
@@ -189,6 +190,7 @@ a {
 	--ml-correct850: rgba(1,102,48,0.4);
 	--ml-correct750: rgba(0,130,54,0.6);
 	--ml-overlay: rgba(0, 0, 0, 0.7);
+	--ml-code110: #9EA2B9;
 
 	// arts
 	--ml-artGhost: #450c00;
@@ -230,6 +232,8 @@ html {
 	--ml-yellow500: #F9CF67;
 	--ml-yellow510: rgb(249, 207, 103, 0.00);
 	--ml-activeTab: #394EB6;
+	--ml-code100: #FF1010;
+	--ml-code120: #68AD00;
 	//
 	scroll-padding-top: var(--ml-headerH);
 }
