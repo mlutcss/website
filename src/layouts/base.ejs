@@ -3,6 +3,17 @@ let cssHeaderLogoVisibility = "Vs-v O1"
 if (it.area === "main"){
 	cssHeaderLogoVisibility = "Vs-h O0"
 }
+const baseUrl = 'https://mlut.style';
+let ogTitle = it.title || 'mlut - make CSS exciting again!';
+let ogDescription = it.description || 'Tailwind CSS alternative for custom websites and creative coding';
+let ogImage = it.image || '/assets/img/preview.png';
+let twImage = it.twimage || '/assets/img/twpreview.png';
+let ogType = it.type || 'website';
+let ogUrl = it.url || '/';
+
+const absImage = new URL(ogImage, baseUrl).href;
+const absTwImage = new URL(twImage, baseUrl).href;
+const absUrl   = new URL(ogUrl, baseUrl).href;
 
 %>
 
@@ -17,6 +28,17 @@ if (it.area === "main"){
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="color-scheme" content="dark light">
+
+	<meta property="og:title" content="<%= ogTitle %>">
+	<meta name="description" content="<%= ogDescription %>">
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="og:description" content="<%= ogDescription %>">
+	<meta property="og:image" content="<%= absImage %>">
+	<meta property="twitter:image" content="<%= absTwImage %>">
+	<meta property="og:url" content="<%= absUrl %>">
+	<meta property="og:type" content="<%= ogType %>">
+	<meta property="og:site_name" content="mlut">
+
 	<link rel="stylesheet" href="/assets/style/style.min.css">
 	<link rel="icon" href="/assets/img/favicon.png" type="image/x-icon">
 	<link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github.min.css">
@@ -25,7 +47,7 @@ if (it.area === "main"){
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=SN+Pro:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
-	<title>mlut - make CSS exciting again!</title>
+	<title><%= ogTitle %></title>
 </head>
 <body class="D-f Fld-c Jc-sb Fnf-Inter Bgc-$core950">
 	<%- include('../_includes/header/header.ejs',{
